@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="text/css">
+    body{
+        margin:0;
+        padding:0;
+    }
+    body td,p,span,legend{
+
+        font-size: 12px;
+    }
+    #WIT{
+        height: 190px;
+        border: 1px solid #CCC;
+        background-image: url(img/cael.jpg);
+    }
+    #VIST,#ALIPAY{
+        padding: 5px;
+        background-color: #E8E8E8;
+        display: none;
+    }
+    .ine {
+        background-image: url(img/btn-join-bg.jpg);
+        padding-top: 1px;
+        padding-bottom: 1px;
+        margin-top: 3px;
+        border: 1px solid #999;
+        font-size: 11px;
+        color: #FFF;
+    }
+    .pcowm {
+        font-size: 13px;
+        font-weight: bold;
+        color: #000;
+        text-align: left;
+        height: 18px;
+        padding-top: 5px;
+        padding-bottom: 0px;
+        border: 1px dashed #EBEBEB;
+    }
+    .clfi {
+        background-image: url(img/ceal_3.gif);
+        background-repeat: no-repeat;
+        display: block;
+        height: 45px;
+        width: 468px;
+        padding-top: 10px;
+        margin-left: 10px;
+    }
+
+    </style>
+    <script>
+    function Showadv(is){
+        switch(is){
+            case 0:
+                document.getElementById('WIT').style.display='block';
+                document.getElementById('ALIPAY').style.display='none';
+                document.getElementById('VIST').style.display='none';
+                break;
+            case 1:
+                document.getElementById('WIT').style.display='none';
+                document.getElementById('VIST').style.display='block';
+                document.getElementById('ALIPAY').style.display='none';
+                break;
+            case 2:
+                document.getElementById('WIT').style.display='none';
+                document.getElementById('VIST').style.display='none';
+                document.getElementById('ALIPAY').style.display='block';
+                break;
+        }
+    }
+    function ChecKm(){
+        if (FROMmy.order_amount.value==''){
+            alert('请输入你的存款金额！');
+            FROMmy.MOAmount.focus();
+            return false
+        }
+        if (FROMmy.order_amount.value<100){
+            alert('存入金額最少為100元！');
+            FROMmy.p3_Amt.focus();
+            return false
+        }
+        var obj=document.getElementsByName('bank_code');
+        for(var i=0;i<obj.length;i++){
+            if(obj[i].checked==true){
+                FROMmy.submit();
+                return
+
+            }
+
+        }
+        alert('请选择你要使用的银行!');
+        return false
+
+    }
+    function Submit(){
+        if (FROMmy2.p3_Amt.value==''){
+            alert('请输入你的存款金额！');
+            FROMmy2.p3_Amt.focus();
+            return false
+        }
+        if (FROMmy2.p3_Amt.value<50){
+            alert('存入金額最少為100元');
+            FROMmy2.p3_Amt.focus();
+            return false
+        }
+        if (FROMmy2.nd_name.value==''){
+            alert('请输入银行帐户全名！');
+            FROMmy2.nd_name.focus();
+            return false
+        }
+        if (FROMmy2.nd_Alias.value==''){
+            alert('请输入银行名称！');
+            FROMmy2.nd_Alias.focus();
+            return false
+        }
+        if (FROMmy2.nd_Account.value==''){
+            alert('请输入银行帐号！');
+            FROMmy2.nd_Account.focus();
+            return false
+        }
+        if (FROMmy2.nd_mdate.value==''){
+            alert('请输入存入日期');
+            FROMmy2.nd_mdate.focus();
+            return false
+        }
+        FROMmy2.submit();
+        return true
+    }
+    function Alsubmit(){
+        if (FROMmy3.p3_Amt.value==''){
+            alert('请输入你的汇款金额！');
+            FROMmy2.p3_Amt.focus();
+            return false
+        }
+        if (FROMmy3.p3_Amt.value<50){
+            alert('汇款金額最少為100元');
+            FROMmy2.p3_Amt.focus();
+            return false
+        }
+        if (FROMmy3.nd_name.value==''){
+            alert('请输入支付宝帐户全名！');
+            FROMmy2.nd_name.focus();
+            return false
+        }
+
+        if (FROMmy3.nd_Account.value==''){
+            alert('请输入支付宝帐号！');
+            FROMmy2.nd_Account.focus();
+            return false
+        }
+        if (FROMmy2.nd_mdate.value==''){
+            alert('请输入存入日期');
+            FROMmy2.nd_mdate.focus();
+            return false
+        }
+        FROMmy3.submit();
+        return true
+    }
+    </script>
+</head>
+
+<body>
+<script language="JavaScript" src="js/Selectdate.js" type="text/javascript"></script>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#E6E6E6" style="font-size: 12px;">
+    <tr>
+        <td width="33%" height="30" align="center" bgcolor="#FEFEF1" id="wWIT"><input name="radio" type="radio" id="huan" value="radio" checked="checked" onclick="Showadv(0)"/>快速支付</td>
+        <td width="34%" align="center" bgcolor="#FEFEF1" id="vVIST"><input type="radio" name="radio" id="yuan" value="radio" onclick="Showadv(1)"/>银行汇款</td>
+        <td width="33%" align="center" bgcolor="#FEFEF1"><input type="radio" name="radio" id="yuan" value="radio" onclick="Showadv(2)"/>支付宝汇款</td>
+    </tr>
+</table>
+<!------------------------------------------------------------------------------------------------>
+<div id="WIT" style="width: 700px;">
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="1">
+        <form action="###" method="post" name="FROMmy" target="_blank" id="FROMmy">
+            <div style="display:none">
+                商 家 号（Merchant ID）：<input type="text" name="merchant_code" value="2060220226"> * <br/>
+                服务类型（Service Type）：<input type="text" name="service_type" value="direct_pay"> * <br/>
+                接口版本（Interface Version）：<input type="text" name="interface_version" value="V3.0"/> * <br/>
+                签名方式（Sign Type）：<input type="text" name="sign_type" value="MD5"/> * <br/>
+                参数编码字符集（Parameter Charset）：<input type="text" name="input_charset" value="UTF-8"/> * <br/>
+                服务器异步通知地址（Notify URL）：<input type="text" name="notify_url" value="http://www.dinpay.com"/> * <br/>
+                商家订单编号（Order No.）：<input type="text" name="order_no" value="DP20160512193438_hljwan123"/> * <br/>
+                商家订单时间（Order Time）：<input type="text" name="order_time" value="2015-07-27 14:30:25"/> * <br/>
+                <!--			订单金额（Order Amount）：<input type="text" name="order_amount" value="0.01"/> * <br/>
+                -->			商品名称（Product Name）：<input type="text" name="product_name" value="testPay"/> * <br/>
+                支付类型（Pay Type）：<input type="text" name="pay_type" value=""/> <br/>
+                商品编号（Product ID）：<input type="text" name="product_code" value=""><br/>
+                商品描述（Product Desc）：<input type="text" name="product_desc" value=""><br/>
+                商品数量（Product Num）：<input type="text" name="product_num" value=""><br/>
+                商品展示URL（Product Show URL）：<input type="text" name="show_url" value=""><br/>
+                客户端IP（Client IP）：<input type="text" name="client_ip" value=""><br/>
+                <!--直连通道标识（Bank Code）：<input type="text" name="bank_code" value=""><br/>-->
+                商家订单号重复校验（Redo Flag）：<input type="text" name="redo_flag" value=""><br/>
+                公用业务扩展参数（Extend Param）：<input type="text" name="extend_param" value="S_Name^hljwan123"><br/>
+                公用回传参数（Extra Return Param）：<input type="text" name="extra_return_param" value="S_Name^hljwan123"><br/>
+                <!--			页面跳转同步通知地址（Return URL）：<input type="text" name="return_url" value="http://abc.zhongyes.top/zh-cn/Cash/MerToDinpay.php">
+                -->   </div>
+            <input name="oid" type="hidden" value="8856059dc752da2d7fl225329" />
+
+            <tr>
+                <td width="14%" height="27" align="center">会员帐号：</td>
+                <td width="86%" align="left"> <input name="textfield" type="text" disabled="disabled" id="textfield" value="0000000" size="10" readonly="readonly" />
+                    <font color="#FF0000">余额:0.0</font></td>
+            </tr>
+            <tr>
+                <td height="13" align="center">选择银行： </td>
+                <td align="left">
+                    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="font-size: 12px;">
+                        <tr>
+                            <td height="30" ><input name="bank_code" type="radio" value="CMB" temp="80" />招商银行</td>
+                            <td><input name="bank_code" type="radio" value="ICBC" temp="80" />工商银行</td>
+                            <td><input name="bank_code" type="radio" value="CCB" temp="80" />建设银行</td>
+                            <td><input name="bank_code" type="radio" value="HXB" temp="80" />华夏银行</td>
+                            <td><input name="bank_code" type="radio" value="BOC" temp="80" />中国银行</td>
+                        </tr>
+                        <tr>
+                            <td height="30" ><input name="bank_code" type="radio" value="BCOM" temp="80" />交通银行</td>
+                            <td><input name="bank_code" type="radio" value="ABC" temp="80" />农业银行</td>
+                            <td><input name="bank_code" type="radio" value="CMBC" temp="80" />民生银行</td>
+                            <td><input name="bank_code" type="radio" value="PSBC" temp="80" />中国邮政</td>
+                            <td><input name="bank_code" type="radio" value="SPDB" temp="80" />浦东发展银行</td>
+                        </tr>
+                        <tr>
+                            <td height="30" ><input name="bank_code" type="radio" value="SPABANK" temp="80" />平安银行</td>
+                            <td><input name="bank_code" type="radio" value="CIB" temp="80" />兴业银行</td>
+                            <td><input name="bank_code" type="radio" value="ECITIC" temp="80" />中信银行</td>
+                            <td><input name="bank_code" type="radio" value="CEBB" temp="80" />光大银行</td>
+                            <td><input name="bank_code" type="radio" value="BOB" temp="80" />北京银行</td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+            <tr>
+                <td height="14" align="center">存入金额：</td>
+                <td align="left"><input name="order_amount" type="text" id="cealvalue" size="15" onkeyup="return isChinese(this)"/>
+                    ￥ <font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;存款金额每笔不能少于100元!</font></td>
+            </tr>
+        </form>
+    </table>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="font-size: 12px;">
+        <tr>
+            <td align="left"> <span style="color: #F00;">注：使用快速存款即时到帐进行投注</span></td>
+            <td><input type="button" name="button" id="button" value="确认提交" class="ine" onclick="ChecKm()"/></td>
+        </tr>
+    </table>
+</div>
+<!------------------------------------------------------------------------------------------------>
+<div id="ALIPAY" style="width: 700px;">
+    <form method="post" name="FROMmy3"  action="###">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;我们的支付宝帐户:<br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#CC0000">123456789@126.com  户名:小明</font></p>
+        <p>1. 当您完成了完成汇款后，输入下列所要求的详细资料。</p>
+        <p class="clfi">&nbsp;&nbsp;&nbsp;&nbsp;存入金额:&nbsp;&nbsp;&nbsp;<input name="p3_Amt" type="text" id="p3_Amt" size="10"  onkeyup="return isChinese(this)"/></p>
+        <fieldset>
+            <legend>汇款信息</legend>
+            <table width="100%" border="0" align="center" cellpadding="1" cellspacing="0"  style="background-image: url(../sports/images/cael.jpg);font-size: 12px;">
+
+                <input name="act" type="hidden" id="act" value="2" />
+                <input name="oid" type="hidden" value="8856059dc752da2d7fl225329" />
+                <input name="val" type="hidden" value="7" />
+                <tr>
+                    <td align="center">支付宝户名:</td>
+                    <td><input name="nd_name" type="text" id="nd_name" size="15" /></td>
+                </tr>
+                <tr>
+                    <td align="center">支付宝帐号:</td>
+                    <td><input type="text" name="nd_Account" id="nd_Account" /></td>
+                </tr>
+                <tr>
+                <tr>
+                    <td align="center">存款日期:</td>
+                    <td>
+                        <input name="nd_mdate"  type="text" id="nd_mdate" style="border:1px solid #666" onFocus="showcalendar(event, this);if(this.value=='0000-00-00')this.value=''" onClick="showcalendar(event, this);" value="2016-05-12" size="10" readonly="readonly" />
+                    </td>
+                </tr>
+
+            </table>
+        </fieldset>
+
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="font-size: 12px;">
+            <tr>
+                <td width="372" align="right">&nbsp;</td>
+                <td width="328" align="center"><input type="button" name="button" id="button" value="确认提交" class="ine" onclick="Alsubmit()"/></td>
+            </tr>
+        </table>
+        <span align="left">2.当您的存款反映到我们的支付宝帐户上，或当收到您的通知后3分钟内，我们将更新您的利德帐户余额。</span>
+    </form>
+</div>
+<!------------------------------------------------------------------------------------------------>
+<div id="VIST" style="width: 700px;">
+    <form method="post" name="FROMmy2"  action="###">
+        <!--<p>1. 如手动存款，可到以下银行存款！</p>-->
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;我们的银行帐户:<br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#CC0000">招商银行 0123456789123456  户名：小明 </font></p>
+        <p>1. 当您完成了银行存款后，输入下列所要求的详细资料。</p>
+        <p class="clfi">&nbsp;&nbsp;&nbsp;&nbsp;存入金额:&nbsp;&nbsp;&nbsp;<input name="p3_Amt" type="text" id="p3_Amt" size="10" onkeyup="return isChinese(this)"/></p>
+        <fieldset>
+            <legend>存款信息</legend>
+            <table width="100%" border="0" align="center" cellpadding="1" cellspacing="0"  style="background-image: url(../sports/images/cael.jpg);font-size: 12px;">
+
+                <input name="act" type="hidden" id="act" value="1" />
+                <input name="oid" type="hidden" value="8856059dc752da2d7fl225329" />
+                <input name="val" type="hidden" value="7" />
+                <tr>
+                    <td align="center">银行户名:</td>
+                    <td><input name="nd_name" type="text" id="nd_name" size="15" /></td>
+                </tr>
+                <tr>
+                    <td align="center">银行名称:</td>
+                    <td><input type="text" name="nd_Alias" id="nd_Alias" /></td>
+                </tr>
+                <tr>
+                    <td align="center">银行帐号:</td>
+                    <td><input type="text" name="nd_Account" id="nd_Account" /></td>
+                </tr>
+                <tr>
+                <tr>
+                    <td align="center">存款日期:</td>
+                    <td>
+                        <input name="nd_mdate"  type="text" id="nd_mdate" style="border:1px solid #666" onFocus="showcalendar(event, this);if(this.value=='0000-00-00')this.value=''" onClick="showcalendar(event, this);" value="2016-05-12" size="10" readonly="readonly" />
+                    </td>
+                </tr>
+
+            </table>
+        </fieldset>
+
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="font-size: 12px;">
+            <tr>
+                <td width="372" align="right">&nbsp;</td>
+                <td width="328" align="center"><input type="button" name="button" id="button" value="确认提交" class="ine" onclick="Submit()"/></td>
+            </tr>
+        </table>
+        <span align="left">2.当您的存款反映到我们的银行帐户上，或当收到您的通知后3分钟内，我们将更新您的利德帐户余额。</span>
+    </form>
+</div>
+<!------------------------------------------------------------------------------------------------>
+<p class="pcowm"> 最近存款记录 >></p>
+<table width="600" border="0" align="center" cellpadding="0" cellspacing="1"  style="background-color: #CCC;font-size: 12px; ">
+    <tr style="background-color: #F90;color:#fff">
+        <td width="146" align="center">时间</td>
+        <td width="85" align="center">存入金额</td>
+        <td width="104" align="center">存款方式</td>
+        <td width="80" align="center">状态</td>
+        <td width="79" align="center"></td>
+    </tr>
+</table>
+</body>
+</html>

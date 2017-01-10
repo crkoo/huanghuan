@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>葡京娱乐场-澳门知名老品牌值得信赖-打造亚洲线上娱乐一流平台！</title>
+    <link type="text/css" href="skins/bootstrap/bootstrap.min.css" rel="stylesheet"/>
+    <link type="text/css" href="skins/css/main.css" rel="stylesheet" />
+    <script type="text/javascript" src="skins/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="skins/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="skins/html5shiv/html5shiv.js"></script><!-- html5shiv.js -->
+</head>
+
+<body>
+<div id="mainBody">
+    <!-- header -->
+    <div id="page-header">
+        <div class="header clearfix">
+            <div class="header-logo">
+                <object type="application/x-shockwave-flash" id="logo-flash" title="" data="skins/images/logo.swf" width="312" height="96"><param name="wmode" value="transparent"><param name="quality" value="high"></object>
+            </div>
+            <div class="header-top clearfix">
+                <!-- 登入 -->
+                <div class="login-wrap float-left clearfix">
+                    <form name="LoginForm" id="LoginForm" action="" method="POST">
+                        <p class="login-unit"><input name="username" type="text" size="12" id="username" maxlength="15" placeholder="@账号" class="login-input login-acc" tabindex="1" /></p>
+                        <p class="login-unit"><input name="passwd" type="password" autocomplete="off" size="13" id="passwd" title="请填写 6-12 位大小写英数字" maxlength="13" class="login-input login-pass" placeholder="密码" tabindex="2" /></p>
+                        <p class="login-unit"><input name="rmNum" type="text" id="rmNum" size="7" maxlength="4" title="( 点选此处产生新验证码 )" class="login-input login-verify" tabindex="3" placeholder="验证码" /></p>
+                        <p class="login-unit" style="width: 40px"><img src="skins/images/macpic.png" id='vPic' alt="( 点选此处产生新验证码 )" title="( 点选此处产生新验证码 )" width="40" height="18" style="display: none;" /></p>
+                        <input type="submit" value="登入" class="login-submit" tabindex="4" />
+                        <input type="button" class="joinus-btn" value="注册" />
+                    </form>
+                    <script>
+                        $(function(){
+                           $("#rmNum").click(function(){
+                               $("#vPic").show();
+                           })
+                        });
+                    </script>
+                </div>
+                <!-- 自訂連結 -->
+                <div class="top-link-wrap float-left">
+                    <a href="###" class="forget">忘记密码?</a>
+                    &nbsp;|&nbsp;
+                    <a href="###" class="js-article-color top-custom-link">
+                        设为首页
+                    </a>
+                    &nbsp;|&nbsp;
+                    <a href="###" class="js-article-color top-custom-link">
+                        加入收藏
+                    </a>
+                </div>
+                <span class="float-right lang-wrap">
+<div id="ele-lang-wrap" class="ele-lang-wrap">
+    <div class="ele-lang-title ele-lang-option ele-lang-zh-cn" data-lang="ele-lang-zh-cn">简体中文</div>
+    <div id="ele-lang-group" class="ele-lang-group">
+        <a href="#" target="mem_index" title="繁體中文" class="ele-lang-option ele-lang-zh-tw " data-lang="ele-lang-zh-tw">繁體中文</a>
+        <a href="#" target="mem_index" title="简体中文" class="ele-lang-option ele-lang-zh-cn ele-lang-current" data-lang="ele-lang-zh-cn">简体中文</a>
+        <a href="#" target="mem_index" title="English" class="ele-lang-option ele-lang-en " data-lang="ele-lang-en">English</a>
+    </div>
+</div>
+<script>
+    $(function(){
+        var ele_lang_group = $('<div>').append($('#ele-lang-group')).html(),
+                $miBody = $('body'),
+                lang_group;
+
+        $miBody.prepend(ele_lang_group);
+        lang_group = $('#ele-lang-group');
+
+        //設定group 的寬度
+        lang_group.css("width", $('#ele-lang-wrap').width()-(lang_group.outerWidth()-lang_group.width()));
+
+        var langAutoClose = function(){
+            langCloseTimer = setTimeout(function(){
+                lang_group.stop().slideUp('fast');
+            }, 1000);
+        }
+
+        $('#ele-lang-wrap')
+                .on("click",function(){
+                    var offset = $(this).offset();
+                    var center_set = $miBody.width() - $('body').width();
+                    center_set = (center_set > 0) ? center_set/2 : 0;
+                    var obj_Left=offset.left + center_set;
+                    var obj_Top=offset.top+$(this).height();
+
+                    if(lang_group.is(':hidden')) {
+                        lang_group.stop().slideDown('fast')
+                                .css({'left':obj_Left,'top':obj_Top})
+                                .on("mouseenter",function(){
+                                    clearTimeout(langCloseTimer);
+                                    $(this).stop(true,true).slideDown('100');
+                                });
+                    } else {
+                        lang_group.stop().slideUp('fast');
+                    }
+                })
+                .on("mouseleave",function(){
+                    langAutoClose();
+                })
+                .on("mouseenter",function(){
+                    if(typeof langCloseTimer != 'undefined'){
+                        clearTimeout(langCloseTimer);
+                    }
+                });
+        lang_group
+                .on('mouseleave',function(){langAutoClose();});
+        $('#ele-lang-wrap a').on('click', function(){
+           if ($(this).hasClass('ele-lang-current')){
+               return false;
+           }else{
+               $('#ele-lang-wrap a').removeClass('ele-lang-current');
+               $(this).addClass('ele-lang-current');
+               $('.ele-lang-title').removeClass($('.ele-lang-title').attr('data-lang')).addClass($(this).attr('data-lang')).attr('data-lang', $(this).attr('data-lang')).html($(this).html());
+           }
+        });
+    });
+</script>
+                </span>
+            </div>
+            <!-- 主選單 -->
+            <div class="mainnav-wrap clear">
+                <div class="mainnav">
+                    <ul class="clearfix">
+                        <li id="LS-first" class="LS-first">
+                            <a href="index.html" target='mem_index' class=" current">首页<br/>
+                                <span></span>
+                            </a>
+                        </li>
+                        <li id="LS-ball" class="LS-ball">
+                            <a href="###" class=" ">体育赛事<br/>
+                                <span></span>
+                            </a>
+                        </li>
+                        <li id="LS-live" class="LS-live">
+                            <a href="#" target='mem_index' class=" ">视讯直播<br/>
+                                <span></span>
+                            </a>
+                        </li>
+                        <li id="LS-game" class="LS-game">
+                            <a href="#" target='mem_index' class=" ">电子游艺<br/>
+                                <span></span>
+                            </a>
+                            <!-- 子選單 -->
+                            <div id="nav-game" class="ele-lsub-group" style="display:none">
+                                <div class="lsub-inner-wrap">
+                                    <a href="#" target='mem_index' title="BBIN电子" class="">BBIN电子</a>
+                                    <a href="#" target='mem_index' title="WG电子" class="">WG电子</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="LS-ltlottery" class="LS-ltlottery">
+                            <a href="#" target='mem_index' class=" ">彩票游戏<br/>
+                                <span></span>
+                            </a>
+                        </li>
+                        <li id="LS-memberexclusiveii" class="LS-memberexclusiveii">
+                            <a href="javascript:;" target='mem_index' class=" " >优惠活动<br/>
+                                <span></span>
+                            </a>
+                        </li>
+                        <li id="LS-mobile" class="LS-mobile">
+                            <a href="javascript:;"
+                               class=" " >手机下注<br/>
+                                <span></span>
+                            </a>
+                        </li>
+                        <li id="LS-service" class="LS-service">
+                            <a href="javascript:;" class=" ">在线客服<br/>
+                                <span></span>
+                            </a>
+                        </li>
+                        <li id="LS-AT3" class="LS-AT3">
+                            <a href="#" target='mem_index' class=" ">代理加盟<br/>
+                                <span></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="skins/js/mainnav.js"></script>
+    </div>
+    <!-- //header -->
+    <div class="banner text-center" id="banner">
+        <img src="skins/images/activity.jpg" />
+    </div><!-- //banner -->
+    <div class="main clearfix" id="main">
+        <div class="notice">
+            <div class="wrap clearfix">
+                <div class="float-left notice_title">
+                    <img src="skins/images/notice_title.png" />
+                </div>
+                <div class="float-left notice_content" id="notice">
+                    <marquee id="ele-msgNews" behavior="scroll" scrollamount="1" direction="left" style="height:100%;">【友情提醒】:不计输赢，天天返点高达1.2无上限，2015年10月20日的返点优惠已添加至游戏账户，请注意查收(*^__^*)    【通知】公司入款银行账号已全面进行更换，请亲们在入款前查看最新的银行入款账号，以免存入我公司停用的银行卡号，带来不便，请多加谅解！祝亲们游戏愉快，多多盈利哟~(*^__^*)     温馨提示：盈丰国际娱乐城最新上网导航【yf8889.com】，请点击收藏此网址！娱乐无忧，让您随时随地畅享博彩天堂。    【好消息】盈丰商城隆重登场，亲爱的会员可在博彩之余，还能享受购物滴乐趣！心动不如行动，快快点击【优惠专区】了解详情。后期更精彩。若有任何问题请联系24小时在线客服嚛~    【好消息】盈丰国际附属平台重磅登场！ BBIN网站维护上哪玩？盈丰国际华丽 备用版 【yf5565.com   yf5563.com  yf6686.com】 让您继续精彩游戏，新的体验，新的视觉，引进多样平台，让您娱乐永不停歇。</marquee>
+                    <script src="skins/js/marquee.js"></script>
+                    <script>
+                        $('#ele-msgNews').marquee({"kclass" : "ele-news-txt" , "speed" : 40 })
+                                .hover(function() {
+                                    $(this).trigger("stop");
+                                }, function() {
+                                    $(this).trigger("start");
+                                });
+                    </script>
+                </div>
+                <div class="float-left notice_welcome">
+                    <img src="skins/images/notice_welcome.png" />
+                </div>
+            </div>
+        </div>
+        <div class="wrap clearfix" style="width: 1024px">
+            <div class="activity">
+                <div class="activity-box">
+                    <ul>
+                        <li>
+                            <div class="activity-title"><img src="skins/images/1.jpg" /></div>
+                            <div class="activity-content" >
+                                <p><img src="skins/images/hd.png" /></p>
+
+                                <p>&nbsp;</p>
+                                <table class="text-center" width="80%">
+                                    <tr>
+                                        <th>首次存款</th>
+                                        <th>红利百分比</th>
+                                        <th>红利上限</th>
+                                        <th>流水倍数</th>
+                                    </tr>
+                                    <tr>
+                                        <td>100元以上</td>
+                                        <td>30%</td>
+                                        <td>2888</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">举例说明：入款1000RMB，获得红利300，有效投注为（1000+300）x20=26000</td>
+                                    </tr>
+                                </table>
+                                <p>&nbsp;</p>
+                                <p><img src="skins/images/s.png" /></p>
+                                <p class="margin-left">• 邮件主题：开户有礼</p>
+                                <p class="margin-left">• 邮件内容：游戏账号、手机号码、存款金额</p>
+                                <p class="margin-left">• 申请方式：请符合优惠规则的会员于成功存款后下注前于24小时内发送邮件至：pujing7788@gmail.com申请，公司审核专员在30分钟内给与回复。</p>
+                                <p><img src="skins/images/gz.png" /></p>
+                                <p class="margin-left">1. 在葡京娱乐场进行第一次有效存款时，会员可自由选择：获得/放弃首次存款优惠，如选择获取优惠，需要达到15倍的有效投注</p>
+                                <p class="margin-left">2. 此礼金需要在首次存款后未进行投注前方可进行申请，若己下注，则视为自动放弃！</p>
+                                <p class="margin-left">3. 会员需要在第一次流水达到后，才可进行第二次存款！ 若首存流水未达到，余额低于10元时，方可不纳入第二次存款里计算！</p>
+                                <p class="margin-left">4. 投注体育、真人、彩票对冲或者对打（红黑、大小、单双、庄闲等等）投注不计，未接受注单、赛果为平的不计入投注额。</p>
+                                <p class="margin-left">5. 一个会员账号、一台电脑、一个地址与一个IP，只限领取一次！</p>
+                                <p class="margin-left">6. 无论是个人或团体，如有任何威胁、滥用或使用不诚实方式套利的行为，经盈丰国际风险部门审核，公司有权取消该会员之盈利！</p>
+                                <p class="margin-left">7. 葡京娱乐场保留在任何时候都可以更改、停止该活动的权利，并不作提前通知。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="activity-title"><img src="skins/images/2.jpg" /></div>
+                            <div class="activity-content" >
+                                <p><img src="skins/images/tb.png" /></p>
+                                <p class="margin-left">1. 返点回馈计算方式：于每周一北京时间中午12点系统结算上周的洗码，洗码返水红利统一于结算后北京时间18:00前加入会员的账号。</p>
+                                <p class="margin-left">2. 有效投注额的下列“无风险投注”，在运动博弈中任何取消注单，赛事或局数的投注额将不予计算。 在真人娱乐，电子游艺或彩票投注等游戏项目的无风险投注额。</p>
+                                <p class="margin-left">（同时投注庄家与闲家大小、单双、红黑等投注行为），皆不与结算。为了避免对文字的理解差异，葡京娱乐场保留以上方案的解释权。</p>
+                                <p>&nbsp;</p>
+                                <table class="text-center" width="80%">
+                                    <tr>
+                                        <th>会员等级</th>
+                                        <th>有效投注</th>
+                                        <th>运动博弈</th>
+                                        <th>真人娱乐</th>
+                                        <th>电子游艺</th>
+                                        <th>彩票游戏</th>
+                                        <th>最高返水</th>
+                                    </tr>
+                                    <tr>
+                                        <td>A</td>
+                                        <td>1000万+</td>
+                                        <td>0.8%</td>
+                                        <td>1.2%</td>
+                                        <td>1.8%</td>
+                                        <td>0.8%</td>
+                                        <td>无上限</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B</td>
+                                        <td>100万+</td>
+                                        <td>0.6%</td>
+                                        <td>0.8%</td>
+                                        <td>1.2%</td>
+                                        <td>0.6%</td>
+                                        <td>无上限</td>
+                                    </tr>
+                                    <tr>
+                                        <td>C</td>
+                                        <td>1元+</td>
+                                        <td>0.5%</td>
+                                        <td>0.6%</td>
+                                        <td>0.8%</td>
+                                        <td>0.4%</td>
+                                        <td>无上限</td>
+                                    </tr>
+                                </table>
+                                <p>&nbsp;</p>
+                                <p><img src="skins/images/gz.png" /></p>
+                                <p class="margin-left">1. 此优惠只需要达到一倍的有效投注即可！</p>
+                                <p class="margin-left">2. 一个会员账号、一台电脑、一个地址与一个IP，只限领取一次！</p>
+                                <p class="margin-left">3. 无风险投注包括在百家乐同时投注庄家、闲家，轮盘同时投注黑色、红色，单、双， 大、小；在运动博弈中，对冲或打对，有以上行为均不给予返点优惠！</p>
+                                <p class="margin-left">4. 无论是个人或团体，如有任何威胁、滥用或使用不诚实方式套利的行为，经盈丰国际风险部门审核，公司有权取消该会员之返点！</p>
+                                <p class="margin-left">5. 葡京娱乐场保留在任何时候都可以更改、停止该活动的权利，并不作提前通知。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="activity-title"><img src="skins/images/3.jpg" /></div>
+                            <div class="activity-content" >
+                                <p class="margin-left" style="color: #fff;">葡京娱乐场是一个温暖的大家庭，推荐您的亲朋好友加入，将获得更多的红利现金馈赠。想要立即获得这项丰厚的现金红利吗？</p>
+                                <p class="margin-left" style="color: #fff;">办法其实很简单,只要将“葡京娱乐场”分享给您的好友知道。</p>
+                                <p><img src="skins/images/tb.png" /></p>
+                                <p class="margin-left">1. 返点回馈计算方式：于每周一北京时间中午12点系统结算上周的洗码，洗码返水红利统一于结算后北京时间18:00前加入会员的账号。</p>
+                                <p class="margin-left">2. 有效投注额的下列“无风险投注”，在运动博弈中任何取消注单，赛事或局数的投注额将不予计算。 在真人娱乐，电子游艺或彩票投注等游戏项目的无风险投注额。</p>
+                                <p class="margin-left">（同时投注庄家与闲家大小、单双、红黑等投注行为），皆不与结算。为了避免对文字的理解差异，葡京娱乐场保留以上方案的解释权。</p>
+                                <p>&nbsp;</p>
+                                <table class="text-center" width="60%">
+                                    <tr>
+                                        <th>条件</th>
+                                        <th>符合条件</th>
+                                        <th>推荐人可获得比例</th>
+                                        <th>最高彩金</th>
+                                    </tr>
+                                    <tr>
+                                        <td>推荐人</td>
+                                        <td>有过一次存款记录</td>
+                                        <td>5%彩金</td>
+                                        <td>1888元</td>
+                                    </tr>
+                                    <tr>
+                                        <td>被推荐人</td>
+                                        <td COLSPAN="3">为新会员且存款100元以上，推荐人即可申请彩金。</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">推荐人获得礼金后，只需达到3倍的有效投注即可</td>
+                                    </tr>
+                                </table>
+                                <p class="margin-left">介绍朋友，请及时联系24小时在线客服索取推广链接，通过该链接注册的玩家将被视为您介绍的玩家。</p>
+                                <p class="margin-left">（若不是通过此链接下注册，推荐人则不能获得相关优惠哦）</p>
+                                <p>&nbsp;</p>
+                                <p><img src="skins/images/s.png" /></p>
+                                <p class="margin-left">•  邮件主题：申请推荐礼金</p>
+                                <p class="margin-left">•  邮件内容：会员账号，被推荐人会员账号，存款金额。</p>
+                                <p class="margin-left">•  成功介绍朋友为您的下线会员时，请在被推荐人存款后的24小时内发送邮件至：pujing7788@gmail.com 申请（逾期无效）</p>
+                                <p>&nbsp;</p>
+                                <p><img src="skins/images/gz.png" /></p>
+                                <p class="margin-left">1. 此优惠只需要达到一倍的有效投注即可！</p>
+                                <p class="margin-left">2. 一个会员账号、一台电脑、一个地址与一个IP，只限领取一次！</p>
+                                <p class="margin-left">3. 无风险投注包括在百家乐同时投注庄家、闲家，轮盘同时投注黑色、红色，单、双， 大、小；在运动博弈中，对冲或打对，有以上行为均不给予返点优惠！</p>
+                                <p class="margin-left">4. 无论是个人或团体，如有任何威胁、滥用或使用不诚实方式套利的行为，经盈丰国际风险部门审核，公司有权取消该会员之返点！</p>
+                                <p class="margin-left">5. 葡京娱乐场保留在任何时候都可以更改、停止该活动的权利，并不作提前通知。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="activity-title"><img src="skins/images/4.jpg" /></div>
+                            <div class="activity-content" >
+                                <p><img src="skins/images/js.png" /></p>
+                                <table class="text-center" width="60%">
+                                    <tr>
+                                        <th>VIP等级</th>
+                                        <th>晋升VIP条件</th>
+                                        <th>晋升/保持VIP条件</th>
+                                        <th>VIP有效期限</th>
+                                    </tr>
+                                    <tr>
+                                        <td>黄金</td>
+                                        <td>单笔存款≥50,000元</td>
+                                        <td>月有效投注≥500,000</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>白金</td>
+                                        <td>单笔存款≥100,000元</td>
+                                        <td>月有效投注≥2,000,000</td>
+                                        <td>0.8%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>钻石</td>
+                                        <td>单笔存款≥300,000元</td>
+                                        <td>月有效投注≥5,000,000</td>
+                                        <td>0.6%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>至尊</td>
+                                        <td>仅限特邀会员</td>
+                                        <td>永久</td>
+                                        <td>永久</td>
+                                    </tr>
+                                </table>
+                                <p>&nbsp;</p>
+                                <p><img src="skins/images/hd.png" /></p>
+                                <table class="text-center" width="70%">
+                                    <tr>
+                                        <th>VIP十大特权</th>
+                                        <th>黄金VIP</th>
+                                        <th>白金VIP</th>
+                                        <th>钻石</th>
+                                        <th>至尊</th>
+                                    </tr>
+                                    <tr>
+                                        <td>晋级礼金</td>
+                                        <td>188</td>
+                                        <td>588</td>
+                                        <td>888</td>
+                                        <td>1888</td>
+                                    </tr>
+                                    <tr>
+                                        <td>每月优惠</td>
+                                        <td>10%</td>
+                                        <td>15%</td>
+                                        <td>20%</td>
+                                        <td>30%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>免费筹码</td>
+                                        <td>288</td>
+                                        <td>500</td>
+                                        <td>888</td>
+                                        <td>5000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>生日礼金</td>
+                                        <td>888</td>
+                                        <td>1188</td>
+                                        <td>1588</td>
+                                        <td>5888</td>
+                                    </tr>
+                                    <tr>
+                                        <td>生日礼品</td>
+                                        <td>888</td>
+                                        <td>1888</td>
+                                        <td>3888</td>
+                                        <td>5888</td>
+                                    </tr>
+                                    <tr>
+                                        <td>节假日优惠</td>
+                                        <td>288</td>
+                                        <td>588</td>
+                                        <td>888</td>
+                                        <td>1588</td>
+                                    </tr>
+                                    <tr>
+                                        <td>优先存取款</td>
+                                        <td>&radic;</td>
+                                        <td>&radic;</td>
+                                        <td>&radic;</td>
+                                        <td>&radic;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>流水王</td>
+                                        <td>888</td>
+                                        <td>1888</td>
+                                        <td>3888</td>
+                                        <td>5888</td>
+                                    </tr>
+                                    <tr>
+                                        <td>介绍好友</td>
+                                        <td>888</td>
+                                        <td>1888</td>
+                                        <td>3888</td>
+                                        <td>5888</td>
+                                    </tr>
+                                </table>
+                                <p class="margin-left">VIP特权详细说明：</p>
+                                <p class="margin-left">1. 荣升为VIP会员，系统自动派发彩金，仅需全额投注即可申请提款，每个VIP级别晋升礼金只能申请一次。</p>
+                                <p class="margin-left">2. 每月一次存款红利，最高可达3888元，6倍打码量即可提款。</p>
+                                <p class="margin-left">3. 每月可申请一次免费筹码，仅需全额投注即可申请提款。</p>
+                                <p class="margin-left">4. 生日前一天发送邮件申请：提供身份证复制件、联系电话发送至pujing7788vip@gmail.com申请，公司将在生日当天进行派送，祝您生日快乐！</p>
+                                <p class="margin-left">5. 每年可享有一次高额生日礼金，无需打码量可直接提款。</p>
+                                <p class="margin-left">6. 新年/中秋/国庆/元旦个人信息可以联系上的会员可享有以上彩金，1倍流水。</p>
+                                <p class="margin-left">7. 可享有优先存取款，5分钟之内到账，并金额无上限。</p>
+                                <p class="margin-left">8. 每月任意一周超过500万元有效投注，每月仅限申请一次，仅需3倍流水。</p>
+                                <p class="margin-left">9. 介绍好友存款成为VIP会员，即可获得以上相对应的奖金。1倍流水即可提款。</p>
+                                <p>&nbsp;</p>
+                                <p><img src="skins/images/s.png" /></p>
+                                <p class="margin-left">• 邮件主题：申请VIP顶级待遇</p>
+                                <p class="margin-left">• 邮件内容：会员账号、真实姓名、手机号码、生日日期</p>
+                                <p class="margin-left">• 达到VIP条件者，请发送邮件至：pujing7788vip@gmail.com申请。经过VIP专属中心审核通过后，客服经理将以邮件方式或电话连线与您取得联系。</p>
+                                <p>&nbsp;</p>
+                                <p><img src="skins/images/gz.png" /></p>
+                                <p class="margin-left">1. VIP资格不可以越级申请，须先成为黄金VIP后才可申请更高级别的VIP。</p>
+                                <p class="margin-left">2. 一个会员账号、一台电脑、一个地址与一个IP，只限领取一次！</p>
+                                <p class="margin-left">3. 此优惠可与葡京娱乐场其他优惠同时共享。</p>
+                                <p class="margin-left">4. 无论是个人或团体，如有任何威胁、滥用或使用不诚实方式套利的行为，经盈丰国际风险部门审核，公司有权对会员做出任何裁决。</p>
+                                <p class="margin-left">5. 葡京娱乐场保留在任何时候都可以更改、停止该活动的权利，并不作提前通知。</p>
+                                <p class="margin-left">6. 葡京娱乐场拥有独立解释权以及最终裁决权。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="activity-title"><img src="skins/images/5.jpg" /></div>
+                            <div class="activity-content">
+                                <p><img src="skins/images/hd.png" /></p>
+                                <p>&nbsp;</p>
+                                <table class="text-center" width="60%">
+                                    <tr>
+                                        <th>存款方式</th>
+                                        <th>存款金额</th>
+                                        <th>立即回馈</th>
+                                        <th>奖金上限</th>
+                                        <th>流水限制</th>
+                                    </tr>
+                                    <tr>
+                                        <td>网银转账</td>
+                                        <td rowspan="4">100元以上</td>
+                                        <td rowspan="4">1.2%</td>
+                                        <td rowspan="4">无上限</td>
+                                        <td rowspan="4">1倍</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ATM转账</td>
+                                    </tr>
+                                    <tr>
+                                      <td>现金存入</td>
+                                    </tr>
+                                    <tr>
+                                      <td>手机银行支付</td>
+                                    </tr>
+                                    <tr>
+                                        <td>以上方式任选其一</td>
+                                        <td>100000元以上<br></td>
+                                        <td>2%</td>
+                                        <td>无上限</td>
+                                        <td>2倍</td>
+                                    </tr>
+                                </table>
+<p>&nbsp;</p>
+                                <p><img src="skins/images/yhfs.png" /></p>
+                                <p class="margin-left">葡京娱乐场的新老会员通过网银，ATM，手机银行转账或现金到柜台存入到公司指定账号进行游戏充值，并与客服联系，最高可享受充值金额2.0%的返利,无上限</p>
+                                <p>&nbsp;</p>
+                                <p><img src="skins/images/gz.png" /></p>
+                                <p class="margin-left">1. 每次存款必须先于在线客服联系索取公司银行账户，确认该账户是否在使用，若入款前未与公司进行账号确认，款项误入公司已停用之银行账户，恕不负责。</p>
+                                <p class="margin-left">2. 公司若发现会员利用非法程序下注或是下注套利等行为，公司有权利将过往所得之优惠全数取回、并取消会员账户。</p>
+                                <p class="margin-left">3. 此活动可与其他优惠同时进行。</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <script>
+                        $(function(){
+                            $(".activity-title").click(function(){
+                                if ($(this).next().is(':hidden')){
+                                    $(".activity-content").hide();
+                                    $(this).next().show();
+                                }else{
+                                    $(this).next().hide();
+                                }
+                            });
+                        })
+                    </script>
+                </div>
+            </div>
+            <div id="partner"></div>
+        </div>
+    </div><!-- //main -->
+    <div id="footer-top">
+        <div class="wrap text-center">
+            <a href="#">關於我們</a>
+            &nbsp;|&nbsp;
+            <a href="#">聯繫我們</a>
+            &nbsp;|&nbsp;
+            <a href="#">代理合作</a>
+            &nbsp;|&nbsp;
+            <a href="#">存款幫助</a>
+            &nbsp;|&nbsp;
+            <a href="#">取款幫助</a>
+            &nbsp;|&nbsp;
+            <a href="#">常見問題</a>
+            &nbsp;|&nbsp;
+            <a href="#">遊戲規則</a>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="footer-center">
+            <div class="footer-inner center">
+                <div class="info">
+                    <div class="list service">
+                        <div class="list-inner">
+                            <h2><img src="skins/images/footer01.png" alt=""></h2>
+                            <dl class="pro m_in">
+                                <dd class="unit">秒</dd>
+                                <dt>18</dt>
+                                <dd class="title">存款火速到帐</dd>
+                                <br>
+                                <dd class="time">平均时间</dd>
+                                <dd class="progress" style="width: 100px;"></dd>
+                                <dd class="opacity"></dd>
+                            </dl>
+                            <dl class="pro m_out">
+                                <dd class="unit">分</dd>
+                                <dt>2`18</dt>
+                                <dd class="title">取款火速到帐</dd>
+                                <br>
+                                <dd class="time">平均时间</dd>
+                                <dd class="progress" style="width: 150px;"></dd>
+                                <dd class="opacity"></dd>
+                            </dl>
+                            <dl class="mon">
+                                <dd class="unit">家</dd>
+                                <dt><span>35</span></dt>
+                                <dd class="title">便捷的银行服务</dd>
+                                <br>
+                                <dd class="time">目前我们的支付机构有</dd>
+                                <dd class="bank_service"><img src="skins/images/footer05.png" alt=""></dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!--<div id="line_01" class="separation"></div>-->
+                    <div class="list product">
+                        <div class="list-inner">
+                            <h2><img src="skins/images/footer02.png" alt=""></h2>
+                            <dl>
+                                <dt>快乐彩 KENO</dt>
+                                <dd>游戏玩法丰富，高返奖高赔率，中奖率更高，为用户提供更激情的体验。</dd>
+                            </dl>
+                            <dl>
+                                <dt>体育平台 SPORTS BET</dt>
+                                <dd>在一个公平、公正的环境下进行游戏，能够让您轻松、怡静的享受体育投注的乐趣。</dd>
+                            </dl>
+                            <dl>
+                                <dt>真人娱乐城 LIVE CASINO</dt>
+                                <dd>想要让自己一夜致富的梦想成真吗?不要错过机会，下一个千万富翁很可能就是您。</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!--<div id="line_02" class="separation"></div>-->
+                    <div class="list help">
+                        <div class="list-inner">
+                            <h2><img src="skins/images/footer03.png" alt=""></h2>
+                            <dl>
+                                <dt>颠覆性产品 SUBVERSIVE PRODUCTS</dt>
+                                <dd>执照许可是由菲律宾博彩监督委员会所核发和监管</dd>
+                            </dl>
+                            <dl>
+                                <dt>合作伙伴 PARTNERS</dt>
+                                <dd><img src="skins/images/footer04.png" alt=""></dd>
+                            </dl>
+                            <dl>
+                                <dt>服务帮助 USE HELP</dt>
+                                <dd><ul class="use-help-list">
+                                    <li style="width:60px;" class="pull-left"><a href="#">游戏介绍</a></li>
+                                    <li style="width:60px" class="pull-left"><a href="#">常见问题</a></li>
+                                    <li style="width:60px" class="pull-left"><a href="#">关于我们</a></li>
+                                    <li style="width:60px" class="pull-left"><a href="#">合作伙伴</a></li>
+                                </ul></dd>
+                                <style type="text/css">
+                                    .use-help-list a {
+                                        color: #be9744
+                                    }
+                                    .use-help-list a:hover {
+                                        color: #be9744
+                                    }
+                                </style>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <script type="text/javascript" src="skins/js/footer.js"></script>
+    </div>
+    <div id="footer-bottom">
+        <div class="wrap text-center">
+            <p>葡京娱乐场所提供的产品和服务，是由菲律宾政府卡格扬河经济特区First Cagayan leisure and Resort Corporation.授权和监管</p>
+            <p>我们将不余遗力的为您提供优质的服务和可靠的资金保障</p>
+            <p>Copyright © 葡京娱乐场 Reserved</p>
+        </div>
+    </div>
+</div>
+<!--浮動圖-->
+<style>
+    .float_r_ight {
+        display: none;
+        position: absolute;
+        right: 35px;
+        top: 15px;
+        padding-top: 121px;
+        width: 118px;
+        height: 242px;
+        background: url("skins/images/float_r_ight_bg.png") no-repeat right top;
+        z-index: 999;
+    }
+    .float_r_ight a {
+        display: block;
+        background-image: url("skins/images/float_r_ight.png");
+        background-repeat: no-repeat;
+    }
+    .float-service {
+        height: 83px;
+        background-position: 0px 0px;
+    }
+    .float-ie {
+        width: 97px;
+        height: 38px;
+        margin-top: 4px;
+        margin: 4px auto 0;
+        background-position: -11px -87px;
+    }
+
+    .float-ub {
+        width: 97px;
+        height: 37px;
+        margin: 4px auto 0;
+        background-position: -11px -128px;
+    }
+    .float-qq {
+        width: 97px;
+        height: 38px;
+        margin: 3px auto 0;
+        background-position: -11px -168px;
+    }
+    .right_close {
+        width: 20px;;
+        height: 15px;
+        margin: 5px auto 0;
+        background-position: -50px -211px;
+    }
+</style>
+<div id="float_r_ight" class="float_r_ight">
+    <a href="###" class="float-service"></a>
+    <a href="###" class="float-ie" target="_blank"></a>
+    <a href="###" class="float-ub" target="_blank"></a>
+    <a href="###" class="float-qq" target="_blank"></a>
+    <a id="right_close" href="###" class="right_close"></a>
+</div>
+
+<script type="text/javascript">
+    <!--
+    var float_box = document.getElementById("float_r_ight");
+
+    var winEvent = function () {
+        var iScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+        setTimeout(function () {
+            clearInterval(float_box.timer);
+            var iTop = parseInt((document.documentElement.clientHeight - float_box.offsetHeight)/2) + iScrollTop;
+
+            float_box.timer = setInterval(function () {
+                var iSpeed = (iTop - float_box.offsetTop) / 8;
+                iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+                float_box.offsetTop == iTop ? clearInterval(float_box.timer) : (float_box.style.top = float_box.offsetTop + iSpeed + "px");
+            }, 30);
+        }, 50);
+        float_box.style.display="block";
+    };
+    $(window).load(winEvent);
+    window.onresize = window.onscroll = winEvent;
+    $("#float_r_ight #right_close").click(function(){
+        $(float_box).remove();
+    });
+    //-->
+</script><!--浮動圖end-->
+</body>
+</html>

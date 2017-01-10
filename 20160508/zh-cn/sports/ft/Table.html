@@ -1,0 +1,659 @@
+
+<div id="showtableData">
+    <div id="bo_data">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="tmp">
+            <tbody>
+            <tr>
+                <td width="47">时间</td>
+                <td width="149">赛事</td>
+                <td width="39">独赢</td>
+                <td width="87">全场-让球</td>
+                <td width="87">全场-大小</td>
+                <td width="69">全场-单双</td>
+                <td width="44">独赢</td>
+                <td width="84">半场-让球</td>
+                <td width="86">半场-大小</td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+        *REPLACELEAGUE*
+    </div>
+</div>
+<div id=DataLeague>
+    <div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="b_leag" >
+            <tr>
+                <td width="20" align="center"><a href="javascript:void(0)" class="cen-img" id='Ecen' onClick="hide_sprts_dt('*LEID*',this)"></a></td>
+                <td width=""  style="cursor:pointer;" onClick="refresh_all();" class="leagcolo" title="*SETLEAGUE*">*SETLEAGUE*</td>
+                <td width="43" align="center" class="up2"> <input name="up2" type="button" value="刷新" id="up2" onClick="refresh_all();" onFocus="this.blur()" title="刷新"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id=DataTR>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mem2" id="r">
+        <tr>
+            <td rowspan="3" align="left">
+                <table  height="67px" border="0" cellspacing="0" cellpadding="0" class="b_mem">
+                    <tr>
+                        <td width="53" rowspan="3" align="center" class="time">*BETTIME*</td>
+                        <td width="131" class="mem_team" title='*SETMBTEAM*'>*BETSETMBTEAM*</td>
+                        <td width="40">*RATIO_MH*</td>
+                        <td width="45" class="mem_bet">*CON_RH*</td>
+                        <td width="40">*RATIO_RH*</td>
+                        <td width="60" class="mem_bet">*CON_OUH*</td>
+                        <td width="40" >*RATIO_OUH*</td>
+                        <td width="22" class="mem_bet">*SET_TE*</td>
+                        <td width="40" align="right">*RATIO_TE*</td>
+                    </tr>
+                    <tr>
+                        <td class="mem_team" title='**SETTGTEAM**'>*BETSETTGTEAM*</td>
+                        <td>*RATIO_MC*</td>
+                        <td class="mem_bet">*CON_RC*</td>
+                        <td>*RATIO_RC*</td>
+                        <td class="mem_bet">*CON_OUC*</td>
+                        <td align="left">*RATIO_OUC*</td>
+                        <td class="mem_bet">*SET_TO*</td>
+                        <td align="right">*RATIO_TO*</td>
+                    </tr>
+                    <tr>
+                        <td class="mem_team">和局*TV*</td>
+                        <td>*RATIO_MN*</td>
+                        <td colspan="6" class="mem_more"></td>
+                    </tr>
+                </table>
+            </td>
+            <td rowspan="3" align="right" class='b_mor'>
+                <table  height="67px" border="0" cellspacing="0" cellpadding="0" class="b_heh">
+                    <tr>
+                        <td width="42" align="right">*RATIO_HMH*</td>
+                        <td width="42" class="mem_bet">*CON_HRH*</td>
+                        <td width="40">*RATIO_HRH*</td>
+                        <td width="50" class="mem_bet">*CON_HOUH*</td>
+                        <td width="40" align="left">*RATIO_HOUH*</td>
+                    </tr>
+                    <tr>
+                        <td align="right">*RATIO_HMC*</td>
+                        <td class="mem_bet">*CON_HRC*</td>
+                        <td>*RATIO_HRC*</td>
+                        <td class="mem_bet">*CON_HOUC*</td>
+                        <td align="left">*RATIO_HOUC*</td>
+                    </tr>
+                    <tr>
+                        <td align="right">*RATIO_HMN*</td>
+                        <td colspan="4">&nbsp;</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td width="31" align="center" >*P3SHOW*</td>
+        </tr>
+        <tr>
+            <td align="center">&nbsp;</td>
+        </tr>
+        <tr>
+            <td align="center">&nbsp;</td>
+        </tr>
+    </table>
+
+</div>
+
+
+
+<div id="PDDataLeague">
+    <div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="b_leag">
+            <tr>
+                <td width="20" align="center"><a href="javascript:void(0)" class="cen-img" onclick="hide_sprts_dt('*LEID*',this)"></a></td>
+                <td class="leagcolo" style="cursor:pointer;" onClick="refresh_all();" title="*SETLEAGUE*">*SETLEAGUE*</td>
+
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="PDDataTR">
+    <table width="100%" border="0" cellpadding="0" cellspacing="1" class="pdmem" id="pd" bgcolor="#EBE6DC">
+        <tr class="temLR">
+            <td colspan="6">*SETMBTEAM*</td>
+            <td colspan="2">和局</td>
+            <td colspan="8">*SETTGTEAM*</td>
+        </tr>
+        <tr>
+            <td width="110" class="tdLR">1 - 0</td>
+            <td width="" class="tdLR">*RATIO_H1C0*</td>
+            <td width="110" class="cenLR">2 - 0</td>
+            <td width="" colspan="3" class="cenLR">*RATIO_H2C0*</td>
+            <td width="109" class="tdLR">0 - 0</td>
+            <td width="" class="tdLR">*RATIO_H0C0*</td>
+            <td width="110" class="cenLR">0 - 1</td>
+            <td width="" class="cenLR">*RATIO_H0C1*</td>
+            <td width="110" class="tdLR">0 - 2</td>
+            <td width="" colspan="5" class="tdLR">*RATIO_H0C2*</td>
+        </tr>
+        <tr>
+            <td class="tdLR">2 - 1</td>
+            <td class="tdLR">*RATIO_H2C1*</td>
+            <td class="cenLR">3 - 0</td>
+            <td colspan="3" class="cenLR">*RATIO_H3C0*</td>
+            <td class="tdLR">1 - 1</td>
+            <td class="tdLR">*RATIO_H1C1*</td>
+            <td class="cenLR">1 - 2</td>
+            <td class="cenLR">*RATIO_H1C2*</td>
+            <td class="tdLR">0 - 3</td>
+            <td colspan="5" class="tdLR">*RATIO_H0C3*</td>
+        </tr>
+        <tr>
+            <td class="tdLR">3 - 1</td>
+            <td class="tdLR">*RATIO_H3C1*</td>
+            <td class="cenLR">3 - 2</td>
+            <td colspan="3" class="cenLR">*RATIO_H3C2*</td>
+            <td class="tdLR">2 - 2</td>
+            <td class="tdLR">*RATIO_H2C2*</td>
+            <td class="cenLR">1 - 3</td>
+            <td class="cenLR">*RATIO_H1C3*</td>
+            <td class="tdLR">2 - 3</td>
+            <td colspan="5" class="tdLR">*RATIO_H2C3*</td>
+        </tr>
+        <tr>
+            <td class="tdLR">4 - 0</td>
+            <td class="tdLR">*RATIO_H4C0*</td>
+            <td class="cenLR"><span class="tdLR1">4 - 1</span></td>
+            <td colspan="3" class="cenLR">*RATIO_H4C1*</td>
+            <td class="tdLR">3 - 3</td>
+            <td class="tdLR">*RATIO_H3C3*</td>
+            <td class="cenLR">0 - 4</td>
+            <td class="cenLR">*RATIO_H0C4*</td>
+            <td class="tdLR">1 - 4</td>
+            <td colspan="5" class="tdLR">*RATIO_H1C4*</td>
+        </tr>
+        <tr>
+            <td class="tdLR"><span class="tdLR1">4 - 2</span></td>
+            <td class="tdLR">*RATIO_H4C2*</td>
+            <td class="cenLR"><span class="tdLR1">4 - 3</span></td>
+            <td colspan="3" class="cenLR">*RATIO_H4C3*</td>
+            <td class="tdLR">4 - 4</td>
+            <td class="tdLR">*RATIO_H4C4*</td>
+            <td class="cenLR">2 - 4</td>
+            <td class="cenLR">*RATIO_H2C4*</td>
+            <td class="tdLR">3 - 4</td>
+            <td colspan="5" class="tdLR">*RATIO_H3C4*</td>
+        </tr>
+        <tr>
+            <td  colspan="2" class="tdLR">*BETTIME*</td>
+            <td colspan="4" class="tdLR"></td>
+            <td class="tdLR">其它比分</td>
+            <td class="tdLR">*RATIO_OVH*</td>
+            <td colspan="2" class="tdLR">&nbsp;</td>
+            <td colspan="6" class="tdLR">&nbsp;</td>
+        </tr>
+    </table>
+</div>
+<!----------------------------------------------------------------------------->
+<div id="HPDDataLeague">
+    <div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="b_leag">
+            <tr>
+                <td width="20" align="center"><a href="javascript:void(0)" class="cen-img" onclick="hide_sprts_dt('*LEID*',this)"></a></td>
+                <td class="leagcolo"  style="cursor:pointer;" onClick="refresh_all();" title="*SETLEAGUE*">*SETLEAGUE*</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="HPDDataTR">
+    <table width="100%" border="0" cellpadding="0" cellspacing="1" class="pdmem" id="pd" bgcolor="#EBE6DC">
+        <tr class="temLR">
+            <td colspan="4">*SETMBTEAM*</td>
+            <td colspan="2">和局</td>
+            <td colspan="4">*SETTGTEAM*</td>
+        </tr>
+        <tr>
+            <td width="110" class="tdLR">1 - 0</td>
+            <td width="" class="tdLR">*RATIO_H1C0*</td>
+            <td width="110" class="cenLR">2 - 0</td>
+            <td width="" class="cenLR">*RATIO_H2C0*</td>
+            <td width="109" class="tdLR">0 - 0</td>
+            <td width="" class="tdLR">*RATIO_H0C0*</td>
+            <td width="110" class="cenLR">0 - 1</td>
+            <td width="" class="cenLR">*RATIO_H0C1*</td>
+            <td width="110" class="tdLR">0 - 2</td>
+            <td width="" class="tdLR">*RATIO_H0C2*</td>
+        </tr>
+        <tr>
+            <td class="tdLR">2 - 1</td>
+            <td class="tdLR">*RATIO_H2C1*</td>
+            <td class="cenLR">3 - 0</td>
+            <td class="cenLR">*RATIO_H3C0*</td>
+            <td class="tdLR">1 - 1</td>
+            <td class="tdLR">*RATIO_H1C1*</td>
+            <td class="cenLR">1 - 2</td>
+            <td class="cenLR">*RATIO_H1C2*</td>
+            <td class="tdLR">0 - 3</td>
+            <td class="tdLR">*RATIO_H0C3*</td>
+        </tr>
+        <tr>
+            <td class="tdLR">3 - 1</td>
+            <td class="tdLR">*RATIO_H3C1*</td>
+            <td class="cenLR">3 - 2</td>
+            <td class="cenLR">*RATIO_H3C2*</td>
+            <td class="tdLR">2 - 2</td>
+            <td class="tdLR">*RATIO_H2C2*</td>
+            <td class="cenLR">1 - 3</td>
+            <td class="cenLR">*RATIO_H1C3*</td>
+            <td class="tdLR">2 - 3</td>
+            <td class="tdLR">*RATIO_H2C3*</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="tdLR">&nbsp;</td>
+            <td colspan="2" class="tdLR">&nbsp;</td>
+            <td class="tdLR">3 - 3</td>
+            <td class="tdLR">*RATIO_H3C3*</td>
+            <td colspan="2" class="tdLR">&nbsp;</td>
+            <td colspan="2" class="tdLR">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="tdLR">*BETTIME*</td>
+            <td colspan="2" class="tdLR">&nbsp;</td>
+            <td class="tdLR">其它比分</td>
+            <td class="tdLR">*RATIO_OVH*</td>
+            <td colspan="2" class="tdLR">&nbsp;</td>
+            <td colspan="2" class="tdLR">&nbsp;</td>
+        </tr>
+    </table>
+</div>
+<!----------------------------------------------------------------------------->
+<div id="RPDDataLeague">
+    <div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="b_leag">
+            <tr>
+                <td width="20" align="center"><a href="javascript:void(0)" class="cen-img" onclick="hide_sprts_dt('*LEID*',this)"></a></td>
+                <td class="leagcolo" style="cursor:pointer;" onClick="refresh_all();" title="*SETLEAGUE*">*SETLEAGUE*</td>
+                <td width="43" align="center" class="up2"> <input name="up2" type="button" value="刷新" id="up2" onClick="refresh_all();" onFocus="this.blur()" title="刷新"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="RPDDataTR">
+    <table width="100%" border="0" cellpadding="0" cellspacing="1" class="pdmem" id="pd" bgcolor="#EBE6DC">
+        <tr class="temLR">
+            <td colspan="6">*SETMBTEAM*</td>
+            <td colspan="2">和局</td>
+            <td colspan="8">*SETTGTEAM*</td>
+        </tr>
+        <tr>
+            <td width="105" class="rtdLR">1 - 0</td>
+            <td width="40" class="rtdLR">*RATIO_RH1C0*</td>
+            <td width="105" class="rcenLR">2 - 0</td>
+            <td width="40" colspan="3" class="rcenLR">*RATIO_RH2C0*</td>
+            <td width="105" class="rtdLR">0 - 0</td>
+            <td width="40" class="rtdLR">*RATIO_RH0C0*</td>
+            <td width="105" class="rcenLR">0 - 1</td>
+            <td width="40" class="rcenLR">*RATIO_RH0C1*</td>
+            <td width="104" class="rtdLR">0 - 2</td>
+            <td width="40" colspan="5" class="rtdLR">*RATIO_RH0C2*</td>
+        </tr>
+        <tr>
+            <td class="rtdLR">2 - 1</td>
+            <td class="rtdLR">*RATIO_RH2C1*</td>
+            <td class="rcenLR">3 - 0</td>
+            <td colspan="3" class="rcenLR">*RATIO_RH3C0*</td>
+            <td class="rtdLR">1 - 1</td>
+            <td class="rtdLR">*RATIO_RH1C1*</td>
+            <td class="rcenLR">1 - 2</td>
+            <td class="rcenLR">*RATIO_RH1C2*</td>
+            <td class="rtdLR">0 - 3</td>
+            <td colspan="5" class="rtdLR">*RATIO_RH0C3*</td>
+        </tr>
+        <tr>
+            <td class="rtdLR">3 - 1</td>
+            <td class="rtdLR">*RATIO_RH3C1*</td>
+            <td class="rcenLR">3 - 2</td>
+            <td colspan="3" class="rcenLR">*RATIO_RH3C2*</td>
+            <td class="rtdLR">2 - 2</td>
+            <td class="rtdLR">*RATIO_RH2C2*</td>
+            <td class="rcenLR">1 - 3</td>
+            <td class="rcenLR">*RATIO_RH1C3*</td>
+            <td class="rtdLR">2 - 3</td>
+            <td colspan="5" class="rtdLR">*RATIO_RH2C3*</td>
+        </tr>
+        <tr>
+            <td class="rtdLR">4 - 0</td>
+            <td class="rtdLR">*RATIO_RH4C0*</td>
+            <td class="rcenLR">4 - 1</td>
+            <td colspan="3" class="cenLR">*RATIO_RH4C1*</td>
+            <td class="rtdLR">3 - 3</td>
+            <td class="rtdLR">*RATIO_RH3C3*</td>
+            <td class="rcenLR">0 - 4</td>
+            <td class="rcenLR">*RATIO_RH0C4*</td>
+            <td class="rtdLR">1 - 4</td>
+            <td colspan="5" class="rtdLR">*RATIO_RH1C4*</td>
+        </tr>
+        <tr>
+            <td class="rtdLR">4 - 2</td>
+            <td class="rtdLR">*RATIO_RH4C2*</td>
+            <td class="rcenLR">4 - 3</td>
+            <td colspan="3" class="rcenLR">*RATIO_RH4C3*</td>
+            <td class="rtdLR">4 - 4</td>
+            <td class="rtdLR">*RATIO_RH4C4*</td>
+            <td class="rcenLR">2 - 4</td>
+            <td class="rcenLR">*RATIO_RH2C4*</td>
+            <td class="rtdLR">3 - 4</td>
+            <td colspan="5" class="tdLR">*RATIO_RH3C4*</td>
+        </tr>
+        <tr>
+            <td  colspan="2" class="rtdLR">*BETTIME*</td>
+            <td colspan="4" class="rtdLR"></td>
+            <td class="rtdLR">其它比分</td>
+            <td class="rtdLR">*RATIO_ROVH*</td>
+            <td colspan="2" class="rtdLR">&nbsp;</td>
+            <td colspan="6" class="rtdLR">&nbsp;</td>
+        </tr>
+    </table>
+</div>
+<!----------------------------------------------------------------------------->
+<div id="HRPDDataLeague">
+    <div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="b_leag">
+            <tr>
+                <td width="20" align="center"><a href="javascript:void(0)" class="cen-img" onclick="hide_sprts_dt('*LEID*',this)"></a></td>
+                <td class="leagcolo"  style="cursor:pointer;" onClick="refresh_all();" title="*SETLEAGUE*">*SETLEAGUE*</td>
+                <td width="43" align="center" class="up2"> <input name="up2" type="button" value="刷新" id="up2" onClick="refresh_all();" onFocus="this.blur()" title="刷新"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="HRPDDataTR">
+    <table width="100%" border="0" cellpadding="0" cellspacing="1" class="pdmem" id="pd" bgcolor="#EBE6DC">
+        <tr class="temLR">
+            <td colspan="4">*SETMBTEAM*</td>
+            <td colspan="2">和局</td>
+            <td colspan="4">*SETTGTEAM*</td>
+        </tr>
+        <tr>
+            <td width="105" class="rtdLR">1 - 0</td>
+            <td width="40" class="rtdLR">*RATIO_RH1C0*</td>
+            <td width="105" class="rcenLR">2 - 0</td>
+            <td width="40" class="rcenLR">*RATIO_RH2C0*</td>
+            <td width="105" class="rtdLR">0 - 0</td>
+            <td width="40" class="rtdLR">*RATIO_RH0C0*</td>
+            <td width="104" class="rcenLR">0 - 1</td>
+            <td width="40" class="rcenLR">*RATIO_RH0C1*</td>
+            <td width="105" class="rtdLR">0 - 2</td>
+            <td width="40" class="rtdLR">*RATIO_RH0C2*</td>
+        </tr>
+        <tr>
+            <td class="rtdLR">2 - 1</td>
+            <td class="rtdLR">*RATIO_RH2C1*</td>
+            <td class="rcenLR">3 - 0</td>
+            <td class="rcenLR">*RATIO_RH3C0*</td>
+            <td class="rtdLR">1 - 1</td>
+            <td class="rtdLR">*RATIO_RH1C1*</td>
+            <td class="rcenLR">1 - 2</td>
+            <td class="rcenLR">*RATIO_RH1C2*</td>
+            <td class="rtdLR">0 - 3</td>
+            <td class="rtdLR">*RATIO_RH0C3*</td>
+        </tr>
+        <tr>
+            <td class="rtdLR">3 - 1</td>
+            <td class="rtdLR">*RATIO_RH3C1*</td>
+            <td class="rcenLR">3 - 2</td>
+            <td class="rcenLR">*RATIO_RH3C2*</td>
+            <td class="rtdLR">2 - 2</td>
+            <td class="rtdLR">*RATIO_RH2C2*</td>
+            <td class="rcenLR">1 - 3</td>
+            <td class="rcenLR">*RATIO_RH1C3*</td>
+            <td class="rtdLR">2 - 3</td>
+            <td class="rtdLR">*RATIO_RH2C3*</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="rtdLR">&nbsp;</td>
+            <td colspan="2" class="rtdLR">&nbsp;</td>
+            <td class="rtdLR">3 - 3</td>
+            <td class="rtdLR">*RATIO_RH3C3*</td>
+            <td colspan="2" class="rtdLR">&nbsp;</td>
+            <td colspan="2" class="rtdLR">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="rtdLR">*BETTIME*</td>
+            <td colspan="2" class="rtdLR">&nbsp;</td>
+            <td class="rtdLR">其它比分</td>
+            <td class="rtdLR">*RATIO_ROVH*</td>
+            <td colspan="2" class="rtdLR">&nbsp;</td>
+            <td colspan="2" class="rtdLR">&nbsp;</td>
+        </tr>
+    </table>
+</div>
+<!----------------------------------------------------------------------------->
+<div id="TDataLeague">
+    <div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="b_leag">
+            <tr>
+                <td width="20" align="center"><a href="javascript:void(0)" class="cen-img" onclick="hide_sprts_dt('*LEID*',this)"></a></td>
+                <td class="leagcolo" style="cursor:pointer;" onClick="refresh_all();" title="*SETLEAGUE*">*SETLEAGUE*</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="TDataTR">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mem2" id="t">
+        <tr>
+            <td width="50" rowspan="2" class="time">*BETTIME*</td>
+            <td rowspan="2" align="left"><b>*SETMBTEAM*&nbsp;<font color="#FF0000">VS</font>&nbsp;*SETTGTEAM*</b></td>
+            <td width="100px" align="center">0~1</td>
+            <td width="100px" align="center">2~3</td>
+            <td width="100px" align="center">4~6</td>
+            <td width="100px" align="center">7UP</td>
+        </tr>
+        <tr>
+            <td align="center">*RATIO_0_1*</td>
+            <td align="center">*RATIO_2_3*</td>
+            <td align="center">*RATIO_4_6*</td>
+            <td align="center">*RATIO_7UP*</td>
+        </tr>
+    </table>
+</div>
+<!----------------------------------------------------------------------------->
+<div id="RTDataLeague">
+    <div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="b_leag">
+            <tr>
+                <td width="20" align="center"><a href="javascript:void(0)" class="cen-img" onclick="hide_sprts_dt('*LEID*',this)"></a></td>
+                <td class="leagcolo" style="cursor:pointer;" onClick="refresh_all();" title="*SETLEAGUE*">*SETLEAGUE*</td>
+                <td width="43" align="center" class="up2"> <input name="up2" type="button" value="刷新" id="up2" onClick="refresh_all();" onFocus="this.blur()" title="刷新"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="RTDataTR">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="remem" id="t">
+        <tr>
+            <td width="50" rowspan="2" class="time">*BETTIME*</td>
+            <td rowspan="2" align="left"><b>*SETMBTEAM*&nbsp;<font color="#FF0000">VS</font>&nbsp;*SETTGTEAM*</b></td>
+            <td width="100px" align="center">0~1</td>
+            <td width="100px" align="center">2~3</td>
+            <td width="100px" align="center">4~6</td>
+            <td width="100px" align="center">7UP</td>
+        </tr>
+        <tr>
+            <td height="20" align="center">*RATIO_R0_1*</td>
+            <td align="center">*RATIO_R2_3*</td>
+            <td align="center">*RATIO_R4_6*</td>
+            <td align="center">*RATIO_R7UP*</td>
+        </tr>
+    </table>
+</div>
+<!----------------------------------------------------------------------------->
+<div id="FataLeague">
+    <div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="b_leag">
+            <tr>
+                <td width="20" align="center"><a href="javascript:void(0)" class="cen-img" onclick="hide_sprts_dt('*LEID*',this)"></a></td>
+                <td class="leagcolo" style="cursor:pointer;" onClick="refresh_all();" title="*SETLEAGUE*">*SETLEAGUE*</td>
+                <td width="43" align="center" class="up2"> <input name="up2" type="button" value="刷新" id="up2" onClick="refresh_all();" onFocus="this.blur()" title="刷新"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="FataTR">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mem2" id="f">
+        <tr>
+            <td width="50" rowspan="2" class="time">*BETTIME*</td>
+            <td rowspan="2" align="left"><b>*SETMBTEAM*&nbsp;<font color="#FF0000">VS</font>&nbsp;*SETTGTEAM*</b></td>
+            <td width="48px" align="center">主主</td>
+            <td width="48px" align="center">主和</td>
+            <td width="48px" align="center">主客</td>
+            <td width="48px" align="center">和主</td>
+            <td width="48px" align="center">和和</td>
+            <td width="48px" align="center">和客</td>
+            <td width="48px" align="center">客主</td>
+            <td width="48px" align="center">客和</td>
+            <td width="48px" align="center">客客</td>
+        </tr>
+        <tr>
+            <td align="center">*RATIO_MBMB*</td>
+            <td align="center">*RATIO_MBFT*</td>
+            <td align="center">*RATIO_MBTG*</td>
+            <td align="center">*RATIO_FTMB*</td>
+            <td align="center">*RATIO_FTFT*</td>
+            <td align="center">*RATIO_FTTG*</td>
+            <td align="center">*RATIO_TGMB*</td>
+            <td align="center">*RATIO_TGFT*</td>
+            <td align="center">*RATIO_TGTG*</td>
+        </tr>
+    </table>
+</div>
+<!----------------------------------------------------------------------------->
+<div id="RFataLeague">
+    <div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="b_leag">
+            <tr>
+                <td width="20" align="center"><a href="javascript:void(0)" class="cen-img" onclick="hide_sprts_dt('*LEID*',this)"></a></td>
+                <td class="leagcolo" style="cursor:pointer;" onClick="refresh_all();" title="*SETLEAGUE*">*SETLEAGUE*</td>
+                <td width="43" align="center" class="up2"> <input name="up2" type="button" value="刷新" id="up2" onClick="refresh_all();" onFocus="this.blur()" title="刷新"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="RFataTR">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="remem" id="f">
+        <tr>
+            <td width="50" rowspan="2" class="time">*BETTIME*</td>
+            <td rowspan="2" align="left"><b>*SETMBTEAM*&nbsp;<font color="#FF0000">VS</font>&nbsp;*SETTGTEAM*</b></td>
+            <td width="48px" align="center">主主</td>
+            <td width="48px" align="center">主和</td>
+            <td width="48px" align="center">主客</td>
+            <td width="48px" align="center">和主</td>
+            <td width="48px" align="center">和和</td>
+            <td width="48px" align="center">和客</td>
+            <td width="48px" align="center">客主</td>
+            <td width="48px" align="center">客和</td>
+            <td width="48px" align="center">客客</td>
+        </tr>
+        <tr>
+            <td height="20" align="center">*RATIO_RMBMB*</td>
+            <td align="center">*RATIO_RMBFT*</td>
+            <td align="center">*RATIO_RMBTG*</td>
+            <td align="center">*RATIO_RFTMB*</td>
+            <td align="center">*RATIO_RFTFT*</td>
+            <td align="center">*RATIO_RFTTG*</td>
+            <td align="center">*RATIO_RTGMB*</td>
+            <td align="center">*RATIO_RTGFT*</td>
+            <td align="center">*RATIO_RTGTG*</td>
+        </tr>
+    </table>
+</div>
+<div id="REshowtableData">
+    <div id="bo_data">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="tmp">
+            <tbody>
+            <tr>
+                <td width="47">时间</td>
+                <td width="">赛事</td>
+                <td width="40">独赢</td>
+                <td width="85">全场-让球</td>
+                <td width="100">全场-大小</td>
+                <td width="62">全场-单双</td>
+                <td width="42">独赢</td>
+                <td width="62">半场-让球</td>
+                <td width="90">半场-大小</td>
+                <td width="55"></td>
+            </tr>
+            </tbody>
+        </table>
+        *REPLACELEAGUE*
+    </div>
+</div>
+<div id=REDataLeague>
+    <div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="b_leag" >
+            <tr>
+                <td width="20" align="center"><a href="javascript:void(0)" class="cen-img" id='Ecen' onClick="hide_sprts_dt('*LEID*',this)"></a></td>
+                <td width="" class="leagcolo" style="cursor:pointer;" onClick="refresh_all();" title="*SETLEAGUE*">*SETLEAGUE*</td>
+                <td width="43" align="center" class="up2"> <input name="up2" type="button" value="刷新" id="up2" onClick="refresh_all();" onFocus="this.blur()" title="刷新"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id=REDataTR>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="remem" id="re">
+        <tr>
+            <td align="left">
+                <table  height="67px" border="0" cellspacing="0" cellpadding="0" class="b_mem">
+                    <tr>
+                        <td width="53" rowspan="3" align="center" class="*RTIMECLASS*">*BETTIME*</td>
+                        <td width="131" class="mem_team" title="*SETMBTEAM*">*BETSETMBTEAM*<span class="*HRED_CLA*">*MBRED*</span></td>
+                        <!--<td width="10" align="center" class="*HRED_CLA*">*MBRED*</td>-->
+                        <td width="40" >*RATIO_RMH*</td>
+                        <td width="45" class="mem_bet">*CON_REH*</td>
+                        <td width="40">*RATIO_REH*</td>
+                        <td width="60" class="mem_bet">*CON_ROUH*</td>
+                        <td width="40" >*RATIO_ROUH*</td>
+                        <td width="22" class="mem_bet">*SET_RTE*</td>
+                        <td width="40" align="right">*RATIO_RTE*</td>
+                    </tr>
+                    <tr>
+                        <td class="mem_team" title="*SETTGTEAM*">*BETSETTGTEAM*<span class="*CRED_CLA*">*TGRED*</span></td>
+                        <!--<td class="*CRED_CLA*">*TGRED*&nbsp;&nbsp;</td>-->
+                        <td>*RATIO_RMC*</td>
+                        <td class="mem_bet">*CON_REC*</td>
+                        <td>*RATIO_REC*</td>
+                        <td class="mem_bet">*CON_ROUC*</td>
+                        <td align="left">*RATIO_ROUC*</td>
+                        <td class="mem_bet">*SET_RTO*</td>
+                        <td align="right">*RATIO_RTO*</td>
+                    </tr>
+                    <tr>
+                        <td class="mem_team">和局*TV*</td>
+                        <!--<td></td>-->
+                        <td>*RATIO_RMN*</td>
+                        <td colspan="6" class="mem_more"></td>
+                    </tr>
+                </table>
+            </td>
+            <td align="right" class='b_mor'>
+                <table  height="67px" border="0" cellspacing="0" cellpadding="0" class="b_heh">
+                    <tr>
+                        <td width="42" align="right">*RATIO_HRMH*</td>
+                        <td width="42" class="mem_bet">*CON_HREH*</td>
+                        <td width="40">*RATIO_HREH*</td>
+                        <td width="50" class="mem_bet">*CON_HROUH*</td>
+                        <td width="40" align="left">*RATIO_HROUH*</td>
+                    </tr>
+                    <tr>
+                        <td align="right">*RATIO_HRMC*</td>
+                        <td class="mem_bet">*CON_HREC*</td>
+                        <td>*RATIO_HREC*</td>
+                        <td class="mem_bet">*CON_HROUC*</td>
+                        <td align="left">*RATIO_HROUC*</td>
+                    </tr>
+                    <tr>
+                        <td align="right">*RATIO_HRMN*</td>
+                        <td colspan="4">&nbsp;</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td width="31" align="center">*P3SHOW*</td>
+        </tr>
+    </table>
+</div>

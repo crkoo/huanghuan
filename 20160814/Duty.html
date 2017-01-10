@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="renderer" content="webkit">
+    <title>博彩责任</title>
+    <link type="text/css" rel="stylesheet" href="style/reset.css" />
+    <link type="text/css" rel="stylesheet" href="style/style.css" />
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="js/public.js"></script>
+</head>
+<body>
+<input type="hidden" id="userid" name="userid" value="">
+<div class="header">
+    <div class="head">
+        <div class="w1000">
+            <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="420" height="100" class="logo">
+                <param name="movie" value="images/logo.swf">
+                <param name="quality" value="high">
+                <param name="wmode" value="transparent">
+                <param name="swfversion" value="6.0.65.0">
+                <!--[if !IE]>-->
+                <object type="application/x-shockwave-flash" data="images/logo.swf" width="420" height="100">
+                    <!--<![endif]-->
+                    <param name="quality" value="high">
+                    <param name="wmode" value="transparent">
+                    <param name="swfversion" value="6.0.65.0">
+                    <!--[if !IE]>-->
+                </object>
+                <!--<![endif]-->
+            </object>
+            <div class="logor"><p>官网直营 大额无忧</p><p class="p_border">单日提款<span>1000</span>万元</p></div>
+            <div class="headright">
+                <div class="tools"><a href="javascript:void(0)" onclick="bookMarksite('http://' + window.location.hostname, document.title);">点击收藏</a> | <a href="check.html" target="_blank">线路检测</a> <a class="flag" href="javascript:void(0)"><img src="images/aomen.gif" /></a> <a class="flag" href="javascript:void(0)"><img src="images/china.gif" /></a> <a class="flag" href="javascript:void(0)"><img src="images/usa.gif" /></a></div>
+                <div class="login">
+                    <form name="LoginForm" id="LoginForm" action="login" method="post" onsubmit=" return denglu(); " style="margin:0" autocomplete="off">
+                        <input type="text"name="username" id="username" tabindex="1" maxlength="20" value="帐号" onfocus="if (this.value == this.defaultValue) {this.value = ''}" onblur="if (this.value == '') {this.value = this.defaultValue}">
+                        <input type="text" name="userpassword" id="userpassword" tabindex="2" maxlength="20" value="密码" onfocus="if (this.value == this.defaultValue) {this.value = '';this.type='password';};" onblur="if (this.value == '') {this.value = this.defaultValue;this.type='text';}">
+                        <div style="position: relative; float:left;"><input type="text" name="code" id="code" tabindex="3" maxlength="4" value="验证码" onfocus="if (this.value == this.defaultValue) { this.value = '' }; change_zc_yzm('checkNum_img');" onblur=" if (this.value == '') { this.value = this.defaultValue }">
+                            <img border="0" onclick="change_zc_yzm('checkNum_img'); " id="checkNum_img" name="checkNum_img" style="background-color:burlywood;" class="yzmimg"></div>
+                        <input type="submit" value="登陆" class="btn sub"><input type="button" value="注册" onclick="javascript:window.location.href = 'Register.html';" class="btn reset">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="w1000">
+            <ul>
+                <li class="on"><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Index.html';"><span class="ico01"></span>网站首页</a></li>
+                <li id="menu02" style="position:relative;"><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Sport.html';"><span class="ico02"></span>体育赛事</a></li>
+                <li id="menu03"><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Live.html';"><span class="ico03"></span>真人娱乐</a></li>
+                <li id="menu04" style="position:relative;"><a href="javascript:void(0)" onclick="javascript:window.location.href = 'SlotGame.html';" id="dzyytab"><span class="ico04"></span>电子游艺</a></li>
+                <li id="menu05"><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Lottery.html';"><span class="ico05"></span>彩票游戏</a></li>
+                <li style="position:relative;"><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Activity.html';" id="yhhdtab"><span class="ico06"></span>优惠活动</a></li>
+                <li><a href="/wap" target="_blank"><span class="ico07"></span>手机投注</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Cooperation.html';"><span class="ico08"></span>代理加盟</a></li>
+                <li><a href="javascript:void(0)" onclick="window.open('#online', '在线客服' , 'width=670,height=580,top=0,left=0,status=no,toolbar=no,scrollbars=yes,resizable=no,personalbar=no')"><span class="ico09"></span>在线客服</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="pagesbanner" style="background:url(images/bannerabout.jpg) top center no-repeat;">
+    <div class="w1000">
+        <div class="gonggao">
+            <span>最新资讯：</span>
+            <marquee id="msgNews" scrollamount="3" scrolldelay="80" direction="left" onmouseover="this.stop();" onmouseout="this.start();" style="height:34px;">尊敬的会员您好！天天返水！美东时间2016年8月13号返水额度已成功派发！祝您游戏愉快，好运连连~  【紧急通知】:美高梅娱乐城入款账号银行【工商 周晓龙】【工商 孙然广】【建设 马离京】【微信 vcs11com】【农业 宋秋生】【工商 康梁】【支付宝13166432651】【工商 吴斌】已停用，请广大玩家务必在入款时进入公司网站点击银行卡转账提取最新的银行资料或咨询在线客服索取，如存入废弃账号，公司概不负责，谢谢合作！  微信扫一扫即可快速入款，微信支付全新升级，秒到账，点击线上存款选择在线支付——选择微信支付——扫一扫支付 无需等待轻松一扫即可自动入款自动上分。  ★尊敬的会员您好！我们公司目前不支持支付宝、微信进行取款，请您务必绑定银行账号进行取款，感谢您的配合！  ★尊敬的会员您好，由于近期有不少不法分子仿照我们公司的微信支付账号创建了微信公众号，为了避免客户存款到公众账号造成财产损失，请您直接扫描与我们客服对话窗口的微信二维码【微信号：vcs11com】添加好友，然后使用微信转账，谢谢&nbsp;<br/>  </marquee>
+        </div>
+    </div>
+</div>
+
+<div class="pages">
+    <div class="about w1000">
+        <div class="aboutleft">
+            <div class="welcome"></div>
+            <ul>
+                <li class="on"><a href="javascript:void(0)" onclick="javascript:window.location.href = 'About.html';">关于我们</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Contact.html';">联系我们</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Desposit.html';">存款帮助</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Teller.html';">取款帮助</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Privacy.html';">隐私政策</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Duty.html';">博彩责任</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Cooperation.html';">合作伙伴</a></li>
+            </ul>
+            <div class="aboutleftbottom"></div>
+        </div>
+        <div class="aboutright">
+
+            <script>
+                $(function () {
+                    $(".aboutleft ul li").removeClass("on");
+                    $(".aboutleft ul li:nth-child(6)").addClass("on");
+                })
+            </script>
+            <div class="content">
+                <p>负责博彩 — 我们提倡有节制的博彩投注</p>
+                <p> 美高梅娱乐场 支持节制性的博彩，并提倡广大玩家对病态赌博的心理有一个基础认识，并做好预防，理解和治疗等相关知识的了解。              美高梅娱乐场 "负责博彩"政策清楚表明我公司对试图减小和降低病态赌博心理所带来负面的影响并积极推扩"负责博彩"的相关承诺。 </p>
+                <p> 我们相信我们有责任去确保每位玩家都能在本公司网站上享受到娱乐博彩投注所带来的愉悦体验和经历，              但同时亦能警觉到病态赌博心态可能会对玩家和社会的经济上造成一定的危害，因此我们建议您参考以下的指引： </p>
+                <ol>
+                    <li>在每次开始赌博投注前设定好您充值存款，下注金额，甚至是亏损的限额。您可以自己在您的帐户内或联系我们的客服去设定您的限额。</li>
+                    <li>在每次开始赌博投注前限定您该次赌博娱乐的时间并严格遵守。</li>
+                    <li>千万不要让赌博影响您的社会日常生活。</li>
+                    <li>如您感到神智不清或正在受到酒精或其他物质的影响，切勿进行赌博投注。</li>
+                    <li>千万不要将赌博作为一种收入的来源或偿还债务的途径。</li>
+                </ol>
+                <h3>博彩心态测试</h3>
+                <p>如您认为自己可能有沉迷赌博投注的问题，可以根据以下的问题对自己做一个判断：</p>
+                <ol>
+                    <li>您是否曾因赌博投注而失学或失业？</li>
+                    <li>您是否曾通过赌博投注而忘却烦恼和不愉快？</li>
+                    <li>您是否曾在输钱时，觉得失落和绝望并想尽快再次下注？</li>
+                    <li>您是否往往赌博投注直至到最后的一分钱也输掉，即使是回家的车费？</li>
+                    <li>您是否曾为了掩盖因赌博投注所损失的金钱和时间而撒谎？</li>
+                    <li>您是否曾被人批评您的赌博投注行为？</li>
+                    <li>您是否曾撒谎，偷窃或借钱来下注或支付赌博投注所欠下的债务？</li>
+                    <li>您是否不愿意在赌博投注之外花费任何的开销？</li>
+                    <li>您是否由于赌博投注而失去对跟亲人或朋友联络的兴趣？</li>
+                    <li>您是否在输钱后觉得必须要尽快返本？</li>
+                    <li>您是否曾由于沮丧失落而赌博投注？</li>
+                    <li>您是否曾觉得沮丧，甚至因为您的赌博投注而有自杀的念头？</li>
+                </ol>
+                <p>您的答案如若 "是" 的越多，有沉迷赌博娱乐问题的机会越高 ，那您便需要尽早寻求以下几种的援助方法。</p>
+                <h3>自我禁止赌博</h3>
+                <p> 大多数的客户都能享受博彩所带来的激情和乐趣，只有极少数人过度沉迷赌博游戏投注，此类通常被视为问题赌徒。              对于那些希望能控制自己沉迷赌博游戏的客户，美高梅娱乐场提供了一种自我禁止赌博的方式，在客户的要求下，关闭其帐户最少1个月。              在该禁赌期间 ，帐户不能重开，如客户想在禁赌期完满后重开帐户，那必须跟我们的客服联络。              如欲参考有关此设施的资料，请联络我们的客户服务部。 </p>
+                <h3>限制自我赌博意愿</h3>
+                <p> 美高梅娱乐场 提供各种不同的限制自我赌博意愿的设施给用户，包括提供充值存款额度，投注额度和投注次数的限制等，使用户能限制自已每天，每周或每月内的充值存款或投注额度。              上限可以随时被减低并立即生效，但如欲增加的话 ，那便会在申请的7天后才能生效 </p>
+                <h3>限制未成年人进入赌博投注网站</h3>
+                <p>
+                    美高梅娱乐场 建议及鼓励客户防止未成年人进入本网站。 ICRA（互联网内容评级委员会）是家庭网上安全协会组织的成员之一，并提供有关互联网安全的一般资讯和意见。您可以进入其网站www.fosi.org去查询更详细的信息。<br>
+                    另外，我们还建议您安装过滤功能的相关软件。该软件能够帮助您限制未成年人上网。您可以进入www.saferinternet.org去查询关于这方面  更多信息。 某些过滤软件例如在www.netnanny.com上的过滤软体亦能提供进一步的过滤保护。
+                </p>
+                <h3>限制未成年人赌博游艺</h3>
+                <p>
+                    美高梅娱乐场 坚决不允许年未满 18岁的未成年人士在本网站上开设账户或进行赌博投注。              美高梅娱乐场 对此责任相当严谨以及重视。美高梅娱乐场 保留要求用户提供年龄证明和检查的相关权利，以核实所提供的资料。              用户的账号有可能会被暂停而帐户里的资金亦会暂时性地被冻结扣押，直至用户提供有效的年龄证明或其他相关文件。不同的国家对网上赌博游戏的合法年龄有所不同，如有疑问，我们建议您所在当地作进一步的查询和确认。<br>
+                    为了避免非法赌博投注，我们可能会使用第三方去协助我们调查和核实您是否18岁或以上。同时，我们希望你能确保您的账户号码，帐户名称及密码保密以防止资料泄漏从而被滥用。<br>
+                    请注意，任何人士未满 18岁而被发现使用本网站的话，我们将会把帐户里所有的奖金全部没收，并有可能向警方报案。
+                </p>
+                <h3>寻求协助</h3>
+                <p>以下机构均能对病态赌博心理提供专业的援助：</p>
+                <ol>
+                    <li>戒赌辅助热线：+44 (0) 845 6000 133</li>
+                    <li>
+                        Gamble Aware<br>
+                        网站： http://www.gambleaware.co.uk
+                    </li>
+                    <li>
+                        GamCare<br>
+                        网站：http://www.gamcare.org.uk
+                    </li>
+                </ol>
+                <p>如有任何有关"负责博彩"的问题，请直接联系我们的客户服务部。</p>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="footer">
+    <div class="w1000">
+        <div class="b1">
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'About.html';">关于我们</a>
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'Contact.html';">联系我们</a>
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'Cooperation.html';">代理加盟</a>
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'Desposit.html';">存款帮助</a>
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'Teller.html';">取款帮助</a>
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'Privacy.html';">隐私政策</a>
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'Generalq.html';">新手操作</a>
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'Activity.html';">优惠活动</a>
+            <a href="check.html" target="_blank">线路检测</a>
+        </div>
+        <div class="b2">
+            <img src="images/b2img.jpg">
+        </div>
+        <div class="b3">
+            <ul>
+                <li><div class="ico qq"></div>QQ客服：<span>213678</span></li>
+                <li><div class="ico qq"></div>QQ客服：<span>491414</span></li>
+                <li><div class="ico email"></div>邮箱：<span>vcsvip88@gmail.com</span></li>
+            </ul>
+        </div>
+        <div class="b4">
+            <img src="images/b4img.png">
+        </div>
+    </div>
+</div>
+
+<!--浮動圖-->
+<div id="kf-online" class="kf-online clearfix">
+    <div class="float-left float_contact"><img src="images/float_left.png" /></div>
+    <div class="float-right float_icon">
+        <a href="#online" class="messenger"></a>
+        <a href="http://www.hlf.pw/" class="oldsite"></a>
+        <a href="###" class="qq">QQ:53255888</a>
+        <a href="###" class="weixin"></a>
+        <a href="javascript:;" class="qrcode"><img src="images/qr_code.jpg" /></a>
+        <a href="http://www.hlf.vip/" class="guidesite"></a>
+        <a href="javascript:;" class="site2">WWW.HLF.VIP</a>
+    </div>
+</div>
+<script>
+    var float_box = document.getElementById("kf-online");
+    var winEvent = function () {
+        var iScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        setTimeout(function () {
+            clearInterval(float_box.timer);
+            var iTop = parseInt((document.documentElement.clientHeight - float_box.offsetHeight)/2) + iScrollTop;
+
+            float_box.timer = setInterval(function () {
+                var iSpeed = (iTop - float_box.offsetTop) / 8;
+                iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+                float_box.offsetTop == iTop ? clearInterval(float_box.timer) : (float_box.style.top = float_box.offsetTop + iSpeed + "px");
+            }, 30);
+        }, 50);
+        float_box.style.display="block";
+    };
+    $(window).load(winEvent);
+    window.onresize = window.onscroll = winEvent;
+    $("#kf-online .float_contact").click(function(){
+        if ($("#kf-online .float_icon").is(':hidden')){
+            $(".kf-online").css('width', '220px');
+            $(".kf-online .float_icon").show();
+        }else{
+            $(".kf-online").css('width', '66px');
+            $(".kf-online .float_icon").hide();
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,880 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>BLB体育 </title>
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+    <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="/Scripts/jquery-1.9.1.min.js"></script>
+    <style>
+        a:link { text-decoration: none; }
+
+        .header-logo { padding: 3px; }
+
+        .width30 { width: 30px; }
+
+        .register { padding-top: 12px; }
+
+        .register a { font-weight: bold; padding-right: 8px; padding-top: 5px; }
+        .headerMain { padding-top: 3px; padding-right: 10px; min-width:50%;}
+        .headerdiv a { font-weight: bold; }
+        .footercontent { padding-top: 12px; padding-bottom: 10px; font-weight: bold; background: #92B3DD; }
+
+        .fontsize { font-size: 25px; padding: 2px 2px 2px 10px; }
+        .linecentermodel { margin: auto; position: absolute; top: 0; left: 0; bottom: 0; right: 0; }
+    </style>
+</head>
+<body>
+<div id="header-top" class="bg-info header-logo">
+    <div class="pull-left">
+        <a href="/">
+            <img width="100" height="40" class="img-responsive" src="/IMG/Main/logo.png" />
+        </a>
+    </div>
+    <div class="pull-right headerMain">
+        <div class="headerdiv">
+            <a class="center-block pull-right" href="javascript:void(0)">账号:cool123 &nbsp;余额：<span id="IndexCredit" style="color: red"></span></a>
+
+            <div class="clearfix"></div>
+        </div>
+        <div class="headerdiv pull-right" style="margin-top: 4px;">
+            <a class="" href="/Main/UserCenter">会员中心</a>&nbsp;&nbsp;
+            <a class="" href="javascript:logoutUser()">退出</a>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <div style="clear: both"></div>
+</div>
+<div id="abc_form1">
+    <style>
+        #header-top { display: none; }
+        .body-banner { background-image: linear-gradient(#DED5C9,#D9EDF7); }
+        .body-banner-if { padding-top: 16px; padding-bottom: 8px; }
+        .body-banner p { font-weight: bold; }
+        .fontwidth { font-weight: bold; }
+        .nav-tabs { width: 100%; background: #D5E1E2; }
+        .nav-tabs > li { width: 33.3333%; text-align: center; }
+        .tab-content { padding: 8px; }
+        .paddin3px { padding: 3px; }
+        .borderradius3px { border-radius: 5px; }
+        .textcenter { text-align: center; padding-bottom: 5px; }
+        .paddingtop10px { padding-top: 10px; }
+    </style>
+    <div class="bg-info header-logo">
+        <div class="pull-left register">
+            <a href="/?UID=84280104F7B00B570DBB16E015E94349">
+                <span class="glyphicon glyphicon-home fontsize"></span>
+            </a>
+        </div>
+        <div class="pull-right register">
+            <a class="center-block pull-left" href="javascript:logoutUser()">退出</a>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+    <div class="bg-info header-logo text-center fontwidth">银行交易</div>
+    <div class="body-banner body-banner-if">
+        <p class="text-left col-lg-offset-3 col-sm-offset-3 col-xs-offset-3">会员账户：<span>cool123</span></p>
+        <p class="text-left col-lg-offset-3 col-sm-offset-3 col-xs-offset-3">账户余额：<span id="Credit"></span>RMB&nbsp;&nbsp;<span onclick="GetCredit()" class="glyphicon glyphicon-repeat btn btn-warning btn-xs"></span></p>
+    </div>
+    <ul id="myTab" class="nav nav-tabs">
+        <li><a href="#ck" data-toggle="tab">存款</a></li>
+        <li onclick="IsHaveBankCard()"><a href="#qk" data-toggle="tab">取款</a></li>
+        <li onclick="GetMoneyChangeRecord()"><a href="#yhjy" data-toggle="tab">交易记录</a></li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in" id="ck">
+            <div class="container">
+                <form class="form-horizontal" role="form" id="defaultForm1" method="post" action="/Main/SubmitDeposit">
+                    <div class="text-center">
+                        <div class="btn-group" id="bankType">
+                            <button type="button" data-value="银行" class="btn btn-default active">银行</button>
+                            <button type="button" data-value="支付宝" class="btn btn-default">支付宝</button>
+                            <button type="button" data-value="微信" class="btn btn-default">微信</button>
+
+                        </div>
+
+                    </div>
+                    <div style="height:8px;"></div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon form_span">入款金额</span>
+                            <input type="text" name="inputMoney" class="form-control input-lg" placeholder="输入金额" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon form_span">存 款 人</span>
+                            <input type="text" name="chinesename" class="form-control input-lg" placeholder="输入姓名" />
+                            <input type="hidden" name="dsf" value="0" id="dsf" title="第三方" /><!--如果是第三方入款则为1否则为0-->
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group" id="dropDownChose1">
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-default
+                     dropdown-toggle btn-lg" data-toggle="dropdown">
+                                    <span id="xuanzhe" class="xuanzhe">选择银行</span>
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" id="dropdown-menu">
+                                    <li><a data-value="59" href="javascript:void(0)">工商银行</a></li>
+                                    <li><a data-value="103" href="javascript:void(0)">微信</a></li>
+                                    <li><a data-value="109" href="javascript:void(0)">支付宝</a></li>
+                                    <li><a data-value="123" href="javascript:void(0)">工商银行</a></li>
+
+                                </ul>
+                            </div>
+                            <input type="text" readonly="readonly" id="inputbank" name="inputbank" class="form-control input-lg">
+                        </div>
+
+                        <!--ABC 开始-->
+                        <div class="input-group" id="dropDownChose2">
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-default
+                     dropdown-toggle btn-lg" data-toggle="dropdown">
+                                    <span id="xuanzhe" class="xuanzhe">选择银行</span>
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" id="dropdown-menu2">
+                                    <li><a data-value="30" href="javascript:void(0)">微信支付</a></li>
+                                    <li><a data-value="22" href="javascript:void(0)">支付宝</a></li>
+                                    <li><a data-value="20" href="javascript:void(0)">网银支付</a></li>
+                                </ul>
+                            </div>
+                            <input type="text" readonly="readonly" id="inputbank2" name="inputbank2" class="form-control input-lg">
+                        </div>
+                        <!--ABC 结束-->
+                        <input type="hidden" id="bankname" name="bankname" value="银行">
+                        <input type="hidden" name="inputbankId" />
+                    </div>
+                    <p class="text-warning">单笔最小入款金额:<span id="minmoney">1</span> RMB</p>
+                    <div class="panel panel-default hide" id="bankdetails">
+                        <div class="panel-body">
+                            <div class="hide" data-val="59">
+                                <span>银  行：<span>工商银行</span></span><br />
+                                <span>收款人：<span>联系客服获取账号</span></span><br />
+                                <span>开户行：<span>工商银行</span></span><br />
+                                <span>帐  号：<span>请联系在线客服获取账号</span></span>
+                            </div>
+                            <div class="hide" data-val="103">
+                                <span>银  行：<span>微信</span></span><br />
+                                <span>收款人：<span> 微信手机版充值系统升级...</span></span><br />
+                                <span>帐  号：<span>请选择电脑版微信扫一扫（或其它充值方式）</span></span>
+                                <img width="120" height="120" class="img-responsive center-block" src="http://ww1.sinaimg.cn/mw690/005BbFQtjw1f54mb6pqngg304604674b.gif" />
+                            </div>
+                            <div class="hide" data-val="109">
+                                <span>银  行：<span>支付宝</span></span><br />
+                                <span>收款人：<span>维护中...</span></span><br />
+                                <span>帐  号：<span>维护期间如需充值请改其它充值方式</span></span>
+                                <img width="120" height="120" class="img-responsive center-block" src="" />
+                            </div>
+                            <div class="hide" data-val="123">
+                                <span>银  行：<span>工商银行</span></span><br />
+                                <span>收款人：<span>请联系在线客服获取账号</span></span><br />
+                                <span>开户行：<span>工商银行</span></span><br />
+                                <span>帐  号：<span>请联系在线客服获取账号</span></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-info btn btn-block btn-lg">开始存入</button>
+                </form>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="qk">
+            <div class="container">
+                <form class="form-horizontal" role="form" id="defaultForm2" method="post" action="/app/login.ashx?act=online_putMoney">
+                    <div style="height:8px;"></div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon form_span">取款金额</span>
+                            <input type="text" name="outputMoney" class="form-control input-lg" placeholder="输入取款金额" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon form_span">取款密码</span>
+                            <input type="password" name="outputPassword" class="form-control input-lg" placeholder="输入取款密码" />
+                        </div>
+                    </div>
+                    <p class="text-warning">手 续 费：<span id="shouxufei">0</span></p>
+                    <p class="text-warning">银行账号：<span id="BankAccount"></span></p>
+                    <p class="text-warning">开户姓名：<span id="BankAccountName"></span></p>
+                    <p class="text-warning">出款上限：<span id="outMax">100000</span></p>
+                    <p class="text-warning">出款下限：<span id="outMin">10</span> </p>
+                    <button type="submit" class="btn-info btn btn-block btn-lg">提交取款</button>
+                </form>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="yhjy">
+            <div class="text-center">
+                <div class="btn-group">
+                    <button onclick="setToday()" type="button" class="btn btn-default">今天</button>
+                    <button onclick="setYesterday()" type="button" class="btn btn-default">昨天</button>
+                    <button onclick="setMondaySunday()" type="button" class="btn btn-default">本周</button>
+                </div>
+                <input type="hidden" id="txtTransTime_Begin">
+                <input type="hidden" id="txtTransTime_End">
+            </div>
+            <div id="yhjy_1"></div>
+            <div class="textcenter">
+                <span id="loadmore" onclick="GetMoneyChangeRecordMore()" class="paddin3px bg-danger borderradius3px">加载更多...</span>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+         aria-labelledby="myModalLabel" aria-hidden="true">
+        <img class="center-block linecentermodel" width="40" height="40" src="/IMG/load.gif" />
+    </div>
+</div>
+<div id="abc_form2"></div>
+<script src="/Scripts/formValidation.min.js"></script>
+<script src="/Scripts/fm_bootstrap.js"></script>
+<script src="/Scripts/CalendarDate.js"></script>
+<script>
+    if ("ok" == "ok")
+        $("#bankType").html($("#bankType").html() + "<button type='button' data-value='在线支付' class='btn btn-default'>微信扫一扫</button>")
+
+    $(function () {
+        GetCredit();
+
+        $('#myTab li:eq(0) a').tab('show');
+        $('#paneTab a:eq(0)').tab('show');
+
+        bankChange();
+        BankTypeChange();
+        //如果是选择第三方弹出新窗口过来的直接默认选择在线支持tab
+        if (location.href.indexOf("&dsf=1") > 0) {
+            $("#bankType button:eq(3)").click();
+        }
+        else {
+            $("#bankType button:eq(0)").click();
+        }
+        Validateinputbank();
+
+        var date1 = new Date();
+        var hours1 = date1.getHours();
+        var dt1;
+        if (hours1 < 12) {
+            dt1 = CurentDate(-1);
+        } else {
+            dt1 = CurentDate(null);
+        }
+        $("#txtTransTime_Begin").val(dt1);
+        $("#txtTransTime_End").val(CurentDate(null));
+    });
+    //存款银行类型改变事件
+    function BankTypeChange() {
+        $("#bankType button").each(function () {
+            $(this).click(function () {
+                $(this).addClass("active").siblings("button").removeClass("active");
+                var banktype = $(this).attr("data-value");
+                $(".xuanzhe").each(function () { $(this).html("选择" + banktype) });
+                $("#inputbank").val('');
+                $("#bankname").val(banktype);
+                if (banktype == "在线支付")
+                {
+                    var url_abc = location.href;
+                    if (url_abc.indexOf("&dsf=1") < 0)
+                    {
+                        url_abc = url_abc + "&dsf=1";
+                        window.open(url_abc, "", "");
+                    }
+                    $("#dropDownChose1").hide();
+                    $("#bankdetails").hide();
+                    $("#dropDownChose2").show();
+                    $("#dropdown-menu2 li:eq(0) a").click();
+                    //$("#defaultForm1").attr("action", "http://www.baidu.com")
+                    $("#dsf").val("1");
+                }
+                else
+                {
+                    $("#dropDownChose1").show();
+                    $("#bankdetails").show();
+                    $("#dropDownChose2").hide();
+                    //$("#defaultForm1").attr("action", "/Main/SubmitDeposit")
+                    $("#dsf").val("0");
+                    $("#dropdown-menu li a").each(function () {
+                        if ($(this).text().indexOf(banktype) > -1) {
+                            $(this).show();
+                        }
+                        else {
+                            $(this).hide();
+                        }
+                    });
+                    $("#dropdown-menu li a").each(function () {
+                        if ($(this).css("display") != "none") {
+                            $(this).click();
+                            return false;
+                        }
+                    });
+                }
+            });
+        });
+    }
+    /*今天*/
+    function setToday() {
+        $("#yhjy_1").html('');
+        var date2 = new Date();
+        var hours2 = date2.getHours();
+        var dt2;
+        if (hours2 < 12) {
+            dt2 = CurentDate(-1);
+        } else {
+            dt2 = CurentDate(null);
+        }
+        $("#txtTransTime_Begin").val(dt2);
+        $("#txtTransTime_End").val(CurentDate(null));
+        page = 1;
+        GetMoneyChangeRecord();
+        if (page > sumpage) {
+            $("#loadmore").hide();
+            return;
+        } else {
+            $("#loadmore").show();
+        }
+    }
+    /*昨天*/
+    function setYesterday() {
+        $("#yhjy_1").html('');
+        page = 1;
+
+        var date3 = new Date();
+        var hours3 = date3.getHours();
+        var dt3;
+        if (hours3 < 12) {
+            dt3 = CurentDate(-2);
+        } else {
+            dt3 = CurentDate(-1);
+        }
+        $("#txtTransTime_Begin").val(dt3);
+        $("#txtTransTime_End").val(dt3);
+        GetMoneyChangeRecord();
+        if (page > sumpage) {
+            $("#loadmore").hide();
+            return;
+        } else {
+            $("#loadmore").show();
+        }
+    }
+    /*本周*/
+    function setMondaySunday() {
+        $("#yhjy_1").html('');
+        page = 1;
+        $("#txtTransTime_Begin").val(FormatDate(getMonday()));
+        $("#txtTransTime_End").val(FormatDate(getSunday()));
+        GetMoneyChangeRecord();
+        if (page > sumpage) {
+            $("#loadmore").hide();
+            return;
+        } else {
+            $("#loadmore").show();
+        }
+    }
+    function GetCredit() {
+        if ($("#Credit").length > 0) {
+            $.ajax({
+                url: '/app/login.ashx?act=getcredit&type=ssc&t=' + new Date(),
+                success: function (data) {
+                    try {
+                        $("#Credit").html(data);
+                    }
+                    catch (e) {
+                    }
+                }
+
+            });
+        }
+    }
+    //存款表单验证
+    function Validateinputbank() {
+        $("#defaultForm1").formValidation({
+            fields: {
+                inputMoney: {
+                    validators: {
+                        notEmpty: {
+                            message: '请输入金额！'
+                        },
+                        regexp: {
+                            regexp: /^(([1-9]\d{0,9})|0)(\.\d{1,2})?$/,
+                            message: '请输入正确的金额！'
+                        }, callback: {
+                            callback: function (value, validator, $field) {
+                                var minmoney = parseFloat($("#minmoney").html());
+                                value = parseFloat(value);
+                                if (minmoney <= value) {
+                                    return {
+                                        valid: true,    // or false
+                                        message: ''
+                                    }
+                                }
+                                else {
+                                    return {
+                                        valid: false,    // or false
+                                        message: '小于最小金额'
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                chinesename: {
+                    validators: {
+                        notEmpty: {
+                            message: '存款人不能为空！'
+                        }
+                        //,
+                        //regexp: {
+                        //    regexp: /^[\u4e00-\u9fa5]+$/,
+                        //    message: '只支持中文名'
+                        //}
+                    }
+                },
+                inputbank: {
+                    validators: {
+                        notEmpty: {
+                            message: '请选择转入银行'
+                        }
+                    }
+                }
+            }
+        })
+                .on('success.form.fv', function (e) {
+                    console.log("123");
+                    // Prevent form submission
+                    e.preventDefault();
+
+                    // Get the form instance
+                    var $form = $(e.target);
+
+                    // Get the FormValidation instance
+                    var bv = $form.data('formValidation');
+
+                    // Use Ajax to submit form data
+                    $('#myModal').modal('show');
+                    $.post($form.attr('action'), $form.serialize(), function (result) {
+                        $('#myModal').modal('hide');
+                        var data = eval("(" + result + ")");
+                        console.log(JSON.stringify({ msg: data.DepositMSG }));
+                        if (data.state == "Success") {
+                            console.log(33);
+                            Modal.alert({ msg: '成功，客服确认后为您添加，谢谢' }).on(function () {
+                                location.href = "/Main/UserCenter?UID=84280104F7B00B570DBB16E015E94349";
+                            });
+                        }
+                        else if (data.state == "Success1")
+                        {
+                            $("#abc_form1").html("");
+                            $("#abc_form2").html(data.DepositMSG);
+                        }
+                        else {
+                            console.log(44);
+                            Modal.alert({ msg: data.DepositMSG }).on(function () {
+                                location.href = "/Main/BankRecord?UID=84280104F7B00B570DBB16E015E94349";
+                            });
+                        }
+                    }, 'text');
+                });
+    }
+    //选择银行下拉改变事件
+    function bankChange() {
+        $("#dropdown-menu li a").each(function () {
+            $(this).click(function () {
+                var bk = $(this).html();
+                $("#inputbank").val(bk);
+                $("#bankdetails").removeClass("hide");
+                var davalue = $(this).attr("data-value");
+                $("#bankdetails div[data-val=" + davalue + "]").removeClass("hide").siblings().addClass("hide");
+                $("input[name=inputbankId]").val(davalue);
+            });
+        });
+        $("#dropdown-menu2 li a").each(function () {
+            $(this).click(function () {
+                var bk = $(this).html();
+                $("#inputbank2").val(bk);
+                $("#bankdetails").removeClass("hide");
+                var davalue = $(this).attr("data-value");
+                $("#bankdetails div[data-val=" + davalue + "]").removeClass("hide").siblings().addClass("hide");
+                $("input[name=inputbankId]").val(davalue);
+            });
+        });
+    }
+    //判断有没有添加银行卡
+    function IsHaveBankCard() {
+        $.ajax({
+            url: '/Main/IsHaveBankCard?UID=84280104F7B00B570DBB16E015E94349',
+            success: function (data) {
+                var data = eval("(" + data + ")");
+                if (data.state == "notexist") {
+                    Modal.alert({ msg: data.msg }).on(function () {
+                        location.href = "/Main/BankInformation?UID=84280104F7B00B570DBB16E015E94349";
+                    });
+                } else if (data.state == "exceed" || data.state == "0") {
+                    Modal.alert({ msg: data.msg }).on(function () {
+                        location.href = "/Main/BankRecord?UID=84280104F7B00B570DBB16E015E94349";
+                    });
+                }
+                else {
+                    $("#BankAccount").html(data.BankAccount);
+                    $("#BankAccountName").html(data.UserName);
+                    $("#shouxufei").html(data.PayMoney);
+                    $("#outMax").html(data.MaxMoney);
+                    $("#outMin").html(data.MinMoney);
+                    OutputMoneyValidate();
+                }
+            }
+        });
+    }
+    //取款表单验证
+    function OutputMoneyValidate() {
+        $("#defaultForm2").formValidation({
+            fields: {
+                outputMoney: {
+                    validators: {
+                        notEmpty: {
+                            message: '请输入金额！'
+                        },
+                        regexp: {
+                            regexp: /^(([1-9]\d{0,9})|0)(\.\d{1,2})?$/,
+                            message: '请输入正确的金额！'
+                        }, callback: {
+                            callback: function (value, validator, $field) {
+                                var minmoney = parseFloat($("#outMin").html());
+                                var maxmoney = parseFloat($("#outMax").html());
+                                value = parseFloat(value);
+                                if (minmoney <= value && maxmoney >= value) {
+                                    return {
+                                        valid: true,    // or false
+                                        message: ''
+                                    }
+                                }
+                                else {
+                                    return {
+                                        valid: false,    // or false
+                                        message: '金额超过限制'
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                outputPassword: {
+                    validators: {
+                        notEmpty: {
+                            message: '取款密码不能为空！'
+                        },
+                        stringLength: {
+                            min: 4,
+                            max: 4,
+                            message: '密码长度是4位！'
+                        }
+                    }
+                }
+            }
+        })
+                .on('success.form.fv', function (e) {
+                    // Prevent form submission
+                    e.preventDefault();
+                    // Get the form instance
+                    var $form = $(e.target);
+                    // Get the FormValidation instance
+                    var bv = $form.data('formValidation');
+                    // Use Ajax to submit form data
+
+                    var cash = $("input[name=outputMoney]").val();
+                    var pass = $("input[name=outputPassword]").val();
+                    var com = $("#shouxufei").html();
+                    var real_cash = parseFloat(cash) - parseFloat($("#shouxufei").html());
+
+                    $('#myModal').modal('show');
+                    $.post($form.attr('action'), { password: pass, REAL_CASH: real_cash, CASH: cash, COM: com }, function (result) {
+                        $('#myModal').modal('hide');
+                        var data = eval("(" + result + ")");
+                        if (data.ret_code == 100) {
+                            Modal.alert({ msg: '提交成功' }).on(function () {
+                                location.href = "/Main/UserCenter?UID=84280104F7B00B570DBB16E015E94349";
+                            });
+                        } else {
+                            Modal.alert({ msg: data.mess }).on(function () {
+                            });
+                        }
+                    }, 'text');
+                });
+    }
+    //取交易记录
+    var page = 1;//页码
+    var sumpage = 1;
+    function GetMoneyChangeRecordMore() {
+        page = page + 1;
+        if (page > sumpage) {
+            $("#loadmore").hide();
+            return;
+        } else {
+            $("#loadmore").show();
+        }
+        GetMoneyChangeRecord();
+    }
+    //取交易记录
+    function GetMoneyChangeRecord() {
+        sdate = $("#txtTransTime_Begin").val();
+        edate = $("#txtTransTime_End").val();
+        var htmls = "";
+        $.ajax({
+            url: '/app/UserRecord.ashx',
+            type: 'POST',
+            data: { sdate: sdate, edate: edate, way: '', page: page },
+            success: function (da) {
+                var data = eval("(" + da + ")");
+                try {
+                    if (data.pageCount > 0) {
+                        sumpage = data.pageCount;
+                        for (var j = 0; j < data.data.length; j++) {
+                            var tr = data.data[j];
+                            var money = tr.tt_money;
+                            var trtype = "", trflag = "+", trstate = "成功";
+                            var orderType = parseInt(tr.tt_orderType);
+                            var state = parseInt(tr.tt_state);
+                            switch (orderType) {
+
+                                case 1:
+                                {
+                                    trflag = "-";
+                                    switch (state) {//类型:1:时彩到足球,2.足球到时彩,3时彩百家乐,4.足球到百家乐,5百家乐到时彩,6.百家乐到足球,
+                                        case 3:
+                                        {
+                                            trtype = "转出 至 HG金额";
+                                            break;
+                                        }
+                                        case 4:
+                                        {
+                                            trtype = "HG金额转出至 账户金额";
+                                            break;
+                                        }
+                                        case 5: {
+                                            trtype = "账户金额 至 AG金额";
+                                            break;
+                                        }
+                                        case 6: {
+                                            trtype = "AG金额 至 账户金额";
+                                            break;
+                                        }
+                                        case 7: {
+                                            trtype = "账户金额 至 波音金额";
+                                            break;
+                                        }
+                                        case 8: {
+                                            trtype = "波音金额 至 账户金额";
+                                            break;
+                                        }
+                                        case 9: {
+                                            trtype = "账户金额 至 LMG金额";
+                                            break;
+                                        }
+                                        case 10: {
+                                            trtype = "LMG金额 至 账户金额";
+                                            break;
+                                        }
+                                        case 11: {
+                                            trtype = "账户金额 至 LB金额";
+                                            break;
+                                        }
+                                        case 12: {
+                                            trtype = "LB金额 至 账户金额";
+                                            break;
+                                        }
+                                        case 31: {
+                                            trtype = "账户金额 至 CT金额";
+                                            break;
+                                        }
+                                        case 32: {
+                                            trtype = "CT金额 至 账户金额";
+                                            break;
+                                        }
+                                        case 41: {
+                                            trtype = "账户金额 至 DS金额";
+                                            break;
+                                        }
+                                        case 42: {
+                                            trtype = "DS金额 至 账户金额";
+                                            break;
+                                        }
+                                        case 51: {
+                                            trtype = "账户金额 至 OG金额";
+                                            break;
+                                        }
+                                        case 52: {
+                                            trtype = "OG金额 至 账户金额";
+                                            break;
+                                        }
+                                        case 61: {
+                                            trtype = "账户金额 至 MG金额";
+                                            break;
+                                        }
+                                        case 62: {
+                                            trtype = "MG金额 至 账户金额";
+                                            break;
+                                        }
+                                        case 71: {
+                                            trtype = "账户金额 至 斗鸡金额";
+                                            break;
+                                        }
+                                        case 72: {
+                                            trtype = "斗鸡金额 至 账户金额";
+                                            break;
+                                        }
+                                        case 81: {
+                                            trtype = "账户金额 至 M8体育金额";
+                                            break;
+                                        }
+                                        case 82: {
+                                            trtype = "M8体育金额 至 账户金额";
+                                            break;
+                                        }
+                                    }
+
+                                    break;
+                                }
+                                case 2:
+                                {
+                                    trtype = "第三方支付充值";
+                                    if (tr.tt_callbackState == 0)
+                                        trstate = "未通知商家";
+                                    else if (tr.tt_callbackState == 5)
+                                        trstate = "失败";
+
+                                    break;
+                                }
+
+                                case 4:
+                                {
+                                    trtype = "银行转账";
+                                    //后台存入
+
+                                    if (tr.tt_ach != '') { //
+                                        if (tr.tt_ach == '') {
+                                            trtype = '后台存入'
+                                        }
+                                        else {
+                                            trtype = tr.tt_ach;
+                                        }
+                                    }
+
+                                    if (money == 0) {
+                                        if (tr.tt_enterProm && tr.tt_enterProm > 0) {
+                                            if (tr.tt_ach == "打码返水") {
+                                                trtype = "打码返水";
+                                            }
+                                            else {
+                                                trtype = "存款优惠";
+                                            }
+                                            money = tr.tt_enterProm;
+                                        }
+                                        if (tr.tt_enterOtherProm && tr.tt_enterOtherProm > 0) {
+                                            trtype = "彩金优惠";
+                                            money = tr.tt_enterOtherProm;
+                                        }
+
+                                    }
+
+                                    if (tr.tt_enterStatus == 0)
+                                        trstate = "取消";
+                                    else if (tr.tt_enterStatus == 2)
+                                        trstate = "未处理";
+                                    break;
+                                }
+                                case 5:
+                                {
+                                    trflag = "-";
+                                    trtype = "申请提款";
+                                    if (tr.tt_outStatus == 0)
+                                        trstate = "取消";
+                                    else if (tr.tt_outStatus == 2)
+                                        trstate = "未处理";
+                                    else if (tr.tt_outStatus == 4)
+                                        trstate = "拒绝";
+                                    break;
+                                }
+                            }
+                            var youhui = tr.tt_enterProm;
+                            if (youhui == null || youhui == "") youhui = '0.00';
+                            htmls += "<div class='paddin3px'><span class='bg-info paddin3px borderradius3px'>" + tr.tt_time + "</span></div><div class='panel panel-warning'><div class='panel-heading'><span>订单号：</span><h3 class='panel-title' style='margin-top:2px;'>" + tr.tt_MOrderID + "</h3></div><div class='panel-body'><div class='list-inline'><span class='pull-left'>" + trtype +
+                                    "</span><span class='pull-right'><span>优惠:</span>" + youhui + "</span></div></div><div class='panel-footer'><div class='list-inline'><span style='font-weight: bold' class='pull-left text-danger'>" + parseFloat(money).toFixed(2) + "</span><span style='font-weight: bold' class='pull-right text-danger'>" + trstate + "</span><div class='clearfix'></div></div></div></div>";
+                        }
+                        $("#yhjy_1").append(htmls);
+                    }
+                    else {
+                        htmls = "<p class='text-danger text-center paddingtop10px'>暂无数据</p>";
+                        $("#loadmore").hide();
+                        $("#yhjy_1").html(htmls);
+                    }
+                }
+                catch (e) {
+
+                }
+            }
+        });
+    }
+</script>
+
+<div class="text-center footercontent">
+    Copyright &copy; BLB体育 Reserved
+</div>
+<script src="/Scripts/bootstrap.min.js"></script>
+
+
+<script src="/Scripts/bootstrap_alert.js"></script>
+<!-- system modal start弹窗html -->
+<div id="ycf-alert" class="modal">
+    <div class="modal-dialog modal-sm linecentermodel" style="width: 300px; height: 108px;">
+        <div class="modal-content">
+            <div class="modal-body bg-info" style="border-radius: 5px; padding: 10px;">
+                <p style="font-size: 15px; font-weight: bold;">[Message]</p>
+            </div>
+            <div class="modal-footer" style="padding: 5px; text-align: center;">
+                <button type="button" class="btn btn-primary ok" data-dismiss="modal">[BtnOk]</button>
+                <button type="button" class="btn btn-default cancel" data-dismiss="modal">[BtnCancel]</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- system modal end弹窗html -->
+
+<script>
+    $(function () {
+        var s = "84280104F7B00B570DBB16E015E94349";
+        if (s != "")
+            setTimeOut();
+    });
+    function logoutUser() {
+        Modal.confirm({ msg: "确定是退出？" }).on(function (e) {
+            if (e) {
+                location.href = "/app/logout.ashx";
+            }
+        });
+    }
+
+    var timeoutID;
+    function setTimeOut() {
+        clearTimeout(timeoutID);
+        $.ajax({
+            url: "/ajax/refresh?UID=84280104F7B00B570DBB16E015E94349&t=" + new Date(),
+            success: function (da) {
+
+            }
+        })
+        timeoutID = setTimeout("setTimeOut()", 5 * 60 * 1000)
+    }
+</script>
+
+
+</body>
+</html>

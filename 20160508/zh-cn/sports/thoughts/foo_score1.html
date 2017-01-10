@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>比赛结果</title>
+    <link href="../style/thoughts.css" rel="stylesheet" type="text/css" />
+</head>
+
+<script>
+    var oid     ="c5d3ae62445381ba66l853366";
+    var g_date="2016-05-11";
+    var gtype="0";
+    var flange=[];
+
+</script>
+<script language="JavaScript" src="../js/all-Http-Request.js" type="text/javascript"></script>
+<script>
+    function ResData(){
+        var getHTML = new HttpRequestXML();
+        getHTML.addEventListener("LoadComplete", Res);
+        getHTML.sendRequest("ajx-score1.html","GET", getUrlParam());
+
+    }
+    function getUrlParam(){
+        var param   ="oid="+oid;
+        param   +="&sport="+gtype;
+        param   +="&g_date="+g_date;
+        param   += "&sid="+ Math.random();
+        return param;
+    }
+    function Res(date){
+        eval(date);
+    }
+    function ScoreSdatd(seta){
+        var ResHeadData=document.getElementById("ResHead").innerHTML;
+        var ResHtmlTR=document.getElementById("ResHtml").innerHTML;
+        var nesLeague = '';
+        var LeagueTe='';
+        var msLeagueTe='';
+        var blaa_h='';
+        if(seta.length==0){
+            score_statement();
+            return
+        }
+        for(var e=0;e<seta.length;e++){
+            var tmpStr=ResHtmlTR;
+            var blaa='';
+
+            if(nesLeague!=seta[e][2]){
+                if(nesLeague!=''){
+                    LeagueTe=LeagueTe+"</div></div>"
+                }
+                LeagueTe=LeagueTe+'<div id="'+seta[e][2]+'" class="mlang1">';
+                LeagueTe=LeagueTe+ResHeadData.replace('*SETLEAGUE*',seta[e][3]);
+
+                var im=flange.join();
+                if(im.indexOf('('+seta[e][2]+'}')!=-1){
+                    LeagueTe=LeagueTe.replace('mlang1','mlang2');
+                    LeagueTe=LeagueTe.replace('cen-img1','cen-img2');
+                }
+
+                LeagueTe=LeagueTe.replace('*MLMID*',seta[e][2]);
+
+                nesLeague=seta[e][2];
+                tmpStr='<div id="TE'+seta[e][2]+'">'+tmpStr;
+            }
+            if(e%2==0){
+                tmpStr=tmpStr.replace('mem2','mem');
+            }
+            tmpStr=tmpStr.replace('*TEMLMID*',seta[e][2]);
+            tmpStr=tmpStr.replace('*BETTIME*',seta[e][1]);
+            tmpStr=tmpStr.replace('*SETMBTEAM*',seta[e][4]);
+            tmpStr=tmpStr.replace('*SETTGTEAM*',seta[e][5]);
+
+            if(seta[e][14]=='' || seta[e][15]==''){
+                $blaa='('+seta[e][14]+')<br>('+seta[e][15]+')';
+            }
+            if(seta[e][6]=='-1' || seta[e][7]=='-1'){
+
+                tmpStr=tmpStr.replace('*MBINBALLHRTGINBALLHR*','取消'+$blaa);
+            }else{
+                tmpStr=tmpStr.replace('*MBINBALLHRTGINBALLHR*',seta[e][6]+'<br>'+seta[e][7]);
+            }
+            if(seta[e][8]=='-1' || seta[e][9]=='-1'){
+                tmpStr=tmpStr.replace('*MBINBALLTGINBALL*','取消');
+            }else{
+                tmpStr=tmpStr.replace('*MBINBALLTGINBALL*',seta[e][8]+'<br>'+seta[e][9]);
+            }
+            LeagueTe=LeagueTe+tmpStr;
+        }
+        LeagueTe=LeagueTe+"</div></div>"
+
+        document.getElementById("Klus").innerHTML=LeagueTe;
+    }
+    function ScoreSdatd_bk(seta){
+        var ResHeadData=document.getElementById("bkResHead").innerHTML;
+        var ResHtmlTR=document.getElementById("bkResHtml").innerHTML;
+        var nesLeague = '';
+        var LeagueTe='';
+        var msLeagueTe='';
+        if(seta.length==0){
+            score_statement();
+            return
+        }
+        for(var e=0;e<seta.length;e++){
+            var tmpStr=ResHtmlTR;
+
+
+            if(nesLeague!=seta[e][2]){
+                if(nesLeague!=''){
+                    LeagueTe=LeagueTe+"</div></div>"
+                }
+                LeagueTe=LeagueTe+'<div id="'+seta[e][2]+'" class="mlang1">';
+                LeagueTe=LeagueTe+ResHeadData.replace('*SETLEAGUE*',seta[e][3]);
+
+                var im=flange.join();
+                if(im.indexOf('('+seta[e][2]+'}')!=-1){
+                    LeagueTe=LeagueTe.replace('mlang1','mlang2');
+                    LeagueTe=LeagueTe.replace('cen-img1','cen-img2');
+                }
+
+                LeagueTe=LeagueTe.replace('*MLMID*',seta[e][2]);
+
+                nesLeague=seta[e][2];
+                tmpStr='<div id="TE'+seta[e][2]+'">'+tmpStr;
+            }
+            if(e%2==0){
+                tmpStr=tmpStr.replace('mem2','mem');
+            }
+            tmpStr=tmpStr.replace('*TEMLMID*',seta[e][2]);
+            tmpStr=tmpStr.replace('*BETTIME*',seta[e][1]);
+            tmpStr=tmpStr.replace('*SETMBTEAM*',seta[e][4]);
+            tmpStr=tmpStr.replace('*SETTGTEAM*',seta[e][5]);
+            if(seta[e][6]=='-1' || seta[e][7]=='-1'){
+                tmpStr=tmpStr.replace('*MBINBALL1TGINBALL1*','取消');
+            }else{
+                tmpStr=tmpStr.replace('*MBINBALL1TGINBALL1*',seta[e][6]+'<br>'+seta[e][7]);
+            }
+            if(seta[e][8]=='-1' || seta[e][9]=='-1'){
+                tmpStr=tmpStr.replace('*MBINBALL2TGINBALL2*','取消');
+            }else{
+                tmpStr=tmpStr.replace('*MBINBALL2TGINBALL2*',seta[e][8]+'<br>'+seta[e][9]);
+            }
+            if(seta[e][10]=='-1' || seta[e][11]=='-1'){
+                tmpStr=tmpStr.replace('*MBINBALL3TGINBALL3*','取消');
+            }else{
+                tmpStr=tmpStr.replace('*MBINBALL3TGINBALL3*',seta[e][10]+'<br>'+seta[e][11]);
+            }
+            if(seta[e][12]=='-1' || seta[e][13]=='-1'){
+                tmpStr=tmpStr.replace('*MBINBALL4TGINBALL4*','取消');
+            }else{
+                tmpStr=tmpStr.replace('*MBINBALL4TGINBALL4*',seta[e][12]+'<br>'+seta[e][13]);
+            }
+            if(seta[e][14]=='-1' || seta[e][15]=='-1'){
+                tmpStr=tmpStr.replace('*MBINBALLHRTGINBALLHR*','取消');
+            }else{
+                tmpStr=tmpStr.replace('*MBINBALLHRTGINBALLHR*',seta[e][14]+'<br>'+seta[e][15]);
+            }
+            /*		if(seta[e][16]=='-1' || seta[e][17]=='-1'){
+             tmpStr=tmpStr.replace('*MBINBALL2HTGINBALL2H*','取消');
+             }else{
+             tmpStr=tmpStr.replace('*MBINBALL2HTGINBALL2H*',seta[e][16]+'<br>'+seta[e][17]);
+             }*/
+            if(seta[e][18]=='-1' || seta[e][19]=='-1'){
+                tmpStr=tmpStr.replace('*MBINBALLJSTGINBALLJS*','取消');
+            }else{
+                tmpStr=tmpStr.replace('*MBINBALLJSTGINBALLJS*',seta[e][18]+'<br>'+seta[e][19]);
+            }
+            if(seta[e][20]=='-1' || seta[e][21]=='-1'){
+                tmpStr=tmpStr.replace('*MBINBALLTGINBALL*','取消');
+            }else{
+                tmpStr=tmpStr.replace('*MBINBALLTGINBALL*',seta[e][20]+'<br>'+seta[e][21]);
+            }
+
+            LeagueTe=LeagueTe+tmpStr;
+        }
+        LeagueTe=LeagueTe+"</div></div>"
+
+        document.getElementById("Klus").innerHTML=LeagueTe;
+    }
+    function ScoreSdatd_tn(seta){
+        if(seta.length==0){
+            score_statement();
+            return
+        }
+    }
+    function ScoreSdatd_vb(seta){
+        if(seta.length==0){
+            score_statement();
+            return
+        }
+    }
+    function ScoreSdatd_bs(seta){
+        if(seta.length==0){
+            score_statement();
+            return
+        }
+    }
+    function score_statement(){
+        var obj=document.getElementById("Klus");
+        obj.innerHTML='<div class=\"nollodds\">今日无比分数据</div>';
+    }
+    function time_select(mdate){
+        g_date=mdate.value;
+        ResData();
+
+    }
+
+    function score_sprts_dt(tid,mid){
+        var bb;
+        var tt;
+        obj=document.getElementById(tid);
+        var htm=obj.offsetHeight;
+        if(htm<26){
+            mid.style.backgroundPosition="-4px -29px";
+            flange.unshift('('+tid+'}');
+            var hgb=document.getElementById('TE'+tid).offsetHeight;
+            var hgs=25+hgb;
+            var osll=Math.floor(hgb/4);
+            var gcot=function(){
+                if((htm+osll)>hgs){
+                    osll=hgs-htm;
+                }
+                if(htm==hgs){
+                    clearTimeout(bb);
+                }else{
+                    htm+=osll;
+                    obj.style.height=htm+'px';
+                }
+            }
+            clearTimeout(tt);
+            bb=setInterval(gcot,1);
+        }else{
+            mid.style.backgroundPosition="-4px -5px";
+            var sue_flang=flange;
+            flange=[];
+            for(var i=0;i<sue_flang.length;i++){
+                if(sue_flang[i]!='('+tid+'}'){
+                    flange.unshift(sue_flang[i]);
+                }
+            }
+            var osll=Math.floor((htm-25)/4);
+            var vcot=function(){
+                if((htm-osll)<25){
+                    osll=htm-25;
+                }
+                if(htm==25){
+                    clearTimeout(tt);
+                    return
+                }else{
+                    htm-=osll;
+                    obj.style.height=htm+'px';
+                }
+            }
+            clearTimeout(bb);
+            tt=setInterval(vcot,1);
+        }
+    }
+
+    function onLoad(){
+        ResData();
+    }
+</script>
+<body onLoad="onLoad()">
+<div id="UA">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" id="sum-dast" >
+        <tr>
+            <td width="120" rowspan="2" class="logo">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td >
+                <div class="sheo">
+                    <a href="soresult.html?oid=c5d3ae62445381ba66l853366" class="usi">下注明细</a>
+                    <a href="cac_soresult.html?oid=c5d3ae62445381ba66l853366" class="usi">帐号历史</a>
+                    <a href="assistance.html?oid=c5d3ae62445381ba66l853366" class="usi">规则说明</a>
+                    <a href="foo_score.html?oid=c5d3ae62445381ba66l853366" class="usi"><font color="#fff835">比赛结果</font></a>
+                    <a href="scroll.html?oid=c5d3ae62445381ba66l853366" class="usi">公告</a>
+                    <a href="Regularia.html?oid=c5d3ae62445381ba66l853366" class="usi">联系我们</a>
+
+                </div>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <div id="left">
+        <span class="left-t">分类信息</span>
+        <div class="left-div">
+            <a href="foo_score.html?oid=c5d3ae62445381ba66l853366&ole_type=0">足球</a>
+            <a href="foo_score1.html?oid=c5d3ae62445381ba66l853366&ole_type=1">篮球</a>
+        </div>
+        <span class="left-b"></span>
+
+    </div>
+    <div id="right">
+        <div id="SC">
+            <table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td width="10"  class="htabl">&nbsp;</td>
+                    <td align="right"  class="htab"><span>足球赛果>></span>
+                        <a href="javascript:void(0)" onClick="ResData()">刷新</a></td>
+                    <td width="10"  class="htabr">&nbsp;</td>
+                </tr>
+            </table>
+            <div class="hdtd">日期：
+                <select name="mdete" id="mdete" onChange="time_select(this)">
+                    <option value="2016-05-11">2016-05-11</option>
+                    <option value="2016-05-10">2016-05-10</option>
+                    <option value="2016-05-09">2016-05-09</option>
+                    <option value="2016-05-08">2016-05-08</option>
+                    <option value="2016-05-07">2016-05-07</option>
+                    <option value="2016-05-06">2016-05-06</option>
+                    <option value="2016-05-05">2016-05-05</option>
+                </select>
+            </div>
+            <div id="Klus"><div class="loading"></div></div>
+
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td width="10" class="beml">&nbsp;</td>
+                    <td class="bem">&nbsp;</td>
+                    <td width="10" class="bemr">&nbsp;</td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+    <div style="height:1px; margin-top:-1px;clear:both;overflow:hidden;"></div>
+</div>
+<div id="bottom">
+    建议使用 1024X768 以上分辨率浏览本网站<br />
+    B8 Ontario Lottery and Gaming &copy; 版權所有 2015
+</div>
+<div id="ResHead" style="display:none;">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="b_leag">
+        <tr>
+            <td width="20" align="left"><a href="javascript:void(0)" class="cen-img1" onClick="score_sprts_dt('*MLMID*',this)"></a></td>
+            <td width="40" align="left"><b>时间</b></td>
+            <td align="left"><b>*SETLEAGUE*</b></td>
+            <td width="80" align="center">上半场</td>
+            <td width="80" align="center">全场</td>
+        </tr>
+    </table>
+</div>
+<div id="ResHtml" style="display:none;">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="mem2">
+        <tr>
+            <td width="60">*BETTIME*</td>
+            <td width="" align="left">*SETMBTEAM*<br>*SETTGTEAM*</td>
+            <td width="80" class="inball">*MBINBALLHRTGINBALLHR*</td>
+            <td width="80" class="inball">*MBINBALLTGINBALL*</td>
+        </tr>
+    </table>
+</div>
+<div id="bkResHead" style="display:none;">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="b_leag">
+        <tr>
+            <td width="20" align="left"><a href="javascript:void(0)" class="cen-img1" onClick="score_sprts_dt('*MLMID*',this)"></a></td>
+            <td width="40" align="left"><b>时间</b></td>
+            <td align="left"><b>*SETLEAGUE*</b></td>
+            <td width="35" align="center">一节</td>
+            <td width="35" align="center">二节</td>
+            <td width="35" align="center">三节</td>
+            <td width="35" align="center">四节</td>
+            <td width="35" align="center">上半</td>
+            <td width="35" align="center">加时</td>
+            <td width="35" align="center">全场</td>
+        </tr>
+    </table>
+</div>
+<div id="bkResHtml" style="display:none;">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="mem2">
+        <tr>
+            <td width="60">*BETTIME*</td>
+            <td align="left">*SETMBTEAM*<br>*SETTGTEAM*</td>
+            <td width="31" class="inball">*MBINBALL1TGINBALL1*</td>
+            <td width="31" class="inball">*MBINBALL2TGINBALL2*</td>
+            <td width="31" class="inball">*MBINBALL3TGINBALL3*</td>
+            <td width="31" class="inball">*MBINBALL4TGINBALL4*</td>
+            <td width="31" class="inball">*MBINBALLHRTGINBALLHR*</td>
+            <!--<td width="30" class="inball">*MBINBALL2HTGINBALL2H*</td>-->
+            <td width="31" class="inball">*MBINBALLJSTGINBALLJS*</td>
+            <td width="31" class="inball">*MBINBALLTGINBALL*</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

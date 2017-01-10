@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>彩票大厅</title>
+    <link href="style/style.css" rel="stylesheet">
+    <script src="js/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="header">
+        <div class="top content clearfix">
+            <div class="header-tips float-left">
+                <img src="images/header_tips.png" />
+            </div>
+            <div class="logo float-left">
+                <object type="application/x-shockwave-flash" id="logo-flash" title="" data="images/logo.swf" width="350" height="165"><param name="wmode" value="transparent"><param name="quality" value="high"></object>
+            </div>
+            <div class="login-box float-right">
+                <form class="clearfix" action="###" method="post">
+                    <div class="login-form float-left">
+                        <div class="clearfix">
+                            <input type="text" class="login-account" placeholder="账号" />
+                            <input type="text" class="login-verify" placeholder="验证码" />
+                        </div>
+                        <div class="mt10 clearfix">
+                            <input type="text" class="login-password" placeholder="密码" />
+                            <input type="submit" class="login-btn" />
+                        </div>
+                    </div>
+                    <div class="open float-right">
+                        <a href="join.html" class="open_button"><img src="images/open.png" /></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="content clearfix">
+                <div class="float-left">
+                    <ul>
+                        <li class="first"><a href="index.html">首页</a></li>
+                        <li class="last active"><a href="lottery.html">彩票大厅</a></li>
+                        <li class="logo_bg"></li>
+                        <li class=""><a href="activity.html">优惠活动</a></li>
+                        <li class=""><a href="join.html">立即注册</a></li>
+                        <li class="last"><a href="cooperation.html">合作加盟</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner page_banner">
+        <a href="###"></a>
+    </div><!-- //banner -->
+    <div class="main">
+        <div class="content clearfix">
+            <div class="notice clearfix">
+                <p class="float-left notice-icon"></p>
+                <div class="float-left marquee">
+                    <marquee id="ele-msgNews" behavior="scroll" scrollamount="1" direction="left" style="height:100%;">新开户立即送50元，新开户立即送50元，新开户立即送50元，新开户立即送50元，新开户立即送50元，</marquee>
+                </div>
+                <script src="js/marquee.js"></script>
+                <script>
+                    $('#ele-msgNews').marquee({"kclass" : "ele-news-txt" , "speed" : 40 })
+                            .hover(function() {
+                                $(this).trigger("stop");
+                            }, function() {
+                                $(this).trigger("start");
+                            });
+                </script>
+            </div>
+            <div class="main-box">
+                <div class="lottery-box clearfix">
+                    <div class="lottery-left float-left text-center" style="height: 240px; line-height: 80px;">时时彩</div>
+                    <div class="lottery-right float-right">
+                        <ul class="clearfix">
+                            <li class="mr14">
+                                <div class="clearfix text-center">
+                                    <div class="lottery-img float-left">
+                                        <img src="images/lottery_1.png">
+                                    </div>
+                                    <div class="lottery-info float-right">
+                                        <div class="lottery-title">重庆时时彩</div>
+                                        <div class="lottery-start">
+                                            <a href="###"><img src="images/start.png" /></a>
+                                        </div>
+                                        <div class="lottery-rule">
+                                            <a href="###"><img src="images/rule.png" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mr14">
+                                <div class="clearfix text-center">
+                                    <div class="lottery-img float-left">
+                                        <img src="images/lottery_2.png">
+                                    </div>
+                                    <div class="lottery-info float-right">
+                                        <div class="lottery-title">新疆时时彩</div>
+                                        <div class="lottery-start">
+                                            <a href="###"><img src="images/start.png" /></a>
+                                        </div>
+                                        <div class="lottery-rule">
+                                            <a href="###"><img src="images/rule.png" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="clearfix text-center">
+                                    <div class="lottery-img float-left">
+                                        <img src="images/lottery_3.png">
+                                    </div>
+                                    <div class="lottery-info float-right">
+                                        <div class="lottery-title">天津时时彩</div>
+                                        <div class="lottery-start">
+                                            <a href="###"><img src="images/start.png" /></a>
+                                        </div>
+                                        <div class="lottery-rule">
+                                            <a href="###"><img src="images/rule.png" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="mt15 clearfix">
+                            <li class="mr14">
+                                <div class="clearfix text-center">
+                                    <div class="lottery-img float-left">
+                                        <img src="images/lottery_4.png">
+                                    </div>
+                                    <div class="lottery-info float-right">
+                                        <div class="lottery-title">福建时时彩</div>
+                                        <div class="lottery-start">
+                                            <a href="###"><img src="images/start.png" /></a>
+                                        </div>
+                                        <div class="lottery-rule">
+                                            <a href="###"><img src="images/rule.png" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mr14">
+                                <div class="clearfix text-center">
+                                    <div class="lottery-img float-left">
+                                        <img src="images/lottery_5.png">
+                                    </div>
+                                    <div class="lottery-info float-right">
+                                        <div class="lottery-title">黑龙江时时彩</div>
+                                        <div class="lottery-start">
+                                            <a href="###"><img src="images/start.png" /></a>
+                                        </div>
+                                        <div class="lottery-rule">
+                                            <a href="###"><img src="images/rule.png" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="clearfix text-center">
+                                    <div class="lottery-img float-left">
+                                        <img src="images/lottery_6.png">
+                                    </div>
+                                    <div class="lottery-info float-right">
+                                        <div class="lottery-title">上海时时彩</div>
+                                        <div class="lottery-start">
+                                            <a href="###"><img src="images/start.png" /></a>
+                                        </div>
+                                        <div class="lottery-rule">
+                                            <a href="###"><img src="images/rule.png" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lottery-box clearfix">
+                    <div class="lottery-left float-left text-center" style="height: 120px; line-height: 60px;">快开</div>
+                    <div class="lottery-right float-right">
+                        <ul class="mt15 clearfix">
+                            <li class="mr14">
+                                <div class="clearfix text-center">
+                                    <div class="lottery-img float-left">
+                                        <img src="images/lottery_7.png">
+                                    </div>
+                                    <div class="lottery-info float-right">
+                                        <div class="lottery-title">北京赛车pk拾</div>
+                                        <div class="lottery-start">
+                                            <a href="###"><img src="images/start.png" /></a>
+                                        </div>
+                                        <div class="lottery-rule">
+                                            <a href="###"><img src="images/rule.png" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lottery-box clearfix">
+                    <div class="lottery-left float-left text-center" style="height: 120px; line-height: 30px;">快乐十分</div>
+                    <div class="lottery-right float-right">
+                        <ul class="mt15 clearfix">
+                            <li class="mr14">
+                                <div class="clearfix text-center">
+                                    <div class="lottery-img float-left">
+                                        <img src="images/lottery_8.png">
+                                    </div>
+                                    <div class="lottery-info float-right">
+                                        <div class="lottery-title">广东十分彩</div>
+                                        <div class="lottery-start">
+                                            <a href="###"><img src="images/start.png" /></a>
+                                        </div>
+                                        <div class="lottery-rule">
+                                            <a href="###"><img src="images/rule.png" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mr14">
+                                <div class="clearfix text-center">
+                                    <div class="lottery-img float-left">
+                                        <img src="images/lottery_8.png">
+                                    </div>
+                                    <div class="lottery-info float-right">
+                                        <div class="lottery-title">广西十分彩</div>
+                                        <div class="lottery-start">
+                                            <a href="###"><img src="images/start.png" /></a>
+                                        </div>
+                                        <div class="lottery-rule">
+                                            <a href="###"><img src="images/rule.png" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="clearfix text-center">
+                                    <div class="lottery-img float-left">
+                                        <img src="images/lottery_10.png">
+                                    </div>
+                                    <div class="lottery-info float-right">
+                                        <div class="lottery-title">黑龙江十分彩</div>
+                                        <div class="lottery-start">
+                                            <a href="###"><img src="images/start.png" /></a>
+                                        </div>
+                                        <div class="lottery-rule">
+                                            <a href="###"><img src="images/rule.png" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lottery-box clearfix">
+                    <div class="lottery-left float-left text-center" style="height: 240px; line-height: 120px;">其他</div>
+                    <div class="lottery-right float-right">
+                        <ul class="clearfix">
+                            <li class="mr14">
+                                <div class="clearfix text-center">
+                                    <div class="lottery-img float-left">
+                                        <img src="images/lottery_11.png">
+                                    </div>
+                                    <div class="lottery-info float-right">
+                                        <div class="lottery-title">香港六合彩</div>
+                                        <div class="lottery-start">
+                                            <a href="###"><img src="images/start.png" /></a>
+                                        </div>
+                                        <div class="lottery-rule">
+                                            <a href="###"><img src="images/rule.png" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mr14">
+                                <div class="clearfix text-center">
+                                    <div class="lottery-img float-left">
+                                        <img src="images/lottery_12.png">
+                                    </div>
+                                    <div class="lottery-info float-right">
+                                        <div class="lottery-title">幸运农场</div>
+                                        <div class="lottery-start">
+                                            <a href="###"><img src="images/start.png" /></a>
+                                        </div>
+                                        <div class="lottery-rule">
+                                            <a href="###"><img src="images/rule.png" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="clearfix text-center">
+                                    <div class="lottery-img float-left">
+                                        <img src="images/lottery_13.png">
+                                    </div>
+                                    <div class="lottery-info float-right">
+                                        <div class="lottery-title">快乐8</div>
+                                        <div class="lottery-start">
+                                            <a href="###"><img src="images/start.png" /></a>
+                                        </div>
+                                        <div class="lottery-rule">
+                                            <a href="###"><img src="images/rule.png" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="mt15 clearfix">
+                            <li class="mr14">
+                                <div class="clearfix text-center">
+                                    <div class="lottery-img float-left">
+                                        <img src="images/lottery_14.png">
+                                    </div>
+                                    <div class="lottery-info float-right">
+                                        <div class="lottery-title">福彩3D</div>
+                                        <div class="lottery-start">
+                                            <a href="###"><img src="images/start.png" /></a>
+                                        </div>
+                                        <div class="lottery-rule">
+                                            <a href="###"><img src="images/rule.png" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mr14">
+                                <div class="clearfix text-center">
+                                    <div class="lottery-img float-left">
+                                        <img src="images/lottery_15.png">
+                                    </div>
+                                    <div class="lottery-info float-right">
+                                        <div class="lottery-title">排列三</div>
+                                        <div class="lottery-start">
+                                            <a href="###"><img src="images/start.png" /></a>
+                                        </div>
+                                        <div class="lottery-rule">
+                                            <a href="###"><img src="images/rule.png" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+            </div>
+        </div>
+    </div><!-- //main -->
+    <div class="footer">
+        <div class="content clearfix">
+            <div class="float-left">
+                <img src="images/footer_1.png">
+                <img src="images/footer_2.png">
+            </div>
+            <div class="float-right text-right">
+                <p>
+                    <a href="about.html">关于我们</a>
+                    <span>|</span>
+                    <a href="help.html">存取款帮助</a>
+                    <span>|</span>
+                    <a href="cooperation.html">合作加盟</a>
+                    <span>|</span>
+                    <a href="rule.html">游戏规则</a>
+                </p>
+                <p class="ft12">Copyright &copy; 2016 伯爵彩票. All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <script>
+        var tim = 1;
+        setInterval("tim++", 100);
+        function autourls(url) {
+            if (tim > 200)
+            {
+                document.getElementById(url).innerHTML="链接超时";
+            }
+            else
+            {
+                document.getElementById(url).innerHTML= tim * 10 + "ms";
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="header">
+    <div class="content clr">
+        <div class="logo fl"><img src="images/logo.png" alt="传奇" /></div>
+        <div class="has-question fr">有问题咨询在线客服？&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://messenger3.providesupport.com/messenger/cq987.html" target="_blank">点击此处</a></div>
+    </div>
+</div>
+<div class="main">
+    <div class="content">
+        <div class="box1 clr">
+            <div class="form fl">
+                <p class="box1_title">用户登录</p>
+                <form action="" method="post" id="form">
+                    <div class="unit clr">
+                        <span class="span fl">用户名：</span>
+                        <span class="input fl"><input type="text" class="username" autofocus="true" /></span>
+                    </div>
+                    <div class="unit clr">
+                        <span class="span fl">密&nbsp;&nbsp;码：</span>
+                        <span class="input fl">
+                            <input type="text" class="password fl" />
+                            <a href="###" class="fr"><img src="images/forgot.jpg" /></a>
+                            <div class="clr"></div>
+                        </span>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="unit clr">
+                        <span class="span fl">验证码：</span>
+                        <span class="input input_verify fl">
+                            <input type="text" class="verify_txt" />
+                        </span>
+                        <span class="verify fl">
+                            <a href="###"><img src="images/verify.jpg" /></a>
+                        </span>
+                    </div>
+                    <p>&nbsp;</p>
+                    <button class="btn">登 &nbsp; &nbsp; 录</button>
+                    <p class="form_notice">验证平台真伪，请使用   <a href="###" class="safe">安全登录</a></p>
+                </form>
+            </div>
+            <div class="banner fr">
+                <div class="swipe" id="slider">
+                    <ul class="swipe-wrap">
+                        <li data-index="0"><img src="images/banner_1.jpg" alt=""></li>
+                        <li data-index="1"><img src="images/banner_2.jpg" alt=""></li>
+                        <li data-index="2"><img src="images/banner_3.jpg" alt=""></li>
+                    </ul>
+                </div>
+                <div id="banner_page">
+                    <div class="clearfix">
+                        <a href="###" class="on">1</a>
+                        <a href="###" class=" ">2</a>
+                        <a href="###" class=" ">3</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box2">
+            <h3>
+                <span class="box2_title">域名线路检测</span>
+                <span class="box2_notice"><font color="#ef303e">温馨提示：</font>登录成功后请选择一条较快线路进入平台！</span>
+            </h3>
+            <ul class="clr">
+                <li>
+                    <a href="http://www.cq618.com" class="address" target="_blank">线路一</a>
+                    <a id="uls1" class="ms">正在测速...</a>
+                    <img src="http://www.cq618.com/" width=1 height=1 onerror="autourls('uls1');" style='display:none'>
+                </li>
+                <li>
+                    <a href="http://www.cq8868.com" class="address" target="_blank">线路二</a>
+                    <a id="uls2" class="ms">正在测速...</a>
+                    <img src="http://www.cq8868.com/" width=1 height=1 onerror="autourls('uls2');" style='display:none'>
+                </li>
+                <li>
+                    <a href="http://www.cq8878.com" class="address" target="_blank">线路三</a>
+                    <a id="uls3" class="ms">正在测速...</a>
+                    <img src="http://www.cq8878.com/" width=1 height=1 onerror="autourls('uls3');" style='display:none'>
+                </li>
+                <li>
+                    <a href="http://www.cq8828.com:81" class="address" target="_blank">线路四</a>
+                    <a id="uls4" class="ms">正在测速...</a>
+                    <img src="http://www.cq8828.com:81/" width=1 height=1 onerror="autourls('uls4');" style='display:none'>
+                </li>
+                <li>
+                    <a href="http://www.cq8898.com" class="address" target="_blank">线路五</a>
+                    <a id="uls5" class="ms">正在测速...</a>
+                    <img src="http://www.cq8898.com/" width=1 height=1 onerror="autourls('uls5');" style='display:none'>
+                </li>
+                <li>
+                    <a href="http://www.cq698.com:81" class="address" target="_blank">线路六</a>
+                    <a id="uls6" class="ms">正在测速...</a>
+                    <img src="http://www.cq698.com:81/" width=1 height=1 onerror="autourls('uls6');" style='display:none'>
+                </li>
+                <li>
+                    <a href="http://www.cq8858.com" class="address" target="_blank">线路七</a>
+                    <a id="uls7" class="ms">正在测速...</a>
+                    <img src="http://www.cq8858.com/" width=1 height=1 onerror="autourls('uls7');" style='display:none'>
+                </li>
+                <li>
+                    <a href="http://www.cq8848.com" class="address" target="_blank">线路八</a>
+                    <a id="uls8" class="ms">正在测速...</a>
+                    <img src="http://www.cq8848.com/" width=1 height=1 onerror="autourls('uls8');" style='display:none'>
+                </li>
+                <li>
+                    <a href="http://www.cq8838.com:81" class="address" target="_blank">线路九</a>
+                    <a id="uls9" class="ms">正在测速...</a>
+                    <img src="http://www.cq8838.com:81/" width=1 height=1 onerror="autourls('uls9');" style='display:none'>
+                </li>
+                <li>
+                    <a href="http://www.cq8808.com:81" class="address" target="_blank">线路十</a>
+                    <a id="uls10" class="ms">正在测速...</a>
+                    <img src="http://www.cq8808.com:81/" width=1 height=1 onerror="autourls('uls10');" style='display:none'>
+                </li>
+            </ul>
+        </div>
+        <div class="kefu">
+            <a href="https://messenger3.providesupport.com/messenger/cq987.html" target="_blank"><img src="images/kefu.png" alt="客服" /></a>
+        </div>
+    </div>
+</div>
+<div class="down">
+    <div class="content clr">
+        <div class="down_pc fl">
+            <a href="http://pan.baidu.com/s/1nvQuicp" class="pc_down_link"><img src="images/pc_down.png" /></a>
+            <p>为了更好的用户体验，推荐使用Google Chrome Firefox 或IE9+浏览器  <a href="browser.zip">&nbsp;&nbsp;点击可立即下载&nbsp;&nbsp;</a></p>
+        </div>
+        <div class="split fl"></div>
+        <div class="down_mobile fl">
+            <a href="###" class="android_link"><img src="images/android.png" /></a>
+            <a href="###" class="iphone_link"><img src="images/iphone.png" /></a>
+        </div>
+        <div class="split fl"></div>
+        <div class="down_scan fr"></div>
+    </div>
+</div>
+<div class="link">
+    <div class="content"><img src="images/link.jpg" /></div>
+</div>
+<div class="footer">
+    <div class="content clr">
+        <div class="footer-copy fl">
+            <p>传奇娱乐由菲律宾马尼拉（GICC）颁发合法执照并受其监督</p>
+            <p>Copyright &copy; 2013-2016 www.cq618.com All Rights Reserved</p>
+        </div>
+        <div class="footer-notice fl"></div>
+    </div>
+</div>
+<script src="js/jquery-1.8.2.min.js"></script>
+<script src="js/swipe.js"></script>
+<script>
+    var slider = Swipe(document.getElementById('slider'), {
+        auto: 3000,
+        continuous: true,
+        callback: function(pos) {
+            var i = bullets.length;
+            while (i--) {
+                bullets[i].className = ' ';
+            }
+            bullets[pos].className = 'on';
+        }
+    });
+    var bullets = document.getElementById('banner_page').getElementsByTagName('a');
+</script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/layer.js"></script>
+    <link type="text/css" rel="stylesheet" href="js/layer.css" id="skinlayercss">
+    <script>
+        var tim = 1;
+        setInterval("tim++", 100);
+        function autourls(url) {
+            if (tim > 200)
+            {
+                document.getElementById(url).innerHTML="链接超时";
+            }
+            else
+            {
+                document.getElementById(url).innerHTML= tim * 10 + "ms";
+            }
+        }
+        function rule(){
+            $.layer({
+                type : 2,
+                title: '用户服务协议',
+                iframe: {src: 'service.html'},
+                offset: ['50px', ''],
+                area : ['700px' ,($(window).height()-100)+'px']
+            });
+        }
+    </script>
+</head>
+<body>
+<div class="header">
+    <div class="content clr">
+        <div class="logo fl"><img src="images/logo.png" alt="传奇" /></div>
+        <div class="has-question fr">有问题咨询在线客服？&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://messenger3.providesupport.com/messenger/cq987.html" target="_blank">点击此处</a></div>
+    </div>
+</div>
+<div class="main">
+    <div class="content">
+        <div class="box1 clr">
+            <div class="signup form fl" style="margin-top: -20px;">
+                <p class="box1_title">用户注册</p>
+                <form action="" method="post" id="form">
+                    <div class="unit clr">
+                        <span class="span fl"><font color="#ef303e">*</font>用户名：</span>
+                        <span class="input fl"><input type="text" class="username" autofocus="true" placeholder="6-16位数字，字母，下划线且必须为字母开头" /></span>
+                    </div>
+                    <div class="unit clr">
+                        <span class="span fl"><font color="#ef303e">*</font>密&nbsp;&nbsp;码：</span>
+                        <span class="input fl">
+                            <input type="text" class="signup_pass password" onkeyup="checkPassLevel(this);" onblur="checkPassLevel(this);" placeholder="6-12位小写字母数字符号组合" />
+                        </span>
+                    </div>
+                    <!-- 等级调用说明：分为5个等级，默认为0，最高为5，更改span.level的class值 -->
+                    <p class="check_pass">
+                        <span>密码安全性</span>
+                        <span class="level level_0" id="level"></span>
+                        <span class="safe_level"></span>
+                    </p>
+                    <div class="unit clr">
+                        <span class="span fl"><font color="#ef303e">*</font>确认密码：</span>
+                        <span class="input fl">
+                            <input type="text" class="signup_pass password" placeholder="再次输入密码确认" />
+                        </span>
+                    </div>
+                    <div class="unit clr">
+                        <span class="span fl">验证码：</span>
+                        <span class="input input_verify fl">
+                            <input type="text" class="verify_txt" />
+                        </span>
+                        <span class="verify fl">
+                            <a href="###"><img src="images/verify.jpg" /></a>
+                        </span>
+                    </div>
+                    <p>&nbsp;</p>
+                    <button class="btn">注 &nbsp; &nbsp; 册</button>
+                    <p class="form_notice" style="margin-top: 15px;"><input type="checkbox" /> 我已阅读并同意 <a href="javascript:rule();" class="safe">《传奇娱乐用户服务协议》</a></p>
+                </form>
+            </div>
+            <div class="banner fr">
+                <div class="swipe" id="slider">
+                    <ul class="swipe-wrap">
+                        <li data-index="0"><img src="images/banner_1.jpg" alt=""></li>
+                        <li data-index="1"><img src="images/banner_2.jpg" alt=""></li>
+                        <li data-index="2"><img src="images/banner_3.jpg" alt=""></li>
+                    </ul>
+                </div>
+                <div id="banner_page">
+                    <div class="clearfix">
+                        <a href="###" class="on">1</a>
+                        <a href="###" class=" ">2</a>
+                        <a href="###" class=" ">3</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box2">
+            <h3>
+                <span class="box2_title">域名线路检测</span>
+                <span class="box2_notice"><font color="#ef303e">温馨提示：</font>注册成功后请选择一条较快线路进入平台！</span>
+            </h3>
+            <ul class="clr">
+                <li>
+                    <a href="http://www.cq117.com" class="address" target="_blank">线路一</a>
+                    <a id="uls1" class="ms">正在测速...</a>
+                    <img src="hhttp://www.cq117.com/" width=1 height=1 onerror="autourls('uls1');" style='display:none'>
+                </li>
+                <li>
+                    <a href="http://www.cq211.com" class="address" target="_blank">线路二</a>
+                    <a id="uls2" class="ms">正在测速...</a>
+                    <img src="http://www.cq211.com/" width=1 height=1 onerror="autourls('uls2');" style='display:none'>
+                </li>
+                <li>
+                    <a href="http://www.cq212.com" class="address" target="_blank">线路三</a>
+                    <a id="uls3" class="ms">正在测速...</a>
+                    <img src="http://www.cq212.com/" width=1 height=1 onerror="autourls('uls3');" style='display:none'>
+                </li>
+                <li>
+                    <a href="http://www.cq225.com" class="address" target="_blank">线路四</a>
+                    <a id="uls4" class="ms">正在测速...</a>
+                    <img src="http://www.cq225.com/" width=1 height=1 onerror="autourls('uls4');" style='display:none'>
+                </li>
+                <li>
+                    <a href="http://www.0088cq.com" class="address" target="_blank">线路五</a>
+                    <a id="uls5" class="ms">正在测速...</a>
+                    <img src="http://www.0088cq.com/" width=1 height=1 onerror="autourls('uls5');" style='display:none'>
+                </li>
+                <li>
+                    <a href="http://www.1188cq.com" class="address" target="_blank">线路六</a>
+                    <a id="uls6" class="ms">正在测速...</a>
+                    <img src="http://www.1188cq.com/" width=1 height=1 onerror="autourls('uls6');" style='display:none'>
+                </li>
+                <li>
+                    <a href="http://www.2288cq.com" class="address" target="_blank">线路七</a>
+                    <a id="uls7" class="ms">正在测速...</a>
+                    <img src="http://www.2288cq.com/" width=1 height=1 onerror="autourls('uls7');" style='display:none'>
+                </li>
+                <li>
+                    <a href="http://www.3388cq.com" class="address" target="_blank">线路八</a>
+                    <a id="uls8" class="ms">正在测速...</a>
+                    <img src="http://www.3388cq.com/" width=1 height=1 onerror="autourls('uls8');" style='display:none'>
+                </li>
+                <li>
+                    <a href="http://www.4488cq.com" class="address" target="_blank">线路九</a>
+                    <a id="uls9" class="ms">正在测速...</a>
+                    <img src="http://www.4488cq.com/" width=1 height=1 onerror="autourls('uls9');" style='display:none'>
+                </li>
+                <li>
+                    <a href="http://www.6688cq.com" class="address" target="_blank">线路十</a>
+                    <a id="uls10" class="ms">正在测速...</a>
+                    <img src="http://www.6688cq.com/" width=1 height=1 onerror="autourls('uls10');" style='display:none'>
+                </li>
+            </ul>
+        </div>
+        <div class="kefu">
+            <a href="https://messenger3.providesupport.com/messenger/cq987.html" target="_blank"><img src="images/kefu.png" alt="客服" /></a>
+        </div>
+    </div>
+</div>
+<div class="down">
+    <div class="content clr">
+        <div class="down_pc fl">
+            <a href="http://pan.baidu.com/s/1nvQuicp" class="pc_down_link"><img src="images/pc_down.png" /></a>
+            <p>为了更好的用户体验，推荐使用Google Chrome Firefox 或IE9+浏览器  <a href="browser.zip">&nbsp;&nbsp;点击可立即下载&nbsp;&nbsp;</a></p>
+        </div>
+        <div class="split fl"></div>
+        <div class="down_mobile fl">
+            <a href="###" class="android_link"><img src="images/android.png" /></a>
+            <a href="###" class="iphone_link"><img src="images/iphone.png" /></a>
+        </div>
+        <div class="split fl"></div>
+        <div class="down_scan fr"></div>
+    </div>
+</div>
+<div class="link">
+    <div class="content"><img src="images/link.jpg" /></div>
+</div>
+<div class="footer">
+    <div class="content clr">
+        <div class="footer-copy fl">
+            <p>传奇娱乐由菲律宾马尼拉（GICC）颁发合法执照并受其监督</p>
+            <p>Copyright &copy; 2013-2016 www.cq618.com All Rights Reserved</p>
+        </div>
+        <div class="footer-notice fl"></div>
+    </div>
+</div>
+<script src="js/swipe.js"></script>
+<script>
+    var slider = Swipe(document.getElementById('slider'), {
+        auto: 3000,
+        continuous: true,
+        callback: function(pos) {
+            var i = bullets.length;
+            while (i--) {
+                bullets[i].className = ' ';
+            }
+            bullets[pos].className = 'on';
+        }
+    });
+    var bullets = document.getElementById('banner_page').getElementsByTagName('a');
+
+    function checkPassLevel(obj){
+        var level = AnalyzePasswordSecurityLevel(obj.value);
+        var $this = $("#level");
+        var text = $(".safe_level");
+        if (obj.value.length == 0){
+            $this.attr('class', 'level level_0');
+            text.html('');
+            return ;
+        }
+        if (level == 0){
+            $this.attr('class', 'level level_0');
+            text.html('较弱');
+        }else if (level == 1){
+            $this.attr('class', 'level level_1');
+            text.html('弱');
+        }else if (level == 2){
+            $this.attr('class', 'level level_2');
+            text.html('中');
+        }else if (level == 3){
+            $this.attr('class', 'level level_3');
+            text.html('强');
+        }else if (level == 4){
+            $this.attr('class', 'level level_4');
+            text.html('非常好');
+        }
+    }
+
+    function AnalyzePasswordSecurityLevel(password) {
+        var pwdArray = [];
+        var securityLevelFlag = 0;
+        if (password.length < 6) {
+            return 0;
+        }
+        else {
+            var securityLevelFlagArray = [0, 0, 0, 0];
+            for (var i = 0; i < password.length; i++) {
+                var asciiNumber = password.substr(i, 1).charCodeAt();
+                if (asciiNumber >= 48 && asciiNumber <= 57) {
+                    securityLevelFlagArray[0] = 1;  //digital
+                }
+                else if (asciiNumber >= 97 && asciiNumber <= 122) {
+                    securityLevelFlagArray[1] = 1;  //lowercase
+                }
+                else if (asciiNumber >= 65 && asciiNumber <= 90) {
+                    securityLevelFlagArray[2] = 1;  //uppercase
+                }
+                else {
+                    securityLevelFlagArray[3] = 1;  //specialcase
+                }
+            }
+
+            for (var i = 0; i < securityLevelFlagArray.length; i++) {
+                if (securityLevelFlagArray[i] == 1) {
+                    securityLevelFlag++;
+                }
+            }
+            return securityLevelFlag;
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>BLB体育 </title>
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+    <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="/Scripts/jquery-1.9.1.min.js"></script>
+    <style>
+        a:link { text-decoration: none; }
+
+        .header-logo { padding: 3px; }
+
+        .width30 { width: 30px; }
+
+        .register { padding-top: 12px; }
+
+        .register a { font-weight: bold; padding-right: 8px; padding-top: 5px; }
+        .headerMain { padding-top: 3px; padding-right: 10px; min-width:50%;}
+        .headerdiv a { font-weight: bold; }
+        .footercontent { padding-top: 12px; padding-bottom: 10px; font-weight: bold; background: #92B3DD; }
+
+        .fontsize { font-size: 25px; padding: 2px 2px 2px 10px; }
+        .linecentermodel { margin: auto; position: absolute; top: 0; left: 0; bottom: 0; right: 0; }
+    </style>
+</head>
+<body>
+<div id="header-top" class="bg-info header-logo">
+    <div class="pull-left">
+        <a href="/">
+            <img width="100" height="40" class="img-responsive" src="/IMG/Main/logo.png" />
+        </a>
+    </div>
+    <div class="pull-right register">
+        <a class="center-block pull-left log" href="/Home/Login">登录</a>
+        <a class="center-block pull-left reg" href="/Home/Register">注册</a>
+        <img class="img-responsive width30 pull-left" src="/IMG/Main/zh_cn.png" />
+    </div>
+    <!-- 登录成功 <div class="pull-right headerMain">
+        <div class="headerdiv">
+            <a class="center-block pull-right" href="javascript:void(0)">账号:cool123 &nbsp;余额：<span id="IndexCredit" style="color: red">0</span></a>
+
+            <div class="clearfix"></div>
+        </div>
+        <div class="headerdiv pull-right" style="margin-top: 4px;">
+            <a class="" href="/Main/UserCenter">会员中心</a>&nbsp;&nbsp;
+            <a class="" href="javascript:logoutUser()">退出</a>
+            <div class="clearfix"></div>
+        </div>
+    </div> //end -->
+    <div style="clear: both"></div>
+</div>
+<style>
+    .body-banner { background-image: linear-gradient(#709CD6,#f1f1f1); }
+    .body-main { padding-top: 15px; padding-bottom: 20px; }
+    .fontsize20 { font-size: 20px; }
+    #fontimg { background-color: #D9EDF7; border: none; }
+    /*Marquee样式*/
+    ul.marquee { display: block; padding: 0; margin: -3px; list-style: none; line-height: 1; position: relative; overflow: hidden; height: 22px; }
+    ul.marquee li { position: absolute; top: -999em; left: 0; display: block; white-space: nowrap; font: 14px Arial,Helvetica,sans-serif; padding: 4px 5px; font-weight: bold; }
+    /*Marquee样式*/
+    .game_block { background: #CCDDE0; border: 1px solid #fff; border-radius: 15px; padding: 10px; text-align: center; font-weight: bold; display: block; position: relative;  }
+    .img-opacity { opacity: 0.5; }
+    .tapes { position: absolute; top: 7px; left: -23px; display: block; width: 100px; height: 30px; line-height: 30px; background: url('../../IMG/Main/g-tapes.png') center no-repeat; background-size: 100px; transform: rotate(-41deg); -ms-transform: rotate(-42deg); -moz-transform: rotate(-42deg); -webkit-transform: rotate(-41deg); -o-transform: rotate(-42deg); color: #e68e26; font-size: 14px; }
+    table { width: 100%; max-width: 100%; }
+    table td { padding: 3px; }
+    .footer_bar { width: 100%; max-width: 100%; background: #F2EFE9; text-align: center; z-index: 9999; }
+    .badge { background-color: red; position: absolute; right: 50%; top: 30px; }
+</style>
+<div class="body-banner">
+    <div id="myCarousel" class="carousel slide">
+        <!-- 轮播（Carousel）指标 -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- 轮播（Carousel）项目 -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="/IMG/Main/banner1.jpg" class="img-responsive center-block">
+            </div>
+            <div class="item">
+                <img src="/IMG/Main/banner2.jpg" class="img-responsive center-block">
+            </div>
+            <div class="item">
+                <img src="/IMG/Main/banner3.jpg" class="img-responsive center-block">
+            </div>
+        </div>
+        <!-- 轮播（Carousel）导航 -->
+        <a class="carousel-control left" href="#myCarousel"
+           data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#myCarousel"
+           data-slide="next">&rsaquo;</a>
+    </div>
+</div>
+<div class="bg-info">
+    <div class="container">
+        <div class="input-group">
+            <span class="input-group-addon" id="fontimg"><span class="glyphicon glyphicon-volume-up fontsize20"></span></span>
+            <div class="form-control">
+                <ul id="marquee" class="marquee"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="body-banner body-main">
+    <table>
+        <tr>
+            <td>
+                <a class="game_block" href="/Home/Login" target="_self">
+                    <img class="img-responsive center-block" src="/IMG/Main/caipiao.png" />
+                    彩票
+                </a>
+
+
+            </td>
+            <td>
+                <a class="game_block" href="/Home/Login" target="_self">
+                    <img class="img-responsive center-block" src="/IMG/Main/sport.png" />
+                    体育赛事
+                </a>
+
+
+            </td>
+            <td>
+                <a class="game_block" href="/Home/Login" target="_self">
+                    <img class="img-responsive center-block" src="/IMG/Main/g-ag.png" />
+                    AG视讯
+                </a>
+
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class="game_block" href="/Home/Login" target="_self">
+                    <img class="img-responsive center-block" src="/IMG/Main/bbin.png" />
+                    BBIN视讯
+                </a>
+
+            </td>
+            <td>
+                <a class="game_block" href="/Home/Login" target="_self">
+                    <img class="img-responsive center-block" src="/IMG/Main/g-m8.png" />
+                    M8体育
+                </a>
+
+
+            </td>
+            <td>
+                <a class="game_block" href="/Home/Login" target="_self">
+                    <img class="img-responsive center-block" src="/IMG/Main/g-egame.png" />
+                    电子游戏
+                </a>
+
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class="game_block" href="javascript:void(0)">
+                    <span class="tapes">即将上线</span>
+                    <img class="img-responsive center-block img-opacity" src="/IMG/Main/g-lmg.png" />
+                    LMG视讯
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="text-center" style="background:#F2EFE9;padding-bottom:10px;"><a href="http://blb01.com?type=PC&amp;intr="><span class="glyphicon glyphicon-log-in"></span> 电脑版</a></div>
+
+<div class="footer_bar">
+    <table>
+        <tr>
+            <td>
+                <a href="/Main/BankRecord?UID=" class="center-block">
+                    <img src="/IMG/icon-coin.png" class="img-responsive center-block" />
+                    银行交易
+                </a>
+            </td>
+            <td>
+                <a href="/Main/ChangeCash?UID=" class="center-block">
+                    <img src="/IMG/icon-transfer.png" class="img-responsive center-block" />
+                    额度转换
+                </a>
+            </td>
+            <td>
+                <a href="/Main/DropRecord?UID=" class="center-block">
+                    <img src="/IMG/icon-record.png" class="img-responsive center-block" />
+                    投注报表
+                </a>
+            </td>
+            <td>
+                <a href="/Main/MessageCenter?UID=" class="center-block" style="position:relative;">
+                    <img src="/IMG/icon-message.png" class="img-responsive center-block" />
+                    信息中心
+                    <span id="MsgNotReadCount" class="badge"></span>
+                </a>
+            </td>
+            <td>
+                <a href="/DisplayGame/Index/ServerUrl" target="_blank" class="center-block">
+                    <img src="/IMG/icon-service.png" class="img-responsive center-block" />
+                    客服
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+<script src="/Scripts/jquery.marquee.min.js"></script>
+<script>
+    $(function () {
+        $('#myCarousel').carousel({
+            interval: 3000
+        });
+        GetCredit();
+        GetMessgeInfo();
+        GetMessageCount();
+
+    });
+
+    function GetCredit() {
+        if ($("#IndexCredit").length > 0) {
+            $.ajax({
+                url: '/ajax/getcredit?UID=&t=' + new Date(),
+                success: function (data) {
+                    try {
+                        if (data.indexOf("<html>") > 0)
+                        {
+                            alert("网络连接超时，请重新登录");
+                            location = "/home/login";
+                        }
+                        else
+                            $("#IndexCredit").html(data);
+                    }
+                    catch (e) {
+                        console.log(e)
+                    }
+                }
+
+            });
+        }
+    }
+    function GetMessgeInfo() {
+        $.ajax({
+            url: '/app/Message.ashx?act=NewInfo&UID=',
+            success: function (data) {
+                if (data != null && data != "网络连接超时") {
+                    data = $.parseJSON(data);
+                    var html = '';
+                    for (var i = 0; i < data.length; i++) {
+                        html += '<li>';
+                        html += data[i].report_content;
+                        html += '</li>';
+                    }
+                    data = html;
+                    $("#marquee").html(data);
+                }
+                $("#marquee").marquee({ scrollSpeed: 22 });
+            }
+        });
+    }
+    //取个人信息数量
+    function GetMessageCount() {
+        if ($("#isuser").length > 0) {
+            $.ajax({
+                type: 'POST',
+                url: '/app/Message.ashx?act=PerInfo&UID=',
+                data: {},
+                cache: false,
+                async: false,
+                error: function () { return false; },
+                success: function (da) {
+                    var data = eval("(" + da + ")");
+                    var html = "";
+                    var count = 0;
+                    if (data.length > 0) {
+                        for (var i = 0; i < data.length; i++) {
+                            if (!data[i].readstate) {
+                                count++;
+                            }
+                        }
+                        if (count == 0) {
+                            $("#MsgNotReadCount").html('');
+                        } else {
+                            $("#MsgNotReadCount").html(count);
+                        }
+                    }
+                    else {
+                        $("#MsgNotReadCount").html('');
+                    }
+                }
+            });
+        }
+    }
+
+</script>
+
+<div class="text-center footercontent">
+    Copyright &copy; BLB体育 Reserved
+</div>
+<script src="/Scripts/bootstrap.min.js"></script>
+
+
+<script src="/Scripts/bootstrap_alert.js"></script>
+<!-- system modal start弹窗html -->
+<div id="ycf-alert" class="modal">
+    <div class="modal-dialog modal-sm linecentermodel" style="width: 300px; height: 108px;">
+        <div class="modal-content">
+            <div class="modal-body bg-info" style="border-radius: 5px; padding: 10px;">
+                <p style="font-size: 15px; font-weight: bold;">[Message]</p>
+            </div>
+            <div class="modal-footer" style="padding: 5px; text-align: center;">
+                <button type="button" class="btn btn-primary ok" data-dismiss="modal">[BtnOk]</button>
+                <button type="button" class="btn btn-default cancel" data-dismiss="modal">[BtnCancel]</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- system modal end弹窗html -->
+
+<script>
+    $(function () {
+        var s = "";
+        if (s != "")
+            setTimeOut();
+    });
+    function logoutUser() {
+        Modal.confirm({ msg: "确定是退出？" }).on(function (e) {
+            if (e) {
+                location.href = "/app/logout.ashx";
+            }
+        });
+    }
+
+    var timeoutID;
+    function setTimeOut() {
+        clearTimeout(timeoutID);
+        $.ajax({
+            url: "/ajax/refresh?UID=&t=" + new Date(),
+            success: function (da) {
+
+            }
+        })
+        timeoutID = setTimeout("setTimeOut()", 5 * 60 * 1000)
+    }
+</script>
+
+
+</body>
+</html>

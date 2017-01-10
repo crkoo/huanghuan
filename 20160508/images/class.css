@@ -1,0 +1,251 @@
+@charset "gb2312";
+/* CSS Document */
+BODY { margin:0; padding:0; font-family:宋体, Verdana;color:#FFF;font-size:12px;}
+TD {FONT-SIZE: 12px;}
+A:link {TEXT-DECORATION: none; color:#FFF;}
+A:visited {TEXT-DECORATION: none;}
+A:hover {TEXT-DECORATION:none;}
+form,div,ul,object,p {margin:0; padding:0;}
+li {margin:0; padding:0; list-style-type:none;}
+a img{border:0;}
+u,strike {text-decoration:none;}
+i { font-style:normal}
+.clear{ clear:both; float:none;}
+/* 主要设定 */
+.ds {display:block; overflow:hidden}
+.none {display: none;}
+.left {float:left; display:block}
+.right {float:right; display:block}
+.ws {width:100%; height:auto}
+.m0 {margin:0 auto;}
+.m1 {margin:10px auto}
+.m2 {margin:20px auto}
+.set {width:auto; height:auto;}
+.main { margin:0 auto;width:1021px; height:auto}
+.txt {font-family:宋体; line-height:20px; font-size:12px;}
+.ah {font-family:宋体; font-size:12px; color:#FFF;}
+.ah:hover { color:#FC0; text-decoration:none;}
+
+/* 背景设置 */
+.bg01 {background:#141414;}
+.bg02 {background:url(topbg.jpg) repeat-x}
+.bg03 {background:url(menubg.png) 9px 0 no-repeat}
+.bg04 {background:url(bg.jpg) top center no-repeat;}
+.bg05 {}
+.bg06 { background:#00243a;}
+.bg07 {background-color: #333333;}
+.regbg {}
+
+/* 首页CSS ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+.head {width:1021px; height:90px;}
+.menu {width:864px; height:40px; background:url(menubg.png) no-repeat;}
+.mlist {margin-top: 5px; width:550px; height:40px; margin-left: 20px; background: url(menuleft123.png) no-repeat;}
+.mlist a {margin: 10px 0 0 10px;height: 30px;}
+.mlist a.ml1 {width: 45px; margin-left: 20px;}
+.mlist a.ml2 {width: 70px; }
+.mlist a.ml3 {width: 50px; }
+.mlist a.ml4 {width: 50px; }
+.mlist a.ml5 {width: 70px; }
+.mlist a.ml6 {width: 70px; margin-left: 20px; }
+.mlist a.ml7 {width: 70px; margin-left: 20px; }
+.login { margin:9px 5px 0 0;width:260px; height:24px;}
+.lonav {width:87px; height:24px; background:url(input-1.png) 0 0 no-repeat; border:none; color:#666; padding-left:5px; line-height:24px}
+.lobut {width:65px; height:24px; background:url(input-1.png) 0 -25px repeat-x; border:none; color:#FFF; font-size:12px; font-family:宋体; line-height:24px; text-align:center;}
+.forget {width:60px; height:20px;}
+.forget a:hover {text-decoration:underline}
+.join { margin:0 0 0 20px;width:102px; height:20px; background:url(join.png) no-repeat; text-align:center;}
+.join a{color:#212121}
+.flash {width:500px; height:330px;}
+.banav {width:auto; height:158px; border:1px solid #0f4c71;}
+/* 首页脚部 */
+.longlogo {width:1021px; height:50px; background:url(longlogo.jpg) no-repeat; margin:0 auto; margin-top:10px;}
+.footmenu { margin:5px auto 0 auto; width:1000px; height:20px;}
+.footmenu a {padding:0 5px 0 5px; line-height:20px; font-size:12px; font-family:宋体; color:#FFF;}
+.footmenu a:hover {text-decoration:underline}
+.footcopy {margin:5px auto 5px auto; width:1000px; height:38px; background:url(flashplayer.jpg) left no-repeat;}
+.fotxt { margin:5px 0 0 120px; width:310px; height:38px; color:#666; line-height:18px; font-size:12px; font-family:宋体;}
+/*在线客服*/
+.seronline {width:auto; height:38px;}
+/*文字内容*/
+.divnav {margin:10px auto 10px auto; width:1000px; height:auto;}
+.atxt { margin:0 5px 0 5px;width:240px; height:auto;}
+.atxtb { margin:10px 0 0 0;width:240px; height:25px; border-bottom:1px dotted #666; line-height:20px; font-size:14px; font-family:宋体; color:#666;}
+.atxtc {margin:5px auto 0 auto; width:230px; height:auto}
+.ac { color:#666;padding:0 0 5px 0;}
+.ab {color:#9f9f9f; padding:0 0 5px 0;}
+/* 内页CSS ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+.smenu { margin:20px 0 0 0; width:780px; height:40px;background:url(text123.png) no-repeat}
+.smenu ul {margin:0 0 0 130px; width:650px; height:40px;display:block; overflow:hidden;}
+.smenu ul a.sm {width:80px; height:20px;}
+.smenu ul a.sm:hover{background:url(aeff_1.png) no-repeat;}
+/* 左右分栏 */
+.leftnav { width:240px;}
+.lnmenu { margin:5px auto 0 8px;width:218px; height:30px; background:url(leftnav.png) 0 -30px no-repeat;}
+/* 菜单停留 */
+.zp-on {width:63px;height:30px;float:left;display:block}
+.zp-off{width:63px;height:30px;background:url(leftnav.png) 0 0 no-repeat;float:left;display:block}
+.jr-on {width:94px;height:30px;float:left;display:block}
+.jr-off{width:94px;height:30px;background:url(leftnav.png) -63px 0 no-repeat;float:left;display:block}
+.gq-on{width:61px;height:30px;float:left;display:block}
+.gq-off{width:61px;height:30px;background:url(leftnav.png) -157px 0 no-repeat;float:left;display:block}
+a.mac1{width:50px;height:12px;color:#004870;font-size:12px;font-family:宋体;}
+a.mac1:hover{ text-decoration:underline;}
+/* 球类菜单 */
+.leftlist {margin:5px 0 0 8px; width:218px; height:auto;}
+/* 效果关闭 off */
+a.ball-off {width:218px; height:24px; border-bottom:1px solid #c3c3c3; background:url(leftlist.png) no-repeat #cdcdcd;display:block; overflow:hidden;}
+a.ball-off b { padding:0 0 0 30px;font-size:12px; font-family:宋体; line-height:25px;color:#00243a;}
+/* 效果开启 on */
+a.ball-on {width:218px; height:24px; border-bottom:1px solid #004579; background:url(leftlist.png) no-repeat #0068b7;display:block; overflow:hidden;}
+a.ball-on b { padding:0 0 0 30px;font-size:12px; font-family:宋体; line-height:25px;color:#FFF;}
+/* 球类列表项目 */
+.blist { width:218px;height:auto; background:#e8e8e8;}
+.blist li {margin:5px auto 0 auto;width:208px;height:20px;border-bottom:1px dotted #a0a0a0;}
+.blist a {font-family:宋体;font-size:12px;line-height:20px; color:#666; padding:0 0 0 10px;}
+.blist a:hover {color:#00243a;}
+/* 右边内容 */
+.rightnav {width:775px; background:#FFF;}
+/* 交易状况变色按钮 */
+a.jy { width:auto; height:27px; margin:0 1px 0 0; background:#7bc0dd;}
+a.jy b { padding:0 15px 0 15px; font-family:宋体; font-size:12px; line-height:27px; color:#064574;}
+a.jy:hover { background:#1c7cc3;}
+a.jy:hover b {color:#FFF;}
+/* 信息 留言 连接变色 */
+a.messa { margin:0 15px 0 15px; font-family:宋体; line-height:20px; font-size:12px; color:#FFF;}
+a.messa:hover {color:#212121; text-decoration:none;}
+a.messb {margin:0 15px 0 15px; font-family:宋体; line-height:20px; font-size:12px; color:yellow;}
+a.messb:hover {color:#212121; text-decoration:none;}
+/* 时时彩 */
+a.ssc { margin:5px 0 0 0;width:200px; height:20px;font-family:"微软雅黑"; font-weight:bold; font-size:12px; line-height:20px; color:#1d2088;}
+a.ssd { margin:5px 0 0 0;width:200px; height:20px;font-family:"微软雅黑"; font-weight:bold; font-size:12px; line-height:20px; color:#22ac38;}
+
+
+
+
+/* 弹出窗口系列 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.abmain {margin:0 auto; width:630px; height:auto}
+.abhead {width:630px;height:50px; background:url(headbg.jpg)}
+/*小菜单连接*/
+a.abm1,a.abm2,a.abm2s,a.abm3,a.abm3s,a.abm4,a.abm4s,a.abm5,a.abm5s,a.abm6,a.abm6s,a.abm7,a.abm7s,a.abm8,a.abm8s {width:75px; height:30px;}
+/* 1 */
+a.abm1s {width:75px; height:30px; background:url(abmenu.png) 0 -31px no-repeat;}
+a.abm2s {width:75px; height:30px;background:url(abmenu.png) -75px -31px no-repeat;}
+a.abm3s {width:75px; height:30px;background:url(abmenu.png) -150px -31px no-repeat;}
+a.abm4s {width:75px; height:30px;background:url(abmenu.png) -225px -31px no-repeat;}
+a.abm5s {width:75px; height:30px;background:url(abmenu.png) -300px -31px no-repeat;}
+a.abm6s {width:75px; height:30px;background:url(abmenu.png) -375px -31px no-repeat;}
+a.abm7s { width:75px; height:30px; background:url(abmenu.png) -450px -31px no-repeat;}
+a.abm8s { width:75px; height:30px; background:url(abmenu.png) -525px -31px no-repeat;}
+
+/* 文字内容 */
+.linav {margin:10px auto;width:590px; height:auto; font-size:12px; line-height:20px; color:#333; font-family:宋体;}
+.linav p {line-height:35px;}
+
+.banner {
+    position: relative;
+    margin-top: 1px;
+    width: 100%;
+    height: 540px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+.carousel_main_wrapper{
+    /* max-width: 1600px;*/
+}
+.page_bottom {position: relative; width: 100%; top: -30px;}
+.carousel_main_wrapper .carousel_main div.slide {
+    height: 540px;
+    float: left;
+    position: relative;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: #000;
+}
+
+.carousel_main div.slide div.slide_content{
+    position: relative;
+    width: 100%;
+    height: 540px;
+    bottom: 0;
+    margin: 0 auto;
+    /*left: 50%;
+    margin-left: -480px;*/
+    text-align:center;
+}
+
+.carousel_main div.slide div.slide_content div.textarea{
+    position: absolute;
+    width: 1000px;
+    left: 50%;
+    margin-left: -500px;
+    bottom: 50px;
+    *left: 0;
+    text-align:center;
+}
+
+.carousel_main_wrapper div.pager {
+    display: none;
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    text-align:center;
+    z-index: 20;
+    zoom: 1;
+}
+.carousel_main_wrapper div.pager a.thumb{
+    height: 16px;
+    width: 16px;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    background-color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0px 10px;
+}
+.carousel_main_wrapper div.pager a.thumb.selected,.carousel_main_wrapper div.pager a.thumb:hover {
+    background-color: #dc3f3f;
+}
+
+.yh_banner {margin: 20px 0;}
+.yh_content {margin-bottom: 40px;}
+.yh_content .yh_row {margin: 4px;}
+.yh_content .yh_row .yh_title {margin: 24px 0; padding: 6px 0 0 65px; width: 120px; height: 36px; background: url("yh_title.png") no-repeat;}
+.yh_content .yh_row .yh_title.yh_title_bg {width: 177px; background-image: url("yh_title_big.png")}
+.yh_content .yh_row .yh_title span {font-size: 18px; font-weight: bold;}
+.yh_content .yh_row .yh_text {margin-left: 5px;}
+.yh_content .yh_row .yh_text p {line-height: 24px;}
+.yh_content .yh_row .yh_text table {margin-top: 10px; text-align: center;}
+.yh_content .yh_row .yh_text table td {height: 34px; vertical-align: middle; background-color: #8c8c8c;}
+.yh_content .yh_row .yh_text table thead td {background-color: #ffa406; font-size: 14px;}
+
+.ag_banner {position: relative; margin: 16px 0 30px; width: 878px; height: 420px; background: url("ag.jpg") no-repeat;}
+.ag_banner .play {position: absolute; display: block; width: 122px; height: 38px; background: url("play.png") no-repeat;}
+.ag_banner .play.play_left {top: 139px; left: 295px;}
+.ag_banner .play.play_right {top: 252px; left: 457px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html class="madvertis zh-cn at1">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=8" />
+    <title>全民彩票</title>
+    <link href="skins/css/standard.css" rel="stylesheet">
+    <link href="skins/css/xinhao99.css" rel="stylesheet">
+    <link href="skins/css/font-awesome.css" rel="stylesheet">
+    <script src="skins/js/jquery-1.7.2.min.js"></script>
+    <script src="skins/js/jquery-ui-1.8.21.custom.min.js"></script>
+    <link href="skins/css/jquery-ui/purple/jquery-ui-1.9.2.custom.css" rel="stylesheet" />
+    <script src="skins/js/common.js"></script>
+    <script src="skins/js/upup.js" data-ltl="Y" id="upupjs"></script>
+    <script src="skins/js/float.js"></script>
+    <script src="skins/js/swfobject.js"></script>
+    <script src="skins/js/jquery.cookie.js"></script>
+    <script src="skins/js/jquery.validationEngine-zh_CN.js" type="text/javascript" charset="utf-8"></script>
+    <script src="skins/js/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div id="mainBody">
+    <div id="page-header">
+        <div class="header clearfix">
+            <!-- LOGO -->
+            <div class="header-logo">
+
+                <div id="ele-logo-wrap">
+                    <a href="/" target="mem_index" id="ele-logo-img" title="首页"></a>
+                </div>
+
+            </div>
+            <div class="header-right clearfix">
+                <div class="header-top clearfix">
+                    <!-- lang -->
+<span class="lang-wrap">
+<script type="text/javascript" src="skins/js/global.js"></script>
+<span class="ele-lang-wrap">
+<a href="#" target="mem_index" class="ele-lang-option ele-lang-zh-tw" title="繁體中文"></a>
+<a href="#" target="mem_index" class="ele-lang-option ele-lang-zh-cn" title="简体中文"></a>
+<a href="#" target="mem_index" class="ele-lang-option ele-lang-en" title="English"></a>
+</span>
+</span>
+                    <!-- 自訂連結 -->
+                    <div class="top-link-wrap">
+                        <a href="javascript:" id="setHomePage">设为主页</a>&nbsp;|&nbsp;<a href="javascript:" id="addFavorite">加入最爱</a>
+                        &nbsp;|&nbsp;<a href="JoinMember.html" class="js-article-color top-custom-link">
+                        合作加盟
+                    </a>
+                    </div>
+                </div>
+                <!-- 登入 -->
+                <a class="header-join-btn" href="JoinMember.html" onClick="f_com.getPager('MAdvertis','JoinMember');"></a>
+                <div class="login-wrap">
+                    <form action="###" method="post" id="LoginForm" name="LoginForm" onSubmit="return loginCheck(this);" >
+                        <input type="hidden" name="uid2" value="guest" />
+                        <input type="hidden" name="SS" value="" />
+                        <input type="hidden" name="SR" value="" />
+                        <input type="hidden" name="TS" value="" />
+                        <p class="login-unit login-unit-user">
+                            <span class="login-user-icon"></span>
+                            <label name="loginName" for="loginName" class="login-placeholder">帐号</label>
+                            <input name="loginName" type="text" size="12" id="loginName" title="请填写 4-15 位大小写英数字" maxlength="15" class="login-input login-acc" tabindex="1" pattern="[a-zA-Z0-9]{4,15}" required />
+                        </p>
+                        <p class="login-unit login-unit-chk">
+                            <label name="vcode" for="vcode" class="login-placeholder">验证码</label>
+                            <input name="vcode" type="text" id="vcode" size="4" maxlength="4" title="( 点选此处产生新验证码 )" class="login-input" onFocus="getKey();" tabindex="3" pattern="\d{4}" required />
+                            <img src="skins/images/yzm.jpg" alt="点击更换" name="rmNum" id="rmNum" onClick="checkimgnum('rmNum');" style="position: absolute;right: 10px;top: 5px;cursor: pointer;">
+                        </p>
+                        <p class="login-unit login-unit-pwd">
+                            <span class="login-pwd-icon"></span>
+                            <label name="loginPwd" for="loginPwd" class="login-placeholder">密码</label>
+                            <input name="loginPwd" type="password" autocomplete="off" size="13" id="loginPwd" title="请填写 6-12 位大小写英数字" maxlength="13" class="login-input" tabindex="2" pattern="[a-zA-Z0-9]{6,13}" required />
+                        </p>
+                        <input class="login-submit" name="Submit" type="submit" value="" tabindex="4" />
+                        <a class="header-forget-pw" href="###" onClick="Go_forget_pwd();">忘记密码</a>
+                        <a class="header-join-link" href="JoinMember.html">加入会员</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- 主選單 -->
+        <div id="navfixed" class="mainnav-placeholder">
+            <div class="mainnav-wrap clear">
+                <div class="mainnav" data-lsub-x="10">
+                    <ul class="clearfix">
+                        <li id="LS-first" class="LS-first"><a href="index.html" class=" current" title="首页">首页</a></li>
+                        <li id="LS-ball" class="LS-ball"><a href="JoinMember.html" >开户注册</a></li>
+                        <li id="LS-ball" class="LS-ball"><a href="activity.html">最新优惠</a></li>
+                        <li id="LS-ball" class="LS-ball"><a href="deposit.html">存款取款</a></li>
+                        <li id="LS-ball" class="LS-ball"><a href="faq.html">常见问题</a></li>
+                        <li id="LS-ball" class="LS-ball"><a href="rule.html">规则说明</a></li>
+                        <li id="LS-ball" class="LS-ball"><a href="agent.html">加盟合作</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function cancelMouse() {return false;}
+        document.oncontextmenu = cancelMouse;
+
+        $(function(){
+            //固定主選單
+            $("#navfixed").navFixed();
+        });
+
+        $.fn.navFixed = function(setting) {
+            var _o = this,
+                    conf = {
+                        fixedClass: 'fixed',
+                        fixedTop: 0
+                    };
+
+            $.extend(conf, setting);
+
+            return this.each(function() {
+                var $target = $(_o),
+                        targetTop = $target[0].offsetTop,
+                        fixedTop = parseInt(conf.fixedTop, 10) || 0,
+                        criticalTop = targetTop - fixedTop;
+                $(window).scroll(function () {
+                    var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop,
+                            scrollLeft = (document.documentElement && document.documentElement.scrollLeft) || document.body.scrollLeft;
+                    if (scrollTop > criticalTop) {
+                        if(!$target.hasClass(conf.fixedClass)) {
+                            $target.addClass(conf.fixedClass);
+                        }
+                        $target.children().css({left: -scrollLeft});
+                    } else if ($target.hasClass(conf.fixedClass)) {
+                        $target.removeClass(conf.fixedClass);
+                    }
+                });
+            });
+        };
+    </script>
+</div>
+<div class="mainBody">
+    <div class="page-banner"></div>
+    <div class="notice clearfix">
+        <div class="notice-item">
+            <div class="marquee">
+                <marquee id="ele-msgNews" behavior="scroll" scrollamount="1" direction="left" style="height:100%;">欢迎光临！优惠内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</marquee>
+            </div>
+            <script src="skins/js/marquee.js"></script>
+            <script>
+                $(function() {
+                    $('#ele-msgNews').marquee({"kclass" : "ele-news-txt" , "speed" : 40 })
+                            .hover(function() {
+                                $(this).trigger("stop");
+                            }, function() {
+                                $(this).trigger("start");
+                            });
+                });
+            </script>
+        </div>
+    </div>
+</div>
+<div class="mainBody page-body">
+    <div id="page-container">
+        <div id="page-body" class="clearfix">
+            <div id="page-sidebar">
+                <div class="sidemenu-header"></div>
+                <div class="sidemenu-body">
+                    <ul class="sidemenu">
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="faq.html">常见问题</a></li>
+                        <li><a href="generalfaq.html">一般常见问题</a></li>
+                        <li><a href="techfaq.html">技术问题</a></li>
+                        <li><a href="deposit.html">存款取款</a></li>
+                        <li><a href="activity.html">最新优惠</a></li>
+                        <li><a href="contactus.html">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="sidemenu-footer"></div>
+            </div>
+            <div id="page-right">
+                <div class="page-right-top"></div>
+                <div class="page-right-y">
+                    <div class="page-right-center">
+                        <link href="skins/css/fckeditor.css" rel="stylesheet" type="text/css">
+                        <div id="direction" class="advertis-event">
+                            <div id="articles">
+                                <h3 class="case-article-title">联系我们</h3>
+                                <div class="case-article-content">
+                                <p style="font-size:14px;line-height:2em;">
+                                    关于全民彩票的任何操作及相关问题，您可以在（常见问题）中找到答案， <br>
+                                    如果您仍然有任何疑惑，可以随时洽询我们的24小时在线客服， <br>
+                                    或填写以下表格后确认送出，我们的客服人员将于24小时内与您联系。 <br>
+                                    联系电话：0063-xxx-xxxxxxxx<br>
+                                    开户咨询QQ：xxxxxxxxx<br>
+                                    代理业务QQ：xxxxxxxxx
+                                    <br>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            $(function() {
+                                var MtabUl = $('#Union').children('ul');
+                                MtabUl.addClass("mtab-menual");
+                                $('#Union').mtab2();
+                                $('.mtab-menual').show();
+                            });
+                        </script>
+                    </div>
+                </div>
+                <div class="page-right-bottom"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="page-footer">
+    <div class="footer">
+        <div class="footer-text clearfix">
+            <div class="footer-text-box">
+                <div class="box-title-left"></div>
+                <div class="text-box-live">
+                    <a class="box-link-open" href="rule.html" target="mem_index"></a>
+                </div>
+                <div class="box-detail">北京赛车PK10是中国福利彩票高频彩的其中一种，每天从9:00-24:00，每五分钟开奖一次，每天共179期，每期由10辆赛车进行比赛的结果作为开奖号码。 游戏玩法：两面盘、大小、单双、冠亚和值、单选、龙虎等。</div>
+                <div class="text-box-sports">
+                    <a class="box-link-open" href="rule.html" target="mem_index"></a>
+                </div>
+                <div class="box-detail">重庆时时彩是中国福利彩票时时彩的简称，由中国福利彩票发行管理中心发行。时时彩全天120期，每天上午10:00—22:00,十分钟一期22:00-02:00五分钟一期。 游戏玩法：两面盘、大小、单双、和值、任选、通选、前三、中三、后三、半顺、顺子等。</div>
+                <div class="text-box-lottery">
+                    <a class="box-link-open" href="rule.html" target="mem_index"></a>
+                </div>
+                <div class="box-detail">香港六合彩一周开奖三期，一般开奖时间为每周二、四、六，盛世提供特码B48.5倍，并且有特码A42.1倍返水13%，欢迎各地彩民和各地庄家加入盛世的豪华阵容，共创盛世新天地。</div>
+            </div>
+            <div class="footer-text-center">
+                <div class="box-title-center"></div>
+                <div class="text-box-logo"></div>
+                <div class="text-box-bet"></div>
+                <div class="box-detail">我们对"小赌怡情、适可而止"的宗旨非常重视。我们希望客户在投注时得到娱乐，但也希望赌博不会影响他们的财政状况和生活。 我们的游戏规则不允许未满18岁的人投注和领奖，如果你未满18岁，请马上退出网站。</div>
+            </div>
+            <div class="footer-text-box">
+                <div class="box-title-right"></div>
+                <div class="text-box-service"></div>
+            </div>
+        </div>
+        <div class="footer-logo-img clearfix">
+            <a id="browser-logo" href="###" target="_blank">
+                <img src="skins/images/ublogo.png" border="0" width="121" />
+            </a>
+        </div>
+        <div class="article-menu">
+            <a href="deposit.html"  target='mem_index' class="js-article-color">存款取款</a>｜
+            <a href="faq.html"  target='mem_index' class="js-article-color">常见问题</a>｜
+            <a href="rule.html"  target='mem_index' class="js-article-color">规则说明</a>｜
+            <a href="agent.html"  target='mem_index' class="js-article-color">加盟合作</a>｜
+            <a href="about.html"  target='mem_index' class="js-article-color">关于我们</a>｜
+            <a href="activity.html"  target='mem_index' class="js-article-color">最新优惠</a>
+
+        </div>
+        <div class="footer-info-copyright">
+            <div class="copyright">Copyright &copy; 全民彩票 Reserved</div>
+            <div class="footer-info"></div>
+        </div>
+    </div>
+</div>
+<script>
+    // 登入表單用
+    $("#addFavorite").click(function() {
+        var ctrl = (navigator.userAgent.toLowerCase()).indexOf('mac') != -1 ? 'Command/Cmd': 'CTRL';
+        if(document.all){ window.external.addFavorite(window.location.href, document.title); }else if (window.sidebar){ window.sidebar.addPanel(document.title, window.location.href, ""); } else { alert('该版本浏览器无法完成此操作。\n您可以尝试通过快捷键' + ctrl + '+D加入到收藏夹~'); }
+        return false;
+    });
+
+    $("#setHomePage").click(function(){
+        try{
+            this.style.behavior='url(#default#homepage)';
+            this.setHomePage($(this).attr("href"));
+        }catch(e){
+            if(window.netscape){ try{ netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect"); }catch(e){ alert("抱歉，此操作被浏览器拒绝！\n请在浏览器地址栏输入 about:config 并回车然后将[signed.applets.codebase_principal_support]设置为'true'"); } }else{ alert("抱歉，您所使用的浏览器无法完成此操作。\n您需要手动将本站设置为首页。"); }
+        }
+        return false;
+    });
+
+    // 表單 label 字暫留效果
+    $('#LoginForm').find('label').InputLabels();
+
+    //點擊 unicode 自動 focus
+    $("#js-acc-unicode").click(function() {
+        $("#username").focus();
+    });
+    function Go_forget_pwd(){
+        alert("帐户密码遗失请与在线客服联系！");
+    }
+
+    function BBOnlineService() {
+        window.open('###', 'Service' ,"width=1039,height=728,status=no,scrollbars=no");
+    }
+</script>
+</body>
+</html>

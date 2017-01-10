@@ -1,0 +1,93 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+}
+
+ol, ul {
+    list-style: none outside none;
+}
+address, caption, cite, code, dfn, em, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+fieldset, img {
+    border: 0 none;
+}
+caption, th {
+    text-align: left;
+}
+q:before, q:after {
+    content: "";
+}
+html {
+	_filter:expression(document.execCommand("BackgroundImageCache",false,true));
+}
+a {
+	text-decoration:none;
+	cursor: pointer; 
+    outline: none;  /* for Firefox Google Chrome  */
+    behavior:expression(this.onFocus=this.blur());  /* for IE */
+	color:#fff
+}
+a:hover{color:#ffe49b}
+i{font-style: normal;}
+.clear {clear: both;}
+.clearfix:before, .clearfix:after { content:""; display:table;}
+.clearfix:after { clear:both;}
+.clearfix { *zoom:1;}
+/*sign*/
+em{float:left;display:inline-block;_display:inline;*display:inline;}
+
+
+html,body{margin:0;padding:0}
+body {font-size: 12px;color: #fff;text-align:left; background:#fff url(../images/bg.jpg) repeat-x center 110px; font-family: "SimSun","Microsoft YaHei", "微软雅黑", "宋体" }
+
+p{
+	margin:0px;
+	padding:0px;
+	display:inline;
+}
+.fl{
+	float:left;
+}
+.fr{
+    float:right;
+}
+a:hover{
+	color:#ddc35a;
+	cursor: pointer;
+    outline: medium none;
+    text-decoration: none;
+}
+.img{
+	border:none;
+}
+
+.zh-cn body {
+    font-family: "SimSun","Microsoft YaHei","微软雅黑", "宋体";
+}
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.whole-auto{
+	width:1000px;
+	margin:0 auto;	
+}
+.yellor-color{
+    color:#fbb209;
+}
+.yellor{
+	color:#9d8835;
+}

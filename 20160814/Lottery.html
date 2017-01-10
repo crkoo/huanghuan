@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="renderer" content="webkit">
+    <title>彩票游戏</title>
+    <link type="text/css" rel="stylesheet" href="style/reset.css" />
+    <link type="text/css" rel="stylesheet" href="style/style.css" />
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="js/public.js"></script>
+</head>
+<body>
+<input type="hidden" id="userid" name="userid" value="">
+<div class="header">
+    <div class="head">
+        <div class="w1000">
+            <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="420" height="100" class="logo">
+                <param name="movie" value="images/logo.swf">
+                <param name="quality" value="high">
+                <param name="wmode" value="transparent">
+                <param name="swfversion" value="6.0.65.0">
+                <!--[if !IE]>-->
+                <object type="application/x-shockwave-flash" data="images/logo.swf" width="420" height="100">
+                    <!--<![endif]-->
+                    <param name="quality" value="high">
+                    <param name="wmode" value="transparent">
+                    <param name="swfversion" value="6.0.65.0">
+                    <!--[if !IE]>-->
+                </object>
+                <!--<![endif]-->
+            </object>
+            <div class="logor"><p>官网直营 大额无忧</p><p class="p_border">单日提款<span>1000</span>万元</p></div>
+            <div class="headright">
+                <div class="tools"><a href="javascript:void(0)" onclick="bookMarksite('http://' + window.location.hostname, document.title);">点击收藏</a> | <a href="check.html" target="_blank">线路检测</a> <a class="flag" href="javascript:void(0)"><img src="images/aomen.gif" /></a> <a class="flag" href="javascript:void(0)"><img src="images/china.gif" /></a> <a class="flag" href="javascript:void(0)"><img src="images/usa.gif" /></a></div>
+                <div class="login">
+                    <form name="LoginForm" id="LoginForm" action="login" method="post" onsubmit=" return denglu(); " style="margin:0" autocomplete="off">
+                        <input type="text"name="username" id="username" tabindex="1" maxlength="20" value="帐号" onfocus="if (this.value == this.defaultValue) {this.value = ''}" onblur="if (this.value == '') {this.value = this.defaultValue}">
+                        <input type="text" name="userpassword" id="userpassword" tabindex="2" maxlength="20" value="密码" onfocus="if (this.value == this.defaultValue) {this.value = '';this.type='password';};" onblur="if (this.value == '') {this.value = this.defaultValue;this.type='text';}">
+                        <div style="position: relative; float:left;"><input type="text" name="code" id="code" tabindex="3" maxlength="4" value="验证码" onfocus="if (this.value == this.defaultValue) { this.value = '' }; change_zc_yzm('checkNum_img');" onblur=" if (this.value == '') { this.value = this.defaultValue }">
+                            <img border="0" onclick="change_zc_yzm('checkNum_img'); " id="checkNum_img" name="checkNum_img" style="background-color:burlywood;" class="yzmimg"></div>
+                        <input type="submit" value="登陆" class="btn sub"><input type="button" value="注册" onclick="javascript:window.location.href = 'Register.html';" class="btn reset">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="w1000">
+            <ul>
+                <li class="on"><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Index.html';"><span class="ico01"></span>网站首页</a></li>
+                <li id="menu02" style="position:relative;"><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Sport.html';"><span class="ico02"></span>体育赛事</a></li>
+                <li id="menu03"><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Live.html';"><span class="ico03"></span>真人娱乐</a></li>
+                <li id="menu04" style="position:relative;"><a href="javascript:void(0)" onclick="javascript:window.location.href = 'SlotGame.html';" id="dzyytab"><span class="ico04"></span>电子游艺</a></li>
+                <li id="menu05"><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Lottery.html';"><span class="ico05"></span>彩票游戏</a></li>
+                <li style="position:relative;"><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Activity.html';" id="yhhdtab"><span class="ico06"></span>优惠活动</a></li>
+                <li><a href="/wap" target="_blank"><span class="ico07"></span>手机投注</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Cooperation.html';"><span class="ico08"></span>代理加盟</a></li>
+                <li><a href="javascript:void(0)" onclick="window.open('#online', '在线客服' , 'width=670,height=580,top=0,left=0,status=no,toolbar=no,scrollbars=yes,resizable=no,personalbar=no')"><span class="ico09"></span>在线客服</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="pagesbanner" style="background:url(images/bannerlottery.jpg) top center no-repeat;">
+    <div class="w1000">
+        <div class="gonggao">
+            <span>最新资讯：</span>
+            <marquee id="msgNews" scrollamount="3" scrolldelay="80" direction="left" onmouseover="this.stop();" onmouseout="this.start();" style="height:34px;">文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容，文字内容<br/>  </marquee>
+        </div>
+    </div>
+</div>
+
+<div class="pages">
+    <script>
+        $(function () {
+            $(".menu ul li").removeClass("on");
+            $(".menu ul li:nth-child(5)").addClass("on");
+        })
+    </script>
+    <style type="text/css">
+        .main {
+            position: relative;
+            width: 1000px;
+            height: 274px;
+            overflow: hidden;
+            text-align: center;
+            margin: 20px auto;
+        }
+        .main .lottery_bb {
+            position: absolute;
+            left: 15px;
+            width: 530px;
+            height: 274px;
+            background: url("images/lottery_1.png") no-repeat left top;
+            overflow: hidden;
+        }
+        .main .lottery_bb:hover {
+            background-image: url("images/lottery_1_hover.png");
+        }
+        .main .lottery_bb a {
+            display: block;
+            width: 180px;
+            height: 40px;
+            margin: 175px 0 0 266px;
+        }
+        .main .lottery_og {
+            position: absolute;
+            left: 465px;
+            width: 530px;
+            height: 274px;
+            background: url("images/lottery_2.png") no-repeat left top;
+            overflow: hidden;
+        }
+
+        .main .lottery_og:hover {
+            background-image: url("images/lottery_2_hover.png");
+        }
+        .main .lottery_og a {
+            display: block;
+            width: 180px;
+            height: 40px;
+            margin: 173px 0 0 98px;
+        }
+    </style>
+    <div class="lottery w1000">
+        <div class="main">
+            <div class="lottery_bb">
+                <a href="#"></a>
+            </div>
+            <div class="lottery_og">
+                <a href="Lottery_2.html"></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            var flag = "AboutUs";
+            $("#" + flag).show();
+        });
+    </script>
+
+    <div class="clear"></div>
+</div>
+<div class="footer">
+    <div class="w1000">
+        <div class="b1">
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'About.html';">关于我们</a>
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'Contact.html';">联系我们</a>
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'Cooperation.html';">代理加盟</a>
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'Desposit.html';">存款帮助</a>
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'Teller.html';">取款帮助</a>
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'Privacy.html';">隐私政策</a>
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'Generalq.html';">新手操作</a>
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'Activity.html';">优惠活动</a>
+            <a href="check.html" target="_blank">线路检测</a>
+        </div>
+        <div class="b2">
+            <img src="images/b2img.jpg">
+        </div>
+        <div class="b3">
+            <ul>
+                <li><div class="ico qq"></div>QQ客服：<span>213678</span></li>
+                <li><div class="ico qq"></div>QQ客服：<span>491414</span></li>
+                <li><div class="ico email"></div>邮箱：<span>vcsvip88@gmail.com</span></li>
+            </ul>
+        </div>
+        <div class="b4">
+            <img src="images/b4img.png">
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var ary = location.href.split("#");
+    jQuery(".live").slide({delayTime:700,defaultIndex:ary[1]});
+</script>
+<!--浮動圖-->
+<div id="kf-online" class="kf-online clearfix">
+    <div class="float-left float_contact"><img src="images/float_left.png" /></div>
+    <div class="float-right float_icon">
+        <a href="#online" class="messenger"></a>
+        <a href="http://www.hlf.pw/" class="oldsite"></a>
+        <a href="###" class="qq">QQ:53255888</a>
+        <a href="###" class="weixin"></a>
+        <a href="javascript:;" class="qrcode"><img src="images/qr_code.jpg" /></a>
+        <a href="http://www.hlf.vip/" class="guidesite"></a>
+        <a href="javascript:;" class="site2">WWW.HLF.VIP</a>
+    </div>
+</div>
+<script>
+    var float_box = document.getElementById("kf-online");
+    var winEvent = function () {
+        var iScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        setTimeout(function () {
+            clearInterval(float_box.timer);
+            var iTop = parseInt((document.documentElement.clientHeight - float_box.offsetHeight)/2) + iScrollTop;
+
+            float_box.timer = setInterval(function () {
+                var iSpeed = (iTop - float_box.offsetTop) / 8;
+                iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+                float_box.offsetTop == iTop ? clearInterval(float_box.timer) : (float_box.style.top = float_box.offsetTop + iSpeed + "px");
+            }, 30);
+        }, 50);
+        float_box.style.display="block";
+    };
+    $(window).load(winEvent);
+    window.onresize = window.onscroll = winEvent;
+    $("#kf-online .float_contact").click(function(){
+        if ($("#kf-online .float_icon").is(':hidden')){
+            $(".kf-online").css('width', '220px');
+            $(".kf-online .float_icon").show();
+        }else{
+            $(".kf-online").css('width', '66px');
+            $(".kf-online .float_icon").hide();
+        }
+    });
+</script>
+</body>
+</html>

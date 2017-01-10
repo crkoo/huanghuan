@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link href="style/style.css" rel="stylesheet">
+    <script src="js/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="header">
+        <div class="top content clearfix">
+            <div class="header-tips float-left">
+                <img src="images/header_tips.png" />
+            </div>
+            <div class="logo float-left">
+                <object type="application/x-shockwave-flash" id="logo-flash" title="" data="images/logo.swf" width="350" height="165"><param name="wmode" value="transparent"><param name="quality" value="high"></object>
+            </div>
+            <div class="login-box float-right">
+                <form class="clearfix" action="###" method="post">
+                    <div class="login-form float-left">
+                        <div class="clearfix">
+                            <input type="text" class="login-account" placeholder="账号" />
+                            <input type="text" class="login-verify" placeholder="验证码" />
+                        </div>
+                        <div class="mt10 clearfix">
+                            <input type="text" class="login-password" placeholder="密码" />
+                            <input type="submit" class="login-btn" />
+                        </div>
+                    </div>
+                    <div class="open float-right">
+                        <a href="join.html" class="open_button"><img src="images/open.png" /></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="content clearfix">
+                <div class="float-left">
+                    <ul>
+                        <li class="first active"><a href="index.html">首页</a></li>
+                        <li class="last"><a href="lottery.html">彩票大厅</a></li>
+                        <li class="logo_bg"></li>
+                        <li class=""><a href="activity.html">优惠活动</a></li>
+                        <li class=""><a href="join.html">立即注册</a></li>
+                        <li class="last"><a href="cooperation.html">合作加盟</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.carouFredSel.js"></script>
+    <div class="banner carousel_main_wrapper">
+        <div class="carousel_main">
+            <div class="slide" style="background-image: url('images/banner_1.jpg');">
+                <a href="###">
+                    <div class="slide_content"></div>
+                </a>
+            </div>
+
+            <div class="slide" style="background-image: url('images/banner_2.jpg');">
+                <a href="###">
+                    <div class="slide_content"></div>
+                </a>
+            </div>
+        </div>
+        <div class="pager">
+            <div id="pager"><a class="selected"></a></div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            if ($('.carousel_main').length >= 1 && $('.carousel_main .slide').length > 1) {
+                $('.carousel_main').carouFredSel({
+                    responsive: true,
+                    items: {
+                        visible: 1,
+                        height: 440,
+                        top: -20
+                    },
+                    scroll: {
+                        duration: 800,
+                        timeoutDuration: 5000,
+                        fx: "crossfade"
+                    },
+                    auto: {
+                        play: true,
+                        progress: {
+                            bar: $("#pager a.selected"),
+                            updater: function (percentage) {
+                                if ($("#pager a:not('.selected') i:not('timer_0')").length && percentage < 4) {
+                                    $("#pager a:not('.selected') i:not('timer_0')").remove();
+                                    $("#pager a:not('.selected')").append($("<i>").addClass("timer_0"));
+                                }
+                                $("#pager a.selected").find("i").remove();
+                                $("#pager a.selected").append($("<i>").addClass("timer_" + (Math.floor(percentage / 1.6129) + 1)));
+                            }
+                        }
+                    },
+                    pagination: {
+                        container: '#pager',
+                        anchorBuilder: function (nr) {
+                            return '<a href="#" class="thumb"><i class="timer_0"></i></a>';
+                        }
+                    },
+                    prev: '#prev1',
+                    next: '#next1'
+                });
+            }
+
+        });
+    </script><!-- //banner -->
+    <div class="main">
+        <div class="main-index">
+            <div class="content clearfix">
+                <div class="notice clearfix">
+                    <p class="float-left notice-icon"></p>
+                    <div class="float-left marquee">
+                        <marquee id="ele-msgNews" behavior="scroll" scrollamount="1" direction="left" style="height:100%;">新开户立即送50元，新开户立即送50元，新开户立即送50元，新开户立即送50元，新开户立即送50元，</marquee>
+                    </div>
+                    <script src="js/marquee.js"></script>
+                    <script>
+                        $('#ele-msgNews').marquee({"kclass" : "ele-news-txt" , "speed" : 40 })
+                                .hover(function() {
+                                    $(this).trigger("stop");
+                                }, function() {
+                                    $(this).trigger("start");
+                                });
+                    </script>
+                </div>
+                <div class="lottery float-right">
+                    <div class="clearfix">
+                        <a href="###" class="float-left"><img src="images/1.png"></a>
+                        <a href="###" class="float-right"><img src="images/2.png"></a>
+                    </div>
+                    <div class="clearfix">
+                        <a href="###" class="float-left"><img src="images/3.png"></a>
+                        <a href="###" class="float-right"><img src="images/4.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- //main -->
+    <div class="footer">
+        <div class="content clearfix">
+            <div class="float-left">
+                <img src="images/footer_1.png">
+                <img src="images/footer_2.png">
+            </div>
+            <div class="float-right text-right">
+                <p>
+                    <a href="about.html">关于我们</a>
+                    <span>|</span>
+                    <a href="help.html">存取款帮助</a>
+                    <span>|</span>
+                    <a href="cooperation.html">合作加盟</a>
+                    <span>|</span>
+                    <a href="rule.html">游戏规则</a>
+                </p>
+                <p class="ft12">Copyright &copy; 2016 伯爵彩票. All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- online -->
+<div class="online online-left text-center" id="floatService1">
+    <a href="###" class="qq"><img src="images/online_left_1.png"></a>
+    <a href="###"><img src="images/online_left_2.png"></a>
+    <a href="###"><img src="images/online_left_3.png"></a>
+    <a href="###" class="close-left" id="closefloatDownLoad1">&times;关闭</a>
+</div>
+<div class="online online-right text-center" id="floatService2">
+    <a href="###" class="qq"><img src="images/online_right_1.png"></a>
+    <a href="###"><img src="images/online_right_2.png"></a>
+    <a href="###"><img src="images/online_right_3.png"></a>
+    <a href="###" class="close-left" id="closefloatDownLoad2">&times;关闭</a>
+</div>
+<script src="js/float.js"></script>
+<script type="text/javascript">
+    $("#floatService1").show().Float({ floatRight: 0 });
+    $("#closefloatDownLoad1").click(function () { $("#floatService1").hide();});
+    $("#floatService2").show().Float({ floatRight: 1 });
+    $("#closefloatDownLoad2").click(function () { $("#floatService2").hide();});
+</script>
+</body>
+</html>

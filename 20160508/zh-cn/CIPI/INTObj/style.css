@@ -1,0 +1,812 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    text-align: center;
+    font-size: 11px;
+    background: url("../images/bg.jpg") repeat center top;
+}
+ul {
+    padding: 0px;
+    margin: 0px;
+}
+ul li{padding: 0px;margin: 0px;list-style-type: none;}
+#top {
+    margin:0px auto;
+    width: 1003px;
+    height: 100%;
+    background-color: #FFF;
+}
+
+#top .hianline {
+    background-image: url(../images/line.jpg);
+    height: 4px;
+    overflow: hidden;
+}
+.ar {
+    margin-top: 3px;
+}
+.left {
+    display: block;
+    float: left;
+    text-align: center;
+    width: 78px;
+}
+.center {
+    display: block;
+    float: left;
+    width: 682px;
+    text-align: center;
+}
+.right {
+    display: block;
+    float: left;
+    width: 240px;
+    text-align: center;
+    overflow: hidden;
+}
+.left .cpn {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    margin-top: 3px;
+    width: 100%;
+}
+.left .cpn table{
+    font-size: 11px;
+    color: #C30;
+}
+.left .cpn  a{
+    background-image: url(../images/cqlogo.png);
+    background-repeat: no-repeat;
+    height: 51px;
+    display: block;
+    width: 67px;
+}
+.Navi{
+    background-image: url(../images/R-Navi-center.gif);
+    height: 60px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+}
+.Navi-left {
+    background-image: url(../images/R-Navi-left.gif);
+    background-repeat: no-repeat;
+    height: 60px;
+    width: 30px;
+    display: block;
+    float: left;
+}
+.Navi-center {
+    display: block;
+    float: left;
+    height: 622px;
+}
+.Navi-right {
+    background-image: url(../images/R-Navi-right.gif);
+    background-repeat: no-repeat;
+    height: 60px;
+    width: 30px;
+    display: block;
+    float: right;
+}
+.Navi-center #Navi-a li{
+    float: left;
+    text-decoration: none;
+    height: 35px;
+    display: block;
+}
+.Navi-center #Navi-a a  {
+    float: left;
+    font-size: 11px;
+    line-height: 3;
+    font-weight: bold;
+    text-decoration: none;
+    color: #FFF;
+}
+.Navi-center #Navi-a span {
+    display: inline;
+    height: 35px;
+    width: 7px;
+    float: left;
+}
+.Navi-center .ulm-na {
+    background-image: url(../images/na-center.gif);
+}
+.Navi-center #Navi-a .ulm-na a{
+    color: #900;
+}
+.Navi-center .ulm-na .ulm-na-left {
+    background-image: url(../images/na-left.gif);
+    display: block;
+
+}
+.Navi-center .ulm-na .ulm-na-right {
+    display: block;
+    background-image: url(../images/na-right.gif);
+}
+.Navi-center .eoi {
+    font-size: 11px;
+    color: #FFF;
+}
+.Navi-center .eoi .rule {
+    color: #fff;
+    text-decoration: none;
+}
+.Navi-centeri #Open{
+    background-image: url(../images/zplot.jpg);
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 200px;
+    display: block;
+    background-position: 0px -18px;
+    background-color: #FFF;
+}
+.Navi-center #Open select{
+    font-size: 10px;
+    padding: 0px;
+    margin: 0px;
+}
+.Navi-center #ZeroCount {
+    display: block;
+    height: 18px;
+    width: 56px;
+    margin-top: 1px;
+    text-align: center;
+    font-size: 13px;
+    color: #F00;
+    background-image: url(../images/zplot.jpg);
+    line-height: 1.4;
+    font-weight: bold;
+}
+.Navi-center #Periods {
+    height: 18px;
+    width: 148px;
+    display: block;
+    text-align: center;
+    background-image: url(../images/zplot.jpg);
+    background-repeat: no-repeat;
+    margin-top: 1px;
+    line-height: 1.5;
+    background-position: 0px -54px;
+    color: #4c4c4c;
+    font-weight: bold;
+    font-size: 12px;
+}
+.Navi-center #LotTime {
+    display: block;
+    width: 124px;
+    height: 18px;
+    text-align: center;
+    background-image: url(../images/zplot.jpg);
+    background-repeat: no-repeat;
+    background-position: 0px -36px;
+    margin-top: 1px;
+    line-height: 1.5;
+    color: #4c4c4c;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/*-----------上圆角--------------*/
+.rp {
+    background-image: url(../images/right.gif);
+    height: 4px;
+    width: 4px;
+    float: right;
+    display:inline;
+    background-repeat: no-repeat;
+}
+.lp {
+    height: 4px;
+    width: 4px;
+    background-image: url(../images/left.gif);
+    display: inline;
+    background-repeat: no-repeat;
+    float: left;
+    margin-top: 0px;
+}
+/*-----------下圆角--------------*/
+.brp {
+    background-image: url(../images/right.gif);
+    height: 4px;
+    width: 4px;
+    float: right;
+    background-position: 0px -4px;
+    display: inline;
+    background-repeat: no-repeat;
+}
+.blp {
+    height: 4px;
+    width: 4px;
+    background-image: url(../images/left.gif);
+    background-position: 0px -4px;
+    display: inline;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+
+
+.right .hkLogo {
+    background-image: url(../images/Gametitle4.png);
+    background-repeat: no-repeat;
+    background-position: center -150px;
+    height: 70px;
+}
+.right #mem .top1{
+    background-image: url(../images/orle_top.png);
+    background-repeat: no-repeat;
+    height: 33px;
+    background-position: center;
+}
+.right #mem .dcenter {
+    background-image: url(../images/orle_center.png);
+    background-repeat: repeat-y;
+    background-position: center;
+}
+.right #mem #dv {
+    color: #333;
+    max-height:363px;
+    _height:expression(this.scrollHeight> 400 ? '400px' : 'auto');
+    -webkit-max-height: 400px;
+    height:auto !important;
+    height:20px;
+    font-weight: bold;
+    text-align: center;
+    overflow: auto;
+    font-size: 13px;
+    width: 220px;
+    margin:0 auto;
+    padding: 10px;
+}
+.right #mem .bomm {
+    background-image: url(../images/orle_bomm.png);
+    background-repeat: no-repeat;
+    height: 31px;
+    background-position: center;
+    text-align: right;
+    padding-right: 20px;
+    color: #FFF;
+}
+.right #mem .top1 p {
+    font-weight: bold;
+    font-size: 13px;
+    background-repeat: no-repeat;
+    background-position: left;
+    line-height: 3.6;
+    text-align: center;
+}
+.right #mem .bomm #quick  {
+    color: #FFF;
+    display:none;
+    font-size: 11px;
+}
+.right #mem .dv2 {
+    display:none;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    background-image: url(../images/orle_center.gif);
+    background-repeat: repeat-y;
+    background-position: center;
+    padding: 0px;
+}
+.right #mem .dv2 input{
+    font-size: 10px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.right #funct {
+    font-size: 11px;
+    text-align: center;
+    background-repeat: no-repeat;
+    height: 46px;
+    width: 233px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+}
+#funct table {
+    font-size: 11px;
+    margin-right: auto;
+    margin-left: auto;
+}
+#funct table tr td {
+    background-color: #FFF;
+    color: #666;
+    border: 1px solid #FFF;
+    font-weight: bold;
+}
+#funct a  {
+    text-decoration: none;
+    color: #666;
+}
+
+/*------------注单----------------*/
+
+#dv .mem {
+    font-size: 11px;
+    border: 1px solid #E0E0E0;
+}
+#dv .h_mem {
+    font-size: 12px;
+
+}
+
+#dv  .memtr {
+    background-color: #ECECEC;
+    height: 22px;
+}
+#dv  .memtr1 {
+    background-color: #FAFAFA;
+    height: 22px;
+}
+
+
+#dv .inp {
+    font-size: 8px;
+    height: 15px;
+    width: 22px;
+    padding: 0px;
+}
+#dv .memtr .alarm {
+    color: #F00;
+}
+
+
+#dv .cinp input{
+    font-size: 10px;
+    padding: 0px;
+
+}
+#dv .ore_hee {
+    background-color: #ffcc00;
+    border: 1px solid #FFD6CA;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+#dv .ore_lemm {
+    background-color: #F8F7F5;
+    height: auto;
+    border: 1px solid #D1D1D1;
+    width: auto;
+    font-size: 12px;
+    padding-top: 3px;
+    padding-right: 0px;
+    padding-bottom: 3px;
+    padding-left: 0px;
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+#dv .gold{
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #CCC;
+    padding-left: 2px;
+    margin-top: 3px;
+    padding-top: 3px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+#dv .maxin_tee{
+    padding-left: 2px;
+    margin: 0px;
+}
+#dv .h_mem  .goldcss {
+    height: 17px;
+    width: 60px;
+    font-size: 12px;
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid #999;
+}
+#inf {
+  text-align: center;
+}
+
+#cq,#cqmad,#cqhlf{
+    margin-top: 5px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 644px;
+}
+#cq .cq-ds{
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+}
+#cq .cq-ds li {
+    width: 116px;
+    float: left;
+    clear: right;
+    overflow: hidden;
+}
+.om-ban{
+    background-color: #7F7F7F;
+    min-height:3px;
+    _height:5px;
+    height: 3px;
+    overflow: hidden;
+    clear: left;
+}
+.om-head {
+    background-color: #7F7F7F;
+    height: 15px;
+    color: #FF0;
+    font-weight: bold;
+}
+
+
+#cq table,#cqmad table,#cqhlf table,#inpu table {
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-color: #CCC;
+    border-bottom-color: #CCC;
+    border-left-color: #CCC;
+}
+#cqmad table{
+    border: 1px solid #CCC;
+}
+#cq .null,#cqmad .null,#cqhlf .null{
+    display: block;
+    height: 26px;
+    width: 25px;
+    float: left;
+    font-size: 12px;
+    text-align: center;
+    line-height: 2;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: #FFF;
+    color: #000;
+    background-color: #F7D228;
+}
+#cq .null2,#cqmad .null2,#cqhlf .null2{
+    display: block;
+    height: 26px;
+    width: 25px;
+    float: left;
+    font-size: 15px;
+    text-align: center;
+    line-height: 1.8;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: #FFF;
+    color: #000;
+    background-color: #F7D228;
+    font-weight: bold;
+}
+#cq .odds,#cqmad .odds,#cqhlf .odds{
+    font-size: 12px;
+    font-weight: bold;
+    color: #00F;
+    width: 35px;
+    text-align: center;
+    margin-top: 4px;
+    float: left;
+}
+#cq .amountinput,#cqmad .amountinput,#cqhlf .amountinput{
+    border: 1px solid #B7B7B7;
+    font-size: 12px;
+    height: 20px;
+    width: 41px;
+    float: left;
+    margin-top: 3px;
+}
+#cq td,#cqmad td,#cqhlf td{
+    background-color: #D7D7D7;
+}
+
+
+
+/*------------*/
+#NEmts{
+    width: 100%;
+    margin-top: 3px;
+}
+#NEmts .ulme_li_t_oa{
+    margin-left: 4px;
+    clear: right;
+    float: left;
+}
+#NEmts .li_t_oa{
+    margin-left: 40px;
+    clear: right;
+    float: left;
+
+}
+#NEmts .ulme_li_t_oa .out_left{
+    background-image: url(../images/lre.gif);
+    background-repeat: no-repeat;
+    float: left;
+    height: 20px;
+    width: 5px;
+}
+#NEmts .ulme_li_t_oa .out_right{
+    background-image: url(../images/rre.gif);
+    background-repeat: no-repeat;
+    float: left;
+    height: 20px;
+    width: 5px;
+}
+#NEmts .ulme_li_t_oa a{
+    background-image: url(../images/cre.gif);
+    float: left;
+    height: 20px;
+    font-size: 12px;
+    line-height: 1.8;
+    overflow: hidden;
+    text-decoration: none;
+    color: #DDD;
+}
+#NEmts .wut_li_t_oa{
+    margin-left: 4px;
+    clear: right;
+    float: left;
+}
+#NEmts .wut_li_t_oa .out_left{
+    background-image: url(../images/lre.gif);
+    background-repeat: no-repeat;
+    float: left;
+    height: 20px;
+    width: 5px;
+}
+#NEmts .wut_li_t_oa .out_right{
+    background-image: url(../images/rre.gif);
+    background-repeat: no-repeat;
+    float: left;
+    height: 20px;
+    width: 5px;
+}
+#NEmts .wut_li_t_oa a{
+    background-image: url(../images/cre.gif);
+    float: left;
+    height: 20px;
+    font-size: 12px;
+    line-height: 1.8;
+    overflow: hidden;
+    text-decoration: none;
+    color: #FF0;
+    font-weight: bold;
+}
+
+/*--------------------下注按钮----------------------*/
+.ra-top {
+    background-color: #D7D7D7;
+    min-height:4px;
+    _height:4px;
+    font-size: 3px;
+    clear: both;
+    height: 4px;
+}
+.ra_bim{
+    min-height:4px;
+    _height:4px;
+    font-size: 3px;
+    clear: both;
+    height: 4px;
+    background-color: #D7D7D7;
+}
+
+#inpu{
+    text-align: center;
+    overflow: hidden;
+    width: 644px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5px;
+    background-color: #D7D7D7;
+}
+#inpu .intext{
+    color: #333;
+    float: left;
+    margin-left: 140px;
+    margin-top: 4px;
+    font-weight: bold;
+}
+#inpu .inspan {
+    background-image: url(../images/total.gif);
+    background-repeat: no-repeat;
+    display: block;
+    height: 18px;
+    width: 55px;
+    font-size: 13px;
+    text-align: center;
+    color: #C00;
+    float: left;
+    margin-left: 3px;
+    margin-top: 3px;
+    font-weight: bold;
+}
+
+#inpu .sinp {
+    text-align: center;
+    float: left;
+    margin-left: 60px;
+}
+
+#inpu .sinp .inp {
+    padding-right: 2px;
+    padding-left: 2px;
+    margin: 0px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+#heoo {
+    width: 100%;
+    margin: auto;
+}
+#heoo .lgohead {
+    height: 75px;
+    background-color: #333;
+    background-image: url(../../sports/images/tom_bs.jpg);
+}
+#heoo .lgohead .logo {
+    background-image: url(../../sports/images/logo.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 100%;
+    width: 175px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #CCC;
+    display: block;
+    float: left;
+}
+#heoo .lgohead .hergh {
+    float: left;
+}
+#heoo .lgohead .notice {
+    float: left;
+    height: 25px;
+    width: 415px;
+    margin-left: 0px;
+    overflow: hidden;
+    display: inline-block;
+    padding-left: 20px;
+    padding-top: 3px;
+    background-image: url(../../sports/images/gif88.png);
+    background-repeat: no-repeat;
+}
+#heoo .lgohead #db {
+    float: right;
+    width: 800px;
+    position: relative;
+}
+#heoo .lgohead #db a {
+    display: inline;
+    float: left;
+    color: #ADADAD;
+    margin-top: 2px;
+    text-decoration: none;
+    margin-left: 3px;
+}
+#heoo .lgohead #db .ball {
+    float: left;
+    margin-top: 20px;
+}
+#heoo .lgohead #db .menu {
+    float: right;
+    margin-top: 5px;
+}
+#heoo .lgohead #db .menu a {
+    margin: 0 12px;
+    color: #fff;
+    line-height: 23px;
+    height: 23px;
+}
+#heoo .lgohead #db .menu a.logout {
+    width: 36px;
+    text-align: center;
+    background: url("../../sports/images/logout.png") no-repeat center;
+}
+#heoo .lgohead #db .cutmem {
+    float: right;
+    color: #FDFFDF;
+    margin-bottom: 0px;
+    display: inline-block;
+}
+
+#heoo .lgohead .lng   {
+    float: right;
+    display: block;
+    overflow: hidden;
+    background-image: url(../../sports/images/tom_bs_r1_c4.jpg);
+    height: 30px;
+    width: 378px;
+    background-repeat: no-repeat;
+    padding-left: 15px;
+    color: #FFF;
+    padding-top: 7px;
+    text-align: left;
+    font-weight: bold;
+}
+#heoo .lgohead .lng .zhing   {
+    display: inline-block;
+    width: 20px;
+    background-image: url(../../sports/images/img_flag.gif);
+    background-repeat: no-repeat;
+    float: left;
+    height: 13px;
+    border: 1px solid #707070;
+    margin-left: 10px;
+    overflow: hidden;
+    margin-top: -1px;
+}
+#heoo .lgohead .lng  a {
+    text-decoration: none;
+    color: #FFF;
+}
+#heoo .lgohead .lng  a:hover {
+    color: #F60;
+}
+#heoo #sp-clss {
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-top-color: #FF9900;
+    border-right-color: #2A2A2A;
+    border-left-color: #2A2A2A;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #2A2A2A;
+}
+#heoo #sp-clss td{
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+#heoo #sp-clss a{
+    /*color: #FFF;*/
+    width: auto;
+    text-decoration: none;
+    background-image: url(../../sports/images/sport-menu.gif);
+    background-repeat: no-repeat;
+    background-position: left;
+    font-size: 12px;
+    padding-left: 18px;
+    text-align: left;
+    overflow: hidden;
+    line-height: 1.4;
+    display: inline-block;
+}
+#heoo #sp-clss a:hover{
+    font-weight: bold;
+}
+.betgtype {
+    color: #FFF;
+}
+.oingtype {
+    font-weight: bold;
+    color: #F90;
+}
+#heoo marquee {
+    color: #EFEFEF;
+    width: 100%;
+}
+#heoo marquee a {
+    color: #D5D5D5;
+    text-decoration: none;
+}

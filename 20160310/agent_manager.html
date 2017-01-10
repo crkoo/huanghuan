@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>代理经理</title>
+    <link href="style/style.css" rel="stylesheet">
+    <script src="js/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="header">
+        <div class="top content clearfix">
+            <div class="header-tips float-left">
+                <img src="images/header_tips.png" />
+            </div>
+            <div class="logo float-left">
+                <object type="application/x-shockwave-flash" id="logo-flash" title="" data="images/logo.swf" width="350" height="165"><param name="wmode" value="transparent"><param name="quality" value="high"></object>
+            </div>
+            <div class="login-box float-right">
+                <form class="clearfix" action="###" method="post">
+                    <div class="login-form float-left">
+                        <div class="clearfix">
+                            <input type="text" class="login-account" placeholder="账号" />
+                            <input type="text" class="login-verify" placeholder="验证码" />
+                        </div>
+                        <div class="mt10 clearfix">
+                            <input type="text" class="login-password" placeholder="密码" />
+                            <input type="submit" class="login-btn" />
+                        </div>
+                    </div>
+                    <div class="open float-right">
+                        <a href="join.html" class="open_button"><img src="images/open.png" /></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="content clearfix">
+                <div class="float-left">
+                    <ul>
+                        <li class="first"><a href="index.html">首页</a></li>
+                        <li class="last"><a href="lottery.html">彩票大厅</a></li>
+                        <li class="logo_bg"></li>
+                        <li class=""><a href="activity.html">优惠活动</a></li>
+                        <li class=""><a href="join.html">立即注册</a></li>
+                        <li class="last active"><a href="cooperation.html">合作加盟</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner page_banner">
+        <a href="###"></a>
+    </div><!-- //banner -->
+    <div class="main">
+        <div class="content clearfix">
+            <div class="notice clearfix">
+                <p class="float-left notice-icon"></p>
+                <div class="float-left marquee">
+                    <marquee id="ele-msgNews" behavior="scroll" scrollamount="1" direction="left" style="height:100%;">新开户立即送50元，新开户立即送50元，新开户立即送50元，新开户立即送50元，新开户立即送50元，</marquee>
+                </div>
+                <script src="js/marquee.js"></script>
+                <script>
+                    $('#ele-msgNews').marquee({"kclass" : "ele-news-txt" , "speed" : 40 })
+                            .hover(function() {
+                                $(this).trigger("stop");
+                            }, function() {
+                                $(this).trigger("start");
+                            });
+                </script>
+            </div>
+            <div class="main-box clearfix">
+                <div class="nav float-left">
+                    <ul>
+                        <li class=""><a href="cooperation.html">合作加盟</a></li>
+                        <li class=""><a href="agent_reg.html">代理注册</a></li>
+                        <li class="active"><a href="agent_manager.html">代理经理</a></li>
+                        <li class=""><a href="about.html">关于我们</a></li>
+                        <li class=""><a href="help.html">存取款帮助</a></li>
+                        <li class=""><a href="rule.html">游戏规则</a></li>
+                    </ul>
+                </div>
+                <div class="box-body float-right">
+                    <div class="article manager">
+                        <h3 class="color-1" style="margin-bottom: 20px;">代理经理</h3>
+                        <p class="manager-icon icon-qq">代理QQ：313239200</p>
+                        <p class="manager-icon icon-email">邮箱：bojue1688@gmail.com</p>
+                        <p class="manager-icon icon-tel">客服电话：0063-9776415668</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- //main -->
+    <div class="footer">
+        <div class="content clearfix">
+            <div class="float-left">
+                <img src="images/footer_1.png">
+                <img src="images/footer_2.png">
+            </div>
+            <div class="float-right text-right">
+                <p>
+                    <a href="about.html">关于我们</a>
+                    <span>|</span>
+                    <a href="help.html">存取款帮助</a>
+                    <span>|</span>
+                    <a href="cooperation.html">合作加盟</a>
+                    <span>|</span>
+                    <a href="rule.html">游戏规则</a>
+                </p>
+                <p class="ft12">Copyright &copy; 2016 伯爵彩票. All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

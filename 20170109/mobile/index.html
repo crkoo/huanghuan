@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>百尊导航</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name='format-detection' content='telephone=no'>
+    <link rel="stylesheet" type="text/css" href="css/client.css" />
+    <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
+</head>
+
+<body>
+<div class="qui-page">
+    <div class="header">
+        <a href="#"><img src="images/mobile-logo.png" /></a>
+    </div>
+    <div class="banner clear">
+        <div class="banner-swip swipe" id='slider'>
+            <ul class="b1 swipe-wrap">
+                <li><img src="images/b_1.jpg" alt="" /></li>
+                <li><img src="images/b_2.jpg" alt="" /></li>
+                <li><img src="images/b_3.jpg" alt="" /></li>
+            </ul>
+        </div>
+        <ul class="clear" id="position">
+            <li class="on">1</li>
+            <li class="">2</li>
+            <li class="">3</li>
+        </ul>
+    </div><!-- //banner -->
+    <div class="notice">
+        <div class="content clear">
+            <div class="notice-title fl">今日头条：</div>
+            <div class="notice-body fl">
+                <marquee id="ele-msgNews" behavior="scroll" scrollamount="1" direction="left" style="height:100%;">新会员免费锦标赛火热进行中，150%首存加奖等您拿！</marquee>
+            </div>
+            <script src="js/marquee.js"></script>
+            <script>
+                $('#ele-msgNews').marquee({"kclass" : "ele-news-txt" , "speed" : 40 })
+                        .hover(function() {
+                            $(this).trigger("stop");
+                        }, function() {
+                            $(this).trigger("start");
+                        });
+            </script>
+        </div>
+    </div>
+    <div class="website">
+        <div class="box-head img">
+            <img src="images/website.jpg" alt="备用网址" />
+        </div>
+        <div class="box-body">
+            <div class="content">
+                <ul>
+                    <li class="clear">
+                        <input value="http://www.zun6789.com" />
+                        <a href="http://www.zun6789.com" class="img" target="_blank"><img src="images/btn.png" /></a>
+                    </li>
+                    <li class="clear">
+                        <input value="http://www.zun667788.com" />
+                        <a href="http://www.zun667788.com" class="img" target="_blank"><img src="images/btn.png" /></a>
+                    </li>
+                    <li class="clear">
+                        <input value="http://www.zun1666.com" />
+                        <a href="http://www.zun1666.com" class="img" target="_blank"><img src="images/btn.png" /></a>
+                    </li>
+                    <li class="clear">
+                        <input value="http://www.zun0123.com" />
+                        <a href="http://www.zun0123.com" class="img" target="_blank"><img src="images/btn.png" /></a>
+                    </li>
+                    <li class="clear">
+                        <input value="http://www.ba1177.com" />
+                        <a href="http://www.ba1177.com" class="img" target="_blank"><img src="images/btn.png" /></a>
+                    </li>
+                    <li class="clear">
+                        <input value="http://www.zun6789.com" />
+                        <a href="http://www.zun6789.com" class="img" target="_blank"><img src="images/btn.png" /></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="activity">
+        <div class="box-head img">
+            <img src="images/activity.jpg" alt="最新优惠">
+        </div>
+        <div class="box-body">
+            <div class="content clear">
+                <ul>
+                    <li>
+                        <span class="icon">01</span>
+                        <a href="http://www.zun6789.com" target="_blank">新会员免费锦标赛，获取二重加奖！</a>
+                    </li>
+                    <li>
+                        <span class="icon">02</span>
+                        <a href="http://www.zun667788.com" target="_blank">150%首存奖金，赠送新玩家！</a>
+                    </li>
+                    <li>
+                        <span class="icon">03</span>
+                        <a href="http://www.zun1666.com" target="_blank">新老玩家，生日礼金专属礼遇！</a>
+                    </li>
+                    <li>
+                        <span class="icon">04</span>
+                        <a href="http://www.zun0123.com" target="_blank">彩票投注，每周1888元免费拿！</a>
+                    </li>
+                    <li>
+                        <span class="icon">05</span>
+                        <a href="http://www.ba1177.com" target="_blank">体育投注，多投多得，最高1888元！</a>
+                    </li>
+                    <li>
+                        <span class="icon">06</span>
+                        <a href="http://zun6789.com" target="_blank">体育幸运注单，100%赠送最高8888元！</a>
+                    </li>
+                    <li>
+                        <span class="icon">07</span>
+                        <a href="http://zun667788.com" target="_blank">老虎机存款三重奖，还有免费救援金！</a>
+                    </li>
+                    <li>
+                        <span class="icon">08</span>
+                        <a href="http://zun1666.com" target="_blank">注册就有机会获神秘奖金</a>
+                    </li>
+                    <li>
+                        <span class="icon">09</span>
+                        <a href="http://zun0123.com" target="_blank">双11红包88元感恩礼金免费送</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/swipe.js"></script>
+<script>
+    var slider =
+            Swipe(document.getElementById('slider'), {
+                auto: 3000,
+                continuous: true,
+                callback: function(pos) {
+                var i = bullets.length;
+                while (i--) {
+                    bullets[i].className = ' ';
+                }
+                bullets[pos].className = 'on';
+                }
+            });
+    	var bullets = document.getElementById('position').getElementsByTagName('li');
+</script>
+</body>
+</html>

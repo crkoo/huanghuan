@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>wab</title>
+    <link href="../layer/skin/layer.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../layer/layer.js"></script>
+<script type="text/javascript" src="../js/selectbody.js"></script>
+<script type="text/javascript" src="../js/all-Http-Request.js"></script>
+<script type="text/javascript" src="../js/all-KienLvs.js"></script>
+<script type="text/javascript">
+    var onlo='Y';
+    var oid='91e0e810489d71b5eal42546';
+    var mtype='mad';
+    var CashType=1;
+    var refreshtime=20;
+    var HTTP_IP='';
+    var rmadrtype='';
+    var intime=false;
+    var sinstime=false;
+    $(function(){
+        $("#top").css({
+            height: $(window).height()
+        });
+    });
+    function cls_show(ost){
+        onlo='Y';
+        mtype=ost.id;
+        rmadrtype='';
+        // plrtype='all';
+        var obj_li=document.getElementById("Navi-a").getElementsByTagName("li");
+        for(var e=0; e < obj_li.length; e++){
+            obj_li[e].className="";
+        }
+
+        ost.className="ulm-na";
+        //document.getElementById("HOME-HTML").innerHTML ='<img src="../images/loading.gif" />';
+    }
+
+    function SubGO(url){
+        var obj=document.getElementById('NEWDOM');
+        obj.action=url;
+        obj.submit();
+    }
+    function Go_Conversion(){
+        var url = null;
+        layer.open({
+            type: 2,
+            title: '',
+            shadeClose: true,//点击其它地方关闭层
+            shade: 0.5,
+            offset: ['50px', ''],
+            area: ['700px', $(window).height()-100+'px'],
+            content: '../../conversion.html'
+        });
+    }
+
+    function Go_Asdiv(val){
+        var url = null;
+        if (val == 7){
+            url = 'Integ.html';
+        }else{
+            url = 'Integ2.html';
+        }
+        layer.open({
+            type: 2,
+            title: layertitle(val),
+            shadeClose: true,//点击其它地方关闭层
+            shade: 0.5,
+            offset: ['50px', ''],
+            area: ['700px', $(window).height()-100+'px'],
+            content: '../../'+url+'?oid='+oid+'&val='+val
+        });
+    }
+    function layertitle(jval){
+        switch(jval){
+            case 7:
+                return false;
+                return '<b style="font-size: 16px;color:#ff9300">会员存款</b>';
+                break
+            case 8:
+                return '<b style="font-size: 16px;color:#ff9300">会员提款</b>';
+                break
+        }
+    }
+    function Go_SoResult(){
+        layer.open({
+            type: 2,
+            title: '<b>未结算注单</b>',
+            shadeClose: true,
+            shade: 0.8,
+            area: ['720px', '700px'],
+            content: 'soresult.html?oid='+oid //iframe的url
+        });
+    }
+    function Go_result(){
+        layer.open({
+            type: 2,
+            title: '<b>北京PK拾-开奖结果</b>',
+            shadeClose: true,
+            shade: 0.8,
+            area: ['1000px', '700px'],
+            content: 'result.html?oid='+oid //iframe的url
+        });
+    }
+    function Go_cac_result(){
+        layer.open({
+            type: 2,
+            title: '<b>北京PK拾-帐户历史</b>',
+            shadeClose: true,
+            shade: 0.8,
+            area: ['720px', '450px'],
+            content: 'cac_soresult.html?oid='+oid //iframe的url
+        });
+    }
+    function Go_triregular(){
+        layer.open({
+            type: 2,
+            title: '<b>北京PK拾-游戏规则</b>',
+            shadeClose: true,
+            shade: 0.8,
+            area: ['750px', '460px'],
+            content: 'triregular.html?oid='+oid //iframe的url
+        });
+    }
+    function Go_deposit(val){
+        layer.open({
+            type: 2,
+            title: '<b>存款</b>',
+            shadeClose: true,
+            shade: 0.8,
+            offset: ['50px', ''],
+            area: ['700px', $(window).height()-100+'px'],
+            content: '../../Integ.php?oid='+oid+'&val='+val
+        });
+    }
+    function Go_withdrawals(val){
+        layer.open({
+            type: 2,
+            title: '<b>提款</b>',
+            shadeClose: true,
+            shade: 0.8,
+            offset: ['50px', ''],
+            area: ['700px', $(window).height()-100+'px'],
+            content: '../../Integ.php?oid='+oid+'&val='+val
+        });
+    }
+
+    function codt(st){st.className='ulm-na'}
+    function sodt(st){
+        if(st.id!=mtype)
+            st.className='btm-na';
+    }
+</script>
+
+<body>
+<div id="top">
+    <div id="heoo">
+        <div class="lgohead">
+            <span class="logo"></span>
+            <div class="hergh">
+                <span class="notice"><marquee scrollamount="4"><a href="#" id="marqueea">利德彩票正式上线，欢迎投注！登录地址：http://www.00000,com</a></marquee></span>
+                    <span class="lng">
+                    &nbsp;&nbsp;&nbsp;<span class="cutmem">帐户:000000&nbsp;&nbsp;保留金额:<span id="Principal">0.0</span>&nbsp;&nbsp;<span id="timedt">Wednesday - EDT 2016-05-11 07:07</span></span>
+                   </span>
+            </div>
+            <div id="db">
+                <div class="ball">
+                    <a href="javascript:void(0)" onclick="show_clss(this,'ft')">足球 <span style="color:#CCCCCC">0 / 0</span></a>&nbsp;
+                    <a href="javascript:void(0)" onclick="show_clss(this,'bk')">篮球 &amp; 橄榄球 <span style="color:#CCCCCC">0 / 0</span></a>
+                </div>
+                <div class="menu">
+                    <a href="javascript:void(0)" onclick="SubGO('../../sports/')" style="color:#FF3">体育</a>
+                    <a href="../../../ag.html">真人</a>
+                    <a href="javascript:void(0);" onClick="Go_Conversion()">额度转换</a>
+                    <a href="../../../yh.html">优惠</a>
+                    <a href="javascript:void(0)" onclick="Go_Down(5)">联系我们</a>
+                    <a href="javascript:void(0)" onclick="OpenLive()">在线直播</a>
+                    <a href="javascript:void(0)" onclick="Go_Asdiv(7)">存款</a>
+                    <a href="javascript:void(0)" onclick="Go_Asdiv(8)">提款</a>
+                    <a href="../../../index.html" class="logout">登出</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hianline"></div>
+
+    <div class="ar">
+        <ul id="center_ul" class="clr">
+            <li class="left">
+                <div class="cpn">
+                    <table width="60" border="0" align="center" cellpadding="0" cellspacing="1">
+                        <tr>
+                            <td><a  href="javascript:void(0)" style="background-position: 0px 0px;" onClick="SubGO('../INTOcq/')" title="重庆时时彩"></a></td>
+                        </tr>
+                        <tr>
+                            <td><a  href="javascript:void(0)" style="background-position: -68px 0px;" onClick="SubGO('../INTObj/')" title="北京PK拾"></a></td>
+                        </tr>
+                    </table>
+                </div>
+            </li>
+            <li class="center">
+                <div class="Navi">
+                    <span class="Navi-left"></span>
+                <span class="Navi-center" >
+                  <table  width="620" border="0" align="center" cellpadding="0" cellspacing="0">
+                      <tr>
+                          <td nowrap="nowrap"  id="Navi-a">
+                              <li class="ulm-na" onClick="cls_show(this)" id='mad' style="margin-left: 0px;" onMouseOver="codt(this);" onMouseOut="sodt(this)"><span class='ulm-na-left'></span><a href="javascript:void(0)" onFocus="this.blur()">主盘口</a><span class='ulm-na-right'></span></li>
+                              <li onClick="cls_show(this)" id='Rmad' style="margin-left: 1px;" onMouseOver="codt(this);" onMouseOut="sodt(this)"><span class='ulm-na-left'></span><a href="javascript:void(0)" onFocus="this.blur()">排位</a><span class='ulm-na-right'></span></li>
+                              <li onclick="cls_show(this)" id="gysum" style="margin-left: 1px;" onmouseover="codt(this);" onmouseout="sodt(this)" class="btm-na"><span class="ulm-na-left"></span><a href="javascript:void(0)" onfocus="this.blur()">冠亚军和</a><span class="ulm-na-right"></span></li>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td >
+                              <table border="0" cellpadding="0" cellspacing="0" class="eoi"><tbody><tr>
+                                  <td height="25" width="70" align="center"><span id="SetMtype">主盘口</span></td>
+                                  <td width="40" align="center"><span id="Open"><select name="sel_open" id="sel_open" onchange="show_mysql();"><option selected="selected" value="E">E 盘</option></select></span></td>
+                                  <td width="80" align="center"><a href="javascript:void(0)" class="rule" onclick="Go_triregular()">游戏规则</a></td>
+                                  <td width="25" align="center">倒数</td>
+                                  <td width="55" align="center"><span id="ZeroCount">准备中.</span></td>
+                                  <td width="28" align="center">期数</td>
+                                  <td width="148" align="center"><span id="Periods">20160512-159(553434)</span></td>
+                                  <td width="52" align="center">开奖时间</td>
+                                  <td width="124" align="center"><span id="LotTime">2016-05-12 22:17:00</span></td>
+                              </tr>
+                              </tbody></table>
+                          </td>
+                      </tr>
+                  </table>
+                </span>
+                    <span class="Navi-right"></span>
+                </div>
+                <div id='HOME-HTML'>
+                    <div id="inf">
+                        <!--      <div class="ra-ban">
+                                <span class="lp"></span>
+                                <span class="rp"></span>
+                              </div>-->
+                        <div id="cq">
+                            <ul class="cq-ds">
+                                <li style="margin-left: 0px;">
+
+                                    <div class="om-ban"><span class="lp"></span><span class="rp"></span></div>
+                                    <div class="om-head">冠军</div>
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#FFFFFF" class="om-ymow">
+                                        <tbody><tr>
+                                            <td><span class="null">单</span><span class="odds" id="FD1">1.96</span><input name="input" type="text" class="amountinput" id="LB_1_FD" onblur="return RcountGold(this)" tabindex="1" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">双</span><span class="odds" id="FE1">1.96</span><input name="input" type="text" class="amountinput" id="LB_1_FE" onblur="return RcountGold(this)" tabindex="2" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">大</span><span class="odds" id="DD1">1.96</span><input name="input" type="text" class="amountinput" id="LB_1_DD" onblur="return RcountGold(this)" tabindex="3" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">小</span><span class="odds" id="DS1">1.96</span><input name="input" type="text" class="amountinput" id="LB_1_DS" onblur="return RcountGold(this)" tabindex="4" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">龙</span><span class="odds" id="WIN1">1.96</span><input name="input" type="text" class="amountinput" id="LB_1_WIN" onblur="return RcountGold(this)" tabindex="5" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">虎</span><span class="odds" id="NOG1">1.96</span><input name="input" type="text" class="amountinput" id="LB_1_NOG" onblur="return RcountGold(this)" tabindex="6" title="20~10000"></td>
+                                        </tr>
+                                        </tbody></table>
+
+                                </li>
+                                <li style="margin-left: 16px;">
+
+                                    <div class="om-ban"><span class="lp"></span><span class="rp"></span></div>
+                                    <div class="om-head">亚军</div>
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#FFFFFF" class="om-ymow">
+                                        <tbody><tr>
+                                            <td><span class="null">单</span><span class="odds" id="FD2">1.96</span><input name="input" type="text" class="amountinput" id="LB_2_FD" onblur="return RcountGold(this)" tabindex="7" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">双</span><span class="odds" id="FE2">1.96</span><input name="input" type="text" class="amountinput" id="LB_2_FE" onblur="return RcountGold(this)" tabindex="8" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">大</span><span class="odds" id="DD2">1.96</span><input name="input" type="text" class="amountinput" id="LB_2_DD" onblur="return RcountGold(this)" tabindex="9" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">小</span><span class="odds" id="DS2">1.96</span><input name="input" type="text" class="amountinput" id="LB_2_DS" onblur="return RcountGold(this)" tabindex="10" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">龙</span><span class="odds" id="WIN2">1.96</span><input name="input" type="text" class="amountinput" id="LB_2_WIN" onblur="return RcountGold(this)" tabindex="11" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">虎</span><span class="odds" id="NOG2">1.96</span><input name="input" type="text" class="amountinput" id="LB_2_NOG" onblur="return RcountGold(this)" tabindex="12" title="20~10000"></td>
+                                        </tr>
+                                        </tbody></table>
+
+                                </li>
+                                <li style="margin-left: 16px;">
+                                    <div class="om-ban"><span class="lp"></span><span class="rp"></span></div>
+                                    <div class="om-head">季军</div>
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#FFFFFF" class="om-ymow">
+                                        <tbody><tr>
+                                            <td><span class="null">单</span><span class="odds" id="FD3">1.96</span><input name="input" type="text" class="amountinput" id="LB_3_FD" onblur="return RcountGold(this)" tabindex="13" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">双</span><span class="odds" id="FE3">1.96</span><input name="input" type="text" class="amountinput" id="LB_3_FE" onblur="return RcountGold(this)" tabindex="14" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">大</span><span class="odds" id="DD3">1.96</span><input name="input" type="text" class="amountinput" id="LB_3_DD" onblur="return RcountGold(this)" tabindex="15" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">小</span><span class="odds" id="DS3">1.96</span><input name="input" type="text" class="amountinput" id="LB_3_DS" onblur="return RcountGold(this)" tabindex="16" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">龙</span><span class="odds" id="WIN3">1.96</span><input name="input" type="text" class="amountinput" id="LB_3_WIN" onblur="return RcountGold(this)" tabindex="17" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">虎</span><span class="odds" id="NOG3">1.96</span><input name="input" type="text" class="amountinput" id="LB_3_NOG" onblur="return RcountGold(this)" tabindex="18" title="20~10000"></td>
+                                        </tr>
+                                        </tbody></table>
+                                </li>
+                                <li style="margin-left: 16px;">
+
+                                    <div class="om-ban"><span class="lp"></span><span class="rp"></span></div>
+                                    <div class="om-head">第四名</div>
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#FFFFFF" class="om-ymow">
+                                        <tbody><tr>
+                                            <td><span class="null">单</span><span class="odds" id="FD4">1.96</span><input name="input" type="text" class="amountinput" id="LB_4_FD" onblur="return RcountGold(this)" tabindex="19" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">双</span><span class="odds" id="FE4">1.96</span><input name="input" type="text" class="amountinput" id="LB_4_FE" onblur="return RcountGold(this)" tabindex="20" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">大</span><span class="odds" id="DD4">1.96</span><input name="input" type="text" class="amountinput" id="LB_4_DD" onblur="return RcountGold(this)" tabindex="21" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">小</span><span class="odds" id="DS4">1.96</span><input name="input" type="text" class="amountinput" id="LB_4_DS" onblur="return RcountGold(this)" tabindex="22" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">龙</span><span class="odds" id="WIN4">1.96</span><input name="input" type="text" class="amountinput" id="LB_4_WIN" onblur="return RcountGold(this)" tabindex="23" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">虎</span><span class="odds" id="NOG4">1.96</span><input name="input" type="text" class="amountinput" id="LB_4_NOG" onblur="return RcountGold(this)" tabindex="24" title="20~10000"></td>
+                                        </tr>
+                                        </tbody></table>
+                                </li>
+                                <li style="margin-left: 16px;">
+
+                                    <div class="om-ban"><span class="lp"></span><span class="rp"></span></div>
+                                    <div class="om-head">第五名</div>
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#FFFFFF" class="om-ymow">
+                                        <tbody><tr>
+                                            <td><span class="null">单</span><span class="odds" id="FD5">1.96</span><input name="input" type="text" class="amountinput" id="LB_5_FD" onblur="return RcountGold(this)" tabindex="25" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">双</span><span class="odds" id="FE5">1.96</span><input name="input" type="text" class="amountinput" id="LB_5_FE" onblur="return RcountGold(this)" tabindex="26" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">大</span><span class="odds" id="DD5">1.96</span><input name="input" type="text" class="amountinput" id="LB_5_DD" onblur="return RcountGold(this)" tabindex="27" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">小</span><span class="odds" id="DS5">1.96</span><input name="input" type="text" class="amountinput" id="LB_5_DS" onblur="return RcountGold(this)" tabindex="28" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">龙</span><span class="odds" id="WIN5">1.96</span><input name="input" type="text" class="amountinput" id="LB_5_WIN" onblur="return RcountGold(this)" tabindex="29" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">虎</span><span class="odds" id="NOG5">1.96</span><input name="input" type="text" class="amountinput" id="LB_5_NOG" onblur="return RcountGold(this)" tabindex="30" title="20~10000"></td>
+                                        </tr>
+                                        </tbody></table>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="cq">
+                            <ul class="cq-ds">
+                                <li style="margin-left: 0px;">
+
+                                    <div class="om-ban"><span class="lp"></span><span class="rp"></span></div>
+                                    <div class="om-head">第六名</div>
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#FFFFFF" class="om-ymow">
+                                        <tbody><tr>
+                                            <td><span class="null">单</span><span class="odds" id="FD6">1.96</span><input name="input" type="text" class="amountinput" id="LB_6_FD" onblur="return RcountGold(this)" tabindex="31" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">双</span><span class="odds" id="FE6">1.96</span><input name="input" type="text" class="amountinput" id="LB_6_FE" onblur="return RcountGold(this)" tabindex="32" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">大</span><span class="odds" id="DD6">1.96</span><input name="input" type="text" class="amountinput" id="LB_6_DD" onblur="return RcountGold(this)" tabindex="33" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">小</span><span class="odds" id="DS6">1.96</span><input name="input" type="text" class="amountinput" id="LB_6_DS" onblur="return RcountGold(this)" tabindex="34" title="20~10000"></td>
+                                        </tr>
+
+                                        </tbody></table>
+
+                                </li>
+                                <li style="margin-left: 16px;">
+
+                                    <div class="om-ban"><span class="lp"></span><span class="rp"></span></div>
+                                    <div class="om-head">第七名</div>
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#FFFFFF" class="om-ymow">
+                                        <tbody><tr>
+                                            <td><span class="null">单</span><span class="odds" id="FD7">1.96</span><input name="input" type="text" class="amountinput" id="LB_7_FD" onblur="return RcountGold(this)" tabindex="37" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">双</span><span class="odds" id="FE7">1.96</span><input name="input" type="text" class="amountinput" id="LB_7_FE" onblur="return RcountGold(this)" tabindex="38" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">大</span><span class="odds" id="DD7">1.96</span><input name="input" type="text" class="amountinput" id="LB_7_DD" onblur="return RcountGold(this)" tabindex="39" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">小</span><span class="odds" id="DS7">1.96</span><input name="input" type="text" class="amountinput" id="LB_7_DS" onblur="return RcountGold(this)" tabindex="40" title="20~10000"></td>
+                                        </tr>
+                                        </tbody></table>
+
+                                </li>
+                                <li style="margin-left: 16px;">
+                                    <div class="om-ban"><span class="lp"></span><span class="rp"></span></div>
+                                    <div class="om-head">第八名</div>
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#FFFFFF" class="om-ymow">
+                                        <tbody><tr>
+                                            <td><span class="null">单</span><span class="odds" id="FD8">1.96</span><input name="input" type="text" class="amountinput" id="LB_8_FD" onblur="return RcountGold(this)" tabindex="43" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">双</span><span class="odds" id="FE8">1.96</span><input name="input" type="text" class="amountinput" id="LB_8_FE" onblur="return RcountGold(this)" tabindex="44" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">大</span><span class="odds" id="DD8">1.96</span><input name="input" type="text" class="amountinput" id="LB_8_DD" onblur="return RcountGold(this)" tabindex="45" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">小</span><span class="odds" id="DS8">1.96</span><input name="input" type="text" class="amountinput" id="LB_8_DS" onblur="return RcountGold(this)" tabindex="46" title="20~10000"></td>
+                                        </tr>
+                                        </tbody></table>
+                                </li>
+                                <li style="margin-left: 16px;">
+
+                                    <div class="om-ban"><span class="lp"></span><span class="rp"></span></div>
+                                    <div class="om-head">第九名</div>
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#FFFFFF" class="om-ymow">
+                                        <tbody><tr>
+                                            <td><span class="null">单</span><span class="odds" id="FD9">1.96</span><input name="input" type="text" class="amountinput" id="LB_9_FD" onblur="return RcountGold(this)" tabindex="49" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">双</span><span class="odds" id="FE9">1.96</span><input name="input" type="text" class="amountinput" id="LB_9_FE" onblur="return RcountGold(this)" tabindex="50" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">大</span><span class="odds" id="DD9">1.96</span><input name="input" type="text" class="amountinput" id="LB_9_DD" onblur="return RcountGold(this)" tabindex="51" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">小</span><span class="odds" id="DS9">1.96</span><input name="input" type="text" class="amountinput" id="LB_9_DS" onblur="return RcountGold(this)" tabindex="52" title="20~10000"></td>
+                                        </tr>
+                                        </tbody></table>
+                                </li>
+                                <li style="margin-left: 16px;">
+
+                                    <div class="om-ban"><span class="lp"></span><span class="rp"></span></div>
+                                    <div class="om-head">第十名</div>
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#FFFFFF" class="om-ymow">
+                                        <tbody><tr>
+                                            <td><span class="null">单</span><span class="odds" id="FD10">1.96</span><input name="input" type="text" class="amountinput" id="LB_10_FD" onblur="return RcountGold(this)" tabindex="55" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">双</span><span class="odds" id="FE10">1.96</span><input name="input" type="text" class="amountinput" id="LB_10_FE" onblur="return RcountGold(this)" tabindex="56" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">大</span><span class="odds" id="DD10">1.96</span><input name="input" type="text" class="amountinput" id="LB_10_DD" onblur="return RcountGold(this)" tabindex="57" title="20~10000"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="null">小</span><span class="odds" id="DS10">1.96</span><input name="input" type="text" class="amountinput" id="LB_10_DS" onblur="return RcountGold(this)" tabindex="58" title="20~10000"></td>
+                                        </tr>
+                                        </tbody></table>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div id="inpu">
+                            <div class="ra-top"><span class="lp"></span><span class="rp"></span></div>
+                            <span class="intext">总金额:</span>
+                            <span id="inspan" class="inspan">0</span>
+                            <span class="sinp"><input name="" type="button" value="下注" class="inp">&nbsp;&nbsp;<input name="" type="reset" value="清除"  class="inp"></span>
+                            <div class="ra_bim"><span class="blp"></span><span class="brp"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class='right'>
+                <div class="hkLogo"></div>
+                <div id="mem">
+                    <div class="top1"><p id="Money">0.0</p></div>
+                    <div class="dcenter">
+                        <div id="dv">没有下注订单。</div>
+                        <div  class="dv2" id='sub-butt'> <input name="" id="BUT"; type="button" value="确认"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="" type="button" value="取消" id="cancel_but"/>
+                        </div>
+                        <div  class="dv2" id='sub-continue'>
+                            <input name="" type="button" value="继续下注"/><br />
+                            <input name="" type="button" value="完成"/>
+                        </div>
+                        <div  class="dv2" id='sub-fulfill'>
+                            <input name="" type="button" value="完成"/>
+                        </div>
+                    </div>
+                    <div class="bomm"><span id="quick"><label for="quick">快速下注</label><input name="autoOdd" id="autoOdd" type="checkbox"/></span></div>
+                </div>
+
+                <div id="funct">
+                    <table width="224" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#E3E3E3">
+                        <tr>
+                            <td height="32" align="center"><a href="javascript:void(0)" onClick="Go_cac_result()">帐户历史</a></td>
+                            <td align="center"><a href="javascript:void(0)" onClick="Go_SoResult()">未结算</a></td>
+                            <td align="center"><a href="javascript:void(0)" onClick="Go_Down('bj','result.html')">开奖结果</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<form id='NEWDOM' action='' method='post' target='_top'>
+    <input type='hidden' name='oid' value='91e0e810489d71b5eal42546'>
+    <input type='hidden' name='langx' value='zh-cn'>
+</form>
+</body>
+</html>

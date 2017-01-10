@@ -1,0 +1,268 @@
+#header-wrap{
+	width:100%;
+    background-color: #000;
+	position:relative;
+}
+#hd-title{
+	width:100%;
+	height:27px;
+	line-height:27px;	
+	border-bottom:1px dashed #806554;
+}
+
+#hd-logo{
+	height: 90px;
+	margin-top: 7px;
+}
+#hd-logo-title{
+    padding-left: 50px;
+    padding-top: 5px;
+    width: 900px;
+	background: url(../images/logo-title.jpg) no-repeat;
+	height: 85px;
+    text-align: center;
+}
+#hd-bottom-line{
+	width:100%;
+	height:2px;
+	background-color: #b38939;
+}
+#body-wrap{
+   /* height: 580px;*/
+    margin-top: 22px;
+    width: 950px;
+}
+#cotent-left-box{
+	background:url(../images/opacity-left-box.png) no-repeat;
+	width:588px;
+	/*height:563px;*/
+	float:left;
+    border: 1px solid #3f2f16;
+    border-radius: 4px;
+}
+#content-right-box{
+   width:341px;
+}
+#content-right-box .first-box{
+	margin-bottom:20px;
+	
+}
+#content-right-box .box-attr{
+	margin-bottom: 18px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+    background:url(../images/opacity-left-box.png) no-repeat;
+    border: 1px solid #3f2f16;
+    border-radius: 4px;
+    height: 108px;
+    color: #fff;
+}
+#content-right-box .box-attr h2 {
+    color: #fff;
+    font-size: 14px;
+    margin: 10px 0;
+}
+#content-right-box .box-attr p{
+    line-height: 24px;
+}
+#box-3 {margin-bottom: 18px;}
+#content-right-box #box-4 {
+    padding: 0px;
+    height: 165px;
+}
+#box-4 div{
+    width: 341px;
+    height: 165px;
+    background:url(../images/qq_bg.png) no-repeat;
+}
+#box-4 p {
+    display: block;
+    padding-left: 10px;
+    padding-top: 22px;
+    width: 170px;
+}
+#site-speed{
+	float: left;
+    margin-left: 35px;
+    margin-bottom: 15px;
+    min-height: 560px;
+    text-align: center;
+	display:inline;
+	
+}
+#site-speed center{
+	color:#C4C4C4;
+	
+}
+#site-speed h2{
+	font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+    margin: 10px 0;
+	
+}
+.span_s input {
+    color: #FFFFFF;
+    height: 30px;
+    text-align: center;
+	line-height:34px;
+}
+
+.main_sp_02 {
+    background:url(../images/to-icon.png) no-repeat center center;
+    width: 60px;
+}
+.span_s {
+    display: inline;
+    float: left;
+    height: 30px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+
+#reload-btn{
+	background:url(../images/refresh-btn.png) no-repeat;
+	width:101px;
+	height:30px;
+	text-indent:-9999px;
+	margin:10px 0px;
+	cursor:pointer;
+	border:none;
+	display:block;
+	overflow:hidden;
+}
+
+#footer-wrap{
+    margin-top: 30px;
+    width: 100%;
+	height:30px;
+	line-height:30px;
+	background-color: #040504;
+	padding: 17px 0;
+    border-top: 2px solid #202020;
+}
+#footer-wrap p{
+    display: block;
+	color:#595959;
+    text-align: center;
+}
+#footer-wrap p span ,#footer-wrap p img{
+    vertical-align: middle;
+}
+
+.sp-content-l-list {
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    width: 546px;
+	margin:0px 0px 3px 5px;
+}
+
+input.sp-input-staitc {
+    color: #FEF200;
+}
+.sp-content-l-list input {
+    background: none repeat scroll 0 0 #636363;
+    border: medium none;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+	float:left;
+}
+
+input.sp-input-url {
+    color: #FFFFFF;
+    width: 230px;
+	margin-right:17px;
+}
+.sp-content-l-list input {
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+}
+.sp-content-l-list .sp-input-staitc {
+    background: url("../images/l_link.png") no-repeat center top;
+}
+.sp-content-l-list .sp-input-url {
+    background: url("../images/c_link.png") no-repeat center top;
+}
+input.sp-input-open {
+    background: #6d522d;
+    border: medium none;
+    color: #ffffff;
+    height: 33px;
+    width: 115px;
+	cursor:pointer;
+}
+
+
+
+
+#sp-header-box-info-flag {
+    margin: 0 auto;
+	float:right;
+    width: 600px;
+	height:27px;
+	line-height:27px;
+}
+#sp-header-box-info-flag a{
+float:left;
+
+}
+#sp-header-box-info-flag span{
+float:left;
+
+}
+
+.cssSet .ele-lang-wrap {
+    background:url(../images/select-icon.png) no-repeat;
+    border: 0 none;
+    color: #FFFFFF;
+    height: 24px;
+    width: 95px;
+}
+.ele-lang-wrap {
+    line-height: 20px;
+    position: relative;
+    text-align: left;
+    top: 1px;
+    width: 80px;
+    z-index: 10;
+}
+
+.cssSet .ele-lang-title {
+    color: #FFFFFF;
+    height: 24px;
+    line-height: 24px;
+}
+.ele-lang-title {
+    color: #000000;
+    cursor: pointer;
+    height: 20px;
+    line-height: 20px;
+    padding-right: 15px;
+    text-indent: 5px;
+}
+.ele-lang-group {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #AEAEAD;
+    border-left: 1px solid #AEAEAD;
+    border-radius: 0 0 5px 5px;
+    border-right: 1px solid #AEAEAD;
+    display: none;
+    font-size: 12px;
+    position: absolute;
+    z-index: 100;
+}
+
+.ele-lang-group a {
+    color: #000000;
+    display: block;
+    height: 22px;
+    line-height: 22px;
+    text-decoration: none;
+    text-indent: 5px;
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>LIVE</title>
+</head>
+<script src="../sports/js/zh-cn.js" language="javascript"></script>
+<script language="JavaScript" src="../sports/js/all-Http-Request.js" type="text/javascript"></script>
+
+<script>
+    var oid='91e0e810489d71b5eal42546';
+    var lang='zh-cn';
+    var sport='All';
+    var g_date='';
+    var eveTID='';
+    var mbgtgame='';
+    var noet='';
+    var version='';
+
+    var GameDate = new Array('2016-05-12','2016-05-13','2016-05-14','2016-05-15','2016-05-16','2016-05-17','2016-05-18');
+    var gameAry = new Array("FT","BK");
+
+    function onloads() {
+
+        onloadGame();
+        reloadioratio();
+        if(eveTID!=''){
+            LiveData();
+        }
+
+    }
+    function chggype(){
+        document.getElementById("reloadgame").src="right.html?oid="+oid+"&lang="+lang+"&sport="+document.getElementById("gameOpt").value+"&g_date="+g_date;
+    }
+    function chggdate(){
+        document.getElementById("reloadgame").src="right.html?oid="+oid+"&lang="+lang+"&sport="+sport+"&g_date="+document.getElementById("gdate").value;
+    }
+    function reloadioratio(){
+        document.getElementById("reloadgame").src="right.html?oid="+oid+"&lang="+lang+"&sport="+sport+"&g_date="+document.getElementById("gdate").value;
+    }
+
+    function LiveData(){
+
+        var getHTML = new HttpRequestXML();
+        getHTML.addEventListener("LoadComplete", ifsrc);
+        getHTML.sendRequest("left.php","GET", getUrlParam());
+
+    }
+    function getUrlParam(){
+        var param   ="oid="+oid;
+        param   +="&lang="+lang;
+        param   +="&sport="+sport;
+        param   +="&eveTID="+eveTID;
+        param   +="&version="+version;
+        param   += "&sid="+ Math.random();
+        return param;
+    }
+    function ifsrc(src){
+//	document.getElementById("res").style.display='';
+        var obj=document.getElementById("eveRTV");
+        obj.style.display='';
+        obj.src=src;
+        var eSobj=document.getElementById('res');
+        eSobj.style.display="block";
+        noetBall();
+    }
+    function noetBall(){
+        for(var i=0;i<mbgtgame.length;i++){
+            if(mbgtgame[i][10]==noet){
+                document.getElementById('res').innerHTML=mbgtgame[i][9]+"<br><span style='color:#ffffff'>"+mbgtgame[i][3]+" "+mbgtgame[i][11]+" - "+mbgtgame[i][12]+" "+mbgtgame[i][4]+"</span>";
+            }
+        }
+    }
+    function onloadGame(){
+        var tmp_opt = "";
+        //====== 處理球類選單
+        tmp_opt = "<option value='All' selected>"+top.str_live_list+"</option>\n";
+        for (var i = 0; i < gameAry.length; i++) {
+            tmp_opt+= "<option value='"+gameAry[i]+"'>"+eval("top.str_"+gameAry[i])+"</option>\n";
+        }
+        tmp_opt = "<select id=\"gameOpt\" name=\"gameOpt\" onChange=\"chggype()\" class=\"select\">\n"+tmp_opt+"</select>";
+        document.getElementById("game_type").innerHTML = tmp_opt;
+
+        //====== 處理日期選單
+        tmp_opt = "";
+        tmp_opt = "<option value='All' selected>"+top.str_live_mdate+"</option>\n";
+        for (i = 0; i < GameDate.length; i++) {
+            tmp_opt+= "<option class='se_date' id='se_date'  value='"+GameDate[i]+"'>"+GameDate[i]+"</option>\n";
+        }
+        tmp_opt = "<select class='se_date' id=\"gdate\" name=\"gdate\" onChange=\"chggdate()\">\n"+tmp_opt+"</select>";
+        document.getElementById("date_list").innerHTML = tmp_opt;
+    }
+</script>
+<style>
+    body{
+        font-size:12px;
+        margin: 0px;
+        padding: 0px;
+    }
+    .live_heada{
+        background-image: url(../sports/images/live_heada_lo.png);
+    }
+    .log{
+        font-size: 17px;
+        font-weight: bold;
+        color: #F90;/*	background-image: url(../sports/images/live_log_r1_c2.jpg);
+	background-repeat: no-repeat;*/
+        padding-left: 40px;
+        background-image: url(../sports/images/live_ofe.gif);
+        background-repeat: no-repeat;
+        height: 22px;
+        background-position: center;
+        width: 1px;
+        font-style: italic;
+        padding-top: 8px;
+    }
+    .rigtype{
+        background-color: #CCC;
+        margin-right: 5px;
+        height: 22px;
+    }
+    #res{
+        /*background-image: url(../sports/images/live_res.gif);*/
+
+        height: 47px;
+        color: #FF0;
+        background-color: #242424;
+        display:none;
+        line-height: 1.8;
+    }
+    #RiLive{
+        height: 455px;
+        background-image: url(../sports/images/live_bodmt.jpg);
+        background-repeat: no-repeat;
+        background-position: center top;
+        width: 480px;
+    }
+    #LeftGame{
+        height: 455px;
+    }
+    #time{
+        float: right;
+        margin-right: 8px;
+        color: #FFF;
+        line-height: 1.8;
+    }
+
+</style>
+<body onLoad="onloads();" scrolling="no" onUnload="unLoad();" onSelectStart="self.event.returnValue=false" oncontextmenu="self.event.returnValue=false;window.event.returnValue=false;">
+<table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td height="30" colspan="2" align="left" class="live_heada"><div class="log"><!--<img src="../sports/images/live_log.jpg" width="73" height="30" />-->LIVE</div></td>
+    </tr>
+    <tr>
+        <td width="490" height="467" align="center"  bgcolor="#242424" ><div id="RiLive">
+            <div id="res"></div>
+            <iframe  id="eveRTV" width="480" marginwidth="0" height="408" marginheight="0" scrolling="No" frameborder="0" style="display:none"></iframe>
+        </div></td>
+        <td width="225" height="467" align="left" valign="top" bgcolor="#242424" ><div id="LeftGame">
+            <div class="rigtype"><span id="game_type"></span><span id="date_list"></span><span id="time">30</span></div>
+            <iframe src="" name="reloadgame" width="220" marginwidth="0" height="439" marginheight="0" scrolling="Auto" frameborder="0" id="reloadgame"></iframe>
+            <div></td>
+    </tr>
+</table>
+</body>
+</html>

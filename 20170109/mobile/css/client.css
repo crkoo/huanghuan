@@ -1,0 +1,53 @@
+html, body, div, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, ul, li{margin: 0; padding: 0;}
+table{border-collapse: collapse; border-spacing: 0;}
+fieldset, img{border: 0;}
+address, caption, cite, code, dfn, th, var{font-style: normal; font-weight: normal;}
+ol, ul{list-style: none;}
+caption, th{text-align: left;}
+h1, h2, h3, h4, h5, h6{font-size: 100%; font-weight: normal;}
+q:before, q:after{content: '';}
+abbr, acronym{border: 0; font-variant: normal;}
+sup{vertical-align: text-top;}
+sub{vertical-align: text-bottom;}
+input, textarea, select{font-family: inherit; font-size: inherit; font-weight: inherit; outline: none;}
+input, textarea, select{font-size: 100%;}
+body{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: relative; z-index: 0; width: 100%; max-width: 640px; min-height: 100%; margin: 0 auto; overflow-x: hidden; font: 14px/24px Helvetica, Arial, sans-serif !important;}
+a{text-decoration: none; color: #000000; cursor: pointer;}
+a:hover{text-decoration: none;}
+.clear:after{content: "\0020"; display: block; height: 0; clear: both; visibility: hidden;}
+.clear{clear: both; zoom: 1}
+.fl{float: left;}
+.fr{float: right;}
+.hidden{display: none;}
+.tl{text-align: left;}
+.tr{text-align: right;}
+.img img {max-width: 100%;}
+
+.qui-page{position: relative; width: 100%; -webkit-transition: -webkit-transform 0.4s; transition: transform 0.4s;}
+.qui-page .header {padding-top: 5px; width: 100%; height: 74px; background: url("../images/mobile-header.png") repeat-x left top; text-align: center; overflow: hidden;}
+.qui-page .banner {position: relative; height: auto; width: 100%; line-height: 0; background-color: #163287; overflow: hidden;}
+.qui-page .banner img { max-width: 100%; }
+/* Swipe 2 required styles */
+.swipe {overflow: hidden;visibility: hidden;position: relative;}
+.swipe-wrap {overflow: hidden;position: relative;}
+.swipe-wrap > li {float:left;width:100%;position: relative;}
+/* END required styles */
+.banner #position {position: absolute; bottom: 10px; width: 100%; height: 10px; text-align: center; }
+.banner #position li {display: inline-block; width: 8px; height: 8px; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%; background-color: rgba(0,0,0,0.5); text-indent: -99999em;}
+.banner #position li.on {background-color: #2eaeff;}
+
+.content {padding: 0 10px;}
+.qui-page .notice {padding: 8px 0; background-color: #163287; height: 24px; color: #fff;}
+.qui-page .notice .notice-title {width: 25%; font-size: 120%; font-weight: bold;}
+.qui-page .notice .notice-body {width: 70%; font-size: 120%; height: 24px;}
+.box-head {position: relative; width: 100%; line-height: 0;}
+.website .box-body ul {margin-top: 10px;}
+.website .box-body li {padding: 5px 0;}
+.website .box-body li input {float: left; width: 62%; padding: 6px 10px; border: 1px solid #99a7cc; border-radius: 10px; -webkit-border-radius: 10px; font-size: 120%; color: #4c4c4c;}
+.website .box-body li a {float: right; display: block; width: 30%;}
+.activity .box-body ul {margin: 12px 0;}
+.activity .box-body li {padding: 5px 0; height: 28px; border-bottom: 1px dotted #cfcfcf; font-size: 120%; overflow: hidden;}
+.activity .box-body li:last-child {border-bottom: 0 none;}
+.activity .box-body li span {display: inline-block; margin-right: 10px; width: 28px; height: 28px; background-image: url("../images/li.png"); background-size: 100% 100%; background-position: 0px 0px; line-height: 30px; text-align: center; overflow: hidden; color: #fff;}
+.activity .box-body li a {color: #737373; line-height: 30px;}
+.activity .box-body li a ,.activity .box-body li span{vertical-align: middle;}

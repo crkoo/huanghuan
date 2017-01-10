@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en" class="first zh-cn ">
+<head>
+    <meta charset="UTF-8">
+    <title>葡京娱乐场-澳门知名老品牌值得信赖-打造亚洲线上娱乐一流平台！</title>
+    <link type="text/css" href="skins/bootstrap/bootstrap.min.css" rel="stylesheet"/>
+    <link type="text/css" href="skins/css/main.css" rel="stylesheet" />
+    <script type="text/javascript" src="skins/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="skins/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="skins/html5shiv/html5shiv.js"></script><!-- html5shiv.js -->
+</head>
+
+<body>
+<div id="mainBody">
+    <!-- header -->
+    <div id="page-header">
+        <div class="header clearfix">
+            <div class="header-logo">
+                <object type="application/x-shockwave-flash" id="logo-flash" title="" data="skins/images/logo.swf" width="312" height="96"><param name="wmode" value="transparent"><param name="quality" value="high"></object>
+            </div>
+            <div class="header-top clearfix">
+                <!-- 登入 -->
+                <div class="login-wrap float-left clearfix">
+                    <form name="LoginForm" id="LoginForm" action="" method="POST">
+                        <p class="login-unit"><input name="username" type="text" size="12" id="username" maxlength="15" placeholder="@账号" class="login-input login-acc" tabindex="1" /></p>
+                        <p class="login-unit"><input name="passwd" type="password" autocomplete="off" size="13" id="passwd" title="请填写 6-12 位大小写英数字" maxlength="13" class="login-input login-pass" placeholder="密码" tabindex="2" /></p>
+                        <p class="login-unit"><input name="rmNum" type="text" id="rmNum" size="7" maxlength="4" title="( 点选此处产生新验证码 )" class="login-input login-verify" tabindex="3" placeholder="验证码" /></p>
+                        <p class="login-unit" style="width: 40px"><img src="skins/images/macpic.png" id='vPic' alt="( 点选此处产生新验证码 )" title="( 点选此处产生新验证码 )" width="40" height="18" style="display: none;" /></p>
+                        <input type="submit" value="登入" class="login-submit" tabindex="4" />
+                        <input type="button" class="joinus-btn" value="注册" />
+                    </form>
+                    <script>
+                        $(function(){
+                           $("#rmNum").click(function(){
+                               $("#vPic").show();
+                           })
+                        });
+                    </script>
+                </div>
+                <!-- 自訂連結 -->
+                <div class="top-link-wrap float-left">
+                    <a href="###" class="forget">忘记密码?</a>
+                    &nbsp;|&nbsp;
+                    <a href="###" class="js-article-color top-custom-link">
+                        设为首页
+                    </a>
+                    &nbsp;|&nbsp;
+                    <a href="###" class="js-article-color top-custom-link">
+                        加入收藏
+                    </a>
+                </div>
+                <span class="float-right lang-wrap">
+<div id="ele-lang-wrap" class="ele-lang-wrap">
+    <div class="ele-lang-title ele-lang-option ele-lang-zh-cn" data-lang="ele-lang-zh-cn">简体中文</div>
+    <div id="ele-lang-group" class="ele-lang-group">
+        <a href="#" target="mem_index" title="繁體中文" class="ele-lang-option ele-lang-zh-tw " data-lang="ele-lang-zh-tw">繁體中文</a>
+        <a href="#" target="mem_index" title="简体中文" class="ele-lang-option ele-lang-zh-cn ele-lang-current" data-lang="ele-lang-zh-cn">简体中文</a>
+        <a href="#" target="mem_index" title="English" class="ele-lang-option ele-lang-en " data-lang="ele-lang-en">English</a>
+    </div>
+</div>
+<script>
+    $(function(){
+        var ele_lang_group = $('<div>').append($('#ele-lang-group')).html(),
+                $miBody = $('body'),
+                lang_group;
+
+        $miBody.prepend(ele_lang_group);
+        lang_group = $('#ele-lang-group');
+
+        //設定group 的寬度
+        lang_group.css("width", $('#ele-lang-wrap').width()-(lang_group.outerWidth()-lang_group.width()));
+
+        var langAutoClose = function(){
+            langCloseTimer = setTimeout(function(){
+                lang_group.stop().slideUp('fast');
+            }, 1000);
+        }
+
+        $('#ele-lang-wrap')
+                .on("click",function(){
+                    var offset = $(this).offset();
+                    var center_set = $miBody.width() - $('body').width();
+                    center_set = (center_set > 0) ? center_set/2 : 0;
+                    var obj_Left=offset.left + center_set;
+                    var obj_Top=offset.top+$(this).height();
+
+                    if(lang_group.is(':hidden')) {
+                        lang_group.stop().slideDown('fast')
+                                .css({'left':obj_Left,'top':obj_Top})
+                                .on("mouseenter",function(){
+                                    clearTimeout(langCloseTimer);
+                                    $(this).stop(true,true).slideDown('100');
+                                });
+                    } else {
+                        lang_group.stop().slideUp('fast');
+                    }
+                })
+                .on("mouseleave",function(){
+                    langAutoClose();
+                })
+                .on("mouseenter",function(){
+                    if(typeof langCloseTimer != 'undefined'){
+                        clearTimeout(langCloseTimer);
+                    }
+                });
+        lang_group
+                .on('mouseleave',function(){langAutoClose();});
+        $('#ele-lang-wrap a').on('click', function(){
+           if ($(this).hasClass('ele-lang-current')){
+               return false;
+           }else{
+               $('#ele-lang-wrap a').removeClass('ele-lang-current');
+               $(this).addClass('ele-lang-current');
+               $('.ele-lang-title').removeClass($('.ele-lang-title').attr('data-lang')).addClass($(this).attr('data-lang')).attr('data-lang', $(this).attr('data-lang')).html($(this).html());
+           }
+        });
+    });
+</script>
+                </span>
+            </div>
+            <!-- 主選單 -->
+            <div class="mainnav-wrap clear">
+                <div class="mainnav">
+                    <ul class="clearfix">
+                        <li id="LS-first" class="LS-first">
+                            <a href="index.html" target='mem_index' class=" current">首页<br/>
+                                <span></span>
+                            </a>
+                        </li>
+                        <li id="LS-ball" class="LS-ball">
+                            <a href="###" class=" ">体育赛事<br/>
+                                <span></span>
+                            </a>
+                        </li>
+                        <li id="LS-live" class="LS-live">
+                            <a href="#" target='mem_index' class=" ">视讯直播<br/>
+                                <span></span>
+                            </a>
+                        </li>
+                        <li id="LS-game" class="LS-game">
+                            <a href="###" target='mem_index' class=" ">电子游艺<br/>
+                                <span></span>
+                            </a>
+                            <!-- 子選單 -->
+                            <div id="nav-game" class="ele-lsub-group" style="display:none">
+                                <div class="lsub-inner-wrap">
+                                    <a href="#" target='mem_index' title="BBIN电子" class="">BBIN电子</a>
+                                    <a href="#" target='mem_index' title="WG电子" class="">WG电子</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="LS-ltlottery" class="LS-ltlottery">
+                            <a href="#" target='mem_index' class=" ">彩票游戏<br/>
+                                <span></span>
+                            </a>
+                        </li>
+                        <li id="LS-memberexclusiveii" class="LS-memberexclusiveii">
+                            <a href="javascript:;" target='mem_index' class=" " >优惠活动<br/>
+                                <span></span>
+                            </a>
+                        </li>
+                        <li id="LS-mobile" class="LS-mobile">
+                            <a href="javascript:;"
+                               class=" " >手机下注<br/>
+                                <span></span>
+                            </a>
+                        </li>
+                        <li id="LS-service" class="LS-service">
+                            <a href="javascript:;" class=" ">在线客服<br/>
+                                <span></span>
+                            </a>
+                        </li>
+                        <li id="LS-AT3" class="LS-AT3">
+                            <a href="#" target='mem_index' class=" ">代理加盟<br/>
+                                <span></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="skins/js/mainnav.js"></script>
+    </div>
+    <!-- //header -->
+    <div class="banner text-center" id="banner">
+        <div class="ad-flash">
+            <style>
+                .ele-slideshow-wrap{
+                    width: 1900px;
+                    position: relative;
+                    margin : 0 auto;
+                }
+                .ele-slideshow-scroll{
+                    width: 1900px;
+                    height: 460px;
+                    overflow: hidden;
+                    position: relative;
+                    z-index: 1;
+                    margin: 0 auto;
+                }
+                .ele-slideshow-wrap ul{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width:1900px;
+                    height: 460px;
+                }
+                .ele-slideshow-wrap li{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 1900px;
+                    height: 460px;
+                    opacity: 0;
+                    filter: alpha(opacity=0);
+                }
+                .ele-slideshow-wrap li a{
+                    display: block;
+                    width: 1900px;
+                    height: 460px;
+                }
+                .ele-slideshow-wrap li a img{
+                    image-rendering: optimizeQuality;
+                }
+                .ele-slideshow-control-wrap{
+                    position: absolute;
+                    z-index: 3;
+                    bottom: 0;
+                    padding: 5px;
+                }
+                .ele-slideshow-nav{
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                .ele-slideshow-nav a{
+                    width: 16px;
+                    height: 16px;
+                    background-color: #8296B1;
+                    display: inline-block;
+                    text-align: center;
+                    color: #FFF;
+                    line-height: 16px;
+                    margin: 0 2px;
+                    text-decoration: none;
+                    position: relative;
+                }
+                .ele-slideshow-nav a.active,
+                .ele-slideshow-nav a:hover{
+                    background-color: #74B0CE;
+                    color: #FFF;
+                }
+                .ele-slideshow-clip{
+                    background-repeat: no-repeat;
+                }
+            </style>
+
+            <div id="js-ele-slideshow1" class="ele-slideshow-wrap" onselectstart="return false;">
+                <div class="js-ele-slideshow-scroll ele-slideshow-scroll">
+                    <ul>
+                        <li data-index="1" data-autoplaytime="5000">
+                            <a href="###" target="mem_index">
+                                <img src="skins/images/slide_1.jpg" width="1900" height="460" >
+                            </a>
+                        </li>
+                        <li data-index="2" data-autoplaytime="5000">
+                            <a href="###" target="mem_index">
+                                <img src="skins/images/slide_2.jpg" width="1900" height="460" >
+                            </a>
+                        </li>
+                        <li data-index="3" data-autoplaytime="8000">
+                            <a href="###" target="mem_index">
+                                <img src="skins/images/slide_3.jpg" width="1900" height="460" >
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ele-slideshow-control-outwrap"><div class="js-ele-slideshow-control-wrap ele-slideshow-control-wrap"></div></div>
+            </div>
+            <script src="skins/js/slideshow/TweenMax.min.js?v=ver45.34"></script>
+            <script src="skins/js/tools/tween.slideshow.js?v=ver45.34"></script>
+            <script>
+                $('.ele-slideshow-wrap img').each(function () {
+                    var img = $(this).prop('src');
+                    if (img.indexOf('.png') != -1 && navigator.userAgent.indexOf("MSIE") != -1) {
+                        $(this).attr('style', 'filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="' + img + '",sizingMethod="scale")');
+                    }
+                });
+
+                $('#js-ele-slideshow'+1).slideshow({
+                    uni            : 1,
+                    animationType  : 'slideshow',
+                    animationTime  : 1.5,
+                    animationOption: {
+                        row : 10,
+                        col : 6
+                    },
+                    isNav          : !!1,
+                    isControl      : !!1,
+                    navPosition    : 'right',
+                    isNumber       : !!0,
+                    isArrow        : !!1,
+                    isText         : !!0,
+                    textX          : 50,
+                    textY          : 10,
+                    textTime       : 2,
+                    random         : !!1,
+                    //自動撥放
+                    isAutoPlay     : !!1,
+                    hovePause      : !!1,
+                    isLink         : !!1,
+                    isRunLine      : !!0,
+                    runLinePos     : 'bottom',
+                    fullScreen     : 0,
+                    fullScreenIEType     : 'slideh'
+                });
+            </script>
+        </div>
+    </div><!-- //banner -->
+    <div class="main clearfix" id="main">
+        <div class="notice">
+            <div class="wrap clearfix">
+                <div class="float-left notice_title">
+                    <img src="skins/images/notice_title.png" />
+                </div>
+                <div class="float-left notice_content" id="notice">
+                    <marquee id="ele-msgNews" behavior="scroll" scrollamount="1" direction="left" style="height:100%;">【友情提醒】:不计输赢，天天返点高达1.2无上限，2015年10月20日的返点优惠已添加至游戏账户，请注意查收(*^__^*)    【通知】公司入款银行账号已全面进行更换，请亲们在入款前查看最新的银行入款账号，以免存入我公司停用的银行卡号，带来不便，请多加谅解！祝亲们游戏愉快，多多盈利哟~(*^__^*)     温馨提示：盈丰国际娱乐城最新上网导航【yf8889.com】，请点击收藏此网址！娱乐无忧，让您随时随地畅享博彩天堂。    【好消息】盈丰商城隆重登场，亲爱的会员可在博彩之余，还能享受购物滴乐趣！心动不如行动，快快点击【优惠专区】了解详情。后期更精彩。若有任何问题请联系24小时在线客服嚛~    【好消息】盈丰国际附属平台重磅登场！ BBIN网站维护上哪玩？盈丰国际华丽 备用版 【yf5565.com   yf5563.com  yf6686.com】 让您继续精彩游戏，新的体验，新的视觉，引进多样平台，让您娱乐永不停歇。</marquee>
+                    <script src="skins/js/marquee.js"></script>
+                    <script>
+                        $('#ele-msgNews').marquee({"kclass" : "ele-news-txt" , "speed" : 40 })
+                                .hover(function() {
+                                    $(this).trigger("stop");
+                                }, function() {
+                                    $(this).trigger("start");
+                                });
+                    </script>
+                </div>
+                <div class="float-left notice_welcome">
+                    <img src="skins/images/notice_welcome.png" />
+                </div>
+            </div>
+        </div>
+        <div class="wrap">
+            <div class="index_list clearfix">
+                <ul>
+                    <li class="li_1">
+                        <a href=""><img src="skins/images/li_1.png" data-name="li_1" /></a>
+                    </li>
+                    <li class="li_2">
+                        <a href=""><img src="skins/images/li_2.png" data-name="li_2" /></a>
+                    </li>
+                    <li class="li_3">
+                        <a href=""><img src="skins/images/li_3.png" data-name="li_3" /></a>
+                    </li>
+                    <li class="li_4">
+                        <a href=""><img src="skins/images/li_4.png" data-name="li_4" /></a>
+                    </li>
+                </ul>
+                <script>
+                    $(function(){
+                       $('.index_list img').hover(function(){
+                           $(this).attr('src', $(this).attr('src').replace($(this).attr('data-name'),$(this).attr('data-name')+'_hover'));
+                       },function(){
+                           $(this).attr('src', $(this).attr('src').replace($(this).attr('data-name')+'_hover',$(this).attr('data-name')));
+                       }) ;
+                    });
+                </script>
+            </div>
+            <div class="jackpot">
+                <div class="email">
+                    <p>客服：pujing7788@gmail.com</p>
+                    <p>代理：dpujing7788@gmail.com</p>
+                    <p>投诉：pujing7788@gmail.com</p>
+                </div>
+                <div class="number">
+
+                </div>
+            </div>
+            <div id="partner"></div>
+        </div>
+    </div><!-- //main -->
+    <div id="footer-top">
+        <div class="wrap text-center">
+            <a href="#">關於我們</a>
+            &nbsp;|&nbsp;
+            <a href="#">聯繫我們</a>
+            &nbsp;|&nbsp;
+            <a href="#">代理合作</a>
+            &nbsp;|&nbsp;
+            <a href="#">存款幫助</a>
+            &nbsp;|&nbsp;
+            <a href="#">取款幫助</a>
+            &nbsp;|&nbsp;
+            <a href="#">常見問題</a>
+            &nbsp;|&nbsp;
+            <a href="#">遊戲規則</a>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="footer-center">
+            <div class="footer-inner center">
+                <div class="info">
+                    <div class="list service">
+                        <div class="list-inner">
+                            <h2><img src="skins/images/footer01.png" alt=""></h2>
+                            <dl class="pro m_in">
+                                <dd class="unit">秒</dd>
+                                <dt>18</dt>
+                                <dd class="title">存款火速到帐</dd>
+                                <br>
+                                <dd class="time">平均时间</dd>
+                                <dd class="progress" style="width: 100px;"></dd>
+                                <dd class="opacity"></dd>
+                            </dl>
+                            <dl class="pro m_out">
+                                <dd class="unit">分</dd>
+                                <dt>2`18</dt>
+                                <dd class="title">取款火速到帐</dd>
+                                <br>
+                                <dd class="time">平均时间</dd>
+                                <dd class="progress" style="width: 150px;"></dd>
+                                <dd class="opacity"></dd>
+                            </dl>
+                            <dl class="mon">
+                                <dd class="unit">家</dd>
+                                <dt><span>35</span></dt>
+                                <dd class="title">便捷的银行服务</dd>
+                                <br>
+                                <dd class="time">目前我们的支付机构有</dd>
+                                <dd class="bank_service"><img src="skins/images/footer05.png" alt=""></dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!--<div id="line_01" class="separation"></div>-->
+                    <div class="list product">
+                        <div class="list-inner">
+                            <h2><img src="skins/images/footer02.png" alt=""></h2>
+                            <dl>
+                                <dt>快乐彩 KENO</dt>
+                                <dd>游戏玩法丰富，高返奖高赔率，中奖率更高，为用户提供更激情的体验。</dd>
+                            </dl>
+                            <dl>
+                                <dt>体育平台 SPORTS BET</dt>
+                                <dd>在一个公平、公正的环境下进行游戏，能够让您轻松、怡静的享受体育投注的乐趣。</dd>
+                            </dl>
+                            <dl>
+                                <dt>真人娱乐城 LIVE CASINO</dt>
+                                <dd>想要让自己一夜致富的梦想成真吗?不要错过机会，下一个千万富翁很可能就是您。</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!--<div id="line_02" class="separation"></div>-->
+                    <div class="list help">
+                        <div class="list-inner">
+                            <h2><img src="skins/images/footer03.png" alt=""></h2>
+                            <dl>
+                                <dt>颠覆性产品 SUBVERSIVE PRODUCTS</dt>
+                                <dd>执照许可是由菲律宾博彩监督委员会所核发和监管</dd>
+                            </dl>
+                            <dl>
+                                <dt>合作伙伴 PARTNERS</dt>
+                                <dd><img src="skins/images/footer04.png" alt=""></dd>
+                            </dl>
+                            <dl>
+                                <dt>服务帮助 USE HELP</dt>
+                                <dd><ul class="use-help-list">
+                                    <li style="width:60px;" class="pull-left"><a href="#">游戏介绍</a></li>
+                                    <li style="width:60px" class="pull-left"><a href="#">常见问题</a></li>
+                                    <li style="width:60px" class="pull-left"><a href="#">关于我们</a></li>
+                                    <li style="width:60px" class="pull-left"><a href="#">合作伙伴</a></li>
+                                </ul></dd>
+                                <style type="text/css">
+                                    .use-help-list a {
+                                        color: #be9744
+                                    }
+                                    .use-help-list a:hover {
+                                        color: #be9744
+                                    }
+                                </style>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <script type="text/javascript" src="skins/js/footer.js"></script>
+    </div>
+    <div id="footer-bottom">
+        <div class="wrap text-center">
+            <p>葡京娱乐场所提供的产品和服务，是由菲律宾政府卡格扬河经济特区First Cagayan leisure and Resort Corporation.授权和监管</p>
+            <p>我们将不余遗力的为您提供优质的服务和可靠的资金保障</p>
+            <p>Copyright © 葡京娱乐场 Reserved</p>
+        </div>
+    </div>
+</div>
+<!--浮動圖-->
+<style>
+    .float_r_ight {
+        display: none;
+        position: absolute;
+        right: 35px;
+        top: 15px;
+        padding-top: 121px;
+        width: 118px;
+        height: 242px;
+        background: url("skins/images/float_r_ight_bg.png") no-repeat right top;
+        z-index: 999;
+    }
+    .float_r_ight a {
+        display: block;
+        background-image: url("skins/images/float_r_ight.png");
+        background-repeat: no-repeat;
+    }
+    .float-service {
+        height: 83px;
+        background-position: 0px 0px;
+    }
+    .float-ie {
+        width: 97px;
+        height: 38px;
+        margin-top: 4px;
+        margin: 4px auto 0;
+        background-position: -11px -87px;
+    }
+
+    .float-ub {
+        width: 97px;
+        height: 37px;
+        margin: 4px auto 0;
+        background-position: -11px -128px;
+    }
+    .float-qq {
+        width: 97px;
+        height: 38px;
+        margin: 3px auto 0;
+        background-position: -11px -168px;
+    }
+    .right_close {
+        width: 20px;;
+        height: 15px;
+        margin: 5px auto 0;
+        background-position: -50px -211px;
+    }
+</style>
+<div id="float_r_ight" class="float_r_ight">
+    <a href="###" class="float-service"></a>
+    <a href="###" class="float-ie" target="_blank"></a>
+    <a href="###" class="float-ub" target="_blank"></a>
+    <a href="###" class="float-qq" target="_blank"></a>
+    <a id="right_close" href="###" class="right_close"></a>
+</div>
+
+<script type="text/javascript">
+    <!--
+    var float_box = document.getElementById("float_r_ight");
+
+    var winEvent = function () {
+        var iScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+        setTimeout(function () {
+            clearInterval(float_box.timer);
+            var iTop = parseInt((document.documentElement.clientHeight - float_box.offsetHeight)/2) + iScrollTop;
+
+            float_box.timer = setInterval(function () {
+                var iSpeed = (iTop - float_box.offsetTop) / 8;
+                iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+                float_box.offsetTop == iTop ? clearInterval(float_box.timer) : (float_box.style.top = float_box.offsetTop + iSpeed + "px");
+            }, 30);
+        }, 50);
+        float_box.style.display="block";
+    };
+    $(window).load(winEvent);
+    window.onresize = window.onscroll = winEvent;
+    $("#float_r_ight #right_close").click(function(){
+        $(float_box).remove();
+    });
+    //-->
+</script><!--浮動圖end-->
+</body>
+</html>

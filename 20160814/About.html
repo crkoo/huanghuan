@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="renderer" content="webkit">
+    <title>关于我们</title>
+    <link type="text/css" rel="stylesheet" href="style/reset.css" />
+    <link type="text/css" rel="stylesheet" href="style/style.css" />
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="js/public.js"></script>
+</head>
+<body>
+<input type="hidden" id="userid" name="userid" value="">
+<div class="header">
+    <div class="head">
+        <div class="w1000">
+            <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="420" height="100" class="logo">
+                <param name="movie" value="images/logo.swf">
+                <param name="quality" value="high">
+                <param name="wmode" value="transparent">
+                <param name="swfversion" value="6.0.65.0">
+                <!--[if !IE]>-->
+                <object type="application/x-shockwave-flash" data="images/logo.swf" width="420" height="100">
+                    <!--<![endif]-->
+                    <param name="quality" value="high">
+                    <param name="wmode" value="transparent">
+                    <param name="swfversion" value="6.0.65.0">
+                    <!--[if !IE]>-->
+                </object>
+                <!--<![endif]-->
+            </object>
+            <div class="logor"><p>官网直营 大额无忧</p><p class="p_border">单日提款<span>1000</span>万元</p></div>
+            <div class="headright">
+                <div class="tools"><a href="javascript:void(0)" onclick="bookMarksite('http://' + window.location.hostname, document.title);">点击收藏</a> | <a href="check.html" target="_blank">线路检测</a> <a class="flag" href="javascript:void(0)"><img src="images/aomen.gif" /></a> <a class="flag" href="javascript:void(0)"><img src="images/china.gif" /></a> <a class="flag" href="javascript:void(0)"><img src="images/usa.gif" /></a></div>
+                <div class="login">
+                    <form name="LoginForm" id="LoginForm" action="login" method="post" onsubmit=" return denglu(); " style="margin:0" autocomplete="off">
+                        <input type="text"name="username" id="username" tabindex="1" maxlength="20" value="帐号" onfocus="if (this.value == this.defaultValue) {this.value = ''}" onblur="if (this.value == '') {this.value = this.defaultValue}">
+                        <input type="text" name="userpassword" id="userpassword" tabindex="2" maxlength="20" value="密码" onfocus="if (this.value == this.defaultValue) {this.value = '';this.type='password';};" onblur="if (this.value == '') {this.value = this.defaultValue;this.type='text';}">
+                        <div style="position: relative; float:left;"><input type="text" name="code" id="code" tabindex="3" maxlength="4" value="验证码" onfocus="if (this.value == this.defaultValue) { this.value = '' }; change_zc_yzm('checkNum_img');" onblur=" if (this.value == '') { this.value = this.defaultValue }">
+                            <img border="0" onclick="change_zc_yzm('checkNum_img'); " id="checkNum_img" name="checkNum_img" style="background-color:burlywood;" class="yzmimg"></div>
+                        <input type="submit" value="登陆" class="btn sub"><input type="button" value="注册" onclick="javascript:window.location.href = 'Register.html';" class="btn reset">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="w1000">
+            <ul>
+                <li class="on"><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Index.html';"><span class="ico01"></span>网站首页</a></li>
+                <li id="menu02" style="position:relative;"><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Sport.html';"><span class="ico02"></span>体育赛事</a></li>
+                <li id="menu03"><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Live.html';"><span class="ico03"></span>真人娱乐</a></li>
+                <li id="menu04" style="position:relative;"><a href="javascript:void(0)" onclick="javascript:window.location.href = 'SlotGame.html';" id="dzyytab"><span class="ico04"></span>电子游艺</a></li>
+                <li id="menu05"><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Lottery.html';"><span class="ico05"></span>彩票游戏</a></li>
+                <li style="position:relative;"><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Activity.html';" id="yhhdtab"><span class="ico06"></span>优惠活动</a></li>
+                <li><a href="/wap" target="_blank"><span class="ico07"></span>手机投注</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Cooperation.html';"><span class="ico08"></span>代理加盟</a></li>
+                <li><a href="javascript:void(0)" onclick="window.open('#online', '在线客服' , 'width=670,height=580,top=0,left=0,status=no,toolbar=no,scrollbars=yes,resizable=no,personalbar=no')"><span class="ico09"></span>在线客服</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="pagesbanner" style="background:url(images/bannerabout.jpg) top center no-repeat;">
+    <div class="w1000">
+        <div class="gonggao">
+            <span>最新资讯：</span>
+            <marquee id="msgNews" scrollamount="3" scrolldelay="80" direction="left" onmouseover="this.stop();" onmouseout="this.start();" style="height:34px;">尊敬的会员您好！天天返水！美东时间2016年8月13号返水额度已成功派发！祝您游戏愉快，好运连连~  【紧急通知】:美高梅娱乐城入款账号银行【工商 周晓龙】【工商 孙然广】【建设 马离京】【微信 vcs11com】【农业 宋秋生】【工商 康梁】【支付宝13166432651】【工商 吴斌】已停用，请广大玩家务必在入款时进入公司网站点击银行卡转账提取最新的银行资料或咨询在线客服索取，如存入废弃账号，公司概不负责，谢谢合作！  微信扫一扫即可快速入款，微信支付全新升级，秒到账，点击线上存款选择在线支付——选择微信支付——扫一扫支付 无需等待轻松一扫即可自动入款自动上分。  ★尊敬的会员您好！我们公司目前不支持支付宝、微信进行取款，请您务必绑定银行账号进行取款，感谢您的配合！  ★尊敬的会员您好，由于近期有不少不法分子仿照我们公司的微信支付账号创建了微信公众号，为了避免客户存款到公众账号造成财产损失，请您直接扫描与我们客服对话窗口的微信二维码【微信号：vcs11com】添加好友，然后使用微信转账，谢谢&nbsp;<br/>  </marquee>
+        </div>
+    </div>
+</div>
+
+<div class="pages">
+    <div class="about w1000">
+        <div class="aboutleft">
+            <div class="welcome"></div>
+            <ul>
+                <li class="on"><a href="javascript:void(0)" onclick="javascript:window.location.href = 'About.html';">关于我们</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Contact.html';">联系我们</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Desposit.html';">存款帮助</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Teller.html';">取款帮助</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Privacy.html';">隐私政策</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Duty.html';">博彩责任</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Cooperation.html';">合作伙伴</a></li>
+            </ul>
+            <div class="aboutleftbottom"></div>
+        </div>
+        <div class="aboutright">
+            <div class="content">
+                <p>
+                    美高梅娱乐场注册于澳门，并且拥有澳门实地赌场牌照，是亚洲最具规模且成长最快的在线娱乐场之一，提供刺激好玩的真人荷官娱乐城，快乐彩，体育博彩，赌场老虎机，虚拟游戏，和扑克游戏等。              拥有 Cagayan Economic Zone Authority 体育博彩与赌场公司执照。<br>
+                    美高梅娱乐场作为知名的在线博彩公司，提供最广范围并最具竞争力的产品。
+                </p>
+                <p>我们承诺：</p>
+                <h3>公平诚信</h3>
+                <p> 美高梅娱乐场作为国际知名的线上博彩营运商，对接入的所有平台均经过严格的筛选，只选用国际知名线上博彩平台。保证让每位玩家在一个公平、公正的环境下进行游戏。              同时菲律宾政府First Cagayan leisure and Resort Corporation会对游戏平台的数据进行监控最终确保游戏的公平性和真实性。 </p>
+                <h3>“不封顶”原则</h3>
+                <p> 美高梅娱乐场一直秉承着“洗码不封顶、取款不封顶”的原则保证所有玩家能最大限度的享受游戏乐趣。 </p>
+                <h3>高效存取款</h3>
+                <p> 美高梅娱乐场一直注重用户体验，高效快速的存取款业务是用户最实在的体验，所以我们一直致力于开发最新的收支业务和人员培训保证高效的存取款，保证5分钟存提款到账，为你快速享受游戏乐趣提供最大保证。 </p>
+                <h3>精英客服团队</h3>
+                <p> 美高梅娱乐场客服均经过严格的筛选及专业的培训，用心打造精英客服团队为玩家提供优质的服务质量。全天候24小时为您提供专业、贴心的VIP服务，让您有宾至如归的感觉。 </p>
+                <h3>强大的专家技术团队</h3>
+                <p> 作为专业的网上博彩游戏运营商，我们在业内聘请了一批经验丰富的线上博彩专家和操盘手，为广大玩家提供最先进、最富娱乐性的游戏项目，并保证我们游戏平台  里的赔率是最佳赔率，从而保证广大玩家的利益。美高梅娱乐场全部游戏设计均采用世界最领先的软件。 </p>
+                <h3>信息安全隐私</h3>
+                <p> 提供平稳的加密安全通道(256位SSL加密标准)，服务器的镜像备份保证了数据库和客户信息的安全。玩家网上支付和银行交易由国际金融机构在高标准的安  全和机密的网络中进行。另外，客户在本平台的所有活动均严格保密，我们不会向任何第三方包括政府透露客户任何的个人信息及资料。 </p>
+                <h3>负责任博彩</h3>
+                <p> 美高梅娱乐场承诺提供「负责任博彩」，並确保每位客户能与我们一起享受到博彩的乐趣。但是我们也了解到有小部分的人有时候未必能控制自己的投注行为，如遇相关问题， 我们会积极鼓励这些用户及时与我们联络，以便尽快提供相关帮助。 </p>
+                <h3>澳门执照</h3>
+                <p>我们提供的所有产品和服务，是由澳门特别行政区政府 所授权和监管。</p>
+                <p>美高梅娱乐场与CT.GPI.LEBO.AG.BBIN.OG.MG 七大线上平台运营商共同打照娱乐第一盛宴。</p>
+                <p>所有真人荷官及主管均经过严格训练及挑选，每局牌局均有荷官主管负责监察，以确保游戏的真实度，保证让每位玩家在一个公平、公正的环境下游戏。</p>
+                <p> 诚信打造品牌，实力铸就 美高梅娱乐场，十大放心理由： </p>
+                <ol>
+                    <li>
+                        平台足够权威<br>
+                        美高梅娱乐场与CT.GPI.LEBO.AG.BBIN.OG.MG 七大线上平台运营商共同打照娱乐第一盛宴
+                    </li>
+                    <li>
+                        排名足够靠前<br>
+                        美高梅娱乐场为亚洲最具公信力品牌之一，信誉领先排名，在海量娱乐城信息中独占前茅。
+                    </li>
+                    <li>
+                        资金足够安全<br>
+                        美高梅娱乐场雄厚的资金链信誉良好，大额存款无忧，资金安全有保障，免去您一切后顾之忧。
+                    </li>
+                    <li>
+                        取款足够自由<br>
+                        美高梅娱乐场24小时自由取款，取款3-5分钟火速到帐，且终身免手续费。
+                    </li>
+                    <li>
+                        活动足够给力<br>
+                        美高梅娱乐场时时推出各项给力活动，优惠送不停，让您真正赚翻天。
+                    </li>
+                    <li>
+                        安全足够保障<br>
+                        美高梅娱乐场采用128位SSL加密技术和严格的安全管理体系，确保客户资料安全得到最完善的保障。
+                    </li>
+                    <li>
+                        服务足够贴心<br>
+                        美高梅娱乐场7X24小时客服贴心的服务，温馨的呵护每一位玩家。
+                    </li>
+                    <li>
+                        VIP足够至尊<br>
+                        美高梅娱乐场VIP尊享贵宾级的专属服务让您享有宾至如归般的帝王享受。
+                    </li>
+                    <li>
+                        操作足够简单<br>
+                        美高梅娱乐场秉承以客户为中心的宗旨，在开发之初就设计了诸多人性化的功能和特性，省去繁琐的麻烦，让您轻松操作。
+                    </li>
+                    <li>
+                        营业足够合法<br>
+                        美高梅娱乐场是菲律宾政府认证的大型合法互联网博彩公司。<br>
+                        选择 美高梅娱乐场，等于选择一份信誉的保障。
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="footer">
+    <div class="w1000">
+        <div class="b1">
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'About.html';">关于我们</a>
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'Contact.html';">联系我们</a>
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'Cooperation.html';">代理加盟</a>
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'Desposit.html';">存款帮助</a>
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'Teller.html';">取款帮助</a>
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'Privacy.html';">隐私政策</a>
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'Generalq.html';">新手操作</a>
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'Activity.html';">优惠活动</a>
+            <a href="check.html" target="_blank">线路检测</a>
+        </div>
+        <div class="b2">
+            <img src="images/b2img.jpg">
+        </div>
+        <div class="b3">
+            <ul>
+                <li><div class="ico qq"></div>QQ客服：<span>213678</span></li>
+                <li><div class="ico qq"></div>QQ客服：<span>491414</span></li>
+                <li><div class="ico email"></div>邮箱：<span>vcsvip88@gmail.com</span></li>
+            </ul>
+        </div>
+        <div class="b4">
+            <img src="images/b4img.png">
+        </div>
+    </div>
+</div>
+<!--浮動圖-->
+<div id="kf-online" class="kf-online clearfix">
+    <div class="float-left float_contact"><img src="images/float_left.png" /></div>
+    <div class="float-right float_icon">
+        <a href="#online" class="messenger"></a>
+        <a href="http://www.hlf.pw/" class="oldsite"></a>
+        <a href="###" class="qq">QQ:53255888</a>
+        <a href="###" class="weixin"></a>
+        <a href="javascript:;" class="qrcode"><img src="images/qr_code.jpg" /></a>
+        <a href="http://www.hlf.vip/" class="guidesite"></a>
+        <a href="javascript:;" class="site2">WWW.HLF.VIP</a>
+    </div>
+</div>
+<script>
+    var float_box = document.getElementById("kf-online");
+    var winEvent = function () {
+        var iScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        setTimeout(function () {
+            clearInterval(float_box.timer);
+            var iTop = parseInt((document.documentElement.clientHeight - float_box.offsetHeight)/2) + iScrollTop;
+
+            float_box.timer = setInterval(function () {
+                var iSpeed = (iTop - float_box.offsetTop) / 8;
+                iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+                float_box.offsetTop == iTop ? clearInterval(float_box.timer) : (float_box.style.top = float_box.offsetTop + iSpeed + "px");
+            }, 30);
+        }, 50);
+        float_box.style.display="block";
+    };
+    $(window).load(winEvent);
+    window.onresize = window.onscroll = winEvent;
+    $("#kf-online .float_contact").click(function(){
+        if ($("#kf-online .float_icon").is(':hidden')){
+            $(".kf-online").css('width', '220px');
+            $(".kf-online .float_icon").show();
+        }else{
+            $(".kf-online").css('width', '66px');
+            $(".kf-online .float_icon").hide();
+        }
+    });
+</script>
+</body>
+</html>

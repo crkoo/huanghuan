@@ -1,0 +1,44 @@
+html,body,div,h1,h2,h3,h4,h5,h6,p,span,em,a,img,ul,li,ol,form,button,input,textarea,dl,dt,dd,iframe{margin:0;padding:0;}
+a {cursor: pointer;color:#000;text-decoration: none;outline: 0 none; font-family:"微软雅黑";}
+p{font-family:"微软雅黑";}
+
+h1,h2,h3,h4,h5,h6,em{font-size:16px;font-weight:normal;}
+ol,ul{list-style:none;}
+em{font-style: normal;}
+img{border:0;vertical-align:middle;}
+.site-color1,a.site-color1 {color: #ff0000;}
+.site-color2,a.site-color2,.site-color2 a {color: #fff;}
+.fl{float: left;}
+.fr{float: right;}
+.clear:after {content:""; display:block; height:0; clear:both; visibility:hidden;}
+.clear {*zoom:1;}
+
+body {background: url("../images/bg.jpg") no-repeat center top;}
+
+#header{background: url("../images/header-bg.jpg") no-repeat center top; height:118px;width:100%;}
+#header .h_cont{width:1020px;margin:0 auto;height: 118px;}
+#header .h_cont .logo {float:left; padding-top:15px;}
+#header .h_cont .header-middle {float:left; margin-left: 45px; padding-top: 40px;}
+#header .h_cont .header-right {float: right;}
+#header .h_cont .header-right .header-nav {width: 267px; height: 28px; color:#FFF; background: url("../images/header-sign-bg.png") no-repeat center top; overflow: hidden; text-align: center;}
+#header .h_cont .header-right .header-nav a {font: 12px "微软雅黑"; color:#FFF; line-height:28px}
+#header .h_cont .header-right .header-nav a.site-color1 {color: #ff0000;}
+#header .h_cont .header-right .header-kf {margin-top: 11px;}
+
+#main{width:1000px; margin:15px auto 30px; padding: 10px; height:auto; background-color: #edeef2; clear:both;}
+#main .box {float: left; margin-bottom: 10px; width: 495px; overflow: hidden;}
+#main .box.big {width: 1000px;}
+#main .box.two {margin-left: 5px;}
+#main .box .box-head {height: 43px;}
+#main .box .box-head .box-title {padding-top: 6px; width: 192px; height: 37px; background: url("../images/div-title.png") no-repeat center top; color: #fff; text-align: center; font-size: 18px; font-weight: bold; overflow: hidden;}
+#main .box .box-head .box-note {margin-top: 10px; height: 24px; font-size: 12px; color: #071133;}
+#main .box .box-body {margin-top: 2px; width: 487px; padding: 8px 3px; background-color: #fff; border: 1px solid #bfbfbf;}
+#main .box.big .box-body {width: 992px;}
+#main .box .box-body li {float: left; margin: 5px; width: 148px; padding: 5px 0; height: 27px; border: 2px solid #c2cae0; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; text-align: center; line-height: 26px; font-size: 14px;}
+#main .box .box-body li img {margin-right: 8px;}
+
+#footer { width:100%; height: 100px; margin:0 auto; text-align:center; clear:both; background: url("../images/footer-bg.png") repeat-x left top; overflow: hidden; font-size: 12px;}
+#footer .main {width: 1020px; margin:0 auto; padding-top: 10px;}
+#footer p.site-color2 {height: 28px;}
+#footer .contact {line-height: 24px;}
+#footer .footer-copyright {height: 24px; padding: 5px 0; line-height: 24px; color: #5879e1;}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>合作加盟</title>
+    <link href="style/style.css" rel="stylesheet">
+    <script src="js/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="header">
+        <div class="top content clearfix">
+            <div class="header-tips float-left">
+                <img src="images/header_tips.png" />
+            </div>
+            <div class="logo float-left">
+                <object type="application/x-shockwave-flash" id="logo-flash" title="" data="images/logo.swf" width="350" height="165"><param name="wmode" value="transparent"><param name="quality" value="high"></object>
+            </div>
+            <div class="login-box float-right">
+                <form class="clearfix" action="###" method="post">
+                    <div class="login-form float-left">
+                        <div class="clearfix">
+                            <input type="text" class="login-account" placeholder="账号" />
+                            <input type="text" class="login-verify" placeholder="验证码" />
+                        </div>
+                        <div class="mt10 clearfix">
+                            <input type="text" class="login-password" placeholder="密码" />
+                            <input type="submit" class="login-btn" />
+                        </div>
+                    </div>
+                    <div class="open float-right">
+                        <a href="join.html" class="open_button"><img src="images/open.png" /></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="content clearfix">
+                <div class="float-left">
+                    <ul>
+                        <li class="first"><a href="index.html">首页</a></li>
+                        <li class="last"><a href="lottery.html">彩票大厅</a></li>
+                        <li class="logo_bg"></li>
+                        <li class=""><a href="activity.html">优惠活动</a></li>
+                        <li class=""><a href="join.html">立即注册</a></li>
+                        <li class="last active"><a href="cooperation.html">合作加盟</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner page_banner">
+        <a href="###"></a>
+    </div><!-- //banner -->
+    <div class="main">
+        <div class="content clearfix">
+            <div class="notice clearfix">
+                <p class="float-left notice-icon"></p>
+                <div class="float-left marquee">
+                    <marquee id="ele-msgNews" behavior="scroll" scrollamount="1" direction="left" style="height:100%;">新开户立即送50元，新开户立即送50元，新开户立即送50元，新开户立即送50元，新开户立即送50元，</marquee>
+                </div>
+                <script src="js/marquee.js"></script>
+                <script>
+                    $('#ele-msgNews').marquee({"kclass" : "ele-news-txt" , "speed" : 40 })
+                            .hover(function() {
+                                $(this).trigger("stop");
+                            }, function() {
+                                $(this).trigger("start");
+                            });
+                </script>
+            </div>
+            <div class="main-box clearfix">
+                <div class="nav float-left">
+                    <ul>
+                        <li class=""><a href="cooperation.html">合作加盟</a></li>
+                        <li class="active"><a href="agent_reg.html">代理注册</a></li>
+                        <li class=""><a href="agent_manager.html">代理经理</a></li>
+                        <li class=""><a href="about.html">关于我们</a></li>
+                        <li class=""><a href="help.html">存取款帮助</a></li>
+                        <li class=""><a href="rule.html">游戏规则</a></li>
+                    </ul>
+                </div>
+                <div class="float-right">
+                    <div class="box-body reg-box">
+                        <div class="reg-title">代理注册</div>
+                        <div class="reg-form">
+                            <p class="color-2 text-center">代理商专属链接地址：000rb.com/?p=代理ID</p>
+                        </div>
+                    </div>
+                    <div class="box-body reg-box">
+                        <div class="reg-title">代理资料</div>
+                        <div class="reg-form">
+                            <div class="reg-form_line clearfix">
+                                <div class="reg-form_line_left">代理账号:&nbsp;</div>
+                                <div class="reg-form_line_input">
+                                    <input type="text" class="form_input" /> <span class="note"><font class="color-2">*</font> 6-20个英文和数字组成</span>
+                                </div>
+                            </div>
+                            <div class="reg-form_line clearfix">
+                                <div class="reg-form_line_left">密 码:&nbsp;</div>
+                                <div class="reg-form_line_input">
+                                    <input type="text" class="form_input" /> <span class="note"><font class="color-2">*</font> 6-20个任意字符组成</span>
+                                </div>
+                            </div>
+                            <div class="reg-form_line clearfix">
+                                <div class="reg-form_line_left">确认密码:&nbsp;</div>
+                                <div class="reg-form_line_input">
+                                    <input type="text" class="form_input" /> <span class="note"><font class="color-2">*</font> 6-20个任意字符组成</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-body reg-box">
+                        <div class="reg-title">个人资料</div>
+                        <div class="reg-form">
+                            <div class="reg-form_line clearfix">
+                                <div class="reg-form_line_left">真实姓名:&nbsp;</div>
+                                <div class="reg-form_line_input">
+                                    <input type="text" class="form_input" /> <span class="note"><font class="color-2">*</font> 名字必须与您的银行户口所用名字相同</span>
+                                </div>
+                            </div>
+                            <div class="reg-form_line clearfix">
+                                <div class="reg-form_line_left">联系电话:&nbsp;</div>
+                                <div class="reg-form_line_input">
+                                    <input type="text" class="form_input" /> <span class="note"><font class="color-2">*</font> 请填写您的固定电话或手机</span>
+                                </div>
+                            </div>
+                            <div class="reg-form_line clearfix">
+                                <div class="reg-form_line_left">邮箱:&nbsp;</div>
+                                <div class="reg-form_line_input">
+                                    <input type="text" class="form_input" /> <span class="note"><font class="color-2">*</font> 和您联系的重要渠道,请用正确的邮箱</span>
+                                </div>
+                            </div>
+                            <div class="reg-form_line clearfix">
+                                <div class="reg-form_line_left">QQ:&nbsp;</div>
+                                <div class="reg-form_line_input">
+                                    <input type="text" class="form_input" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-body reg-box">
+                        <div class="reg-title">银行资料</div>
+                        <div class="reg-form">
+                            <div class="reg-form_line clearfix">
+                                <div class="reg-form_line_left">出款银行:&nbsp;</div>
+                                <div class="reg-form_line_input">
+                                    <select class="form_select">
+                                        <option value="">请选择</option>
+                                    </select>
+                                    <span class="note"><font class="color-2">*</font> </span>
+                                </div>
+                            </div>
+                            <div class="reg-form_line clearfix">
+                                <div class="reg-form_line_left">取款密码:&nbsp;</div>
+                                <div class="reg-form_line_input">
+                                    <input type="text" class="form_input" /> <span class="note"><font class="color-2">*</font> 6-20个任意字符组成</span>
+                                </div>
+                            </div>
+                            <div class="reg-form_line clearfix">
+                                <div class="reg-form_line_left">确认取款密码:&nbsp;</div>
+                                <div class="reg-form_line_input">
+                                    <input type="text" class="form_input" /> <span class="note"><font class="color-2">*</font> 6-20个任意字符组成</span>
+                                </div>
+                            </div>
+                            <div class="reg-form_line clearfix">
+                                <div class="reg-form_line_left">银行账号:&nbsp;</div>
+                                <div class="reg-form_line_input">
+                                    <input type="text" class="form_input" /> <span class="note"><font class="color-2">*</font> 请认真填写,否则不能出款</span>
+                                </div>
+                            </div>
+                            <div class="reg-form_line clearfix">
+                                <div class="reg-form_line_left">开户行地址:&nbsp;</div>
+                                <div class="reg-form_line_input">
+                                    <input type="text" class="form_input" /> <span class="note"><font class="color-2">*</font> 请认真填写,否则不能出款</span>
+                                </div>
+                            </div>
+                            <div class="reg-form_line clearfix">
+                                <div class="reg-form_line_left">您的推广网址:&nbsp;</div>
+                                <div class="reg-form_line_input">
+                                    <input type="text" class="form_input" /> <span class="note"> &nbsp;  请输入您的推广网址,如果没有可留空</span>
+                                </div>
+                            </div>
+                            <div class="reg-form_line clearfix">
+                                <div class="reg-form_line_left">&nbsp;</div>
+                                <div class="reg-form_line_input">
+                                    <input type="submit" class="form_btn" value="提交" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- //main -->
+    <div class="footer">
+        <div class="content clearfix">
+            <div class="float-left">
+                <img src="images/footer_1.png">
+                <img src="images/footer_2.png">
+            </div>
+            <div class="float-right text-right">
+                <p>
+                    <a href="about.html">关于我们</a>
+                    <span>|</span>
+                    <a href="help.html">存取款帮助</a>
+                    <span>|</span>
+                    <a href="cooperation.html">合作加盟</a>
+                    <span>|</span>
+                    <a href="rule.html">游戏规则</a>
+                </p>
+                <p class="ft12">Copyright &copy; 2016 伯爵彩票. All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

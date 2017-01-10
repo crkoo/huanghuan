@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>BLB体育 </title>
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+    <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="/Scripts/jquery-1.9.1.min.js"></script>
+    <style>
+        a:link { text-decoration: none; }
+
+        .header-logo { padding: 3px; }
+
+        .width30 { width: 30px; }
+
+        .register { padding-top: 12px; }
+
+        .register a { font-weight: bold; padding-right: 8px; padding-top: 5px; }
+        .headerMain { padding-top: 3px; padding-right: 10px; min-width:50%;}
+        .headerdiv a { font-weight: bold; }
+        .footercontent { padding-top: 12px; padding-bottom: 10px; font-weight: bold; background: #92B3DD; }
+
+        .fontsize { font-size: 25px; padding: 2px 2px 2px 10px; }
+        .linecentermodel { margin: auto; position: absolute; top: 0; left: 0; bottom: 0; right: 0; }
+    </style>
+</head>
+<body>
+<div id="header-top" class="bg-info header-logo">
+    <div class="pull-left">
+        <a href="/">
+            <img width="100" height="40" class="img-responsive" src="/IMG/Main/logo.png" />
+        </a>
+    </div>
+    <div class="pull-right headerMain">
+        <div class="headerdiv">
+            <a class="center-block pull-right" href="javascript:void(0)">账号:cool123 &nbsp;余额：<span id="IndexCredit" style="color: red"></span></a>
+
+            <div class="clearfix"></div>
+        </div>
+        <div class="headerdiv pull-right" style="margin-top: 4px;">
+            <a class="" href="/Main/UserCenter">会员中心</a>&nbsp;&nbsp;
+            <a class="" href="javascript:logoutUser()">退出</a>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <div style="clear: both"></div>
+</div>
+<style>
+    #header-top { display: none; }
+    .fontwidth { font-weight: bold; }
+    .body-banner { background-image: linear-gradient(#DED5C9,#D9EDF7); }
+    .body-header { background: #D1E0E2; padding: 8px 12px 8px 4px; }
+    table { width: 100%; max-width: 100%; }
+    table td { padding: 5px; text-align: center; width: 33.33333333%; }
+    .table-border td { border: 1px solid #fff; border-collapse: collapse; }
+    .choose-td { background: url(/IMG/selected.png) top left no-repeat; background-size: 30px; }
+    .padding8px { padding-left: 8px; padding-right: 8px; }
+    .marginbuttom5px { margin-bottom: 5px; }
+    .spanborder { border: 1px solid #F9CC9D; padding: 2px 6px; font-size: 12px; }
+</style>
+<div class="bg-info header-logo">
+    <div class="pull-left register">
+        <a href="/?UID=C78AE030FF7D8873B2278566623864BB">
+            <span class="glyphicon glyphicon-home fontsize"></span>
+        </a>
+    </div>
+    <div class="pull-right register">
+        <a class="center-block pull-left" href="javascript:logoutUser()">退出</a>
+    </div>
+    <div style="clear:both"></div>
+</div>
+<div class="bg-info header-logo text-center fontwidth">额度转换</div>
+<div class="body-header">
+    <span class="input-lg">选择钱包</span>
+    <small>当前账户:<small id="Credit"></small></small>
+    <span title="刷新" onclick="GetCredit()" class="glyphicon glyphicon-repeat btn btn-warning btn-xs pull-right"></span>
+</div>
+<div class="body-banner">
+    <table class="table-border from_money">
+        <tr>
+            <td>
+                <span data-value="1">我的钱包</span>
+            </td>
+            <td>
+                <span data-value="8">BBIN视讯</span><br />
+                <span onclick="getLivemoney('bbin')" class="Credit_bbin spanborder BBINCredit">获取</span>
+            </td>
+            <td>
+                <span data-value="7">AG视讯</span><br />
+                <span onclick="getLivemoney('ag')" class="Credit_ag spanborder AGCredit">获取</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span data-value="9">LMG视讯</span><br />
+                <span onclick="getLivemoney('lmg')" class="Credit_lmg spanborder LMGCredit">获取</span>
+            </td>
+            <td>
+                <span data-value="60">MG视讯</span><br />
+                <span onclick="getLivemoney('mg')" class="Credit_mg spanborder MGCredit">获取</span>
+            </td>
+            <td>
+                <span data-value="50">OG视讯</span><br />
+                <span onclick="getLivemoney('og')" class="Credit_og spanborder OGCredit">获取</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span data-value="40">DS视讯</span><br />
+                <span onclick="getLivemoney('ds')" class="Credit_ds spanborder DSCredit">获取</span>
+            </td>
+            <td>
+                <span data-value="30">CT视讯</span><br />
+                <span onclick="getLivemoney('ct')" class="Credit_ct spanborder CTCredit">获取</span>
+            </td>
+            <td>
+                <span data-value="80">M8体育</span><br />
+                <span onclick="getLivemoney('M8sport')" class="Credit_M8sport spanborder m8sportCredit">获取</span>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="body-header">
+    <span class="input-lg">转入到</span>
+</div>
+<div class="body-banner">
+    <table class="table-border to_money">
+        <tr>
+            <td>
+                <span data-value="1">我的钱包</span>
+            </td>
+            <td>
+                <span data-value="8">BBIN视讯</span><br />
+                <span onclick="getLivemoney('bbin')" class="Credit_bbin spanborder BBINCredit">获取</span>
+            </td>
+            <td>
+                <span data-value="7">AG视讯</span><br />
+                <span onclick="getLivemoney('ag')" class="Credit_ag spanborder AGCredit">获取</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span data-value="9">LMG视讯</span><br />
+                <span onclick="getLivemoney('lmg')" class="Credit_lmg spanborder LMGCredit">获取</span>
+            </td>
+            <td>
+                <span data-value="60">MG视讯</span><br />
+                <span onclick="getLivemoney('mg')" class="Credit_mg spanborder MGCredit">获取</span>
+            </td>
+            <td>
+                <span data-value="50">OG视讯</span><br />
+                <span onclick="getLivemoney('og')" class="Credit_og spanborder OGCredit">获取</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span data-value="40">DS视讯</span><br />
+                <span onclick="getLivemoney('ds')" class="Credit_ds spanborder DSCredit">获取</span>
+            </td>
+            <td>
+                <span data-value="30">CT视讯</span><br />
+                <span onclick="getLivemoney('ct')" class="Credit_ct spanborder CTCredit">获取</span>
+            </td>
+            <td>
+                <span data-value="80">M8体育</span><br />
+                <span onclick="getLivemoney('M8sport')" class="Credit_M8sport spanborder m8sportCredit">获取</span>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="body-banner padding8px">
+    <div class="container">
+        <form class="form-horizontal" role="form" id="defaultForm">
+            <div style="height:8px;"></div>
+            <div class="form-group marginbuttom5px">
+                <div class="input-group">
+                    <span class="input-group-addon form_span">金额</span>
+                    <input type="text" name="changeMoney" class="form-control input-lg" placeholder="输入转账金额" />
+                </div>
+            </div>
+            <table class="btn-money" id="btns_money">
+                <tr>
+                    <td><span data-val="50" class="btn center-block btn-info">50</span></td>
+                    <td><span data-val="100" class="btn center-block btn-info">100</span></td>
+                    <td><span data-val="500" class="btn center-block btn-info">500</span></td>
+                </tr>
+                <tr>
+                    <td><span data-val="1000" class="btn center-block btn-info">1000</span></td>
+                    <td><span data-val="5000" class="btn center-block btn-info">5000</span></td>
+                    <td><span data-val="10000" class="btn center-block btn-info">10000</span></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <button type="button" class="btn-info btn btn-block btn-lg marginbuttom5px" id="submitData">确定</button>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <img class="center-block linecentermodel" width="40" height="40" src="/IMG/load.gif" />
+</div>
+<script src="/Scripts/formValidation.min.js"></script>
+<script src="/Scripts/fm_bootstrap.js"></script>
+<script>
+    $(function () {
+        tdchoosestyle();
+        Validateinputmoney();
+        bindMoney_btn();
+        btn_ajaxsubmitData();
+        GetCredit();
+    });
+
+    //真人钱包块点击事件
+    function tdchoosestyle() {
+        $(".from_money tr td").each(function () {
+            $(this).click(function () {
+                $(this).addClass("choose-td").siblings("td").removeClass("choose-td").parent("tr").siblings("tr").children("td").removeClass("choose-td");
+                var moneyType = $(this).children("span:eq(0)").attr("data-value");
+                var con = $(".to_money tr").first().children("td").first();
+
+                if (moneyType == "1") {
+                    $(".to_money tr td").removeAttr("style");
+                    $(con).removeClass("choose-td").css("opacity", 0.3);
+
+                    $(".to_money tr:eq(0) td:gt(0),.to_money tr:gt(0) td").each(function () {
+                        $(this).click(function () {
+                            $(this).addClass("choose-td").siblings("td").removeClass("choose-td").parent("tr").siblings("tr").children("td").removeClass("choose-td");
+                        });
+                    });
+                } else {
+                    $(".to_money tr td").removeClass("choose-td").css("opacity", 0.3).unbind("click");
+                    $(con).removeAttr("style").addClass("choose-td");
+                }
+            });
+        });
+        $(".to_money tr td").each(function () {
+            $(this).click(function () {
+                $(this).addClass("choose-td").siblings("td").removeClass("choose-td").parent("tr").siblings("tr").children("td").removeClass("choose-td");
+            });
+        });
+    }
+    //金额验证
+    function Validateinputmoney() {
+        $("#defaultForm").formValidation({
+            fields: {
+                changeMoney: {
+                    validators: {
+                        notEmpty: {
+                            message: '请输入金额！'
+                        },
+                        regexp: {
+                            regexp: /^(([1-9]\d{0,9})|0)(\d{1,2})?$/,
+                            message: '请输入正确的金额！'
+                        }
+                    }
+                }
+            }
+        });
+    }
+    //金额快速输入
+    function bindMoney_btn() {
+        $("#btns_money tr td span").each(function () {
+            $(this).click(function () {
+                var btn_money = $(this).attr("data-val");
+                $("input[name=changeMoney]").val(btn_money);
+            });
+        });
+    }
+    //按钮事件提交数据
+    function btn_ajaxsubmitData() {
+        $("#submitData").click(function () {
+            var from = $(".from_money .choose-td span").attr("data-value");
+            var to = $(".to_money .choose-td span").attr("data-value");
+            var money = $("input[name=changeMoney]").val();
+            var reg = /^(([1-9]\d{0,9})|0)(\d{1,2})?$/;
+            if (from == undefined) {
+                Modal.alert({ msg: '请选择转出钱包!' });
+                return;
+            } else if (to == undefined) {
+                Modal.alert({ msg: '请选择接收钱包!' });
+                return;
+            } else if (money == "") {
+                Modal.alert({ msg: '请输入金额!' });
+                return;
+            } else if (!reg.test(money)) {
+                Modal.alert({ msg: '请输入正确金额!' });
+                return;
+            }
+            $('#myModal').modal('show');
+            $.ajax({
+                url: '/app/Credit.ashx?from=' + from + '&to=' + to + '&switch_amount=' + money + '&t=' + new Date(),
+                success: function (data) {
+                    if (data != "") {
+                        var res = eval("(" + data + ")");
+                        Modal.alert({ msg: res.msg }).on(function (e) {
+                            if (res.msg.indexOf("有误") == -1 || res.msg.indexOf("超时") == -1) {
+                                var classname = Object.keys(res)[1];
+                                var money = res[classname].toFixed(2);
+                                $("." + classname).html(money);
+                                $("input[name=changeMoney]").val('');
+                            }
+                            GetCredit();
+                        });
+                    } else {
+                        Modal.alert({ msg: '失败,请与客服人员联系是否转换成功' });
+                    }
+                },
+                complete: function (data) {
+                    $('#myModal').modal('hide');
+                }
+            });
+        });
+    }
+    //取真人额度
+    function getLivemoney(atype) {
+        $('#myModal').modal('show');
+        $.ajax({
+            url: "/app/login.ashx?act=getcredit&type=" + atype + "&t=" + new Date(),
+            success: function (data) {
+                $(".Credit_" + atype).html(data);
+            }, complete: function (data) {
+                $('#myModal').modal('hide');
+            }
+        });
+    }
+    //取账户额度
+    function GetCredit() {
+        if ($("#Credit").length > 0) {
+            $.ajax({
+                url: '/app/login.ashx?act=getcredit&type=ssc&t=' + new Date(),
+                success: function (data) {
+                    try {
+                        $("#Credit").html(data);
+                    }
+                    catch (e) {
+                    }
+                }
+
+            });
+        }
+    }
+</script>
+<div class="text-center footercontent">
+    Copyright &copy; BLB体育 Reserved
+</div>
+<script src="/Scripts/bootstrap.min.js"></script>
+
+
+<script src="/Scripts/bootstrap_alert.js"></script>
+<!-- system modal start弹窗html -->
+<div id="ycf-alert" class="modal">
+    <div class="modal-dialog modal-sm linecentermodel" style="width: 300px; height: 108px;">
+        <div class="modal-content">
+            <div class="modal-body bg-info" style="border-radius: 5px; padding: 10px;">
+                <p style="font-size: 15px; font-weight: bold;">[Message]</p>
+            </div>
+            <div class="modal-footer" style="padding: 5px; text-align: center;">
+                <button type="button" class="btn btn-primary ok" data-dismiss="modal">[BtnOk]</button>
+                <button type="button" class="btn btn-default cancel" data-dismiss="modal">[BtnCancel]</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- system modal end弹窗html -->
+
+<script>
+    $(function () {
+        var s = "C78AE030FF7D8873B2278566623864BB";
+        if (s != "")
+            setTimeOut();
+    });
+    function logoutUser() {
+        Modal.confirm({ msg: "确定是退出？" }).on(function (e) {
+            if (e) {
+                location.href = "/app/logout.ashx";
+            }
+        });
+    }
+
+    var timeoutID;
+    function setTimeOut() {
+        clearTimeout(timeoutID);
+        $.ajax({
+            url: "/ajax/refresh?UID=C78AE030FF7D8873B2278566623864BB&t=" + new Date(),
+            success: function (da) {
+
+            }
+        })
+        timeoutID = setTimeout("setTimeOut()", 5 * 60 * 1000)
+    }
+</script>
+
+
+</body>
+</html>

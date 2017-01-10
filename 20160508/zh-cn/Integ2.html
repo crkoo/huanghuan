@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<script>
+    function CheckKey(){
+        //if(event.keyCode == 13) return false;
+        //if((event.keyCode < 48 || event.keyCode > 57) && (event.keyCode > 95 || event.keyCode < 106)){return false;}
+        if(!((event.keyCode>=48&&event.keyCode<=57)||(event.keyCode>=96&&event.keyCode<=105)||(event.keyCode==8)))
+            return false;
+    }
+    //var mstat='';
+    function Submit(){
+        if (FROMmy.Amount.value==''){
+            alert('请输入取款金额！');
+            FROMmy.Amount.focus();
+            return false
+        }
+        if (FROMmy.Amount.value<200){
+            alert('提款金额最少为200元！');
+            FROMmy.Amount.focus();
+            return false
+        }
+        if (FROMmy.Amount.value>0.0){
+            alert('提款金額超出帳户餘額!');
+            FROMmy.Amount.focus();
+            return false
+        }
+        if (FROMmy.nd_name.value==''){
+            alert('请输入银行帐户全名！');
+            FROMmy.nd_name.focus();
+            return false
+        }
+        if (FROMmy.nd_Prv.value==''){
+            alert('请输入开户银行所属的省！');
+            FROMmy.nd_Prv.focus();
+            return false
+        }
+        if (FROMmy.nd_City.value==''){
+            alert('请输入开户银行所属的市！');
+            FROMmy.nd_City.focus();
+            return false
+        }
+        if (FROMmy.nd_Points.value==''){
+            alert('请输入开户银行的银行分行名称！');
+            FROMmy.nd_Points.focus();
+            return false
+        }
+        if (FROMmy.nd_Account.value==''){
+            alert('请输入银行帐号！');
+            FROMmy.nd_Account.focus();
+            return false
+        }
+        if (FROMmy.moneypass.value==''){
+            alert('请输入资金管理密码！');
+            FROMmy.nd_Account.focus();
+            return false
+        }
+        return true
+    }
+</script>
+<style>
+    body{
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-bottom: 0px;
+        margin-left: 10px;
+    }
+    body td,legend,p,span{
+        font-size:12px;
+    }
+    .topdiv{
+        width: 680px;
+    }
+    .ine {
+        background-image: url(img/btn-join-bg.jpg);
+        padding-top: 1px;
+        padding-bottom: 1px;
+        margin-top: 3px;
+        border: 1px solid #999;
+        font-size: 11px;
+        color: #FFF;
+    }
+    .pcowm {
+        font-size: 13px;
+        font-weight: bold;
+        color: #000;
+        text-align: left;
+        height: 18px;
+        padding-top: 5px;
+        padding-bottom: 0px;
+        border: 1px dashed #EBEBEB;
+    }
+    .input1_long {
+        border:#b4b4b4 solid 1px;
+        color:#333333;
+    }
+    .input2_long {
+        border:1px solid #b4b4b4;
+        background-color: #FFFF99;
+    }
+</style>
+<body>
+<div class="topdiv">
+    <form  method="post" id="FROMmy" name="FROMmy" onSubmit="return Submit();">
+        <input name="act" type="hidden" value="1" />
+        <input name="oid" type="hidden" value="8856059dc752da2d7fl225329" />
+        <fieldset>
+            <!--<legend>提款信息</legend>-->
+            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="tab">
+                <tr>
+                    <td width="21%" height="30" align="left">提款金额:</td>
+                    <td width="40%" align="left"><input name="Amount" type="text" id="Amount" size="15" class="input1_long" onfocus="this.className='input2_long'" onblur="this.className='input1_long'"/> &nbsp;&nbsp;當前餘額：￥0.0</td>
+                    <td width="39%" >最底提款不能少于200的整数.</td>
+                </tr>
+                <tr>
+                    <td height="30" align="left">银行帐户名:</td>
+                    <td align="left"><input name="nd_name" type="text" class="input1_long" id="nd_name" onfocus="this.className='input2_long'" onblur="this.className='input1_long'" value="" size="40" /></td>
+                    <td>&nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td height="30" align="left">银行名称:</td>
+                    <td align="left"><select name="nd_Alias" id="nd_Alias" >
+                        <option  value="工商银行" >工商银行</option>
+                        <option  value="招商银行" >招商银行</option>
+                        <option  value="建设银行" >建设银行</option>
+                        <option  value="中国银行" >中国银行</option>
+                        <option  value="交通银行" >交通银行</option>
+                        <option  value="农业银行" >农业银行</option>
+                        <!--      <option>光大银行</option>
+                        <option>兴业银行</option>-->
+
+                    </select></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="30" align="left">所属省:</td>
+                    <td align="left"><input name="nd_Prv" type="text" class="input1_long" id="nd_Prv" onfocus="this.className='input2_long'" onblur="this.className='input1_long'" value="" size="40" /></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="30" align="left">所属市:</td>
+                    <td align="left"><input name="nd_City" type="text" class="input1_long" id="nd_City" onfocus="this.className='input2_long'" onblur="this.className='input1_long'" value="" size="40" /></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="30" align="left">所属分行:</td>
+                    <td align="left">
+                        <input name="nd_Points" type="text" class="input1_long" id="nd_Points" onfocus="this.className='input2_long'" onblur="this.className='input1_long'" value="" size="40" /></td>
+                    <td>&nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td height="30" align="left">银行帐号:</td>
+                    <td align="left">
+                        <input name="nd_Account" type="text" class="input1_long" id="nd_Account" onfocus="this.className='input2_long'" onblur="this.className='input1_long'" value="" size="40" /></td>
+                    <td>请填写详细的银行分行名称，<br />以便您的提款快速到账。</td>
+                </tr>
+                <tr>
+                    <td height="30" align="left">资金密码:</td>
+                    <td colspan="2">
+                        <input name="moneypass" type="password" class="input1_long" id="moneypass" onfocus="this.className='input2_long'" onblur="this.className='input1_long'"   size="15" />
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td width="57%" align="left"><p style=" color:#F00">提款美东时间(23:00-15:00).所有的提款,将会在5~30分钟内处理完成。</p>
+                    <!-- <p style=" color:#F00"><span style="color: #F00">:提示：春节期间由于陪分银行</span>跨行入帐延迟，不便之处敬请愿谅！</p>--></td>
+                <td width="43%" align="center"><!--<input type="submit" name="button" id="button" value="确认提款" class="ine"/>--><input type="" name="button" id="button" value="提款时间23:00-15:00" class="ine"/></td>
+            </tr>
+        </table>
+
+    </form>
+</div>
+<p class="pcowm"> 最近提款记录 >></p>
+<table width="600" border="0" align="center" cellpadding="0" cellspacing="1" style="background-color: #CCC;">
+    <tr  style="background-color: #F90;color:#fff">
+        <td width="143" align="center">提款时间</td>
+        <td width="88" align="center">提款金额</td>
+        <td width="119" align="center">完成时间</td>
+        <td width="83" align="center">状态</td>
+        <td width="161"></td>
+    </tr>
+</table>
+</body>
+</html> 

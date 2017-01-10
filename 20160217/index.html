@@ -1,0 +1,128 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>传奇娱乐</title>
+    <link rel="stylesheet" type="text/css" href="skins/css/check.css" />
+    <link rel="stylesheet" type="text/css" href="skins/css/style.css" />
+    <script src="skins/js/jquery-1.10.2.js"></script>
+    <script src="skins/artDialog/artDialog.js?skin=twitter"></script>
+</head>
+
+<body class="zh-cn">
+<div id="header-wrap">
+    <div id="hd-logo" class="whole-auto">
+        <h1 id="hd-logo-title">
+            <img src="skins/images/logo.png" />
+        </h1>
+    </div>
+</div>
+<div id="body-wrap" class="whole-auto">
+    <div id="cotent-left-box" class="fl clearfix">
+        <div id="site-speed">
+            <h2>测试网站连接速度</h2>
+            <script language="javascript">
+                tim = 1;
+                setInterval("tim++", 100);
+                b = 0;
+                var autourl = ['www.cq618.com','www.cq698.com:81','www.cq648.com','www.cq8828.com:81','www.cq8838.com:81','www.cq8848.com','www.cq8858.com','www.cq8868.com','www.scq8878.com','www.cq8898.com','www.cq8808.com:81'];
+
+                function butt() {
+                    document.write("<form name=autof id='autof-id'> ");
+                    for ( var i = 0; i < autourl.length; i++){
+                        document.write("<p class='sp-content-l-list clear'><input class='sp-input-staitc' type='text' readonly='readonly' name='txt"+i+"' size='10' value='测试中……' /> <span class='span_s main_sp_02'></span><input class='sp-input-url' type='text' readonly='readonly' name='url"+i+"' size='40'><input class='sp-input-open' type='button' value='直接打开' onclick='window.open(this.form.url"+ i + ".value)'></p>");
+
+                    }
+                    document.write("<center style='clear:both'><input id='reload-btn' type='button' value='刷新' onClick='reload()'></center></form>");
+                }
+                butt();
+                function auto(url) {
+                    document.forms[0]["url" + b].value = url;
+                    if (tim > 200) {
+                        document.forms[0]["txt" + b].value = "链接超时";
+                    } else {
+                        document.forms[0]["txt" + b].value = "时间" + tim / 10 + "秒";
+                    }
+                    b++;
+                }
+                function run() {
+                    document.write("<div id='aa' style='display: none;'> ")
+                    for ( var i = 0; i < autourl.length; i++){
+                        document.write("<img src=http://" + autourl[i] + "/"
+                                + Math.random()
+                                + " width=1 height=1 onerror=auto('http://"
+                                + autourl[i] + "')>");
+                    }
+                    document.write("</div> ");
+                }
+                run();
+
+                function reload(){
+                    window.location.reload();
+                }
+                $(function(){
+                    top.navChoose = 0;
+                    $("#header-nav-ul").each(function(){
+                        main = $(this);
+                        main.children( "li" ).click(function(){
+
+                            var i = main.children( "li" ).index(this);
+                            $.each( main.children( "li" ) , function(j){
+
+                                if(i == j){
+                                    top.navChoose = i;
+                                }
+                            });
+                        });
+                    });
+
+                    $("#header-nav-ul").children( "li" ).eq(top.navChoose).children( "a" ).toggleClass("over");
+
+                });
+            </script>
+            <center>如不能显示效果，请按Ctrl+F5刷新本页</center>
+        </div>
+    </div>
+    <div id="content-right-box" class="fr">
+        <div class="box-attr">
+            <h2>温馨提示：反应时间越小，打开就越快</h2>
+            <p>如果我们的检测中心对您有帮助，请按ctrl+D收藏：www.cq009.com</p>
+        </div>
+        <div class="box-attr">
+            <h2>如果检测后还不能登录请按以下操作方式</h2>
+            <p>操作步骤：打开IE浏览器：选择：工具-》Internet选项-》在选择（删除历史浏览记录）-》删除-》重启IE</p>
+        </div>
+        <div class="clearfix" id="box-3">
+            <a href="###" id="mobile" class="fl"><img src="skins/images/mobile_download.png" /></a>
+            <a href="http://cq618.com/download/CQ.exe" class="fr"><img src="skins/images/client_download.png" /></a>
+        </div>
+        <div id="box-4" class="box-attr clearfix">
+            <p class="fl" style="padding-top: 13px;"><img src="skins/images/qq_left.png" /></p>
+            <p class="fr"><a href="tencent://message/?Menu=yes&Uin=908965666&Service=58&SigT=A7F6"><img src="skins/images/qq.png" /></a></p>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+
+<div id="footer-wrap">
+    <div class="whole-auto">
+        <p>
+            <span>Copyright &copy; 2016 传奇娱乐 All rights reserved  <font color="#873636">温馨提醒：彩票有风险，投资需谨慎，不向未满18周岁的青少年出售彩票！</font></span>
+            <img src="skins/images/footer_icon.png" />
+        </p>
+    </div>
+</div>
+<script>
+    $(document).on('click', '#mobile', function(){
+        art.dialog({
+            title: '扫描二维码',
+            content: '<div class="aui_content" style="padding: 20px 25px;"><img src="skins/images/iphone.png" width="300" height="300"><img src="skins/images/android.png" width="300" height="300"></div>',
+            lock: true,
+            //cancel: false,
+            okVal: '确定',
+            ok: function () {}
+        });
+    });
+</script>
+</body>
+</html>

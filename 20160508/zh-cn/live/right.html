@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<script language="JavaScript" src="../sports/js/all-Http-Request.js" type="text/javascript"></script>
+<script>
+    parent.lang='zh-cn';
+    parent.sport='All';
+    parent.g_date='All';
+    var refreshtime=20;
+    var retime_flag='Y';
+
+    function gameonLoad(){
+        updatehtime();
+        MameLiveData();
+    }
+    function MameLiveData(){
+
+        retime_flag='N'
+        var getHTML = new HttpRequestXML();
+        getHTML.addEventListener("LoadComplete", setLive);
+        getHTML.sendRequest("game_list.html","GET", getUrlParam());
+
+    }
+    function getUrlParam(){
+
+        var param   ="oid="+parent.oid;
+        param   +="&lang="+parent.lang;
+        param   +="&sport="+parent.sport;
+        param   +="&g_date="+parent.g_date;
+        param   += "&sid="+ Math.random();
+        return param;
+    }
+    function  setLive(date){
+        //alert(date);
+        // var Gmem=new Array();
+        try{eval(date);}catch(E){}
+    }
+    function LiveTable(eaoSAM){
+        parent.mbgtgame=eaoSAM;
+        var dateormg='';
+        var setHtml='';
+        setHtml+='<table border="0" cellspacing="1" cellpadding="0" bgcolor="#CCCCCC" class="riggame">';
+        if(eaoSAM.length>0){
+            for(var i=0;i<eaoSAM.length;i++){
+                if(parent.eveTID==eaoSAM[i][1] && parent.eveTID!=''){
+                    parent.noet=eaoSAM[i][10];
+                }
+
+                if(eaoSAM[i][0]!='FT' && eaoSAM[i][0]!='BK' ){continue;}
+                if(eaoSAM[i][13]!='perform'){continue;}
+                var bdate=eaoSAM[i][2].split(" ");
+                var mtime=bdate[1].split(":");
+                //alert(bdate[]);
+                if(dateormg!=bdate[0]){
+                    dateormg=bdate[0];
+                    setHtml+='<tr bgcolor="#999999" style="color:#FFF"><td><b>'+bdate[0]+'</b></td></tr>';
+                }
+                var livego='';
+                if(eaoSAM[i][6]=='Y'){
+                    livego='<a  href="javascript:void(0)"  onClick="eLive(\''+eaoSAM[i][1]+'\','+eaoSAM[i][10]+',\''+eaoSAM[i][13]+'\')" class="livego"></a>';
+                }
+                setHtml+='<tr><td bgcolor="#FFFFFF"><b>'+mtime[0]+":"+mtime[1]+' '+eval('top.str_'+eaoSAM[i][0])+'</b><br>'+eaoSAM[i][9]+'<br>'+eaoSAM[i][3]+'vs'+eaoSAM[i][4]+livego+'</td></tr>';
+
+            }
+        }else{
+            setHtml+='<tr bgcolor="#FFFFFF" align="center"><td><br><b>未有相关赛事直播</b></td></tr>';
+        }
+        setHtml+='</table>';
+        retime_flag='Y';
+        refreshtime=30;
+        document.getElementById("BODY").innerHTML = setHtml;
+
+        parent.noetBall();
+    }
+    function eLive(eao,not,fp){
+        //alert(eao);
+        parent.version=fp;
+        parent.noet=not;
+        parent.eveTID=eao;
+        parent.LiveData();
+
+    }
+    function updatehtime(){
+        var obj=parent.document.getElementById("time");
+        setTimeout("updatehtime()",1000);
+        if(retime_flag=='Y'){
+            if(refreshtime<=0) {
+                MameLiveData();
+                return;
+            }
+
+            obj.innerHTML=refreshtime;
+            refreshtime-=1;
+        }
+
+    }
+</script>
+<style>
+    body{
+        font-size:12px;
+        background-color: #FFF;
+    }
+    .riggame{
+        width: 100%;
+    }
+    .riggame td{
+        padding-left: 5px;
+        padding-bottom: 5px;
+    }
+    .livego{
+        height: 14px;
+        width: 18px;
+        background-image: url(../sports/images/live_vlc.gif);
+        display: inline;
+        float: right;
+        background-repeat: no-repeat;
+        margin-right: 3px;
+    }
+</style>
+<body onLoad="gameonLoad();" id="BODY" scrolling="no" onUnload="unLoad();" onSelectStart="self.event.returnValue=false" oncontextmenu="self.event.returnValue=false;window.event.returnValue=false;">
+</body>
+</html>

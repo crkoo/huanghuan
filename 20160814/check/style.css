@@ -1,0 +1,69 @@
+﻿@charset "utf-8";
+*{margin:0px; padding:0px; list-style:none;}
+body{ font-size:14px;line-height: 24px;color: #ffffff;font-family:"Microsoft YaHei","微软雅黑";}
+a{ color:#ffffff; text-decoration:none;}
+.c{clear: both;line-height: 0;overflow: hidden;zoom: 1;font-size: 0;content: '.';}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+img{ border:none; vertical-align:middle;}
+.wp{position: relative; width:1000px; margin:0 auto;}
+.wp .check_1 {position: absolute; left: 30px; top: 14px;}
+.wp .check_2 {position: absolute; left: 395px; top: 9px;}
+
+.xlbj{ background:#201610 url(../images/wzbj.jpg) center bottom no-repeat;}
+
+.header{ overflow:hidden; height:200px; background:url(../images/topbj.jpg) right center no-repeat;}
+.header .logo{ float:left; margin-top:75px;}
+.header .top_r{ float:right; color:#fee1b1;font-size:14px; margin-top:8px;}
+.header .top_r a{ padding:0 8px; color:#fee1b1;}
+.dqpos{ overflow:hidden; height:54px; line-height:54px; font-size:18px; color:#fdf6c4;}
+.dqpos span{ float:right;}
+.con{ width:100%; height:1144px; overflow:hidden; background:url(../images/conbj.png) center top no-repeat;}
+.footer{text-align:center; overflow:hidden; padding:20px 0; color:#fff;}
+
+.red{ color:#fc0202;}
+
+.box_l{ float:left; width:545px; padding-top:150px; margin-left:30px;}
+.box_r{ float:right; width:330px; font-size:14px; padding-top:150px; margin-right:25px;}
+.box_r p{ padding-bottom:20px;}
+.box_r p.an{ padding-bottom:12px;}
+.box_r p.ts{ padding-top:20px;}
+
+.bt{ overflow:hidden; padding-bottom:30px; clear:both; font-size:12px;}
+.bt span{ display:block; font-size:24px; color:#fbdd11; padding-bottom:10px;}
+
+.tline{ overflow:hidden; padding:9px 0;}
+.tline img{ margin:12px 22px 0 22px; float:left;}
+.tline input{ float:left;}
+
+.msinput{ width:98px; height:31px; line-height:31px; border:1px solid #8d895d; background-color:#1d0200; text-align:center; font-size:14px; color:#fdea9f;font-family:"Microsoft YaHei","微软雅黑";}
+.urlinput{ width:223px; height:31px; line-height:31px; border:1px solid #8d895d; background-color:#1d0200; padding-left:25px; font-size:14px; color:#fdea9f;font-family:"Microsoft YaHei","微软雅黑";}
+.buttonopen{ width:90px; height:31px; background:url(../images/ico_andk.png) no-repeat; text-indent:-9999px; overflow:hidden; margin-left:22px; border:none; margin-top:1px; cursor:pointer;}
+.cen{ text-align:center; padding:20px 0 40px 0; overflow:hidden;}
+.buttonsubmit{ width:294px; height:53px; background:url(../images/ico_ansx.png) no-repeat; border:none; font-size:18px; color:#fdea9f;font-family:"Microsoft YaHei","微软雅黑"; cursor:pointer;}
+
+
+.rkefu{ position:fixed; left:50%; top:50%; width:106px; margin-top:-157px; z-index:9999; margin-left:550px;}
+.rkefu img{ float:left;}
+
+#leftNav {margin-left:0px;  
+line-height:24px; 
+z-index:299;  
+position:fixed;
+top:160px; left:10px; 
+_position:absolute; /* for IE6 */  
+_top: expression(documentElement.scrollTop + documentElement.clientHeight-this.offsetHeight); /* for IE6 */ 
+position:fixed;_position:absolute;
+overflow:visible;  }
+#rightNav {list-style:none;
+margin-right:0px;  
+line-height:24px; 
+z-index:299;  
+position:fixed;
+top:160px; right:10px; 
+_position:absolute; /* for IE6 */  
+_top: expression(documentElement.scrollTop + documentElement.clientHeight-this.offsetHeight); /* for IE6 */ 
+position:fixed;_position:absolute;
+overflow:visible;  }
+#rightNav li {list-style:none;margin:0;padding:0;}
+#rightNav a {display:block;margin:0;padding:0;}
+#rightNav li img {display:block;margin:0;padding:0;}

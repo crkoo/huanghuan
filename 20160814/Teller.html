@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="renderer" content="webkit">
+    <title>取款帮助</title>
+    <link type="text/css" rel="stylesheet" href="style/reset.css" />
+    <link type="text/css" rel="stylesheet" href="style/style.css" />
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="js/public.js"></script>
+</head>
+<body>
+<input type="hidden" id="userid" name="userid" value="">
+<div class="header">
+    <div class="head">
+        <div class="w1000">
+            <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="420" height="100" class="logo">
+                <param name="movie" value="images/logo.swf">
+                <param name="quality" value="high">
+                <param name="wmode" value="transparent">
+                <param name="swfversion" value="6.0.65.0">
+                <!--[if !IE]>-->
+                <object type="application/x-shockwave-flash" data="images/logo.swf" width="420" height="100">
+                    <!--<![endif]-->
+                    <param name="quality" value="high">
+                    <param name="wmode" value="transparent">
+                    <param name="swfversion" value="6.0.65.0">
+                    <!--[if !IE]>-->
+                </object>
+                <!--<![endif]-->
+            </object>
+            <div class="logor"><p>官网直营 大额无忧</p><p class="p_border">单日提款<span>1000</span>万元</p></div>
+            <div class="headright">
+                <div class="tools"><a href="javascript:void(0)" onclick="bookMarksite('http://' + window.location.hostname, document.title);">点击收藏</a> | <a href="check.html" target="_blank">线路检测</a> <a class="flag" href="javascript:void(0)"><img src="images/aomen.gif" /></a> <a class="flag" href="javascript:void(0)"><img src="images/china.gif" /></a> <a class="flag" href="javascript:void(0)"><img src="images/usa.gif" /></a></div>
+                <div class="login">
+                    <form name="LoginForm" id="LoginForm" action="login" method="post" onsubmit=" return denglu(); " style="margin:0" autocomplete="off">
+                        <input type="text"name="username" id="username" tabindex="1" maxlength="20" value="帐号" onfocus="if (this.value == this.defaultValue) {this.value = ''}" onblur="if (this.value == '') {this.value = this.defaultValue}">
+                        <input type="text" name="userpassword" id="userpassword" tabindex="2" maxlength="20" value="密码" onfocus="if (this.value == this.defaultValue) {this.value = '';this.type='password';};" onblur="if (this.value == '') {this.value = this.defaultValue;this.type='text';}">
+                        <div style="position: relative; float:left;"><input type="text" name="code" id="code" tabindex="3" maxlength="4" value="验证码" onfocus="if (this.value == this.defaultValue) { this.value = '' }; change_zc_yzm('checkNum_img');" onblur=" if (this.value == '') { this.value = this.defaultValue }">
+                            <img border="0" onclick="change_zc_yzm('checkNum_img'); " id="checkNum_img" name="checkNum_img" style="background-color:burlywood;" class="yzmimg"></div>
+                        <input type="submit" value="登陆" class="btn sub"><input type="button" value="注册" onclick="javascript:window.location.href = 'Register.html';" class="btn reset">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="w1000">
+            <ul>
+                <li class="on"><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Index.html';"><span class="ico01"></span>网站首页</a></li>
+                <li id="menu02" style="position:relative;"><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Sport.html';"><span class="ico02"></span>体育赛事</a></li>
+                <li id="menu03"><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Live.html';"><span class="ico03"></span>真人娱乐</a></li>
+                <li id="menu04" style="position:relative;"><a href="javascript:void(0)" onclick="javascript:window.location.href = 'SlotGame.html';" id="dzyytab"><span class="ico04"></span>电子游艺</a></li>
+                <li id="menu05"><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Lottery.html';"><span class="ico05"></span>彩票游戏</a></li>
+                <li style="position:relative;"><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Activity.html';" id="yhhdtab"><span class="ico06"></span>优惠活动</a></li>
+                <li><a href="/wap" target="_blank"><span class="ico07"></span>手机投注</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Cooperation.html';"><span class="ico08"></span>代理加盟</a></li>
+                <li><a href="javascript:void(0)" onclick="window.open('#online', '在线客服' , 'width=670,height=580,top=0,left=0,status=no,toolbar=no,scrollbars=yes,resizable=no,personalbar=no')"><span class="ico09"></span>在线客服</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="pagesbanner" style="background:url(images/bannerabout.jpg) top center no-repeat;">
+    <div class="w1000">
+        <div class="gonggao">
+            <span>最新资讯：</span>
+            <marquee id="msgNews" scrollamount="3" scrolldelay="80" direction="left" onmouseover="this.stop();" onmouseout="this.start();" style="height:34px;">尊敬的会员您好！天天返水！美东时间2016年8月13号返水额度已成功派发！祝您游戏愉快，好运连连~  【紧急通知】:美高梅娱乐城入款账号银行【工商 周晓龙】【工商 孙然广】【建设 马离京】【微信 vcs11com】【农业 宋秋生】【工商 康梁】【支付宝13166432651】【工商 吴斌】已停用，请广大玩家务必在入款时进入公司网站点击银行卡转账提取最新的银行资料或咨询在线客服索取，如存入废弃账号，公司概不负责，谢谢合作！  微信扫一扫即可快速入款，微信支付全新升级，秒到账，点击线上存款选择在线支付——选择微信支付——扫一扫支付 无需等待轻松一扫即可自动入款自动上分。  ★尊敬的会员您好！我们公司目前不支持支付宝、微信进行取款，请您务必绑定银行账号进行取款，感谢您的配合！  ★尊敬的会员您好，由于近期有不少不法分子仿照我们公司的微信支付账号创建了微信公众号，为了避免客户存款到公众账号造成财产损失，请您直接扫描与我们客服对话窗口的微信二维码【微信号：vcs11com】添加好友，然后使用微信转账，谢谢&nbsp;<br/>  </marquee>
+        </div>
+    </div>
+</div>
+
+<div class="pages">
+    <div class="about w1000">
+        <div class="aboutleft">
+            <div class="welcome"></div>
+            <ul>
+                <li class="on"><a href="javascript:void(0)" onclick="javascript:window.location.href = 'About.html';">关于我们</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Contact.html';">联系我们</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Desposit.html';">存款帮助</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Teller.html';">取款帮助</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Privacy.html';">隐私政策</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Duty.html';">博彩责任</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:window.location.href = 'Cooperation.html';">合作伙伴</a></li>
+            </ul>
+            <div class="aboutleftbottom"></div>
+        </div>
+        <div class="aboutright">
+
+            <script>
+                $(function () {
+                    $(".aboutleft ul li").removeClass("on");
+                    $(".aboutleft ul li:nth-child(4)").addClass("on");
+                })
+            </script>
+            <div class="content">
+                <h3>取款方法：</h3>
+                <ol>
+                    <li>会员登入后点选”线上取款”。</li>
+                    <li>输入取款密码，确认提款人姓名与您银行账号持有人相符。</li>
+                    <li>输入出款额度，如有任何问题，请您联系 美高梅娱乐场 在线客服，我们将在第一时间为您解答问题。</li>
+                    <li>确认提款银行账号正确。</li>
+                    <li>
+                        选择公司金流方式出款：<br>
+                        绑定中国工商银行(优先)、中国农业银行、北京银行、交通银行、中国银行、中国建设银行、中国光大银行、兴业银行、中国民生银行总行、招商银行、中信银  行、广东发展银行、中国邮政、深圳发展银行、上海浦东发展银行。出款的会员﹐单笔取款￥1000000RMB以內﹐可24小時提出申请﹐并享受15分钟內  到账。
+                    </li>
+                </ol>
+                <h3>取款需知：</h3>
+                <ol>
+                    <li>最低取款为￥100人民币，取款上限为单笔￥1,000,000人民币。(线上支付每日最高取款总额上限为￥1,000,000人民币,公司入款每日最高取款为￥3,000,000人民币,VIP会员每日最高取款为￥5,000,000人民币)。</li>
+                    <li>完成全额有效投注，全天24小时不限次数提款，手续费全免。</li>
+                    <li>
+                        美高梅娱乐场 保留权利审核会员账户，若由上次出款起，有效下注金额未达"最后一次入款后账户的总余额"，而申请出款者，公司将收取"最后一次入款后账户的总余额"50%的行政费用。<br>
+                        【例1】1月1日 12:00当下额度￥10000,并再存入50000元,则在1月1日 12:00后,有效投注额必须为（10000+50000)以上出款,才不被扣除行政费用+手续费用。<br>
+                        【例2】若有效投注未达到(10000+50000)元,则会扣除行政费用(10000+50000)x50% =须被扣除30000元 。
+                    </li>
+                    <li> **请注意: 各游戏和局/未接受/取消注单，不纳入有效投注计算。                  运动博弈游戏项目，大赔率玩法计算有效投注金额，小赔率玩法计算输赢金额为有效投注。                  **大赔率产品包括: 过关、波胆、总入球、半全场、双胜彩、冠军赛。 </li>
+                    <li>如有任何问题，请咨询24小时在线客服！</li>
+                </ol>
+                <p>**美高梅娱乐场 相关优惠，请详见‘优惠活动’</p>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="footer">
+    <div class="w1000">
+        <div class="b1">
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'About.html';">关于我们</a>
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'Contact.html';">联系我们</a>
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'Cooperation.html';">代理加盟</a>
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'Desposit.html';">存款帮助</a>
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'Teller.html';">取款帮助</a>
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'Privacy.html';">隐私政策</a>
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'Generalq.html';">新手操作</a>
+            <a href="javascript:void(0)" onclick="javascript:window.location.href = 'Activity.html';">优惠活动</a>
+            <a href="check.html" target="_blank">线路检测</a>
+        </div>
+        <div class="b2">
+            <img src="images/b2img.jpg">
+        </div>
+        <div class="b3">
+            <ul>
+                <li><div class="ico qq"></div>QQ客服：<span>213678</span></li>
+                <li><div class="ico qq"></div>QQ客服：<span>491414</span></li>
+                <li><div class="ico email"></div>邮箱：<span>vcsvip88@gmail.com</span></li>
+            </ul>
+        </div>
+        <div class="b4">
+            <img src="images/b4img.png">
+        </div>
+    </div>
+</div>
+
+<!--浮動圖-->
+<div id="kf-online" class="kf-online clearfix">
+    <div class="float-left float_contact"><img src="images/float_left.png" /></div>
+    <div class="float-right float_icon">
+        <a href="#online" class="messenger"></a>
+        <a href="http://www.hlf.pw/" class="oldsite"></a>
+        <a href="###" class="qq">QQ:53255888</a>
+        <a href="###" class="weixin"></a>
+        <a href="javascript:;" class="qrcode"><img src="images/qr_code.jpg" /></a>
+        <a href="http://www.hlf.vip/" class="guidesite"></a>
+        <a href="javascript:;" class="site2">WWW.HLF.VIP</a>
+    </div>
+</div>
+<script>
+    var float_box = document.getElementById("kf-online");
+    var winEvent = function () {
+        var iScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        setTimeout(function () {
+            clearInterval(float_box.timer);
+            var iTop = parseInt((document.documentElement.clientHeight - float_box.offsetHeight)/2) + iScrollTop;
+
+            float_box.timer = setInterval(function () {
+                var iSpeed = (iTop - float_box.offsetTop) / 8;
+                iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+                float_box.offsetTop == iTop ? clearInterval(float_box.timer) : (float_box.style.top = float_box.offsetTop + iSpeed + "px");
+            }, 30);
+        }, 50);
+        float_box.style.display="block";
+    };
+    $(window).load(winEvent);
+    window.onresize = window.onscroll = winEvent;
+    $("#kf-online .float_contact").click(function(){
+        if ($("#kf-online .float_icon").is(':hidden')){
+            $(".kf-online").css('width', '220px');
+            $(".kf-online .float_icon").show();
+        }else{
+            $(".kf-online").css('width', '66px');
+            $(".kf-online .float_icon").hide();
+        }
+    });
+</script>
+</body>
+</html>

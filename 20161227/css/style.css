@@ -1,0 +1,34 @@
+*{margin:0px;padding:0px;}
+body {overflow-x:hidden;font-family: "微软雅黑", "Microsoft YaHei", Helvetica,sansation, Verdana, Arial, sans-serif;font-size: 12px;}
+a{text-decoration: none;}
+a:link,a:visited{}
+img,table,input{border: 0;vertical-align: middle;}
+ul{list-style: none;}
+h1,h2,h3,h4,h5,h6{font-weight: normal;}
+.fl{float: left;}
+.fr{float: right;}
+.clear:after {content:""; display:block; height:0; clear:both; visibility:hidden;}
+.clear {*zoom:1;}
+.text-center {text-align: center;}
+
+body { background: #1e0f09 url("../images/bg.jpg") no-repeat center top;}
+.container {position: relative; width: 1000px; margin: 0 auto;}
+.flash {padding: 64px 0 0 315px; height: 164px;}
+.register {margin-left: 501px;}
+.content {position: relative; margin-top: 83px; background: url("../images/content_bg.png") repeat left top; border-top: 2px solid #b97113; }
+.content img {max-width: 100%;}
+.content .title {position: relative; height: 120px;}
+.content .title img {position: absolute; left: 251px; top: -33px;}
+.content .desc {width: 910px; margin: 0 auto; color: #fff; font-size: 18px; line-height: 28px;}
+.content .p1 {margin: 30px auto; width: 955px;}
+.text_1_img,.text_2_img {padding-bottom: 30px; text-align: center;}
+.content .text {margin: 0 auto; width: 930px; padding-bottom: 30px; font-size: 16px; line-height: 26px; color: #fff;}
+.content .text p {margin-bottom: 20px;}
+.content .webchat {margin: 0 auto; width: 941px; height: 258px; background: url("../images/qq.png") no-repeat center top; overflow: hidden;}
+.content .webchat .qq {margin: 133px 0 0 144px; width: 440px; height: 85px; overflow: hidden;}
+.content .webchat .qq p {color: #7b3b12; font-size: 28px; text-align: center; font-weight: 500;}
+.content .webchat .qq p a {color: #7b3b12;}
+.content .webchat .qrcode {margin-right: 10px; margin-top: 32px; width: 310px; height: 185px; }
+.content .webchat .qrcode .weixin {margin-top: 85px; margin-left: 10px; width: 115px; color: #fff; font-size: 21px; font-weight: bold;}
+
+.footer {position: relative; width: 100%; height: 310px; background: url("../images/footer.jpg") no-repeat center top; overflow: hidden;}

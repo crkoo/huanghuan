@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>传奇娱乐</title>
+	<link type="text/css" rel="stylesheet" href="css/index.css" />
+	<script type="text/javascript" src="js/jquery-min-1.7.js"></script>
+	<script type="text/javascript" src="js/js.js"></script>
+	<script type="text/javascript" src="js/jcarousellite.js"></script>
+	<script language="javascript">
+	//加入收藏
+	function AddFavorite(sURL, sTitle) {
+		sURL = encodeURI(sURL);
+		try{
+			window.external.addFavorite(sURL, sTitle);
+		}catch(e) {
+			try{
+				window.sidebar.addPanel(sTitle, sURL, "");
+			}catch (e) {
+				alert("加入收藏失败，请使用Ctrl+D进行添加,或手动在浏览器里进行设置.");
+			}
+		}
+	}
+	//设为首页
+	function SetHome(url){
+		if (document.all) {
+			document.body.style.behavior='url(#default#homepage)';
+			document.body.setHomePage(url);
+		}else{
+			alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+		}
+	}
+	var tim = 1;
+	setInterval("tim++", 100);
+	function autourls(url) {
+		if (tim > 200)
+		{
+			document.getElementById(url).innerHTML="链接超时";
+		}
+		else
+		{
+			document.getElementById(url).innerHTML= tim * 10 + "ms";
+		}
+	}
+	</script>
+</head>
+
+<body>
+<a name="m001"></a>
+<div class="head">
+	<div class="w995 center head_center">
+		<div class="head_logo_01 l"><img src="images/head_logo_01.png" /></div>
+		<div class="head_logo_02 l"><img src="images/head_logo_02.png" /></div>
+		<div class="head_menu r">
+			<ul>
+				<li><a href="http://www.777888.com" target="_blank">登入官网</a></li>
+				<li><a onclick="SetHome(window.location)" href="javascript:void(0)">设为首页</a></li>
+				<li><a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)">收藏本站</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="type_list">
+	<div class="type_list_center w995 center" style="text-align:center">
+		<div style="width:1183px; height:734px; margin:0 auto;">
+			<div class="international w995 center">
+				<div class="international_pic l"><img src="images/gj_03.png" /> </div>
+				<div class="international_list l">
+					<ul>
+						<li><a href="http://www.777888.com" target="_blank">线路1</a></li>
+						<li><a href="http://www.777888.co" target="_blank">线路2</a></li>
+						<li><a href="http://www.5679.com" target="_blank">线路3</a></li>
+						<li><a href="http://www.jp0000.com" target="_blank">线路4</a></li>
+						<li><a href="http://www.jp3333.com" target="_blank">线路5</a></li>
+						<li><a href="http://www.jp4444.com" target="_blank">线路6</a></li>
+						<li><a href="http://www.777888.com/cl/?module=MRule&method=Mobile" target="_blank">手机下注</a></li>
+						<li><a href="http://ub66.com/?lang=zh-cn" target="_blank">环宇浏览器</a></li>
+						<li><a href="#" target="_blank">代理图片下载</a></li>
+						<li><a href="http://www.777888.com/cl/?module=MRule&method=InstallationInstruction&type=download" target="_blank">金牌下载专区</a></li>
+						<li><a href="http://www.9987.com/dsj/dns.html" target="_blank">DNS修复教程</a></li>
+						<li><a href="http://messenger.providesupport.com/messenger/yunbo666.html" target="_blank">在线客服</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="international w995 center" style="height:102px;">
+				<div class="international_pic l"><img src="images/gb_03.png" /> </div>
+				<div class="international_list l" style=" height:47px;">
+					<ul>
+
+						<li><a href="http://www.0966.com" target="_blank">贵宾专线1</a></li>
+						<li><a href="http://www.jp8855.com" target="_blank">贵宾专线2</a></li>
+						<li><a href="http://www.jp5588.com" target="_blank">贵宾专线3</a></li>
+						<li><a href="http://www.yb5566.com" target="_blank">贵宾专线4</a></li>
+						<li><a href="http://www.yb5577.com" target="_blank">贵宾专线5</a></li>
+						<li><a href="http://www.yb1155.com" target="_blank">贵宾专线6</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="international w995 center" style="height:102px;">
+				<div class="international_pic l"><img src="images/yh_03.png" /> </div>
+				<div class="international_list l" style=" height:47px;">
+					<ul>
+
+						<li><a href="http://www.boc.cn/" target="_blank">中国银行</a></li>
+						<li><a href="http://www.icbc.com.cn/icbc/" target="_blank">工商银行</a></li>
+						<li><a href="http://www.ccb.com/cn/home/index.html" target="_blank">建设银行</a></li>
+						<li><a href="http://www.abchina.com/cn/" target="_blank">农业银行</a></li>
+						<li><a href="http://www.psbc.com/portal/zh_CN/index.html" target="_blank">邮政银行</a></li>
+						<li><a href="http://www.cmbc.com.cn/" target="_blank">民生银行</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="international w995 center">
+				<div class="international_pic l"><img src="images/xy_03.png" /> </div>
+				<div class="international_list l">
+					<ul>
+						<li><a href="http://www.jd.com" target="_blank">京东</a></li>
+						<li><a href="http://www.dangdang.com" target="_blank">当当网</a></li>
+						<li><a href="http://www.ctrip.com" target="_blank">携程旅行网</a></li>
+						<li><a href="http://www.toutiao.com" target="_blank">头条新闻</a></li>
+						<li><a href="http://www.163.com/" target="_blank">网易</a></li>
+						<li><a href="http://www.taobao.com" target="_blank">淘宝</a></li>
+						<li><a href="http://www.weibo.com" target="_blank">新浪微博</a></li>
+						<li><a href="http://www.youku.com" target="_blank">优酷</a></li>
+						<li><a href="http://www.tmall.com" target="_blank">天猫</a></li>
+						<li><a href="http://www.amazon.com" target="_blank">亚 马 逊</a></li>
+						<li><a href="http://www.vip.com" target="_blank">唯品会</a></li>
+						<li><a href="http://www.eastmoney.com" target="_blank">东方财富</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="international w995 center" style="height:102px;">
+				<div class="international_pic l"><img src="images/yx_03.png" /> </div>
+				<div class="international_list l" style=" height:47px;">
+					<ul>
+
+						<li><a href="http://mail.qq.com" target="_blank">QQ邮箱</a></li>
+						<li><a href="http://mail.163.com" target="_blank">163邮箱</a></li>
+						<li><a href="http://mail.sina.com.cn" target="_blank">新浪邮箱</a></li>
+						<li><a href="http://www.hotmail.com" target="_blank">Hotmail</a></li>
+						<li><a href="http://mail.126.com" target="_blank">126邮箱</a></li>
+						<li><a href="http://mail.sohu.com" target="_blank">搜狐邮箱</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="international w995 center" style="height:102px;">
+				<div class="international_pic l"><img src="images/ls_03.png" /> </div>
+				<div class="international_list l" style=" height:47px;">
+					<ul>
+
+						<li><a href="http://ag.777888.com" target="_blank">代理登入1</a></li>
+						<li><a href="http://ag.yb5577.com" target="_blank">代理登入2</a></li>
+						<li><a href="http://ag.5679.com" target="_blank">代理登入3</a></li>
+						<li><a href="http://ag.jp8855.com" target="_blank">代理登入4</a></li>
+						<li><a href="http://ag.jp5588.com" target="_blank">代理登入5</a></li>
+						<li><a href="http://ag.0699.com" target="_blank">代理登入6</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<a name="m002"></a>
+<div class="jc_list">
+	<div class="jc_list_center w995 center">
+		<div class="jc_list_left">
+			<ul>
+				<li style="margin-top: 0;">
+					<span id="uls1" class="ms">正在测速...</span><span style="margin-left:10px">--&gt;&gt;&gt;</span><span class="address">http://www.cq618.com</span><a href="http://www.cq618.com" target="_blank"><img src="images/zj_03.jpg"/></a><img src="http://www.cq618.com/" width=1 height=1 onerror="autourls('uls1');" style='display:none'>
+				</li>
+				<li>
+					<span id="uls2" class="ms">正在测速...</span><span style="margin-left:10px">--&gt;&gt;&gt;</span><span class="address">http://www.cq8828.com:81</span><a href="http://www.cq8828.com:81" target="_blank"><img src="images/zj_03.jpg"/></a><img src="http://www.cq8828.com:81/" width=1 height=1 onerror="autourls('uls2');" style='display:none'>
+				</li>
+				<li>
+					<span id="uls3" class="ms">正在测速...</span><span style="margin-left:10px">--&gt;&gt;&gt;</span><span class="address">http://www.cq8838.com:81</span><a href="http://www.cq8838.com:81" target="_blank"><img src="images/zj_03.jpg"/></a><img src="http://www.cq8838.com:81/" width=1 height=1 onerror="autourls('uls3');" style='display:none'>
+				</li>
+				<li>
+					<span id="uls4" class="ms">正在测速...</span><span style="margin-left:10px">--&gt;&gt;&gt;</span><span class="address">http://www.cq8848.com</span><a href="http://www.cq8848.com" target="_blank"><img src="images/zj_03.jpg"/></a><img src="http://www.cq8848.com/" width=1 height=1 onerror="autourls('uls4');" style='display:none'>
+				</li>
+				<li>
+					<span id="uls5" class="ms">正在测速...</span><span style="margin-left:10px">--&gt;&gt;&gt;</span><span class="address">http://www.cq698.com:81</span><a href="http://www.cq698.com:81" target="_blank"><img src="images/zj_03.jpg"/></a><img src="http://www.cq698.com:81/" width=1 height=1 onerror="autourls('uls5');" style='display:none'>
+				</li>
+				<li>
+					<span id="uls6" class="ms">正在测速...</span><span style="margin-left:10px">--&gt;&gt;&gt;</span><span class="address">http://www.cq8858.com</span><a href="http://www.cq8858.com" target="_blank"><img src="images/zj_03.jpg"/></a><img src="http://www.cq8858.com/" width=1 height=1 onerror="autourls('uls6');" style='display:none'>
+				</li>
+				<li>
+					<span id="uls7" class="ms">正在测速...</span><span style="margin-left:10px">--&gt;&gt;&gt;</span><span class="address">http://www.cq648.com</span><a href="http://www.cq648.com" target="_blank"><img src="images/zj_03.jpg"/></a><img src="http://www.cq648.com/" width=1 height=1 onerror="autourls('uls7');" style='display:none'>
+				</li>
+				<li>
+					<span id="uls8" class="ms">正在测速...</span><span style="margin-left:10px">--&gt;&gt;&gt;</span><span class="address">http://www.cq8868.com</span><a href="http://www.cq8868.com" target="_blank"><img src="images/zj_03.jpg"/></a><img src="http://www.cq8868.com/" width=1 height=1 onerror="autourls('uls8');" style='display:none'>
+				</li>
+				<li>
+					<span id="uls9" class="ms">正在测速...</span><span style="margin-left:10px">--&gt;&gt;&gt;</span><span class="address">http://www.cq8808.com:81</span><a href="http://www.cq8808.com:81" target="_blank"><img src="images/zj_03.jpg"/></a><img src="http://www.cq8808.com:81/" width=1 height=1 onerror="autourls('uls9');" style='display:none'>
+				</li>
+				<li>
+					<span id="uls10" class="ms">正在测速...</span><span style="margin-left:10px">--&gt;&gt;&gt;</span><span class="address">http://www.cq8898.com</span><a href="http://www.cq8898.com" target="_blank"><img src="images/zj_03.jpg"/></a><img src="http://www.cq8898.com/" width=1 height=1 onerror="autourls('uls10');" style='display:none'>
+				</li>
+				<li>
+					<span id="uls11" class="ms">正在测速...</span><span style="margin-left:10px">--&gt;&gt;&gt;</span><span class="address">http://www.cq8878.com</span><a href="http://www.cq8878.com" target="_blank"><img src="images/zj_03.jpg"/></a><img src="http://www.cq8878.com/" width=1 height=1 onerror="autourls('uls11');" style='display:none'>
+				</li>
+			</ul>
+			<a href="index.html?12#m002" style="display:block; width:172px; height:25px; margin-left:180px; margin-top:20px;"><img src="images/zc_03.jpg" /></a>
+		</div>
+		<div class="jc_list_right"><a href="ad.zip" target="_blank"><img src="images/xz_03.jpg" /></a></div>
+	</div>
+</div>
+<a name="m003"></a>
+<div class="yx_list">
+	<div class="carousel">
+		<div class="jCarouselLite" id="demo-02">
+			<ul>
+				<li style="background-image: url('images/sd_01.jpg');"><a href="###"></a></li>
+				<li style="background-image: url('images/sd_02.jpg');"><a href="###"></a></li>
+				<li style="background-image: url('images/sd_03.jpg');"><a href="###"></a></li>
+				<li style="background-image: url('images/sd_04.jpg');"><a href="###"></a></li>
+				<li style="background-image: url('images/sd_05.jpg');"><a href="###"></a></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+		<div class="prev" id="prev"><img src="images/prev.png" /></div>
+		<div class="next" id="next"><img src="images/next.png" /></div>
+	</div><!--carousel end-->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#demo-02').jCarouselLite({
+				btnPrev: '#prev',
+				btnNext: '#next',
+				auto: 2000,
+				visible: 1,
+				speed: 2000
+			});
+			$(".swbtn").click(function(){
+				$(".swbtn").toggle();
+			});
+		});
+	</script>
+</div>
+<a name="m004"></a>
+<div class="hdxz" style="text-align: center;">
+	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="1300" height="607">
+		<param name="movie" value="bb.swf" />
+		<param name="wmode" value="transparent" />
+		<param name="quality" value="high" />
+		<embed src="bb.swf?1" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="1300" height="607"></embed>
+	</object>
+</div>
+<a name="m005"></a>
+<div class="hdjs" style="text-align:center"><img src="images/logo.png" /></div>
+<div class="footer">
+	<div class="footer_center w955 center">Copyright &copy; 传奇娱乐 All Rights Reserved 版权</div>
+</div>
+
+<div class="qqkefu">
+	<ul>
+		<li class="top" style="opacity: 0.9;">TOP<span></span></li>
+		<li class="qq_cza" style="overflow: hidden; width: 45px;"><a href="#m001"><b class="a"></b>网址导航</a></li>
+		<li class="qq_cza" style="overflow: hidden; width: 45px;"><a href="#m002"><b class="b"></b>线路检测</a></li>
+		<li class="qq_cza" style="overflow: hidden; width: 45px;"><a href="#m003"><b class="c"></b>游戏展示</a></li>
+		<li class="qq_cza" style="overflow: hidden; width: 45px;"><a href="javascript:void(0)" onclick="linkto()"><b class="lxb"></b>手机游戏</a></li>
+		<li class="qq_cza" style="overflow: hidden; width: 45px;"><a href="#m005"><b class="d"></b>金牌娱乐</a></li>
+	</ul>
+</div>
+<script>
+	function linkto(){ location.href= location.href+"?"+(new Date())+"#m004"; }
+</script>
+</body>
+</html>

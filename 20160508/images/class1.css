@@ -1,0 +1,176 @@
+@charset "gb2312";
+/* CSS Document */
+BODY { margin:0; padding:0; font-family:宋体, Verdana;color:#FFF;font-size:12px;}
+TD {FONT-SIZE: 12px;}
+A:link {TEXT-DECORATION: none; color:#FFF;}
+A:visited {TEXT-DECORATION: none;}
+A:hover {TEXT-DECORATION:none;}
+form,div,ul,object,p {margin:0; padding:0;}
+li {margin:0; padding:0; list-style-type:none;}
+a img{border:0;}
+u,strike {text-decoration:none;}
+i { font-style:normal}
+
+/* 主要设定 */
+.ds {display:block; overflow:hidden}
+.left {float:left; display:block}
+.right {float:right; display:block}
+.ws {width:100%; height:auto}
+.m0 {margin:0 auto;}
+.m1 {margin:10px auto}
+.m2 {margin:20px auto}
+.set {width:auto; height:auto;}
+.main { margin:0 auto;width:1021px; height:auto}
+.txt {font-family:宋体; line-height:20px; font-size:12px;}
+.ah {font-family:宋体; font-size:12px; color:#FFF;}
+.ah:hover { color:#FC0; text-decoration:none;}
+
+/* 背景设置 */
+.bg01 {background:#003654;}
+.bg02 {background:url(topbg.png) repeat-x}
+.bg03 {background:url(menubg.png) 9px 0 no-repeat}
+.bg04 {background:url(bg.jpg) top center no-repeat;}
+.bg05 {background:url(sportsbookBG.jpg) repeat-x}
+.bg06 { background:#00243a;}
+.regbg {background:url(regbg.jpg) top center no-repeat;}
+
+/* 首页CSS ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+.head {width:1021px; height:90px;}
+.menu {width:770px; height:40px; background:url(menubg.png) no-repeat;}
+.mlist {width:490px; height:40px; background:url(menuleft.png) no-repeat;}
+.mlist a.ml1 {width:50px; height:20px;}
+.mlist a.ml2 {width:80px; height:20px;}
+.mlist a.ml2:hover{background:url(aeff_1.png) no-repeat;}
+.login { margin:9px 5px 0 0;width:260px; height:24px;}
+.lonav {width:87px; height:24px; background:url(input-1.png) 0 0 no-repeat; border:none; color:#666; padding-left:5px; line-height:24px}
+.lobut {width:65px; height:24px; background:url(input-1.png) 0 -25px repeat-x; border:none; color:#FFF; font-size:12px; font-family:宋体; line-height:24px; text-align:center;}
+.forget {width:60px; height:20px;}
+.forget a:hover {text-decoration:underline}
+.join { margin:0 5px 0 20px;width:102px; height:20px; background:url(join.png) no-repeat; text-align:center;}
+.join a{color:#003654}
+.flash {width:500px; height:330px;}
+.banner {margin:5px auto 5px auto; width:1011px; height:160px;}
+.banav {width:auto; height:158px; border:1px solid #0f4c71;}
+/* 首页脚部 */
+.footmenu { margin:5px auto 0 auto; width:1000px; height:20px;}
+.footmenu a {padding:0 5px 0 5px; line-height:20px; font-size:12px; font-family:宋体; color:#FFF;}
+.footmenu a:hover {text-decoration:underline}
+.footcopy {margin:5px auto 5px auto; width:1000px; height:38px; background:url(flashplayer.jpg) left no-repeat;}
+.fotxt { margin:5px 0 0 120px; width:310px; height:38px; color:#666; line-height:18px; font-size:12px; font-family:宋体;}
+/*在线客服*/
+.seronline {width:auto; height:38px;}
+/*文字内容*/
+.divnav {margin:10px auto 10px auto; width:1000px; height:auto;}
+.atxt { margin:0 5px 0 5px;width:240px; height:auto;}
+.atxtb { margin:10px 0 0 0;width:240px; height:25px; border-bottom:1px dotted #666; line-height:20px; font-size:14px; font-family:宋体; color:#666;}
+.atxtc {margin:5px auto 0 auto; width:230px; height:auto}
+.ac { color:#666;padding:0 0 5px 0;}
+.ab {color:#9f9f9f; padding:0 0 5px 0;}
+/* 内页CSS ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+.smenu { margin:20px 0 0 0; width:780px; height:40px;background:url(text.png) no-repeat}
+.smenu ul {margin:0 0 0 130px; width:650px; height:40px;display:block; overflow:hidden;}
+.smenu ul a.sm {width:80px; height:20px;}
+.smenu ul a.sm:hover{background:url(aeff_1.png) no-repeat;}
+/* 左右分栏 */
+.leftnav { width:240px; height:1500px;}
+.lnmenu { margin:5px auto 0 8px;width:218px; height:30px; background:url(leftnav.png) 0 -30px no-repeat;}
+/* 菜单停留 */
+.zp-on {width:63px;height:30px;float:left;display:block}
+.zp-off{width:63px;height:30px;background:url(leftnav.png) 0 0 no-repeat;float:left;display:block}
+.jr-on {width:94px;height:30px;float:left;display:block}
+.jr-off{width:94px;height:30px;background:url(leftnav.png) -63px 0 no-repeat;float:left;display:block}
+.gq-on{width:61px;height:30px;float:left;display:block}
+.gq-off{width:61px;height:30px;background:url(leftnav.png) -157px 0 no-repeat;float:left;display:block}
+a.mac1{width:50px;height:12px;color:#004870;font-size:12px;font-family:宋体;}
+a.mac1:hover{ text-decoration:underline;}
+/* 球类菜单 */
+.leftlist {margin:5px 0 0 8px; width:218px; height:auto;}
+/* 效果关闭 off */
+a.ball-off {width:218px; height:24px; border-bottom:1px solid #c3c3c3; background:url(leftlist.png) no-repeat #cdcdcd;display:block; overflow:hidden;}
+a.ball-off b { padding:0 0 0 30px;font-size:12px; font-family:宋体; line-height:25px;color:#00243a;}
+a.ball-off small {font-size:12px; font-family:Arial; line-height:25px;color:#00243a;float:right;}
+/* 效果开启 on */
+a.ball-on {width:218px; height:24px; border-bottom:1px solid #004579; background:url(leftlist.png) no-repeat #0068b7;display:block; overflow:hidden;}
+a.ball-on b { padding:0 0 0 30px;font-size:12px; font-family:宋体; line-height:25px;color:#FFF;}
+a.ball-on small {font-size:12px; font-family:Arial; line-height:25px;color:#FFF;float:right;}
+/* 球类列表项目 */
+.blist { width:218px;height:auto; background:#e8e8e8;}
+.blist li {margin:5px auto 0 auto;width:208px;height:20px;border-bottom:1px dotted #a0a0a0;}
+.blist a {font-family:宋体;font-size:12px;line-height:20px; color:#666; padding:0 0 0 10px;}
+.blist a:hover {color:#00243a;}
+/* 右边内容 */
+.rightnav {width:775px; height:900px; background:#FFF;}
+/* 交易状况变色按钮 */
+a.jy { width:auto; height:27px; margin:0 1px 0 0; background:#7bc0dd;}
+a.jy b { padding:0 15px 0 15px; font-family:宋体; font-size:12px; line-height:27px; color:#064574;}
+a.jy:hover { background:#1c7cc3;}
+a.jy:hover b {color:#FFF;}
+/* 信息 留言 连接变色 */
+a.messa { margin:0 15px 0 15px; font-family:宋体; line-height:20px; font-size:12px; color:#FFF;}
+a.messa:hover {color:#003654; text-decoration:none;}
+a.messb {margin:0 15px 0 15px; font-family:宋体; line-height:20px; font-size:12px; color:yellow;}
+a.messb:hover {color:#003654; text-decoration:none;}
+/* 时时彩 */
+a.ssc { margin:5px 0 0 0;width:200px; height:20px;font-family:"微软雅黑"; font-weight:bold; font-size:12px; line-height:20px; color:#1d2088;}
+a.ssd { margin:5px 0 0 0;width:200px; height:20px;font-family:"微软雅黑"; font-weight:bold; font-size:12px; line-height:20px; color:#22ac38;}
+
+
+
+
+/* 弹出窗口系列 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.abmain {margin:0 auto; width:630px; height:auto}
+.abhead {width:630px;height:50px; background:url(headbg.jpg)}
+/*小菜单连接*/
+a.abm1s,a.abm2,a.abm2s,a.abm3,a.abm3s,a.abm4,a.abm4s,a.abm5,a.abm5s,a.abm7,a.abm7s {width:80px; height:30px;}
+/* 1 */
+a.abm1 {width:80px; height:30px; background:url(abmenu.png) 0 -31px no-repeat;}
+a.abm2s {width:80px; height:30px;background:url(abmenu.png) -80px -31px no-repeat;}
+a.abm3s {width:80px; height:30px;background:url(abmenu.png) -160px -31px no-repeat;}
+a.abm4s {width:80px; height:30px;background:url(abmenu.png) -240px -31px no-repeat;}
+a.abm5s {width:80px; height:30px;background:url(abmenu.png) -320px -31px no-repeat;}
+a.abm6 {width:100px; height:30px;}
+a.abm6s {width:100px; height:30px;background:url(abmenu.png) -400px -31px no-repeat;}
+a.abm7s { width:80px; height:30px; background:url(abmenu.png) -500px -31px no-repeat;}
+
+/* 文字内容 */
+.linav {margin:10px auto;width:590px; height:auto; font-size:12px; line-height:20px; color:#333; font-family:宋体;}
+.linav p {line-height:35px;}
+
+/* 财务中心 菜单效果----*/
+a.m_1 {width:100px; height:35px; text-align:center; color:#FFF; line-height:35px; font-family:宋体; font-size:12px;}
+a.m_2 {width:100px; height:35px; text-align:center; color:#FFF; line-height:35px; font-family:宋体; font-size:12px; background:url(../images/money/menubg.png) repeat-x;}
+/* 汇款位置 */
+.huika { width:660px;height:30px; line-height:30px;background:#FFF; color:#333; border:1px dashed #CCC; border-left:none; border-right:none; display:block; overflow:hidden}
+.huikb { width:660px;height:30px; line-height:30px;background:#eaeaea; color:#333;border:1px dashed #CCC; border-left:none; border-right:none;display:block; overflow:hidden}
+.huikc { width:660px;height:30px; line-height:30px;background:#FFF; color:#333; border:1px dashed #CCC; border-top:none; border-left:none; border-right:none; display:block; overflow:hidden}
+.huikd { width:660px;height:30px; line-height:30px;background:#eaeaea; color:#333;border:1px dashed #CCC; border-top:none;border-left:none; border-right:none;display:block; overflow:hidden}
+/* PAGE */
+a.pag { margin:0 5px 0 5px;width:39px;height:20px; line-height:20px; color:#666; text-align:center; padding:0 10px 0 10px; font-size:12px; font-family:宋体; border:1px solid #CCC;}
+a.pag:hover { width:41px;border:none; height:22px; line-height:22px; color:#FFF; background:#002133}
+/* 关于我们文字列表 */
+.list {font-size:12px; font-family:宋体;color:#333; line-height:25px; padding:15px;}
+
+/*联赛*/
+.lians {width:230px; height:20px;background:#FFF;}
+.lians .cbox {width:auto; height:20px; margin:0 5px 0 5px;}
+.lians .ltxt {width:auto; height:20px; font-family:宋体; font-size:12px; line-height:20px; color:#333;}
+.lsa {margin:0 1px 0 1px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
