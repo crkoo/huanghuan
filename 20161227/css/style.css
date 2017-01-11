@@ -32,3 +32,32 @@ body { background: #1e0f09 url("../images/bg.jpg") no-repeat center top;}
 .content .webchat .qrcode .weixin {margin-top: 85px; margin-left: 10px; width: 115px; color: #fff; font-size: 21px; font-weight: bold;}
 
 .footer {position: relative; width: 100%; height: 310px; background: url("../images/footer.jpg") no-repeat center top; overflow: hidden;}
+
+/*在线客服*/
+.kf-online {
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 15px;
+    width: 192px;
+    height: 476px;
+    background: url("../images/kf.png");
+    z-index: 999;
+    overflow: hidden;
+}
+.kf-online .kf_content {
+    margin: 205px 0 0 29px;
+}
+.kf-online .kf_content a {
+    display: block;
+    line-height: 0;
+    margin-bottom: 3px;
+}
+.kf-online .kf_close {
+    position: absolute;
+    bottom: 11px;
+    left: 91px;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
