@@ -8,11 +8,20 @@
 <body>
 <div class="container">
     <div class="flash">
-        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="700" height="150">
-            <param name="movie" value="images/swf.swf" />
-            <param name="wmode" value="transparent" />
-            <param name="quality" value="high" />
-            <embed src="images/swf.swf?1" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="700" height="150"></embed>
+        <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="700" height="150">
+            <param name="movie" value="images/swf.swf">
+            <param name="quality" value="high">
+            <param name="wmode" value="transparent">
+            <param name="swfversion" value="6.0.65.0">
+            <!--[if !IE]>-->
+            <object type="application/x-shockwave-flash" data="images/swf.swf" width="700" height="150">
+                <!--<![endif]-->
+                <param name="quality" value="high">
+                <param name="wmode" value="transparent">
+                <param name="swfversion" value="6.0.65.0">
+                <!--[if !IE]>-->
+            </object>
+            <!--<![endif]-->
         </object>
     </div>
     <div class="register"><a href="http://0528444.com/"><img src="images/register.png" /></a></div>
