@@ -79,6 +79,9 @@
   float: right;
   background: #4d4d4d;
 }
+.bodybox .menubannbox .menubox .menuboxr ul .lasli:hover {
+  background: #4d4d4d;
+}
 .bodybox .menubannbox .menubox .menuboxr ul .lasli a {
   padding: 0 10px 0 5px;
 }
@@ -596,4 +599,36 @@
 }
 .heightauto {
   height: auto !important;
+}
+.box-head {
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid #bfbfbf;
+  background-color: #ffffff;
+}
+.box-head dl {
+  position: relative;
+}
+.box-head dl.marginLeft {
+  margin-left: 10px;
+}
+.box-head dt {
+  position: absolute;
+  top: 1px;
+  height: 39px;
+  line-height: 39px;
+  padding: 0 10px;
+  color: #737373;
+  border-bottom: 1px solid #ff334b;
+  font-size: 18px;
+}
+.box-head dd {
+  position: absolute;
+  right: 10px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+}
+.box-head dd a {
+  color: #cccccc;
 }

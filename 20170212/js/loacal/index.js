@@ -1,18 +1,4 @@
 $(function() {
-	$("#headdivbox").load("html/public/head.html", function() {
-		if(config.ifdebug) {
-			console.log("request is over!");
-		}
-		//当为主页时，不加载用户反馈html
-		if($("#ifindex").val() == "index") {
-			$("#headdivbox").find(".menubannbox").remove();
-			$("#headdivbox").css({
-				"height": "auto"
-			});
-			return;
-		}
-	});
-
 	/*banner*/
 	var slider = Swipe(document.getElementById('slider'), {
 		auto: 3000,
