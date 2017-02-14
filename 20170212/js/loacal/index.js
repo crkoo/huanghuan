@@ -20,13 +20,13 @@ $(function() {
 	//启动加载数据
 	ajaxRequst("", "", "pk10");
 	ajaxRequst("", "", "cqSsc");
-	ajaxRequst("", "", "tjSsc");
-	ajaxRequst("", "", "xjSsc");
+	//ajaxRequst("", "", "tjSsc");
+	//ajaxRequst("", "", "xjSsc");
 	ajaxRequst("", "", "gdklsf");
-	ajaxRequst("", "", "cqnc");
-	ajaxRequst("", "", "kuai3");
-	ajaxRequst("", "", "shiyix5_sd");
-	ajaxRequst("", "", "shiyix5_gd");
+	//ajaxRequst("", "", "cqnc");
+	//ajaxRequst("", "", "kuai3");
+	//ajaxRequst("", "", "shiyix5_sd");
+	//ajaxRequst("", "", "shiyix5_gd");
 
 	//回到顶部
 	$("#gotop").click(function() {
@@ -41,11 +41,6 @@ $(function() {
 			$("#gotop").show();
 		} else {
 			$("#gotop").hide();
-		}
-	});
-	$("#fooderbox").load("html/public/fooder.html", function() {
-		if(config.ifdebug) {
-			console.log("request is over!");
 		}
 	});
 });

@@ -329,7 +329,11 @@
   width: 100%;
   margin: 0;
 }
-.bodybox .contentbox .contentcb .cztypel ul li .cztypelt .rowbox2 ul li {
+.bodybox .contentbox .contentcb .cztypel .kajiantex {
+  width: 100%;
+  margin: 0;
+}
+.bodybox .contentbox .contentcb .cztypel ul li .cztypelt .rowbox2 ul li,.bodybox .contentbox .contentcb .cztypel .kajiantext li {
   display: inline-block;
   float: left;
   margin-right: 5px;
@@ -344,6 +348,10 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
+.bodybox .contentbox .contentcb .cztypel .kajiantext li {
+  color: #595959;
+  margin-right: 7px;
+}
 .bodybox .contentbox .contentcb .cztypel ul li .cztypelt .rowbox2 ul li img {
   width: 40px;
 }
@@ -351,11 +359,19 @@
   background: url("../img/saizi.gif") no-repeat center;
   background-size: 40px 40px;
 }
+.bodybox .contentbox .contentcb .cztypel ul li .cztypelt .rowbox2 ul .add {
+  color: #4c4c4c;
+  font-size: 24px;
+}
+.bodybox .contentbox .contentcb .cztypel ul li .cztypelt .rowbox2 ul .total {
+  font-size: 14px;
+  color: #595959;
+}
 .bodybox .contentbox .contentcb .cztypel ul li .cztypelt .rowbox2 ul .numblue,.bodybox .contentbox .contentcb .cztypel ul li .cztypelt .rowbox2 ul .numred {
   margin-right: 17px;
 }
-.bodybox .contentbox .contentcb .cztypel ul li .cztypelt .rowbox2 ul.small_interval .numblue,.bodybox .contentbox .contentcb .cztypel ul.small_interval li .cztypelt .rowbox2 ul .numred {
-  margin-right: 9px;
+.bodybox .contentbox .contentcb .cztypel .cztypelt .rowbox2 ul.small_interval .numblue,.bodybox .contentbox .contentcb .cztypel .cztypelt .rowbox2 ul.small_interval .numred {
+  margin-right: 7px;
 }
 .bodybox .contentbox .contentcb .cztypel ul li .cztypelt .rowbox2 ul .li_after {
   margin-right: 0;
