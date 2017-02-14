@@ -27,7 +27,6 @@ $(function() {
 	ajaxRequst("", "", "kuai3");
 	ajaxRequst("", "", "shiyix5_sd");
 	ajaxRequst("", "", "shiyix5_gd");
-	indexObj.loadFangAanNews(); //加载方案预测新闻
 
 	//回到顶部
 	$("#gotop").click(function() {
@@ -871,44 +870,6 @@ function typeOf(type, num) {
 	}
 }
 
-	//加载方案预测数据
-indexObj.loadFangAanNews = function() {
-		$.ajax({
-			url: publicUrl + "news/findProjectPrediction.do",
-			type: "GET",
-			dataType: 'json',
-			data: {
-				programaId: "",
-				pageNo: 1,
-				pageSize: 10
-			},
-			beforeSend: function() {
-				$("#fanganyc").empty().text("正在加载...");
-			},
-			success: function(data) {
-				var data = data;
-				if(typeof data == 'object') {} else {
-					data = JSON.parse(data);
-				}
-				if(data.errorCode == "0") {
-					if(data.result.businessCode == "0") {
-						$("#fanganyc").empty();
-						var html = "";
-						$(data.result.data.list).each(function() {
-							html += "<li><a target='_blank' href='html/zixunhtml/zx_detail.html?" + this.newsId + "'>" + this.title + "</a></li>";
-						});
-						$("#fanganyc").append(html);
-					} else {
-						$("#fanganyc").empty().text("数据加载异常！");
-					}
-				}
-			},
-			error: function(xhr) {
-				$("#bannernews").empty().text("正在加载...");
-				indexObj.loadFangAanNews(); //加载方案预测新闻
-			}
-		});
-	}
 indexObj.defaultViewigm = function(obj) {
 	$(obj).attr("src", "img/banner/banner01.jpg");
 	$(obj).parent().css({
