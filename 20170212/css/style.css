@@ -351,6 +351,10 @@
 .bodybox .contentbox .contentcb .cztypel .kajiantext li {
   color: #595959;
   margin-right: 7px;
+  font-size: 14px;
+}
+.bodybox .contentbox .contentcb .cztypel .kajiantext li.totalred {
+  color: #f13131;
 }
 .bodybox .contentbox .contentcb .cztypel ul li .cztypelt .rowbox2 ul li img {
   width: 40px;
