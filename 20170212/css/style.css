@@ -92,12 +92,12 @@
   line-height: 0;
   overflow: hidden;
 }
-.bannerbox img { max-width: 100%; }
+/*.bannerbox img { max-width: 100%; }*/
 /* Swipe 2 required styles */
 .swipe {overflow: hidden;visibility: hidden;position: relative;}
 .swipe-wrap {overflow: hidden;position: relative;}
 .swipe-wrap > li {float:left;width:100%;position: relative; text-align: center;}
-.swipe-wrap > li img {max-width: 100%;}
+/*.swipe-wrap > li img {max-width: 100%;}*/
 .bannerbox #banner_page {position: absolute; bottom: 40px; width: 100%; margin: 0 auto; text-align: right;}
 .bannerbox #banner_page a {display: inline-block; margin: 0 5px; width: 24px; height: 24px; border-radius: 50%; -moz-border-radius: 50%; -webkit-border-radius: 50%; background-color: #a4a4aa; text-indent: -99999em; cursor: default; text-decoration: none; overflow: hidden;}
 .bannerbox #banner_page a.on {background-color: #fff;}

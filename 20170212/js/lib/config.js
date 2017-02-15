@@ -4,7 +4,7 @@ var config = {
 		backUrl: "http://webapp.1680210.com/kai-bms/", //线上正式环境
 		ifdebug: false //当为true的时候是调试模式
 	}
-	//设为首页
+//设为首页
 function SetHome(url) {
 	if(document.all) {
 		document.body.style.behavior = 'url(#default#homepage)';
@@ -34,6 +34,23 @@ function addFavorite2() {
 		alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
 	}
 }
+function showtime()
+{
+	var today,hour,second,minute,year,month,date;
+	today=new Date();
+	year = today.getFullYear();
+	month = today.getMonth()+1;
+	date = today.getDate();
+	hour = today.getHours();
+	minute =today.getMinutes();
+	second = today.getSeconds();
+	var a = new Array("日", "一", "二", "三", "四", "五", "六");
+	var week = today.getDay();
+	var str = "星期"+ a[week];
+	document.getElementById('current_time').innerHTML = year + "-" + month + "-" + date + " " + hour + ":" + minute + ":" + second + " "+str; //显示时间
+	setTimeout("showtime();", 1000);
+}
+showtime();
 
 $(function() {
 	publicmethod.fixBox();
