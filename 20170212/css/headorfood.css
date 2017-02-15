@@ -550,7 +550,7 @@ body {
   text-align: center;
 }
 .bodybox .menubannbox .menubox .menuboxr ul li a {
-  padding: 0 35px;
+  padding: 0 18px;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1089,3 +1089,67 @@ body {
   float: left;
   margin-left: 16px;
 }
+
+.box-head {
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid #bfbfbf;
+  background-color: #ffffff;
+  position: relative;
+}
+.box-head dl {
+  position: relative;
+}
+.box-head dl.marginLeft {
+  margin-left: 10px;
+}
+.box-head dt {
+  position: absolute;
+  top: 1px;
+  height: 39px;
+  line-height: 39px;
+  padding: 0 15px;
+  color: #737373;
+  border-bottom: 1px solid #ff334b;
+  font-size: 18px;
+}
+.box-head dd {
+  position: absolute;
+  right: 10px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+}
+.box-head dd a {
+  color: #cccccc;
+}
+.box-head .hot {
+  position: absolute;
+  left: 92px;
+  top: 3px;
+}
+.zhibo {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background: #ffffff;
+  margin-top: 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.zhibo .zhibo-body {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 0 15px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background: #ffffff;
+  border-bottom: 1px solid #f0f0f0;
+}
+.zhibo .zhibo-body {margin: 20px auto; border-bottom: 0 none;}
+.zhibo .zhibo-body img {max-width: 100%;}
+.zhibo .zhibo-body .row {margin: 8px auto;}
