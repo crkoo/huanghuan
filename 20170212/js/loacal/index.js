@@ -18,11 +18,11 @@ $(function() {
 	});
 
 	//启动加载数据
-	ajaxRequst("", "", "pk10");
-	ajaxRequst("", "", "cqSsc");
+	//ajaxRequst("", "", "pk10");
+	//ajaxRequst("", "", "cqSsc");
 	//ajaxRequst("", "", "tjSsc");
 	//ajaxRequst("", "", "xjSsc");
-	ajaxRequst("", "", "gdklsf");
+	//ajaxRequst("", "", "gdklsf");
 	//ajaxRequst("", "", "cqnc");
 	//ajaxRequst("", "", "kuai3");
 	//ajaxRequst("", "", "shiyix5_sd");

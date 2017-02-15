@@ -192,6 +192,9 @@ body {
 .bodybox .numred {
   background: url("../img/icon/bjpknum.png") no-repeat -91px -49px !important;
 }
+.bodybox .numyellow {
+  background: url("../img/icon/bjpknum.png") no-repeat -348px -236px !important;
+}
 .bodybox .num1 {
   background: url("../img/icon/bjpknum.png") no-repeat -424px 0;
 }

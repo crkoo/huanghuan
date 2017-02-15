@@ -377,6 +377,20 @@
 .bodybox .contentbox .contentcb .cztypel .cztypelt .rowbox2 ul.small_interval .numblue,.bodybox .contentbox .contentcb .cztypel .cztypelt .rowbox2 ul.small_interval .numred {
   margin-right: 7px;
 }
+.bodybox .contentbox .contentcb .cztypel .cztypelt .rowbox2 ul.best_interval .numblue,.bodybox .contentbox .contentcb .cztypel .cztypelt .rowbox2 ul.best_interval .numred ,.bodybox .contentbox .contentcb .cztypel .cztypelt .rowbox2 ul.best_interval .numyellow {
+  margin-right: 1px;
+    margin-bottom: 0px;
+}
+.bodybox .contentbox .contentcb .cztypel ul li#kuai8 .cztypelt {
+    padding-bottom: 8px;
+    height: 315px;
+}
+.bodybox .contentbox .contentcb .cztypel ul li#kuai8 .cztypelt .rowbox2 {
+    height: 80px;
+}
+.bodybox .contentbox .contentcb .cztypel ul li#kuai8 .cztypelt .rowbox3 {
+    margin-top: 7px;
+}
 .bodybox .contentbox .contentcb .cztypel ul li .cztypelt .rowbox2 ul .li_after {
   margin-right: 0;
 }
@@ -395,7 +409,7 @@
   text-align: center;
   background: #FFFFFF;
 }
-.bodybox .contentbox .contentcb .cztypel ul li .cztypelt .rowbox3 table th {
+.bodybox .contentbox .contentcb .cztypel ul li .cztypelt .rowbox3 table.colorset th {
   color: #de0846;
 }
 .bodybox .contentbox .contentcb .cztypel ul li .cztypelt .rowbox3 table td {
@@ -423,6 +437,30 @@
 }
 .bodybox .contentbox .contentcb .cztypel ul .cztypell {
   background: #ffffff;
+}
+#fc3d .rowbox3 .longhu2 .sumNum,#gdklsf .rowbox3 .longhu2 .sumNum,#cqxinyunlongchang .rowbox3 .longhu2 .sumNum,#xinyin28 .rowbox3 .longhu2 .sumNum,#kuai8 .rowbox3 .longhu2 .sumNum,#kuai8 .rowbox3 .longhu2 .betweenThree {
+    color: #d73434;
+}
+#fc3d .rowbox3 .longhu2 .sumSingleDouble,#xinyin28 .rowbox3 .longhu2 .sumBigSmall,#kuai8 .rowbox3 .longhu2 .behindThree,#kuai8 .rowbox3 .longhu2 .lastThree {
+    color: #0065d9;
+}
+#fc3d .rowbox3 .longhu2 .sumBigSmall,#xinyin28 .rowbox3 .longhu2 .sumSingleDouble,#kuai8 .rowbox3 .longhu2 .sumBigSmall,#kuai8 .rowbox3 .longhu2 .sumSingleDouble {
+    color: #ff10d5;
+}
+#gdklsf .rowbox3 .longhu2 .sumSingleDouble,#kuai8 .rowbox3 .longhu2 .singleDouble {
+    color: #18920a;
+}
+#gdklsf .rowbox3 .longhu2 .sumBigSmall,#gdklsf .rowbox3 .longhu2 .lastBigSmall {
+    color: #ff1668;
+}
+#gdklsf .rowbox3 .longhu2 .firstDragonTiger,#gdklsf .rowbox3 .longhu2 .secondDragonTiger,#gdklsf .rowbox3 .longhu2 .thirdDragonTiger,#gdklsf .rowbox3 .longhu2 .fourthDragonTiger {
+    color: #0045e3;
+}
+#cqxinyunlongchang .rowbox3 .longhu2 .lastBigSmall,#cqxinyunlongchang .rowbox3 .longhu2 .secondDragonTiger,#cqxinyunlongchang .rowbox3 .longhu2 .fourthDragonTiger {
+    color: #ff4ce0;
+}
+#cqxinyunlongchang .rowbox3 .longhu2 .sumBigSmall,#cqxinyunlongchang .rowbox3 .longhu2 .firstDragonTiger,#cqxinyunlongchang .rowbox3 .longhu2 .thirdDragonTiger {
+    color: #0045e3;
 }
 .bodybox .contentbox .contentcb .otherr {
   width: 243px;
