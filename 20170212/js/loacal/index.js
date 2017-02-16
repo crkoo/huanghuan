@@ -1,17 +1,11 @@
 $(function() {
 	/*banner*/
-	var slider = Swipe(document.getElementById('slider'), {
-		auto: 3000,
-		continuous: true,
-		callback: function(pos) {
-			var i = bullets.length;
-			while (i--) {
-				bullets[i].className = '';
-			}
-			bullets[pos].className = 'on';
-		}
+	var swiper = new Swiper('.swiper-container', {
+		pagination: '.swiper-pagination',
+		paginationClickable: '.swiper-pagination',
+		spaceBetween: 30,
+		effect: 'fade'
 	});
-	var bullets = document.getElementById('banner_page').getElementsByTagName('a');
 
 
 	//启动加载数据
@@ -24,22 +18,6 @@ $(function() {
 	//ajaxRequst("", "", "kuai3");
 	//ajaxRequst("", "", "shiyix5_sd");
 	//ajaxRequst("", "", "shiyix5_gd");
-
-	//回到顶部
-	$("#gotop").click(function() {
-		$('body,html').animate({
-			scrollTop: 0
-		}, 500);
-		$(this).hide();
-		return false;
-	});
-	$(document).scroll(function() {
-		if($(this).scrollTop() > 10) {
-			$("#gotop").show();
-		} else {
-			$("#gotop").hide();
-		}
-	});
 });
 
 //公共URL前缀

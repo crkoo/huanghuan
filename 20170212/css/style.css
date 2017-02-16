@@ -89,16 +89,26 @@
   line-height: 0;
   overflow: hidden;
 }
-/*.bannerbox img { max-width: 100%; }*/
-/* Swipe 2 required styles */
-.swipe {overflow: hidden;visibility: hidden;position: relative;}
-.swipe-wrap {overflow: hidden;position: relative;}
-.swipe-wrap > li {float:left;width:100%; height: 470px; position: relative; text-align: center; background-position: center top; background-repeat: no-repeat;}
-/*.swipe-wrap > li img {max-width: 100%;}*/
-.bannerbox #banner_page {position: absolute; bottom: 40px; width: 100%; margin: 0 auto; text-align: right;}
-.bannerbox #banner_page a {display: inline-block; margin: 0 5px; width: 24px; height: 24px; border-radius: 50%; -moz-border-radius: 50%; -webkit-border-radius: 50%; background-color: #a4a4aa; text-indent: -99999em; cursor: default; text-decoration: none; overflow: hidden;}
-.bannerbox #banner_page a.on {background-color: #fff;}
-.bannerbox .content {width: 1200px; margin: 0 auto;}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+.swiper-pagination .swiper-pagination-bullet {
+  width: 24px;
+  height: 24px;
+  margin: 0 5px;
+}
+.bannerpage {position: absolute; bottom: 40px; width: 100%; height:24px; margin: 0 auto; text-align: right; z-index: 10;}
+.bannerpage .swiper-pagination {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  text-align: right;
+}
 
 .bodybox .contentbox {
   width: 1200px;

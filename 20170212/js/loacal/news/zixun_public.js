@@ -1,20 +1,16 @@
 $(function(){
-	//回到顶部
-	$("#gotop").click(function() {
-		$('body,html').animate({
-			scrollTop: 0
-		}, 500);
-		$(this).hide();
-		return false;
-	});
-	$(document).scroll(function() {
-		//console.log($(this).scrollTop())
-		if($(this).scrollTop() > 10) {
-			$("#gotop").show();
-		} else {
-			$("#gotop").hide();
+	$("#news_tab a").bind('click', function (e) {
+		e.preventDefault();
+		if ($(this).hasClass('active')){
+			return false;
+		}else{
+			$("#news_tab li").removeClass('active');
+			$(this).parent().addClass('active');
+			var id = $(this).attr('href').replace('#','');
+			$(".left_list").addClass('displaynone');
+			$("#"+id).removeClass('displaynone');
 		}
-	});
+	})
 });
 
  

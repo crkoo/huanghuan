@@ -134,6 +134,22 @@ $(function() {
 			}
 		})
 	}
+    //回到顶部
+    $("#gotop").click(function() {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
+        $(this).hide();
+        return false;
+    });
+    $(document).scroll(function() {
+        //console.log($(this).scrollTop())
+        if($(this).scrollTop() > 10) {
+            $("#gotop").show();
+        } else {
+            $("#gotop").hide();
+        }
+    });
 })
 
 //公共URL
@@ -209,7 +225,7 @@ publicmethod.fixBox = function() {
 		$(obj).empty();
 		var fixedBox = '<ul>' +
 			'<li>' +
-			'<a class="kefuicon" target="_blank" href="http://crm2.qq.com/page/portalpage/wpa.php?lang=&uin=800057725&cref=http://www.168kai.cc&ref=&pt=168%E5%BC%80%E5%A5%96%E7%BD%91&f=1&ty=1&ap=&as="></a>' +
+			'<a class="kefuicon" target="_blank" href="#"></a>' +
 			'</li>' +
 			'<li>' +
 			'<!--用户反馈模态框-->' +
@@ -221,12 +237,13 @@ publicmethod.fixBox = function() {
 			'<a class="topicon" id="gotop" href="javascript:"></a>' +
 			'</li>' +
 			'</ul>';
-		var fixedPointer = '<ul class="ul_pre">' +
+		/*var fixedPointer = '<ul class="ul_pre">' +
 			'<li class="prev_li">' +
 			'</li>' +
 			'<li class="next_li">' +
 			'</li>' +
-			'</ul>';
+			'</ul>';*/
+    var fixedPointer = "";
 		fixedBox = fixedBox+"" + fixedPointer;
 		$(obj).append(fixedBox)
 	}
