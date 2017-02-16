@@ -6,16 +6,13 @@ $(function() {
 		callback: function(pos) {
 			var i = bullets.length;
 			while (i--) {
-				bullets[i].className = ' ';
+				bullets[i].className = '';
 			}
 			bullets[pos].className = 'on';
 		}
 	});
 	var bullets = document.getElementById('banner_page').getElementsByTagName('a');
-	var slider2 = Swipe(document.getElementById('slider2'), {
-		auto: 3000,
-		continuous: true
-	});
+
 
 	//启动加载数据
 	//ajaxRequst("", "", "pk10");
