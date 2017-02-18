@@ -1,6 +1,9 @@
 body {
   background: #f0f0f0;
 }
+.a_color {
+  color: #fa8e19;
+}
 .noboder {
   border: 0 solid transparent !important;
 }
@@ -8,16 +11,6 @@ body {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-}
-.haomaquh {
-  height: auto !important;
-}
-.firthtd th {
-  height: 46px !important;
-}
-.secondtd th {
-  font-size: 14px !important;
-  line-height: 20px;
 }
 @keyframes lfetmenua {
   0% {
@@ -30,7 +23,11 @@ body {
 .bodybox .liline {
   color: #cccccc !important;
 }
-
+.bodybox .kaijiangjl div.box-head {
+  height: 40px;
+  border-bottom: 2px solid #e7e7e7;
+  overflow: visible;
+}
 @keyframes twinkling {
   /*透明度由0.2到1*/
   0% {
@@ -84,7 +81,7 @@ body {
 }
 .bodybox .haomaqu {
   width: 1200px;
-  height: 270px;
+  height: 370px;
   background: #ffffff;
   padding: 30px;
   box-sizing: border-box;
@@ -92,7 +89,7 @@ body {
   -moz-box-sizing: border-box;
 }
 .bodybox .haomaqu .haomaqul {
-  width: 817px;
+  width: 917px;
   display: inline-block;
   float: left;
 }
@@ -107,6 +104,7 @@ body {
 .bodybox .haomaqu .haomaqul .haomaline {
   width: 887px;
   height: auto;
+  overflow: hidden;
   clear: both;
 }
 .bodybox .haomaqu .haomaqul .haomaline div {
@@ -118,7 +116,7 @@ body {
   text-align: center;
 }
 .bodybox .haomaqu .haomaqul .haomaline .haomaimg img {
-  max-width: 100%;
+  width: 100%;
 }
 .bodybox .haomaqu .haomaqul .haomaline .haomaimg .kaijianname {
   height: 60px;
@@ -136,9 +134,6 @@ body {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
 }
-.bodybox .haomaqu .haomaqul .haomaline .haomaimg .kaihistory a:hover {
-  color: #f9982e;
-}
 .bodybox .haomaqu .haomaqul .haomaline .numberqu {
   margin-left: 55px;
   margin-top: 22px;
@@ -146,23 +141,13 @@ body {
   height: 77px;
   overflow: hidden;
   display: block;
-  width: 550px;
+  width: 650px;
 }
 .bodybox .haomaqu .haomaqul .haomaline .numberqu .nuberqutit {
   width: 100%;
 }
-.bodybox .haomaqu .haomaqul .haomaline .numberqu .nuberqutit .ssc {
-  font-size: 16px;
-  color: #000000;
-  margin-right: 10px;
-}
-.bodybox .haomaqu .haomaqul .haomaline .numberqu .nuberqutit .preDrawIssue {
-  color: #f44a07;
+.bodybox .haomaqu .haomaqul .haomaline .numberqu .nuberqutit .preIssue {
   margin: 0 5px;
-}
-.bodybox .haomaqu .haomaqul .haomaline .numberqu .nuberqutit .times {
-  color: #808080;
-  margin-left: 50px;
 }
 .bodybox .haomaqu .haomaqul .haomaline .numberqu .kajianhao {
   margin-top: 16px;
@@ -197,9 +182,6 @@ body {
 }
 .bodybox .haomaqu .haomaqul .haomaline .numberqu .kajianhao ul .numblue {
   margin-right: 17px;
-  height: 36px;
-  width: 36px;
-  color: #FFFFFF;
 }
 .bodybox .haomaqu .haomaqul .haomaline .numberqu .kajianhao ul .li_after {
   margin-right: 0;
@@ -209,7 +191,7 @@ body {
   margin-right: 22px;
 }
 .bodybox .haomaqu .haomaqul .haomaline .numberqu .numbertablel table {
-  width: 550px;
+  width: 260px;
   height: 76px;
   background: #e5e5e5;
 }
@@ -227,73 +209,16 @@ body {
 .bodybox .haomaqu .haomaqul .haomaline .zoushimap .lihead {
   color: #999999;
 }
-.bodybox .haomaqu .haomaqul .haomaline .zoushimap .no_left {
-  margin-left: 0;
-}
-.bodybox .haomaqu .haomaqul .haomaline .zoushimap .list {
+.bodybox .haomaqu .haomaqul .haomaline .zoushimap li {
   display: inline-block;
   float: left;
-  height: 30px;
-  line-height: 30px;
 }
-.bodybox .haomaqu .haomaqul .haomaline .zoushimap .list a {
+.bodybox .haomaqu .haomaqul .haomaline .zoushimap li a {
   margin-right: 33px;
   color: #333333;
 }
-.bodybox .haomaqu .haomaqul .haomaline .zoushimap .list a:hover {
-  color: #fa8e19;
-}
-.bodybox .haomaqu .haomaqul .haomaline .zoushimap .morelist {
-  position: relative;
-  width: 70px;
-}
-.bodybox .haomaqu .haomaqul .haomaline .zoushimap .morelist .more {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 70px;
-  z-index: 2;
-  display: block;
-  background: #FFFFFF;
-  text-align: center;
-  border: 1px solid #ffffff;
-  margin-right: 0;
-}
-.bodybox .haomaqu .haomaqul .haomaline .zoushimap .morelist .more img {
-  margin-left: 5px;
-  margin-bottom: 2px;
-}
-.bodybox .haomaqu .haomaqul .haomaline .zoushimap .morelist .more .yellowpre {
-  display: none;
-}
-.bodybox .haomaqu .haomaqul .haomaline .zoushimap .morelist .sub_morelist {
-  position: absolute;
-  width: 353px;
-  font-size: 14px;
-  color: #333333;
-  top: 31px;
-  right: -2px;
-  z-index: 1;
-  background: #ffffff;
-  border: 1px solid #fa8e19;
-}
-.bodybox .haomaqu .haomaqul .haomaline .zoushimap .morelist .sub_morelist ul {
-  float: left;
-  width: 104px;
-  height: auto;
-  margin: 10px 0;
-}
-.bodybox .haomaqu .haomaqul .haomaline .zoushimap .morelist .sub_morelist ul li {
-  float: left;
-}
-.bodybox .haomaqu .haomaqul .haomaline .zoushimap .morelist .sub_morelist ul a:hover {
-  color: #fa8e19;
-}
-.bodybox .haomaqu .haomaqul .haomaline .zoushimap .morelist .sub_morelist .leftUl {
-  margin-left: 20px;
-}
 .bodybox .haomaqu .haomaqur {
-  width: 323px;
+  width: 223px;
   float: left;
   display: inline-block;
 }
@@ -303,23 +228,15 @@ body {
   overflow: hidden;
   color: #666666;
 }
-.bodybox .haomaqu .haomaqur .line .soundbtn {
-    margin-left: 60px;
-}
 .bodybox .haomaqu .haomaqur .linetit {
   height: 60px;
   line-height: 60px;
 }
 .bodybox .haomaqu .haomaqur .linetit .nextIssue {
-  color: #f44a07;
   margin: 0 5px;
 }
 .bodybox .haomaqu .haomaqur .linelast {
   border-bottom: 1px solid #e5e5e5;
-}
-.bodybox .haomaqu .haomaqur .linelast .drawCount,
-.bodybox .haomaqu .haomaqur .linelast .sdrawCount {
-  margin: 0 5px;
 }
 .bodybox .haomaqu .haomaqur .margt20 {
   margin-top: 20px;
@@ -330,7 +247,7 @@ body {
 }
 .bodybox .haomaqu .haomaqur .linetime .bgtime {
   height: 40px;
-  width: 20px;
+  width: 40px;
   background: #444553;
   color: #ffd200;
   text-align: center;
@@ -356,6 +273,12 @@ body {
   display: none;
   float: right;
 }
+.bodybox .haomaqu .haomaqur .linetime .cuttime {
+  color: #666666 !important;
+}
+.bodybox .haomaqu .haomaqur .linetime .indextime {
+  color: red;
+}
 .bodybox .haomaqu .haomaqur .linetime span {
   display: inline-block;
   height: 40px;
@@ -373,39 +296,22 @@ body {
   padding-bottom: 30px;
 }
 .bodybox .kaijiangjl .listcontent {
- /* border-top: 2px solid #e7e7e7;*/
+  border-top: 2px solid #e7e7e7;
 }
-.listcontent .hezhizs_title {
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-  margin: 30px 0;
-}
-.listcontent .hezhizs_tu {
-  text-align: center;
-  margin: 30px 0;
+.bodybox .kaijiangjl .gyhtitle {
+  width: 500px;
+  height: 47px;
+  line-height: 47px;
+  padding-left: 30px;
+  font-size: 18px;
 }
 .bodybox .kaijiangjl div {
   width: 100%;
   height: auto;
   overflow: hidden;
 }
-.bodybox .kaijiangjl div.box-head {
-    height: 50px;
-    border-bottom: 2px solid #e7e7e7;
-    overflow: visible;
-}
-.bodybox .kaijiangjl div.box-head dt {
-    top: 2px;
-    height: 48px;
-    line-height: 48px;
-    border-bottom: 2px solid #ff334b;
-}
-.bodybox .kaijiangjl div #kaijiangjl {
-  float: left;
-}
 .bodybox .kaijiangjl div ul {
-  width: auto;
+  width: 100%;
 }
 .bodybox .kaijiangjl div ul li {
   width: auto;
@@ -423,11 +329,8 @@ body {
 .bodybox .kaijiangjl div ul li a {
   color: #444444;
 }
-.bodybox .kaijiangjl div ul li a:hover {
-  color: #f9982e;
-}
-.bodybox .kaijiangjl div ul .reset {
-  border: none;
+.bodybox .kaijiangjl div ul #kjls {
+  margin-left: 600px;
 }
 .bodybox .kaijiangjl div ul .kaijiltit {
   font-size: 18px;
@@ -453,22 +356,6 @@ body {
   background: url("../img/icon/bjpknum.png") no-repeat -386px -55px;
 }
 .bodybox .kaijiangjl div ul .selected a {
-  color: #f4831e;
-}
-.bodybox .kaijiangjl div #kjls {
-  float: right;
-  width: 110px;
-  border-radius: 4px;
-  border: 1px solid #dddddd;
-}
-.bodybox .kaijiangjl div #kjls a {
-  width: 110px;
-  height: 36px;
-  line-height: 36px;
-  text-align: center;
-  margin-right: 20px;
-}
-.bodybox .kaijiangjl div #kjls a:hover {
   color: #f4831e;
 }
 .bodybox .kaijiangjl .head {
@@ -526,9 +413,6 @@ body {
 .bodybox .kaijiangjl .jrsmtj table tr td {
   background: #FFFFFF;
   color: #666666;
-}
-.bodybox .kaijiangjl .jrsmtj table .sub_tr th {
-  font-size: 14px;
 }
 .bodybox .kaijiangjl .cltx {
   width: 100%;
@@ -608,6 +492,9 @@ body {
 .bodybox .kaijiangjl .hmfb .secondtb {
   margin-top: 20px;
 }
+.bodybox .kaijiangjl .botborder {
+  border-bottom: 2px solid #e7e7e7;
+}
 .bodybox .kaijiangjl .jrsmhmtj {
   margin-top: 30PX;
   padding: 0 30px;
@@ -624,7 +511,7 @@ body {
 .bodybox .kaijiangjl .jrsmhmtj table tr td {
   height: 45px;
   text-align: center;
-  padding: 0 16px;
+  padding: 0 19px;
 }
 .bodybox .kaijiangjl .jrsmhmtj table tr th .imgnumber,
 .bodybox .kaijiangjl .jrsmhmtj table tr td .imgnumber {
@@ -691,36 +578,6 @@ body {
   background: #FFFFFF;
   color: #333333;
 }
-.bodybox .kaijiangjl .jrsmhmtj table tr .blueqiu {
-  width: 270px;
-}
-.bodybox .kaijiangjl .jrsmhmtj table tr .blueqiu ul {
-  display: block;
-  margin: 0 auto;
-  max-width: 240px;
-}
-.bodybox .kaijiangjl .jrsmhmtj table tr .blueqiu ul li {
-  height: 36px;
-  width: 36px;
-  border: none;
-  margin: 6px;
-  color: #FFFFFF;
-  padding: 0;
-}
-.bodybox .kaijiangjl .jrsmhmtj table tr .blueqiu ul .selectedOpacity {
-  opacity: 0.1;
-}
-.bodybox .kaijiangjl .jrsmhmtj .kjjltable td {
-  height: 40px !important;
-  padding: 0 10px !important;
-}
-.bodybox .kaijiangjl .jrsmhmtj .kjjltable td li {
-  height: 36px;
-  width: 36px;
-  border: none;
-  margin: 6px;
-  padding: 0;
-}
 .bodybox .luntanre {
   clear: both;
   width: 1200px;
@@ -738,6 +595,7 @@ body {
 }
 .bodybox .luntanre .luntit dl {
   display: inline-block;
+  margin-bottom: 10px;
   width: 100%;
 }
 .bodybox .luntanre .luntit dl dt,
@@ -813,6 +671,35 @@ body {
 .bodybox .luntanre .luntlist .luntanr {
   float: right;
 }
+.bodybox .fixedgoBack .ul_pre {
+  top: 396px;
+  height: 0px;
+  width: 100%;
+}
+.bodybox .fixedgoBack .ul_pre .prev_li,
+.bodybox .fixedgoBack .ul_pre .next_li {
+  display: none;
+  font-size: 18px;
+  width: 40px;
+  height: 140px;
+  line-height: 140px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.bodybox .fixedgoBack .ul_pre .prev_li {
+  background-image: url(../img/prev_li.png);
+  float: left;
+  left: 102px;
+}
+.bodybox .fixedgoBack .ul_pre .next_li {
+  background-image: url(../img/next_li.png);
+  float: right;
+  right: 97px;
+}
 .pk10lzzhfxymbox .haomaqu {
   width: 1200px;
   height: 270px;
@@ -851,8 +738,10 @@ body {
   float: left;
 }
 .pk10lzzhfxymbox .haomaqu .haomaqubox .haomaqul .haomaline .haomaimg {
-  width: 100px;
   text-align: center;
+}
+.pk10lzzhfxymbox .haomaqu .haomaqubox .haomaqul .haomaline .haomaimg a img {
+  width: 100%;
 }
 .pk10lzzhfxymbox .haomaqu .haomaqubox .haomaqul .haomaline .haomaimg .kaijianname {
   height: 60px;
@@ -880,22 +769,21 @@ body {
   width: 560px;
 }
 .pk10lzzhfxymbox .haomaqu .haomaqubox .haomaqul .haomaline .numberqu .nuberqutit {
-  font-size: 15px;
+  font-size: 16px;
   width: 100%;
 }
 .pk10lzzhfxymbox .haomaqu .haomaqubox .haomaqul .haomaline .numberqu .nuberqutit:div {
   display: inline-block;
 }
 .pk10lzzhfxymbox .haomaqu .haomaqubox .haomaqul .haomaline .numberqu .nuberqutit .divl {
-  width: 273px;
   float: left;
 }
 .pk10lzzhfxymbox .haomaqu .haomaqubox .haomaqul .haomaline .numberqu .nuberqutit .divl a {
   display: inline-block;
 }
-.pk10lzzhfxymbox .haomaqu .haomaqubox .haomaqul .haomaline .numberqu .nuberqutit .divl .pk10tit {
+.pk10lzzhfxymbox .haomaqu .haomaqubox .haomaqul .haomaline .numberqu .nuberqutit .divl a .pk10tit {
   color: #000000;
-  font-size: 16px;
+  font-size: 18px;
   margin-right: 20px;
 }
 .pk10lzzhfxymbox .haomaqu .haomaqubox .haomaqul .haomaline .numberqu .nuberqutit .divl .redfont {
@@ -903,10 +791,9 @@ body {
 }
 .pk10lzzhfxymbox .haomaqu .haomaqubox .haomaqul .haomaline .numberqu .nuberqutit .divr {
   font-size: 14px;
-  float: left;
+  float: right;
   color: #999999;
-  margin-left: 10px;
-  line-height: 23px;
+  margin-right: 20px;
 }
 .pk10lzzhfxymbox .haomaqu .haomaqubox .haomaqul .haomaline .numberqu .kajianhao {
   margin-top: 16px;
@@ -941,9 +828,6 @@ body {
 }
 .pk10lzzhfxymbox .haomaqu .haomaqubox .haomaqul .haomaline .numberqu .kajianhao ul .numblue {
   margin-right: 17px;
-  height: 36px;
-  color: #FFFFFF;
-  width: 36px;
 }
 .pk10lzzhfxymbox .haomaqu .haomaqubox .haomaqul .haomaline .numberqu .kajianhao ul .li_after {
   margin-right: 0;
@@ -1093,6 +977,9 @@ body {
 .pk10lzzhfxymbox .haomaqu .hreflist ul .checked:hover a {
   color: #FFFFFF;
 }
+.pk10lzzhfxymbox .haomaquh {
+  height: auto !important;
+}
 .pk10lzzhfxymbox .zhlzbox {
   clear: both;
   width: 1200px;
@@ -1161,7 +1048,6 @@ body {
 .pk10lzzhfxymbox .zhlzbox .listhead .listheadl .xxselected {
   top: -5px;
   height: 50px;
-  width: 160px;
   background: #313242;
   color: #FFFFFF;
 }
@@ -1238,13 +1124,76 @@ body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
+
+.bodybox .zhlzbox .listheadr {
+  width: 360px;
+  float: right;
+  position: relative;
+  top: 7px;
+  right: 30px;
+}
+.zhlzbox .listheadr .listheadrl {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  float: left;
+  font-size: 12px;
+}
+.zhlzbox .listheadr .listheadrl .checked {
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  background: #e61931;
+  color: #FFFFFF;
+}
+.zhlzbox .listheadr .listheadrl .searchbtn {
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  height: 28px;
+  line-height: 28px;
+  width: 70px;
+  text-align: center;
+}
+.zhlzbox .listheadr .listheadrl .checked:hover {
+  color: #FFFFFF;
+}
+.zhlzbox .listheadr .listheadrl span {
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  padding: 0 10px;
+  height: 28px;
+  line-height: 28px;
+}
+.zhlzbox .listheadr .listheadrl span:hover {
+  color: #f44a07;
+}
+.zhlzbox .listheadr .listheadrr {
+  float: right;
+  width: 66%;
+  height: auto;
+  display: inline-block;
+  font-size: 12px;
+}
+.zhlzbox .listheadr .listheadrr > div {
+  display: inline-block;
+  float: right;
+  height: 28px;
+  line-height: 28px;
+}
+.zhlzbox .listheadr .listheadrr .rightime {
+  width: 220px;
+  height: 28px;
+}
+
 .pk10lzzhfxymbox .zhlzbox .listbox .checkbox {
   width: 100%;
   height: auto;
   overflow: hidden;
 }
 .pk10lzzhfxymbox .zhlzbox .listbox .checkbox .selected {
-  background: #fa8e19;
+  background: #e61931;
   padding: 0 5px;
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -1255,7 +1204,7 @@ body {
   color: #FFFFFF !important;
 }
 .pk10lzzhfxymbox .zhlzbox .listbox .checkbox .checked i {
-  border: 1px solid #fa8e19 !important;
+  border: 1px solid #e61931 !important;
   background: url("../img/icon/bjpknum.png") no-repeat -199px -249px;
 }
 .pk10lzzhfxymbox .zhlzbox .listbox .checkbox .checkbtnzh {
@@ -1396,9 +1345,6 @@ body {
   width: 100%;
   height: auto;
   overflow: hidden;
-}
-.pk10lzzhfxymbox .zhlzbox .listbox .listcontent .box .second_th th {
-  color: red;
 }
 .pk10lzzhfxymbox .zhlzbox .listbox .listcontent .box .lz_table_head {
   height: 43px;
@@ -1622,13 +1568,10 @@ body {
 .zsbox .zhlzbox .listbox #lensetable td ul li {
   width: 36px;
   height: 36px;
-  line-height: 36px;
   display: inline-block;
   position: relative;
   margin: 10px 5px;
   float: left;
-  color: #FFFFFF;
-  font-size: 14px;
 }
 .zsbox .zhlzbox .listbox #lensetable td ul li i {
   position: absolute;
@@ -1644,7 +1587,7 @@ body {
   -webkit-border-radius: 50%;
   background: #f1010a;
   display: none;
-  font-size: 10px;
+  font-size: 14px;
 }
 .zsbox .zhlzbox .listhead .listheadl .lmms {
   top: 0;
@@ -1710,20 +1653,14 @@ body {
 .zsbox .zhlzbox .bastren table td .kaijnum {
   color: #f1010a;
   font-size: 14px;
+  margin-right: 9px;
 }
 .zsbox .zhlzbox .bastren table .leftth {
   font-size: 14px;
   color: #333333;
 }
 .zsbox .zhlzbox .bastren table th {
-  background: #f5f5f5;
   line-height: 26px;
-  min-width: 18px;
-  font-size: 16px;
-  color: #555555;
-  text-align: center;
-}
-.zsbox .zhlzbox .bastren table .first_th th {
   background: #f5f5f5;
   min-width: 18px;
   font-size: 16px;
@@ -1735,6 +1672,9 @@ body {
 }
 .zsbox .zhlzbox .bastren table .verline {
   border-right: 2px solid #d6d6d6 !important;
+}
+.zsbox .zhlzbox .bastren .listbox_p {
+  margin-top: 30px;
 }
 .zsbox .zhlzbox .bastren #lmsjtable tr {
   display: none;
@@ -1917,8 +1857,8 @@ body {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
 }
-.zsbox .zhlzbox .bastren #chartLinediv table {
-  display: none;
+.zsbox .zhlzbox .bastren #chartLinediv {
+  position: relative;
 }
 .zsbox .zhlzbox .bastren #chartLinediv table .jitdbg {
   background: #fa9932;
@@ -2030,7 +1970,6 @@ body {
 }
 #dxdsmc .checked,
 #lhmc .checked {
-  border: none !important;
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -2075,6 +2014,7 @@ body {
 .mrcltj .zhlzbox .bastren table td .kaijnum {
   color: #f1010a;
   font-size: 14px;
+  margin-right: 9px;
 }
 .mrcltj .zhlzbox .bastren table .leftth {
   font-size: 14px;
@@ -2087,9 +2027,6 @@ body {
   font-size: 16px;
   color: #555555;
   text-align: center;
-}
-.mrcltj .zhlzbox .bastren table #qihao th {
-  font-size: 14px;
 }
 .mrcltj .zhlzbox .bastren table .verline {
   border-right: 2px solid #d6d6d6 !important;
@@ -2163,7 +2100,8 @@ body {
 }
 .mrcltj .zhlzbox .listheadl #colorSet {
   float: left;
-  padding: 30px 30px 0;
+  padding: 30px;
+  padding-bottom: 0 ;
   width: 100%;
   color: #666666;
 }
@@ -2252,10 +2190,6 @@ body {
   background: #797b8f;
   outline: none;
   color: #FFFFFF;
-  text-align: center;
-}
-.mrcltj .zhlzbox .listheadl #colorSet .spanAdd:hover {
-  background: #63646f;
 }
 .mrcltj .zhlzbox .listheadl #colorSet #sid1 .spanbtn,
 .mrcltj .zhlzbox .listheadl #colorSet #sid2 .spanbtn,
@@ -2280,13 +2214,4 @@ body {
 .mrcltj .zhlzbox .listheadl #colorSet #sid2,
 .mrcltj .zhlzbox .listheadl #colorSet #sid3 {
   display: none;
-}
-.lefttit {
-  display: inline-block;
-  float: left;
-  width: 150px;
-  height: 47px;
-  line-height: 47px;
-  margin-left: 30px;
-  font-size: 18px;
 }

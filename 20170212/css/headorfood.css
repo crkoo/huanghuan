@@ -997,6 +997,9 @@ body {
     background-color: #e6e6e6;
     border: 0 none;
 }
+.bodybox .haomaqu .haomaqur .line .soundbtn {
+  margin-left: 60px;
+}
 
 .soundbtn i {
   width: 100%;
@@ -1115,6 +1118,11 @@ body {
   background-color: #ffffff;
   position: relative;
 }
+.bodybox .kaijiangjl div.box-head {
+  height: 50px;
+  border-bottom: 2px solid #e7e7e7;
+  overflow: visible;
+}
 .box-head dl,.box-head ul {
   position: relative;
 }
@@ -1134,6 +1142,12 @@ body {
   border-bottom: 1px solid #ff334b;
   font-size: 18px;
 }
+.bodybox .kaijiangjl div.box-head dt {
+  top: 2px;
+  height: 48px;
+  line-height: 48px;
+  border-bottom: 2px solid #ff334b;
+}
 .box-head li {
   float: left;
   margin-top: 1px;
@@ -1144,9 +1158,29 @@ body {
   font-size: 18px;
   border-bottom: 1px solid #bfbfbf;
 }
+.box-head .zst li {
+  float: left;
+  margin-top: 2px !important;
+  height: 48px !important;
+  line-height: 48px !important;
+  padding: 0 15px !important;
+  color: #737373 !important;
+  font-size: 18px !important;
+  border-bottom: 0 none !important;
+  border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-left: 0 none !important;
+  border-top: 0 none !important;
+  border-right: 0 none !important;
+  cursor: pointer;
+}
 .box-head li.active {
     border-bottom: 1px solid #ff334b;
   }
+.box-head .zst li.active {
+    border-bottom: 2px solid #ff334b !important;
+}
 .box-head dd {
   position: absolute;
   right: 10px;
@@ -1161,6 +1195,23 @@ body {
   position: absolute;
   left: 92px;
   top: 3px;
+}
+.box-head .box-head-btn {
+  position: absolute;
+  top: 10px;
+  left: 200px;
+  padding: 0 10px;
+  width: 100px !important;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border: 1px solid #dbdbdb;
+  color: #8d8d8d;
+  cursor: pointer;
 }
 .zhibo {
   width: 100%;
@@ -1187,3 +1238,71 @@ body {
 .zhibo .zhibo-body {margin: 20px auto; border-bottom: 0 none;}
 .zhibo .zhibo-body img {max-width: 100%;}
 .zhibo .zhibo-body .row {margin: 8px auto;}
+.bodybox .zuire {
+  width: 1200px;
+  padding: 12px 0;
+  height: 26px;
+  background: #ffffff;
+  margin: 0 auto;
+}
+.bodybox .zuire a {
+  display: inline-block;
+  height: 26px;
+  margin: 0 45px;
+  line-height: 26px;
+  padding-left: 28px;
+}
+.pk10gyhzsbox.bodybox .zuire a {
+  margin: 0 30px;
+}
+.bodybox .zuire span {
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+}
+.bodybox .zuire a,.bodybox .zuire span {
+  vertical-align: middle;
+}
+.ssc_icon {
+  background-repeat: no-repeat;
+  background-image: url('../img/icon/ssc.png');
+}
+.ssc_icon.icon_kaijiang{
+  background-position: 0 0;
+}
+.ssc_icon.icon_history{
+  background-position: 0 -26px;
+}
+.ssc_icon.icon_video{
+  background-position: 0 -52px;
+}
+.ssc_icon.icon_trend{
+  background-position: 0 -78px;
+}
+.ssc_icon.icon_comprehensive{
+  background-position: 0 -104px;
+}
+.ssc_icon.icon_gy{
+  background-position: 0 -130px;
+}
+.ssc_icon.icon_hnfx{
+  background-position: 0 -156px;
+}
+
+
+.listcontent .hezhizs_title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 30px 0;
+}
+.listcontent .hezhizs_tu {
+  text-align: center;
+  margin: 30px 0;
+}
+.bodybox .kaijiangjl div {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.bordertopnone {border-top: 0 none!important;}
