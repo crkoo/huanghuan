@@ -124,6 +124,12 @@ body {
 .colorred,a.colorred,a.colorred:hover {
   color: #cc0a14 !important;
 }
+.colorbule,a.colorbule,a.colorbule:hover {
+  color: #0065d9 !important;
+}
+.colorpurple,a.colorpurple,a.colorpurple:hover {
+  color: #ff10d5 !important;
+}
 .numberbox li {
   display: inline-block;
   height: 36px !important;
@@ -1255,6 +1261,9 @@ body {
 .pk10gyhzsbox.bodybox .zuire a {
   margin: 0 30px;
 }
+.fc3d.bodybox .zuire a {
+  margin: 0 22px;
+}
 .bodybox .zuire span {
   display: inline-block;
   height: 26px;
@@ -1306,3 +1315,6 @@ body {
   overflow: hidden;
 }
 .bordertopnone {border-top: 0 none!important;}
+.bodybox .haomaqu .haomaqul .haomaline .numberqu .numbertablel table tr.thead_color th {
+  color: #595959;
+}
