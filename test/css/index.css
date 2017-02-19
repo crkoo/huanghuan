@@ -1,0 +1,345 @@
+@charset "utf-8";
+/*简介开始*/
+#intro {
+	min-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 335px;
+	width: 1200px;
+	margin-top: 15px;
+	margin-bottom: 8px;
+}
+#intro ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+.introtitle {
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-align: left;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	border-left: 6px solid #FFB32D;
+	background-color: #e10529;
+	text-indent: 13px;
+}
+.bimg {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	width: 9999px;
+	position: absolute;
+}
+.bimg li {
+	float: left;
+}
+.bimg li img {
+	width: 600px;
+	height: 120px;
+	overflow-x: hidden;
+}
+#intro-right {
+	background-color: rgba(255,255,255,1.00);
+	float: left;
+	width: 390px;
+	height: 330px;
+	margin-right: 10px;
+}
+#intro-rightdes {
+	width: 368px;
+	height: 260px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: auto;
+	padding: 0;
+	margin-right: auto;
+}
+.ntro-rightimg {
+	height: 120px;
+	width: 368px;
+	padding: 0;
+	float: left;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.ntro-rightimg img {
+	width: 100%;
+	height: 100%;
+}
+.intro-rightdestion {
+	text-align: left;
+	line-height: 25px;
+	font-size: 13px;
+	color: #434040;
+}
+.intro-rightdestitle {
+	color: #E72327;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 33px;
+	text-indent: 20px;	
+}
+#intro-mid {
+	width: 800px;
+	height: 330px;
+	background-color: #FFFFFF;
+	float: left;
+}
+#teachers {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	height: 275px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 790px;
+}
+#teachers div {
+	margin-right: 10px;
+	height: 265px;
+	width: 187px;
+	padding: 0;
+	float: left;
+	margin-top: 0px;
+	color: #666;
+	font-size: 13px;
+	line-height: 23px;
+}
+#thearticle {
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 980px;
+	background-color: #fff;
+	margin-bottom: 10px;
+}
+#thearticle aside {
+	margin-right: 10px;
+	flex: 1;
+	width: 230px;
+	padding: 8px;
+	float: left;
+	background-color: #fff;
+}
+#asidetop {
+	padding: 0;
+	list-style-type: none;
+	height: 200px;
+	margin: 0;
+}
+#asidetop li {
+	height: 33px;
+	text-align: left;
+	text-indent: 35px;
+	font-size: 14px;
+	line-height: 33px;
+	font-weight: bold;
+	color: #666;
+	margin-top: 5px;
+}
+#asidetop li:first-child {
+	height: 40px;
+	line-height: 40px;
+	margin-top: 0px;
+	font-weight: bolder;
+	font-size: 18px;
+	background-color: #FAE8C8;
+	border-left: 6px solid #e10529;
+	text-indent: 15px;
+}
+.asidtitle {
+	background-color: #FAE8C8;
+	margin-top: 0px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+	font-weight: bolder;
+	text-indent: 15px;
+	margin-bottom: 0px;
+	color: #666;
+	border-left: 6px solid #e10529;
+}
+#asidemid {
+	height: 230px;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+#asidemid li {
+	height: 30px;
+	margin-top: 5px;
+	color: #666;
+	text-indent: 25px;
+	font-size: 13px;
+	line-height: 30px;
+}
+#asidedown {
+	height: 493px;
+	overflow-y: hidden;
+	padding: 0;
+	margin-right: 0px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	margin-top: 5px;
+}
+#asidedown li {
+	height: 30px;
+	color: #666;
+	font-size: 14px;
+	line-height: 30px;
+	text-indent: 20px;
+	text-align: left;
+}
+#thearticle article {
+	width: 940px;
+	float: left;
+	margin-bottom: 10px;
+	background-color: #fff;
+}
+.teacherstitle {
+	color: #e10529;
+	font-size: 18px;
+	margin-top: 10px;
+	display: block;
+	width: 130px;
+	height: 30px;
+	line-height: 30px;
+	font-weight: bolder;
+	margin-bottom: 10px;
+	background-image: url(../img/%E8%BE%B9%E6%A1%862.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% 100%;
+	text-align: center;
+
+}
+
+article div {
+	flex: 1;
+	background-color: rgba(255,255,255,1.00);
+	text-align: left;
+	color: rgba(62,64,71,1.00);
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	height: 190px;
+	margin-top: 6px;
+}
+section div:first-child {
+	margin-top: 0px;
+}
+.listimg {
+	width: 200px;
+	height: 185px;
+	margin-right: 15px;
+	display: inline;
+	float: left;
+}
+.listimg img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.listtitle {
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	margin-left: 10px;
+	margin-top: 0px;
+	padding: 0;
+	margin-bottom: 0px;
+	line-height: 40px;
+	color: #fff;
+	width: 130px;
+	height: 40px;
+	text-align: center;
+	display: block;
+}
+h3 a:hover {
+	color: #FFB32D !important;
+}
+.listtitlebar {
+	height: 40px;
+	background-color: #e10529;
+	width: 718px;
+	z-index: 999;
+	margin-left: 208px;
+	margin-bottom: 5px;
+	border-left: 6px solid #FFB32D;
+}
+.listdescription {
+	text-align: left;
+	line-height: 25px;
+	font-size: 16px;
+	color: #423F3F;
+	text-indent: 70px;
+	margin-top: 10px;
+	margin-right: 5px;
+}
+/*主要内容结束*/
+
+/*学院风采开始*/
+#studentshow {
+	width: 1200px;
+	height: 250px;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	color: #666;
+	text-align: center;
+	line-height: 200px;
+	background-color: #fff;
+	position: relative;
+	overflow:hidden;
+}
+#student-title {
+	height: 35px;
+	background-color: #e10529;
+	border-left: 6px solid #FFB32D;
+	text-indent: 25px;
+	line-height: 35px;
+	font-size: 18px;
+	font-weight: bolder;
+	color: #fff;
+	text-align: left;
+}
+#student {
+	position: absolute;
+	padding: 0;
+	height: 200px;
+	display: block;
+	list-style-type: none;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 200%;
+}
+#studentshow ul li {
+	width: 188px;
+	height: 196px;
+	float: left;
+	color: #666;
+	padding: 0;
+	margin-right: 8px;
+	text-align: center;
+}
+
+#studentshow ul li a {
+	width: 185px;
+	height: 168px;
+	padding: 0;
+	margin-top: 0px;
+	display: block;
+}
+#studentshow ul li a img {
+	width: 100%;
+	padding: 0;
+	height: 100%;
+	margin-top: 0px;
+}
