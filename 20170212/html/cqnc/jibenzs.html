@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11" />
+    <title>【幸运农场开奖结果】幸运农场开奖查询_幸运农场开奖号码 - 99彩票网</title>
+    <meta name="keywords" content="幸运农场开奖结果,幸运农场开奖信息,幸运农场开奖视频,幸运农场开奖走势图,幸运农场开奖数据,幸运农场开奖历史,  幸运农场开奖查询,幸运农场开奖直播,幸运农场开奖号码,幸运农场开奖记录"/>
+    <meta name="distribution" content="99彩票网幸运农场开奖栏目提供最新幸运农场开奖结果查询、幸运农场开奖号码走势、幸运农场开奖时间、  幸运农场今天开奖信息。"/>
+    <link rel="stylesheet" href="../../css/headorfood.css" />
+    <link rel="stylesheet" href="../../css/SSC_jiebenzs.css" />
+    <link rel="shortcut icon" href="../../img/icon/favicon.ico">
+    <link rel="stylesheet" href="../../css/user_adv.css" />
+    <script src="../../js/lib/bootstrap-3.3.0/js/tests/vendor/jquery.min.js"></script>
+    <script src="../../js/lib/bootstrap-3.3.0/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/lib/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+<div class="bodybox pk10lzzhfxymbox daxiaodsbox zsbox klsf">
+    <div id="headdivbox">
+        <div class="headboxf">
+            <div class="headboxh">
+                <div class="headboxhc">
+                    <div class="headboxhl">
+                        <ul>
+                            <li class="logonli">
+                                <a href="#" onclick="SetHome(window.location)">设为首页</a>
+                            </li>
+                            <li class="logonli liline">|</li>
+                            <li class="logonli">
+                                <a href="#" onclick="javascript:addFavorite2()">收藏本站</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="headboxhr">
+                        <ul>
+                            <li class="logoli" id="current_time">2017-02-09 15:54:57 星期四</li>
+                            <li class="logonli">
+                                <a href="#" target="_blank">99彩票</a>
+                            </li>
+                            <li class="logonli">
+                                <a href="#" class="colorred">会员登录</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="headbox">
+                    <a class="logobox" href="index.html"></a>
+                    <a class="logobox guanggao1" target="_blank" href="#"><img src="../../img/guanggao/guangao1.png" /></a>
+                    <a class="logobox guanggao2" target="_blank" href="#"><img src="../../img/guanggao/guangao2.png" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menubannbox heightauto">
+        <div class="menubox">
+            <div class="menuboxr">
+                <ul class="clearfix">
+                    <li><a href="../../index.html">首页</a></li>
+                    <li><a href="../../html/xgc/">香港彩</a></li>
+                    <li><a href="../../html/shishicai_cq/">重庆时时彩</a></li>
+                    <li><a href="../../html/pk10/">北京PK10</a></li>
+                    <li><a href="../../html/fc3d/">福彩3D</a></li>
+                    <li><a href="../../html/klsf/">快乐十分</a></li>
+                    <li class="menuselected"><a href="../../html/cqnc/">幸运农场</a></li>
+                    <li><a href="../../html/kuai8/">北京快乐8</a></li>
+                    <li><a href="../../html/xy28/">幸运28</a></li>
+                    <li><a href="../../html/kuai3/">江苏快三</a></li>
+                    <li><a href="../../html/xyft/">幸运飞艇</a></li>
+                    <li class="lasli"><a href="../../html/news/" class="phoneicon">彩票资讯</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="zuire">
+        <a href="index.html" class="ssc_icon icon_kaijiang">即时开奖</a>
+        <span>&nbsp;|&nbsp;</span>
+        <a href="kjhistory.html" class="ssc_icon icon_history">开奖历史</a>
+        <span>&nbsp;|&nbsp;</span>
+        <a href="kjvideo.html" class="ssc_icon icon_video">开奖视频</a>
+        <span>&nbsp;|&nbsp;</span>
+        <a href="jibenzs.html" class="ssc_icon icon_trend">基本走势</a>
+    </div>
+
+    <div class="zhlzbox margt20">
+        <div class="box-head">
+            <dl class="marginLeft3">
+                <dt>基本走势</dt>
+            </dl>
+            <div class="listheadr">
+                <div class="listheadrl">
+                    <span id="today" class="">今天</span>
+                    <span id="yesterday">昨天</span>
+                    <span id="qianday">前天</span>
+                    <span id="thirty" class="checked">最近30期</span>
+                    <span id="sixty">最近60期</span>
+                    <span id="ninety">最近90期</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="listbox">
+            <div class="checkbox">
+                <div id="biaozxz" class="checkbtnzh checkbtnmc">
+                    <ul>
+                        <li class="title">标注选择：</li>
+                        <li class="sinli checked"><i>1</i>
+                            <a href="javascript:void(0)">遗漏</a>
+                        </li>
+                        <li class="sinli checked"><i>2</i>
+                            <a href="javascript:void(0)">拆线</a>
+                        </li>
+                        <!--<li class="sinli"><i>3</i>
+                            <a href="javascript:void(0)">遗漏分成</a>
+                        </li>
+                        <li class="sinli"><i>4</i>
+                            <a href="javascript:void(0)">分隔线</a>
+                        </li>-->
+                    </ul>
+                </div>
+            </div>
+            <div class="listcontent">
+                <div class="box">
+                    <div id="waitBox" class="bastren w1200">
+                        <div id="chartLinediv" style="position:relative;*position:static;">
+                            <table id="trend_table2" width="100%" cellpadding="1" cellspacing="1" border="0">
+                                <thead>
+                                <tr class="first_th">
+                                    <th width="130" rowspan="2">期号</th>
+                                    <th width="800" colspan="20">彩球</th>
+                                </tr>
+                                <tr class="second_th">
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th>4</th>
+                                    <th>5</th>
+                                    <th>6</th>
+                                    <th>7</th>
+                                    <th>8</th>
+                                    <th>9</th>
+                                    <th>10</th>
+                                    <th>11</th>
+                                    <th>12</th>
+                                    <th>13</th>
+                                    <th>14</th>
+                                    <th>15</th>
+                                    <th>16</th>
+                                    <th>17</th>
+                                    <th>18</th>
+                                    <th>19</th>
+                                    <th>20</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr>
+                                        <td>20170212044</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum01"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum01">6</div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum09"></div></td>
+                                        <td><div class="qiu_icon2 ncnum10"></div></td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum12"></div></td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum14"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum17"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum20"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td>20170212044</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum01"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum01">6</div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum09"></div></td>
+                                        <td><div class="qiu_icon2 ncnum10"></div></td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum12"></div></td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum14"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum17"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum20"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td>20170212044</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum01"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum01">6</div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum09"></div></td>
+                                        <td><div class="qiu_icon2 ncnum10"></div></td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum12"></div></td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum14"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum17"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum20"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td>20170212044</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum01"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum01">6</div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum09"></div></td>
+                                        <td><div class="qiu_icon2 ncnum10"></div></td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum12"></div></td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum14"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum17"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum20"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td>20170212044</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum01"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum01">6</div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum09"></div></td>
+                                        <td><div class="qiu_icon2 ncnum10"></div></td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum12"></div></td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum14"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum17"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum20"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td>20170212044</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum01"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum01">6</div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum09"></div></td>
+                                        <td><div class="qiu_icon2 ncnum10"></div></td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum12"></div></td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum14"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum17"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum20"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td>20170212044</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum01"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum01">6</div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum09"></div></td>
+                                        <td><div class="qiu_icon2 ncnum10"></div></td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum12"></div></td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum14"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum17"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum20"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td>20170212044</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum01"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum01">6</div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum09"></div></td>
+                                        <td><div class="qiu_icon2 ncnum10"></div></td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum12"></div></td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum14"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum17"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum20"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td>20170212044</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum01"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum01">6</div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum09"></div></td>
+                                        <td><div class="qiu_icon2 ncnum10"></div></td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum12"></div></td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum14"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum17"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum20"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td>20170212044</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum01"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum01">6</div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum09"></div></td>
+                                        <td><div class="qiu_icon2 ncnum10"></div></td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum12"></div></td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum14"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum17"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum20"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td>20170212044</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum01"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum01">6</div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum09"></div></td>
+                                        <td><div class="qiu_icon2 ncnum10"></div></td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum12"></div></td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum14"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum17"></div></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><div class="qiu_icon2 ncnum20"></div></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fooderbox">
+        <div class="footer1">
+            <ul>
+                <li class="lileft">
+                    <img src="../../img/logobot.png" />
+                    <p>最专业的彩票开奖网站</p>
+                    <p>数据分析最全面的开奖数据平台 </p>
+                </li>
+                <li class="about_li">
+                    <div><span class="about"></span><span class="">关于我们</span></div>
+                    <p class="p1">
+                        <a href="#">关于我们</a>
+                    </p>
+                    <p>
+                        <a href="#">客服中心</a>
+                    </p>
+                    <p>
+                        <a href="#">商务合作</a>
+                    </p>
+                    <p>
+                        <a href="#">免责声明</a>
+                    </p>
+                </li>
+                <li class="about_li">
+                    <div><span class="rewards"></span><span class="">中奖神器</span></div>
+                    <p class="p1">
+                        <a href="#">开奖号码</a>
+                    </p>
+                    <p>
+                        <a href="#">走势图表</a>
+                    </p>
+                    <p>
+                        <a href="#">玩法规则</a>
+                    </p>
+                </li>
+                <li class="about_li">
+                    <div><span class="call"></span><span class="">免费调用</span></div>
+                    <p class="p1">
+                        <a href="#" target="_blank">自助网址导航</a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="footer3">
+            <div class="footer3c">
+                Copyright &copy; 2000-<span id="localyears"></span> 99kj.hk 彩票直播网 All rights reserved. <img src="../../img/icon/waring.png" /> 彩票有风险，购买要适度。禁止18周岁以下未成年人购买彩票。
+            </div>
+            <div class="footer4c">
+                <img src="../../img/footer.png" />
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="fixedgoBack">
+    <div class="fix1200">
+        <ul>
+            <li>
+                <a class="kefuicon" target="_blank" href="#"></a>
+            </li>
+            <li>
+                <!--用户反馈模态框-->
+                <span class="fankuicon fankuicon_a" data-toggle="modal" data-target="#myModal">
+							<span class="fankuicons"></span>
+						</span>
+
+
+            </li>
+            <li>
+                <a class="topicon" id="gotop" href="javascript:"></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="user_adv"></div>
+</body>
+<script type="text/javascript" src="../../js/lib/config.js"></script>
+<script type="text/javascript" src="../../js/loacal/animate/animate.js" ></script>
+</html>

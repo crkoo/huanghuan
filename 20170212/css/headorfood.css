@@ -130,6 +130,9 @@ body {
 .colorpurple,a.colorpurple,a.colorpurple:hover {
   color: #ff10d5 !important;
 }
+.colorgreen,a.colorgreen,a.colorgreen:hover {
+  color: #18920a !important;
+}
 .numberbox li {
   display: inline-block;
   height: 36px !important;
@@ -200,6 +203,10 @@ body {
 }
 .bodybox .numyellow {
   background: url("../img/icon/bjpknum.png") no-repeat -348px -236px !important;
+}
+.bodybox .add {
+  font-size: 20px;
+  color: #4c4c4c;
 }
 .bodybox .num1 {
   background: url("../img/icon/bjpknum.png") no-repeat -424px 0;
@@ -1264,6 +1271,9 @@ body {
 .fc3d.bodybox .zuire a {
   margin: 0 22px;
 }
+.xgc.bodybox .zuire a {
+  margin: 0 15px;
+}
 .bodybox .zuire span {
   display: inline-block;
   height: 26px;
@@ -1297,6 +1307,15 @@ body {
 .ssc_icon.icon_hnfx{
   background-position: 0 -156px;
 }
+.ssc_icon.icon_rili{
+  background-position: 0 -182px;
+}
+.ssc_icon.icon_shengxiao{
+  background-position: 0 -208px;
+}
+.ssc_icon.icon_zhengma{
+  background-position: 0 -234px;
+}
 
 
 .listcontent .hezhizs_title {
@@ -1317,4 +1336,100 @@ body {
 .bordertopnone {border-top: 0 none!important;}
 .bodybox .haomaqu .haomaqul .haomaline .numberqu .numbertablel table tr.thead_color th {
   color: #595959;
+}
+.bodybox .haomaqu .haomaqul .haomaline .numberqu .kajianhao ul .add {
+  font-size: 24px;
+  color: #595959;
+}
+.bodybox .haomaqu .haomaqul .haomaline .numberqu .kajianhao ul .total {
+  font-size: 14px;
+  color: #595959;
+}
+
+.numberqu .numbertablel .kajiantex {
+  width: 100%;
+  margin: 0;
+}
+.numberqu .numbertablel .kajiantext li {
+  display: inline-block;
+  float: left;
+  width: 36px;
+  height: 40px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 5px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  color: #595959;
+  margin-right: 20px;
+  font-size: 14px;
+}
+.numberqu .numbertablel .kajiantext li.totalred {
+  color: #f13131;
+}
+.bodybox.xgc .kaijiangjl .jrsmhmtj table tr th, .bodybox.xgc .kaijiangjl .jrsmhmtj table tr td{
+  padding: 0 3px;
+}
+.bodybox.xgc .kaijiangjl .jrsmhmtj table tr .blueqiu {
+  width: 430px;
+}
+.bodybox.xgc .kaijiangjl .jrsmhmtj table tr .blueqiu ul {
+  display: block;
+  margin: 0 auto;
+  max-width: 500px;
+}
+.bodybox.xgc .kaijiangjl .jrsmhmtj table tr .blueqiu ul li {
+  height: 36px;
+  width: 36px;
+  border: none;
+  color: #FFFFFF;
+  padding: 0;
+  margin: 6px 0;
+}
+.bodybox.xgc .kaijiangjl .jrsmhmtj table tr .blueqiu ul li.numtext {
+  width: auto;
+  margin: 6px 2px;
+}
+
+.bodybox.xgc .kaijiangjl .jrsmhmtj table tr .qiu_icon {
+  float: left;
+  height: 36px;
+  width: 36px;
+  line-height: 36px;
+  border: none;
+  color: #FFFFFF;
+  padding: 0;
+  margin: 6px 0;
+  font-size: 20px;
+}
+.bodybox.xgc .kaijiangjl .jrsmhmtj table tr .qiu_icon2,.bodybox .zhlzbox .listbox .listcontent .qiu_icon2 {
+  height: 36px;
+  width: 36px;
+  line-height: 36px;
+  border: none;
+  color: #FFFFFF;
+  padding: 0;
+  margin: 6px auto;
+  font-size: 20px;
+}
+.bodybox.xgc .kaijiangjl .jrsmhmtj table tr .qiu_text {
+  float: left;
+  height: 36px;
+  line-height: 36px;
+  margin: 6px 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+.zsbox.klsf .zhlzbox .bastren table td {
+  height: 45px!important;
+}
+.bodybox.kuai8 .haomaqu .haomaqul .haomaline .numberqu .kajianhao ul li {
+  margin-right: 5px;
+}
+.bodybox.kuai8 .kaijiangjl .jrsmhmtj table tr .blueqiu ul li {
+  margin: 6px 2px;
+}
+.bodybox.kuai8 .kaijiangjl .jrsmhmtj table tr th, .bodybox.kuai8 .kaijiangjl .jrsmhmtj table tr td {
+  padding: 0 8px;
 }
