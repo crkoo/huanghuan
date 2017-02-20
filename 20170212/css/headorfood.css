@@ -1433,3 +1433,9 @@ body {
 .bodybox.kuai8 .kaijiangjl .jrsmhmtj table tr th, .bodybox.kuai8 .kaijiangjl .jrsmhmtj table tr td {
   padding: 0 8px;
 }
+.bodybox .kaijiangjl .jrsmhmtj table tr .blueqiu ul li.add {
+  color: #4c4c4c;
+}
+.bodybox .kaijiangjl .jrsmhmtj table tr .blueqiu ul li.total {
+  color: #4c4c4c;
+}
