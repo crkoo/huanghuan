@@ -1,0 +1,73 @@
+/* CSS Document */
+
+img {border:0; outline:0;}
+body{margin:0 auto;background:#fff;background:url(/images/tu_2011.jpg) repeat-x; font-family:Arial, sans-serif; line-height:1.666em }
+ol, ul, li,dl,dd {list-style: none;}
+
+.box{width:1000px;overflow:hidden;margin:0px auto;background:#fff;clear:both;float:none;}
+.float{ float:left;width:970px;}
+.bold{ font-weight:bold;}
+.vs{clear:both; margin:3px auto 5px auto; text-align:center}
+h2{height:30px;border-bottom:2px solid #FE8101;line-height:32px; background:url(/images/h2_bg.gif) repeat-x;}
+h2 .word{color:#0E2F5C;font-weight:bold; background:url(/images/h2_icon.gif) no-repeat left center;padding-left:32px;height:28px;}
+
+.h{color:#AD760F}
+.hh{color:#ff3300;font-size:14px;}
+.sh{color:#7A0100;font-weight:bold;}
+
+
+
+
+#links .bold{color:#000;}
+
+
+
+.in{padding:2px;font-family:Arial;border-bottom:1px solid #cccccc;border-right:1px solid #cccccc; border-left:1px solid #676767;border-top:1px solid #676767}
+.button{ background:#F1F1F1; border-bottom:1px solid #676767;border-right:1px solid #676767; border-left:1px solid #FCFCFC;border-top:1px solid #FCFCFC;padding:2px;}
+.hui{color:#777;font-weight:bold;}
+.red{color:#FF0000;font-weight:bold;}
+
+#header{width:1000px; margin:0px auto;}
+/*#header .top_p{width:1px;margin:0px auto; background:url(/images/top_h.jpg) no-repeat;height:5px; overflow:hidden;}
+#header .top{width:996px; margin:-5px auto;overflow:hidden;}
+#header .top .left{float:left;width:5px; text-align:left; background:url(/images/top_l.gif) no-repeat;height:150px;}
+#header .top .mid{float:left;width:1000px; background:#fff;}
+#header .top .right{float:right;width:5px;background:url(/images/top_r.gif) no-repeat;height:150px;}*/
+
+.home{ background:url(/images/top_home_bg.gif) repeat-x;height:25px; line-height:25px;}
+.home .w{float:left;padding-left:10px;}
+.home .set{float:right;padding-right:12px;}
+
+
+#cailele{margin:6px 0px 0px 0px; border:1px solid #ddd;}
+#cailele h1{font-family:'Î¢ÈíÑÅºÚ';font-size:17px;font-weight:normal;color:#333;}
+#cailele a{font-size:14px;font-family:Arial;margin:0px 2px 0px 2px;}
+
+
+.hide{ display:none;}
+.show{display:block;}
+
+#gg_class27 {
+	 margin: 2px 0px 0px 0px; width: 347px; display: block; float: left; clear: both;  height:92px;
+}
+#gg_class27 ul {
+	padding-bottom: 0px; list-style-type: none; margin: 0px; padding-left: 2px; padding-right: 0px; clear: both; padding-top: 0px
+}
+#gg_class27 li {
+	text-align: center; line-height: 26px;height: 26px; margin: 1px; width: 111px; border: #fff3cf 1px solid; float: left;  background-color:#F3F5EB; font-size: 12px; display:inline;
+}
+#gg_class27 span{margin-left:5px;}
+
+#gg_class27 li  a {
+	color:#333333; text-decoration:none;
+}
+#gg_class27 li a:hover {
+	background-color: #ffd18c; display: block;
+}
+
+.dtop{ font-weight:bold;width:756px;padding-left:10px;}
+.dtop a{ margin-left:0px;margin-right:11px;font-family:Arial;font-size:12px;color:#000;text-align:left;line-height:20px;}
+.dtop a:hover{ font-family:Arial;font-size:12px;color:#933a00;text-align:left;line-height:20px;text-decoration:underline;}
+.dtop span{ color:#ff0000;margin-left:0px;margin-right:11px;font-family:Arial;font-size:12px;line-height:20px;}
+.cailele{border:1px solid #ddd;margin:5px auto;padding:5px;line-height:22px;}
+

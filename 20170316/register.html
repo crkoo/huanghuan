@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Welcome</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link type="text/css" href="theme/css/style.css" rel="stylesheet" />
+<link href="theme/css/validationEngine.css" type="text/css" rel="stylesheet">
+<script src="theme/js/jquery.js" type="text/javascript"></script>
+<script src="theme/js/jquery.cycle.all.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="theme/js/jquery1.js"></script>
+<script type="text/javascript" src="theme/js/jquery_003.js"></script>
+<script type="text/javascript" src="theme/js/jquery2.js"></script>
+<script type="text/javascript" src="theme/js/reg.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#noticeDiv").text("【投注限制】为防止玩家恶意刷水平台禁止同一IP同期同种玩法累计投注超过总注单60%，两面盘不可同时投注大小/单双/龙虎。 若发现违规且警告无效游戏平台将给予封号，并没收账户资金。感谢您的理解与配合。如有疑问请咨询客服！");
+	});
+</script>
+</head>
+
+<body>
+	<span class="el-2"></span>
+	<span class="el-3"></span>
+	<div class="wrapper">
+		<span class="el-1"></span>
+		<!-- header -->
+		<div class="header">
+			<div class="logo">
+				<object id="FlashA" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="252" height="87" class="logo">
+					<param name="movie" value="logo.swf">
+					<param name="quality" value="high">
+					<param name="wmode" value="transparent">
+					<param name="swfversion" value="6.0.65.0">
+					<!--[if !IE]>-->
+					<object type="application/x-shockwave-flash" data="logo.swf" width="252" height="87">
+						<!--<![endif]-->
+						<param name="quality" value="high">
+						<param name="wmode" value="transparent">
+						<param name="swfversion" value="6.0.65.0">
+						<!--[if !IE]>-->
+					</object>
+					<!--<![endif]-->
+				</object>
+			</div>
+			<div class="notice">
+				<h2>最新公告：</h2>
+				<div class="cont">
+					<marquee id="noticeDiv" direction="left" scrollamount="4" onmouseover="this.stop()" onmouseout="this.start()"></marquee>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="kaihubg cur" style="display: block;">
+			<div class="kaihu">
+				<div class="kaihuin">
+					<div class="kaihutl">请在以下填写您的注册信息</div>
+					<div class="cl h28"></div>
+					<script type="text/javascript">
+						jQuery(document).ready(function() {
+							var theForm = $("#main");
+							theForm.validationEngine();
+							$('input[name=regBtn]').click(function() {
+								if (theForm.validationEngine('validate')) {
+									doRegister();
+								}
+							});
+						});
+					</script>
+					<form id="main" method="post" name="main">
+						<table class="zhucetable">
+							<tr>
+								<td width="96"><div class="tar f15">会员账号：</div></td>
+								<td width=""><input size="40" id="reg_username" maxlength="15"
+									class="validate[required,custom[onlyLetterNumber],minSize[6],maxSize[15]] zucenpt" type="text"> <span
+									class="pl8 f15">账号规则：账号必须为6-15为数字和字母组合</span></td>
+
+							</tr>
+							<tr>
+								<td width="96"><div class="tar f15">登陆密码：</div></td>
+								<td width=""><input id="reg_password" maxlength="15" size="40"
+									class="validate[required,minSize[6],maxSize[15]] zucenpt" type="password"> <span class="pl8 f15">密码规则：密码长度要有6-15个字符，以及必须含有数字和字母组合</span>
+								</td>
+
+							</tr>
+							<tr>
+								<td width="96"><div class="tar f15">确认密码：</div></td>
+								<td width=""><input id="reg_password1" maxlength="15" size="40"
+									class="validate[required,equals[reg_password]] zucenpt" type="password"> <span class="pl8 f15">确定密码</span></td>
+
+							</tr>
+							<tr>
+								<td width="96"><div class="tar f15">真实姓名：</div></td>
+								<td width=""><input id="reg_name" size="40" maxlength="10" class="validate[required] zucenpt"> <span
+									class="pl8 f15">姓名必须与你用于提款的银行户口名字一致，否则无法提款</span></td>
+
+							</tr>
+							<tr>
+								<td width="96"><div class="tar f15">电子邮箱：</div></td>
+								<td width=""><input id="reg_email" size="40" maxlength="30"
+									class="validate[required,custom[email],minSize[4]] zucenpt" type="text"> <span class="pl8 f15">email格式：888888@qq.com</span>
+								</td>
+							</tr>
+ 							<tr>
+								<td width="96"><div class="tar f15">验证码：</div></td>
+								<td width=""><input id="reg_code" size="40" maxlength="10" class="validate[required] zucenpt"> <span
+									class="pl8 f15"><img id="reg_img" src="theme/img/code.png" alt="none" title="看不清？点击更换一张验证图片" /></span></td>
+
+							</tr>
+							<tr>
+								<td width="96"><div class="tar f15">&nbsp;</div></td>
+								<td width=""><input type="button" name="regBtn" class="subbtn fl mr12" value="" /> <a href="index.html" class="wydeng">我要登录</a></td>
+
+							</tr>
+
+						</table>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+﻿img{border:none;}
+body{background:#ffffff;color:#000000;text-align:center;font:78%/normal Verdana,Simsun,Arial,Helvetica,sans-serif;margin:0px;}
+table{margin:0px auto;}
+td{font-size:12px;font-family:"宋体";text-align:center;height:25px;margin:0px;padding:0px;}
+.head{background:#fff094;}
+.headblue{background-color:#fff094;color:#0000ff;cursor:pointer;}
+.white{background:#FEFAEB;}
+.yellow{background:#FFFFFF;}
+.sn_white{background:#FEFAEB;cursor:pointer;}
+.sn_yellow{background:#FFFFFF;cursor:pointer;}
+.purple{background-color:#DBA4C8;}
+.redback{background-color:#ff0000;}
+.blueback{background-color:#4661F4;}
+.yellowback{background-color:#F5C850;}
+.poter{cursor:pointer;}
+.whiteWord{color:#cccccc;}
+.blueWord{color:#0000ff;}
+.red{color:#ff0000;}
+.blackword{color:#000000;font-family:Arial;font-weight:900;}
+.bold{font-weight:bold;}
+.enfont{font-family:Arial;}
+.ch_background_white{background:#FFFFFF url(/images/ch_back.gif) no-repeat center;color:#333333;font-family:Arial;}
+.ch_background_yellow{background:#FEFAEB url(/images/ch_back.gif) no-repeat center;color:#333333;font-family:Arial;}
+.ch_background_black{background:#FFFFFF url(/images/ch_back.gif) no-repeat center;font-family:Arial;color:#000000;}
+.ch_background_red{background:#FFFFFF url(/images/ch_back_red.gif) no-repeat center;font-family:Arial;color:#ff0000;}
+.ch_background_blue{background:#FFFFFF url(/images/ch_back_blue.gif) no-repeat center;font-family:Arial;color:#0000ff;}
+.hz_background_white{background:#FEFAEB url(/images/hzback.gif) no-repeat center;color:#ffffff;font-family:Arial;font-weight:bold;}
+.hz_background_yellow{background:#FFFFFF url(/images/hzback.gif) no-repeat center;color:#ffffff;font-family:Arial;font-weight:bold;}
+.background_white{background:#FEFAEB url(/images/zst4.gif) no-repeat center;color:#ffffff;font-family:Arial;font-weight:bold;}
+.background_yellow{background:#FFFFFF url(/images/zst3.gif) no-repeat center;color:#ffffff;font-family:Arial;font-weight:bold;}
+.zstpur_backyellow{background:#FFFFFF url(/images/zst5.gif) no-repeat center;color:#ffffff;font-family:Arial;font-weight:bold;}
+.zstpur_backwhite{background:#FEFAEB url(/images/zst5.gif) no-repeat center;color:#ffffff;font-family:Arial;font-weight:bold;}
+.zstpur_backpurple{background:#DBA4C8 url(/images/zst5.gif) no-repeat center;color:#ffffff;font-family:Arial;font-weight:bold;}
+.zstred_backyellow{background:#FFFFFF url(/images/zst2.gif) no-repeat center;color:#ffffff;font-family:Arial;font-weight:bold;}
+.zstred_backwhite{background:#FEFAEB url(/images/zst2.gif) no-repeat center;color:#ffffff;font-family:Arial;font-weight:bold;}
+.zstblue_backyellow{background:#FFFFFF url(/images/zst1.gif) no-repeat center;color:#ffffff;font-family:Arial;font-weight:bold;}
+.zstblue_backwhite{background:#FEFAEB url(/images/zst1.gif) no-repeat center;color:#ffffff;font-family:Arial;font-weight:bold;}
+.hz_white{background:#FFFFFF url(/images/hzback.gif) no-repeat center;color:#ffffff;font-family:Arial;}
+.redback_white{background:#FFFFFF url(/images/redback.gif) no-repeat center;color:#ffffff;font-family:Arial;}
+.pl{height:30px;background-color:#ffffff;font-weight:bold;font-family:Arial;vertical-align:bottom;}
+.plv{font-size:11px;font-family:arial;}
+
+.selectNumred{background:url(/images/zst2.gif) no-repeat center;font-size:12px;color:#ffffff;font-family:Arial;font-weight:bold;height:25px;line-height:25px;}
+.selectNumblue{background:url(/images/zst1.gif) no-repeat center;font-size:12px;color:#ffffff;font-family:Arial;font-weight:bold;height:25px;line-height:25px;}
+.selectNumkong{background:url(/images/ch_back.gif) no-repeat center;font-size:12px;color:#000000;font-family:Arial;height:25px;line-height:25px;}
+.selectNumXX{background:url(/images/hzback.gif) no-repeat center;font-size:12px;font-family:Arial;height:23px;width:89%;margin:0px;padding-top:4px;color:#ffffff;}
+.selectBKred{background-color:#ff0000;font-size:12px;width:89%;color:#ffffff;}
+.selectBKyellow{background-color:#F5C850;font-size:12px;width:89%;color:#ffffff;}
+.selectBKblue{background-color:#4661F4;font-size:12px;width:89%;color:#ffffff;}
+.cp_bycllleft{font-family:Arial;background:#FFFFFF;font-size:14px;height:60px;margin:0px;text-align:center;border-right:#d0d0d0 solid 1px;}
+.cp_bycllright{font-family:Arial;background:#FFFFFF;font-size:14px;height:60px;margin:0px;text-align:center;}
+.cp_chakan{text-align:center;float:left;width:330px;margin:0px auto;}
+.cp_chakan a{text-align:center;color:#999999;text-decoration:underline;margin:0px auto;font-weight:bold;font-size:14px;}
+.cp_bycllbt{background:url(/images/cp_buyol.gif) center no-repeat;width:190px;height:43px;color:#999999;background-color:#ffffff;cursor:pointer;border:0px;}
+.tip{left:576px;text-align:center;position:absolute;top:139px;z-index:100;color:#000;font-size:12px;font-family:Arial;}
+
+#ShowExplain{margin:0 auto;width:997px;background-color:#ffffff;}
+#ShowExplain .title{margin-left:10px;text-align:left;height:20px;line-height:20px;font-size:14px;font-weight:bold;}
+#ShowExplain .list{margin-left:10px;clear:both;}
+#ShowExplain .content{float:left;text-align:left;height:20px;line-height:20px;font-size:14px;}
+#ShowExplain .mag{margin-left:30px;}
+
+/*------Basketball Lottery------*/
+.thead{height:30px;background:#fff094;}
+.theadblue{height:30px;background:#fff094;color:#0000ff;cursor:pointer;}
+.bkc{background:#ebebeb;height:24px;}
+.bkw{background:#f6f6f6;height:24px;}
