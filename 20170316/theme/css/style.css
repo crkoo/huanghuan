@@ -590,10 +590,27 @@ body {
     background-position: 100% 100%;
   }
 }
+@keyframes cloud {
+  from {
+    background-position: 0% 100%;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
+@keyframes cloud {
+  from {
+    background-position: 0% 100%;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
 .header {
   *zoom: 1;
   padding: 20px 0;
   position: relative;
+  height: 113px;
 }
 .header:before,
 .header:after {
@@ -607,9 +624,16 @@ body {
   float: left;
   position: relative;
 }
+.header .logo .flash {
+  position: absolute;
+  width: 252px;
+  height: 87px;
+  top: -20px;
+  left: 0;
+}
 .header .logo-wenzi {
   position: absolute;
-  top: 70px;
+  top: 50px;
   left: 0;
   width: 287px;
   height: 66px;
