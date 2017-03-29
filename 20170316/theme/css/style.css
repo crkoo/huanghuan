@@ -950,8 +950,9 @@ div#slideshow {
 
 }
 .kaihubg.cur{
-	top: 128px;
-}.kaihubg.cur .kaihu{
+	top: 200px;
+}
+.kaihubg.cur .kaihu{
 	top: 0px;
 }
 .kaihu{
