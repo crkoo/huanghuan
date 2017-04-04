@@ -321,11 +321,6 @@ body {
 5\25 {
      width: 23.75%;
  }
-
-    .container {
-        width: 95%;
-    }
-
 }
 
 @media screen and (max-width: 840px) {
@@ -1792,15 +1787,12 @@ u\24 + *,
 /* Basic */
 
 body {
-    background-color: #597aff;
+    background-color: #fff;
     font-family: "微软雅黑", "Microsoft YaHei", 'Source Sans Pro', sans-serif;
     font-size: 18pt;
     line-height: 1.75em;
-    font-weight: 300;
     letter-spacing: 1px;
     color: #3a3939;
-    text-shadow: 0 0 0.5px rgba(58, 57, 57, 0.25);
-    -webkit-text-stroke: 0.25px;
 }
 
 body.is-scroll {
@@ -1826,13 +1818,10 @@ input, textarea, select {
     font-weight: 300;
     letter-spacing: 1px;
     color: #3a3939;
-    text-shadow: 0 0 0.5px rgba(58, 57, 57, 0.25);
-    -webkit-text-stroke: 0.25px;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
-    text-transform: uppercase;
     line-height: 1.75em;
 }
 
@@ -1857,21 +1846,6 @@ strong, b {
 
 em, i {
     font-style: italic;
-}
-
-a {
-    -moz-transition: border-color 0.35s ease-in-out, color 0.35s ease-in-out;
-    -webkit-transition: border-color 0.35s ease-in-out, color 0.35s ease-in-out;
-    -ms-transition: border-color 0.35s ease-in-out, color 0.35s ease-in-out;
-    transition: border-color 0.35s ease-in-out, color 0.35s ease-in-out;
-    /*color: #35b88f;*/
-    /*text-shadow: 0 0 0.5px rgba(53, 184, 143, 0.25);*/
-    text-decoration: none;
-    /*border-bottom: dotted 1px rgba(53, 184, 143, 0.5);*/
-}
-
-a:hover {
-    border-bottom-color: rgba(53, 184, 143, 0);
 }
 
 sub {
@@ -1946,7 +1920,8 @@ article:last-child {
 
 .image img {
     display: block;
-    width: 100%;
+    max-width: 100%;
+    line-height: 0;
 }
 
 .image.featured {
@@ -2405,12 +2380,13 @@ button.style3:hover,
 }
 
 /* Header */
-
+a {
+    text-decoration: none;
+}
 #header {
     height: 700px;
     position: relative;
     color: #fff;
-    text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
     text-align: center;
     margin: 0;
     padding: 109px 0 14em 0;
@@ -2431,12 +2407,13 @@ button.style3:hover,
 
 #header header .kf {
     margin: 40px auto 0;
-    padding-left: 45px;
+    padding-left: 60px;
     padding-top: 17px;
     width: 331px;
     height: 60px;
     background: url("../../images/kf_bg.png") no-repeat left top;
     font-size: 18px;
+    line-height: 40px;
 }
 
 #header header .kf a {
@@ -2490,7 +2467,7 @@ button.style3:hover,
 
 #banner header span, #advantage header span, #portfolio header span,#webcom header span {
     display: inline-block;
-    padding: 0.3em 2em 0.3em 2em;
+    padding: 0.3em 3em 0.3em 3em;
     border-radius: 3em;
     font-weight: 400;
     font-size: 36px;
@@ -2507,6 +2484,7 @@ button.style3:hover,
 #banner p {
     margin: 0;
     font-size: 16px;
+    font-weight: normal;
 }
 
 #banner footer,#advantage footer,#portfolio footer {
@@ -2573,7 +2551,6 @@ button.style3:hover,
     font-size: 16px;
     letter-spacing: normal;
     margin-bottom: 0;
-    /*line-height: 1.5;*/
 }
 #advantage .container.box_2 .image-left {
     float: right;
@@ -2613,10 +2590,10 @@ button.style3:hover,
     color: #4e4e4e;
     text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
     text-align: center;
-    background: #e5e8ea url("images/bg-5.jpg") bottom center no-repeat;
+    background: #e5e8ea url("images/bg-5.jpg") top center no-repeat;
     padding: 41px 0 0 0;
     margin: 0;
-    background-size: 125% auto;
+    background-size: 125% 100%;
 }
 #webcom header p {
     font-size: 18px;
@@ -2628,12 +2605,13 @@ button.style3:hover,
 }
 #webcom li .form-left {
     float: left;
-    width: 260px;
+    width: 26%;
     text-align: right;
+    line-height: 40px;
 }
 #webcom li .form-right {
     float: left;
-    width: 720px;
+    width: 74%;
     text-align: left;
 }
 #webcom form input[type="text"] {
@@ -2655,6 +2633,13 @@ button.style3:hover,
     font-size: 18px;
     padding: 0.5em 3em;
     margin-bottom: 2em;
+}
+#webcom #img_captcha {
+    width: 120px;
+    height: 40px;
+}
+#webcom form input[type="text"],#webcom #img_captcha{
+    vertical-align: middle;
 }
 
     /* Footer */
@@ -2854,7 +2839,6 @@ button.style3:hover,
 
     /* Banner */
     #banner {
-        padding: 4em 0 4em 0;
         background-size: auto, 175% auto;
     }
 
@@ -2866,7 +2850,7 @@ button.style3:hover,
 
     /* Basic */
     body {
-        background-color: #203936;
+        background-color: #fff;
         background-image: url("images/overlay.png"), url("../../images/bg-alt.jpg");
         background-repeat: repeat, no-repeat;
         background-size: auto, 100% auto;
@@ -2921,17 +2905,6 @@ button.style3:hover,
     .box.style3 {
         padding: 2.5em 2em 2.5em 2em;
     }
-
-    /* Banner */
-    #banner {
-        padding: 3.5em;
-        background-size: 200% auto;
-    }
-
-    #banner br {
-        display: none;
-    }
-
 }
 
 /* Mobile */
@@ -3062,7 +3035,7 @@ button.style3:hover,
 
     /* Header */
     #header {
-        padding: 6em 0 6em 0;
+        height: auto;
     }
 
     #header header {
@@ -3075,41 +3048,15 @@ button.style3:hover,
         letter-spacing: 6px;
     }
 
-    #header footer {
-        bottom: 4.5em;
-        padding: 0 2em 0 2em;
+    #advantage .image-left,#advantage .container.box_2 .image-left {
+        float: none;
+        width: 100%;
+        text-align: left;
     }
-
-    #header footer:after {
-        bottom: -4.5em;
-        left: 50%;
-        height: 4.5em;
+    #advantage .image-text,#advantage .container.box_2 .image-text {
+        float: none;
+        width: 100%;
     }
-
-    #header footer:before {
-        width: 45px;
-        height: 33px;
-        bottom: -2.25em;
-        margin-left: -22.5px;
-        margin-bottom: -16.5px;
-        background-size: 45px 33px;
-    }
-
-    /* Banner */
-    #banner {
-        padding: 3em 2em 3em 2em;
-        background-size: auto 150%;
-    }
-
-    #banner header {
-        margin: 0 0 1em 0;
-    }
-
-    #banner header h2 {
-        font-size: 1.5em;
-        letter-spacing: 6px;
-    }
-
     /* Footer */
     #footer .icons {
         padding: 0.5em 1.25em 0.5em 1.25em;
