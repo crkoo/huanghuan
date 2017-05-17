@@ -65,9 +65,11 @@ function status(status,id){
     if (id == ''){
         return false;
     }
-    $.post('index.php?m=admin&a=news_status&_'+Math.random(), {id: id, status: status}, function(json){
+    $.post('index.php?m=ucenter&a=status&_'+Math.random(), {id: id, status: status}, function(json){
         if (json.errcode == 0){
-            $("#status_"+id).attr('src','/skins/images/status_'+json.errmsg+'.gif');
+            alert('更新成功');
+            //$("#status_"+id).attr('src',SKINS+'images/status_'+status+'.gif');
+            location.reload();
         }else{
             alert(json.errmsg);
             return false;

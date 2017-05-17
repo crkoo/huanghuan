@@ -15,6 +15,6 @@ if ($tpl){
 if ($a == 'out'){
     unset($_SESSION['nick']);
     session_destroy();
-    header("Location: home.php?m=login");
+    header("Location: index.php?m=login");
 }
 include('templets/admin.index.php');

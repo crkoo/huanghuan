@@ -6,7 +6,50 @@
  * Time: 下午3:18
  */
 if ($a == 'index'){
-
+    $list = $db->getLineAll("select * from cp99_admin");
+}elseif ($a == 'edit'){
+    if (!empty($_POST)){
+        $id = isset($_POST['id']) ? intval($_POST['id']) : null;
+        $username = isset($_POST['username']) ? $_POST['username'] : null;
+        $pwd = isset($_POST['pwd']) ? $_POST['pwd'] : null;
+        $sure_pwd = isset($_POST['sure_pwd']) ? $_POST['sure_pwd'] : null;
+        if (empty($id)){
+            if (empty($username)){
+                ShowMsg('用户名不能为空', -1);
+                exit;
+            }
+            if (empty($pwd) || empty($sure_pwd)){
+                ShowMsg("请确认密码是否输入", -1);
+                exit;
+            }
+            if (md5($pwd) != md5($sure_pwd)){
+                ShowMsg('两次输入的密码不一致', -1);
+                exit;
+            }
+            $db->insert('cp99_admin', array('admin_user' => $username, 'admin_password' => md5($pwd)));
+        }else{
+            $find = $db->getLine("select * from cp99_admin where id=".$id);
+            if (empty($find)){
+                ShowMsg('用户数据不存在', -1);
+                exit;
+            }
+            if (!empty($pwd) && md5($pwd) != md5($sure_pwd)){
+                ShowMsg('两次输入的密码不一致', -1);
+                exit;
+            }
+            $db->update('cp99_admin', $find['id'], "`admin_password`='".md5($pwd)."'");
+            ShowMsg("修改成功", 'index.php?m=ucenter&a=index');
+            exit;
+        }
+    }
+    $id = isset($_GET['id']) ? intval($_GET['id']) : null;
+    if (!empty($id)){
+        $data = $db->getLine("select * from cp99_admin where id=".$id);
+    }else{
+        $data = array(
+            'id' => null
+        );
+    }
 }elseif ($a == 'passwd'){
     if ($_POST){
         $mid = $_SESSION['uid'];
@@ -37,6 +80,18 @@ if ($a == 'index'){
             exit();
         }
     }
+}elseif ($a == 'status'){
+    $id = isset($_POST['id']) ? intval($_POST['id']) : null;
+    $status = isset($_POST['status']) ? intval($_POST['status']) : null;
+    if (is_null($id) || is_null($status)){
+        outputJson(1, '参数传递错误.');
+    }
+    $user = $db->getLine("select id from cp99_admin where id=$id");
+    if(empty($user)){
+        outputJson(1, '数据不存在');
+    }
+    $db->update('cp99_admin', $id, "`admin_status`=".$status);
+    outputJson(0, 'ok');
 }else{
     header('HTTP/1.1 404 Not Found', true, 404);
 }

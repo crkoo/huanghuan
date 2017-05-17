@@ -6,6 +6,38 @@
  * Time: 上午11:53
  */
 
+function getActiveName($activeId){
+    switch ($activeId){
+        case 4:
+            return '修改会员登入密码';
+        break;
+        case 8:
+            return '会员账号解冻';
+        break;
+        case 6:
+            return '忘记会员账号';
+        break;
+        case 9:
+            return '修改真实姓名';
+        break;
+        case 12:
+            return '修改银行账号';
+        break;
+        case 7:
+            return '修改银行地址';
+        break;
+        case 5:
+            return '修改银行名称';
+        break;
+        case 13:
+            return '修改会员取款密码';
+        break;
+        default:
+            return '';
+        break;
+    }
+}
+
 function httpGet($url) {
     $curl = curl_init();
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);

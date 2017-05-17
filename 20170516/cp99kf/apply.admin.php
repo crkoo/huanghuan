@@ -5,143 +5,92 @@
  * Date: 2017/5/17
  * Time: 16:35
  */
-?>
-<!doctype html>
-<html lang="zh-CN">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>申请列表</title>
-    <link href="<?=SKINS?>css/admin.css" rel="stylesheet" type="text/css" />
-    <link href="<?=SKINS?>js/calendar/calendar-blue.css" rel="stylesheet" type="text/css" />
-    <script src="<?=SKINS?>js/jquery-1.11.3.min.js"></script>
-    <script>var SKINS = '<?=SKINS?>';</script>
-    <script src="<?=SKINS?>js/calendar/calendar.js"></script>
-</head>
-<body>
-<?=tpl('admin.header.php')?>
-<div class="content clearfix">
-    <?=tpl('admin.left.php', $m, $a)?>
-    <div class="right fl">
-        <div class="box">
-            <div class="boxHead"><span>申请列表</span></div>
-            <div class="boxBody">
-                <div class="search_form">
-                    <form action="index.php" method="get" enctype="multipart/form-data">
-                        <input type="hidden" name="m" value="apply">
-                        <input type="hidden" name="a" id="a" value="index">
-                        关键词：<input type="text" name="keywords" class="text" value="<?=$keywords?>">
-                        项目：
-                        <select name="activeId">
-                            <option value="">请选择</option>
-                            <option value="4">修改会员登入密码</option>
-                            <option value="8">会员账号解冻</option>
-                            <option value="6">忘记会员账号</option>
-                            <option value="9">修改真实姓名</option>
-                            <option value="12">修改银行账号</option>
-                            <option value="7">修改银行地址</option>
-                            <option value="5">修改银行名称</option>
-                            <option value="13">修改会员取款密码</option>
-                        </select>
-                        状态：
-                        <select name="status">
-                            <option value="">全部</option>
-                            <option value="0">等待审核</option>
-                            <option value="1">已通过</option>
-                            <option value="2">已拒绝</option>
-                        </select>
-                        时间：
-                        <input type="text" name="time_start" id="time_start" class="date text" size="12" value="<?=$time_start?>">
-                        <script language="javascript" type="text/javascript">
-                            Calendar.setup({
-                                inputField     :    "time_start",
-                                ifFormat       :    "%Y-%m-%d",
-                                showsTime      :    'true',
-                                timeFormat     :    "24"
-                            });
-                        </script>
-                        -
-                        <input type="text" name="time_end" id="time_end" class="date text" size="12" value="<?=$time_end?>">
-                        <script language="javascript" type="text/javascript">
-                            Calendar.setup({
-                                inputField     :    "time_end",
-                                ifFormat       :    "%Y-%m-%d",
-                                showsTime      :    'true',
-                                timeFormat     :    "24"
-                            });
-                        </script>
-                        <input type="submit" value="搜 索">
-                        <input type="button" onClick="location.href='home.php?m=photo&a=modify';" value=" 添 加 ">
-                    </form>
-                </div>
-                <div class="list_box">
-                    <form action="" method="post" name="form" id="form">
-                        <table width="100%" class="tablestyle">
-                            <tr class="tl back">
-                                <th>编号</th>
-                                <th>申请账号</th>
-                                <th>修改项目</th>
-                                <th>审核状态</th>
-                                <th>申请时间</th>
-                                <th>回复状态</th>
-                                <th>回复时间</th>
-                                <th>操作</th>
-                            </tr>
-                            <?php
-                            if (!empty($list)){
-                                foreach ($list as $k=>$vo){
-                                    ?>
-                                    <tr data-id="<?=$vo['id']?>">
-                                        <td>
-                                            <label>
-                                                <input type="checkbox" name="checkBox[]" value="<?=$vo['id']?>" />
-                                                <?=$vo['id']?>
-                                            </label>
-                                        </td>
-                                        <td><?=$vo['account']?></td>
-                                        <td><?=$vo['activeName']?></td>
-                                        <td><?=$vo['status']?></td>
-                                        <td><?=date('Y-m-d H:i:s', $vo['addTime'])?></td>
-                                        <td><?=$vo['is_reply']?></td>
-                                        <td><?=date('Y-m-d H:i:s', $vo['updateTime'])?></td>
-                                        <td>
-                                            [<a href="index.php?m=apply&a=modify&id=<?=$vo['id']?>" class="edit">回复</a>]
-                                            [<a href="index.php?m=apply&a=del&id=<?=$vo['id']?>" class="disabled">删除</a>]
-                                        </td>
-                                    </tr>
-                                    <?php
-                                }
-                            }else{
-                                ?>
-                                <tr>
-                                    <td colspan="7" class="tc">无数据</td>
-                                </tr>
-                                <?php
-                            }
-                            ?>
-                        </table>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<script src="<?=SKINS?>js/admin_common.js"></script>
-<script>
-    $(function(){
-        //删除
-        $(".disabled").click(function(e){
-            if (!confirm('确认删除?')){return false;}
-            e.preventDefault();
-            $.get($(this).attr('href'),function(data){
-                //
-                if (data.errcode) {
-                    alert(data.errmsg);
-                    return;
-                }
-                location.reload();
-            },'json');
-        });
-    });
-</script>
-</body>
-</html>
+if ($a == 'index'){
+    require_once(LIB.'page.class.php');
+    $status = isset($_GET['status']) && $_GET['status']!='' ? intval($_GET['status']) : null;
+    $where = " WHERE is_del=0";
+    $keywords = isset($_GET['keywords']) ? $_GET['keywords'] : "";
+    $activeId = isset($_GET['activeId']) ? $_GET['activeId'] : "";
+    if ($keywords){
+        $where .= " AND (`account` like '%{$keywords}%' OR `content` like '%{$keywords}%' OR `tips` like '%{$keywords}%')";
+    }
+    if ($activeId){
+        $where .= " AND `activeId`=".$activeId;
+    }
+    $time_start = isset($_GET['time_start']) && trim($_GET['time_start']) ? trim($_GET['time_start']) : '';
+    $time_end = isset($_GET['time_end']) && trim($_GET['time_end']) ? trim($_GET['time_end']) : '';
+    if ($time_start) {
+        $where .= " AND addTime>='" . strtotime($time_start) . "'";
+    }
+    if ($time_end) {
+        $where .= " AND addTime<='" . strtotime($time_end.' 23:59:59') . "'";
+    }
+    if ($status){
+        $where .= " AND status={$status}";
+    }
+    $sql = "SELECT * FROM `cp99_content` {$where} ORDER BY id DESC ";
+    $total = $db->count($sql);
+    if ($total){
+        $page = new Page($total, 15);
+        $sql .= " limit $page->firstcount,$page->displaypg";
+        $list = $db->getLineAll($sql);
+        $pageShow = $page->show_link();//显示分页
+    }
+}elseif ($a == 'modify'){
+    $data = $_POST;
+    if (!empty($data)){
+        unset($data['submit']);
+        if (empty($data['account'])){
+            ShowMsg("会员账号不能为空", -1);
+            exit;
+        }
+        if (empty($data['content'])){
+            ShowMsg("修改内容不能为空", -1);
+            exit;
+        }
+        if (!empty($data['tips'])){
+            $data['is_reply'] = 1;
+            $data['updateTime'] = time();
+            $data['updateIp'] = GetIP();
+        }
+        $data['activeName'] = getActiveName($data['activeId']);
+        if (empty($data['id'])){
+            unset($data['id']);
+            $data['addTime'] = time();
+            $data['ipaddr'] = GetIP();
+            $db->insert('cp99_content', $data);
+        }else{
+            $db->update('cp99_content', $data['id'], $data);
+        }
+        ShowMsg('数据编辑成功', 'index.php?m=apply&a=index');
+    }
+    $id = isset($_GET['id']) ? intval($_GET['id']) : null;
+    if (!empty($id)){
+        $data = $db->getLine("select * from cp99_content where id=".$id);
+    }else{
+        $data = array(
+            'id' => null,
+            'account' => null,
+            'activeId' => null,
+            'status' => null,
+            'content' => null,
+            'tips' => null,
+        );
+    }
+}elseif($a == 'del'){
+    $id = isset($_GET['id']) ? intval($_GET['id']) : null;
+    if (empty($id)){
+        outputJson(1, '参数传递错误');
+        exit;
+    }
+    $find = $db->getLine("select id from cp99_content where is_del=0 and id=".$id);
+    if (empty($find)){
+        outputJson(1, '数据不存在');
+    }
+    $db->update("cp99_content", $id, "`is_del`=1");
+    outputJson(0, 'ok');
+}else{
+    header('HTTP/1.1 404 Not Found', true, 404);
+}
+include('templets/admin.apply.'.$a.'.php');
+$db->close();

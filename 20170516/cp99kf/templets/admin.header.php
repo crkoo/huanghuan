@@ -10,7 +10,7 @@ $username = isset($_SESSION['nick']) ? $_SESSION['nick'] : "admin";
 <script>
 function logout(){
     if (confirm("您确定要退出控制面板吗？"))
-        top.location = "home.php?m=index&a=out";
+        top.location = "index.php?m=index&a=out";
     return false;
 }
 </script>
