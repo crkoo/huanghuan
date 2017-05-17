@@ -158,17 +158,18 @@
             <span class="modal-right-icon"></span>
         </div>
         <div class="modal-content">
+            <form action="" id="form1" method="post" enctype="application/x-www-form-urlencoded">
             <ul class="fm-list">
                 <li>
                     <label>请输入会员帐号：</label>
                     <span>
-                        <input class="ipt" type="text" id="account" name="account" value="" placeholder="请填写您的会员账号">
+                        <input class="ipt" type="text" id="apply_account1" name="account" value="" placeholder="请填写您的会员账号">
                     </span>
                 </li>
                 <li>
                     <label>请选择修改项目：</label>
                     <span>
-                        <select class="ipt" id="activeName" name="search_activeName">
+                        <select class="ipt activeId" id="activeId1" name="search_activeName">
                             <option value="4">修改会员登入密码</option>
                             <option value="8">会员账号解冻</option>
                             <option value="6">忘记会员账号</option>
@@ -183,13 +184,14 @@
                 <li class="form-content">
                     <label>修改内容：</label>
                     <span>
-                        <textarea class="textarea" placeholder="填写内容"></textarea>
+                        <textarea class="textarea" id="content1" placeholder="填写内容"></textarea>
                     </span>
                 </li>
                 <li>
-                    <button class="detail-fm-btn btn-submit" type="button" name="button">点击查询</button>
+                    <button class="detail-fm-btn btn-submit" type="button" name="button" id="save_button1">提交申请</button>
                 </li>
             </ul>
+            </form>
         </div>
     </div>
 </div>
@@ -199,7 +201,6 @@
 <script src="js/unslider.min.js"></script>
 <script src="js/miniTip.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
-<script type="text/javascript" src="commons/component/DatePicker/WdatePicker.js"></script>
 <script type="text/javascript">
     $(function() {
         //unslider

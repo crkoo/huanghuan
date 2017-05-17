@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50520
 File Encoding         : 65001
 
-Date: 2017-05-17 18:23:37
+Date: 2017-05-17 22:09:33
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -33,7 +33,7 @@ CREATE TABLE `cp99_admin` (
 -- ----------------------------
 -- Records of cp99_admin
 -- ----------------------------
-INSERT INTO `cp99_admin` VALUES ('2', 'root', 'e10adc3949ba59abbe56e057f20f883e', '0', '3', '1', '');
+INSERT INTO `cp99_admin` VALUES ('2', 'root', 'e10adc3949ba59abbe56e057f20f883e', '0', '4', '1', '');
 INSERT INTO `cp99_admin` VALUES ('4', 'admin', 'e10adc3949ba59abbe56e057f20f883e', '0', '1', '0', '');
 
 -- ----------------------------
@@ -57,11 +57,17 @@ CREATE TABLE `cp99_content` (
   `updateTime` int(10) DEFAULT NULL COMMENT '审核时间',
   `updateIp` char(30) DEFAULT NULL COMMENT '审核IP',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='申请表';
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COMMENT='申请表';
 
 -- ----------------------------
 -- Records of cp99_content
 -- ----------------------------
-INSERT INTO `cp99_content` VALUES ('1', 'gfds', '4', '修改会员登入密码', 'gfdsgfds', '0', '', null, null, '0', '1', '1495016236', '127.0.0.1', null, null);
-INSERT INTO `cp99_content` VALUES ('2', 'gfds', '4', '修改会员登入密码', 'gfdsgfds', '0', '', null, null, '0', '1', '1495016236', '127.0.0.1', null, null);
-INSERT INTO `cp99_content` VALUES ('3', 'gfds', '4', '修改会员登入密码', 'gfdsgfds', '0', '', null, null, '0', '1', '1495016251', '127.0.0.1', null, null);
+INSERT INTO `cp99_content` VALUES ('1', 'gfds', '4', '修改会员登入密码', 'gfdsgfds', '1', '', null, null, '0', '0', '1495016236', '127.0.0.1', null, null);
+INSERT INTO `cp99_content` VALUES ('2', 'gfds', '4', '修改会员登入密码', 'gfdsgfds', '1', '', null, null, '0', '0', '1495016236', '127.0.0.1', null, null);
+INSERT INTO `cp99_content` VALUES ('3', 'gfds', '4', '修改会员登入密码', 'gfdsgfds', '1', '', null, null, '0', '0', '1495016251', '127.0.0.1', null, null);
+INSERT INTO `cp99_content` VALUES ('4', 'tes', '6', '忘记会员账号', 'dsafda', '1', '3q', null, null, '1', '0', '1495029337', '127.0.0.1', '1495029465', '127.0.0.1');
+INSERT INTO `cp99_content` VALUES ('5', 'forgt', '6', '忘记会员账号', '我的账号忘记了，邮箱是hello', '1', 'ok', null, null, '1', '0', '1495029380', '127.0.0.1', '1495029457', '127.0.0.1');
+INSERT INTO `cp99_content` VALUES ('6', 'fda', '8', '会员账号解冻', 'fdsa', '1', 'ok', null, null, '1', '0', '1495029498', '127.0.0.1', '1495029519', '127.0.0.1');
+INSERT INTO `cp99_content` VALUES ('7', 'lq20001008', '5', '修改银行名称', '真实姓名:李琴 银行卡卡号:6215582316003623281 旧银行名称:中国银行 新银行名称:工商银行', '1', '您好，已经为您修改成功了哦！', '2', 'root', '1', '0', '1495029587', '127.0.0.1', '1495029698', '127.0.0.1');
+INSERT INTO `cp99_content` VALUES ('8', 'xb1230', '4', '修改会员登入密码', '真实姓名:许斌 银行卡卡号:6216608100001151943', '1', '您好，您的密码已经为您修改成了ss123456，请您登陆之后点击会员中心及时修改您的密码，尽量控制在10位数内/由数字及字母组成的密码，顺便同步下您的MG密码哦，非常感谢您对我司的支持与信赖，祝您生活愉快，玩的开心，赢得精彩！', '2', 'root', '1', '0', '1495029735', '127.0.0.1', '1495029754', '127.0.0.1');
+INSERT INTO `cp99_content` VALUES ('9', 'buzhidao8', '12', '修改银行账号', '真实姓名:张洪朝 旧银行卡卡号:6221884930016425741 新银行卡卡号:6222022402014939488 新银行卡所属银行:中国工商银行 新卡号开户地址:河南洛阳分支行', '1', '已经为您修改 好了哦', '2', 'root', '1', '0', '1495029779', '127.0.0.1', '1495029794', '127.0.0.1');

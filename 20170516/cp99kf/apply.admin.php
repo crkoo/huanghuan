@@ -52,6 +52,8 @@ if ($a == 'index'){
             $data['is_reply'] = 1;
             $data['updateTime'] = time();
             $data['updateIp'] = GetIP();
+            $data['userId'] = $_SESSION['uid'];
+            $data['userName'] = $_SESSION['nick'];
         }
         $data['activeName'] = getActiveName($data['activeId']);
         if (empty($data['id'])){

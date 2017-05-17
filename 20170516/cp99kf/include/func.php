@@ -300,8 +300,8 @@ if (!function_exists('redirect')){
  * @return string 返回json格式数据
  */
 if (!function_exists('outputJson')){
-    function outputJson($errcode = 0, $errmsg = ''){
-        $msg = array('errcode'=>$errcode,'errmsg'=>$errmsg);
+    function outputJson($errcode = 0, $errmsg = '', $data = null){
+        $msg = array('errcode'=>$errcode, 'errmsg'=>$errmsg, 'data' => $data);
         echo json_encode($msg);
         exit();
     }
