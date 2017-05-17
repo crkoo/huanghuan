@@ -50,16 +50,16 @@
             <div class="left">
                 <ul class="btn">
                     <li>
-                        <a href='#dialog-01' onclick="showDetail()"><img class='sa' src='images/menu_01.png'><img class='sb' src='images/menu_01.png'></a>
+                        <a href='javascript:void(0);' onclick="getModerName(9)"><img class='sa' src='images/menu_01.png'><img class='sb' src='images/menu_01.png'></a>
                     </li>
                     <li>
-                        <a href='#dialog-02'><img class='sa' src='images/menu_02.png'><img class='sb' src='images/menu_02.png'></a>
+                        <a href='javascript:void(0);' onclick="getModerName(7)"><img class='sa' src='images/menu_02.png'><img class='sb' src='images/menu_02.png'></a>
                     </li>
                     <li>
-                        <a href='#dialog-03'><img class='sa' src='images/menu_03.png'><img class='sb' src='images/menu_03.png'></a>
+                        <a href='javascript:void(0);' onclick="getModerName(5)"><img class='sa' src='images/menu_03.png'><img class='sb' src='images/menu_03.png'></a>
                     </li>
                     <li>
-                        <a href='#dialog-04'><img class='sa' src='images/menu_04.png'><img class='sb' src='images/menu_04.png'></a>
+                        <a href='javascript:void(0);' onclick="getModerName(13)"><img class='sa' src='images/menu_04.png'><img class='sb' src='images/menu_04.png'></a>
                     </li>
                     <li>
                         <a href='https://v88.live800.com/live800/chatClient/chatbox.jsp?companyID=18228&configID=1215&jid=&s=1' target='_blank'><img class='sa' src='images/menu_05.png'><img class='sb' src='images/menu_05.png'></a>
@@ -69,16 +69,16 @@
             <div class="right">
                 <ul class="btn">
                     <li>
-                        <a href='#dialog-05'><img class='sa' src='images/menu_06.png'><img class='sb' src='images/menu_06.png'></a>
+                        <a href='javascript:void(0);' onclick="getModerName(4)"><img class='sa' src='images/menu_06.png'><img class='sb' src='images/menu_06.png'></a>
                     </li>
                     <li>
-                        <a href='#dialog-06'><img class='sa' src='images/menu_07.png'><img class='sb' src='images/menu_07.png'></a>
+                        <a href='javascript:void(0);' onclick="getModerName(8)"><img class='sa' src='images/menu_07.png'><img class='sb' src='images/menu_07.png'></a>
                     </li>
                     <li>
-                        <a href='#dialog-07'><img class='sa' src='images/menu_08.png'><img class='sb' src='images/menu_08.png'></a>
+                        <a href='javascript:void(0);' onclick="getModerName(6)"><img class='sa' src='images/menu_08.png'><img class='sb' src='images/menu_08.png'></a>
                     </li>
                     <li>
-                        <a href='#dialog-08'><img class='sa' src='images/menu_09.png'><img class='sb' src='images/menu_09.png'></a>
+                        <a href='javascript:void(0);' onclick="getModerName(12)"><img class='sa' src='images/menu_09.png'><img class='sb' src='images/menu_09.png'></a>
                     </li>
                     <li>
                         <a href='https://v88.live800.com/live800/chatClient/chatbox.jsp?companyID=18228&configID=1215&jid=&s=1' target='_blank'><img class='sa' src='images/menu_05.png'><img class='sb' src='images/menu_05.png'></a>
@@ -154,17 +154,40 @@
     <div id="msgDetail">
         <div class="modal-header">
             <span class="modal-left-icon"></span>
-            <span class="modal-title">填写修改信息</span>
+            <span class="modal-title" id="dialogTitle">填写修改信息</span>
             <span class="modal-right-icon"></span>
         </div>
         <div class="modal-content">
             <ul class="fm-list">
                 <li>
-                    <label for="">请输入会员帐号：</label>
-                    <input class="ipt" type="text" id="account" name="account" value="" placeholder="请填写您的会员账号">
+                    <label>请输入会员帐号：</label>
+                    <span>
+                        <input class="ipt" type="text" id="account" name="account" value="" placeholder="请填写您的会员账号">
+                    </span>
                 </li>
                 <li>
-                    <button class="btn-submit j-btn-submit" type="button" name="button"></button>
+                    <label>请选择修改项目：</label>
+                    <span>
+                        <select class="ipt" id="activeName" name="search_activeName">
+                            <option value="4">修改会员登入密码</option>
+                            <option value="8">会员账号解冻</option>
+                            <option value="6">忘记会员账号</option>
+                            <option value="9">修改真实姓名</option>
+                            <option value="12">修改银行账号</option>
+                            <option value="7">修改银行地址</option>
+                            <option value="5">修改银行名称</option>
+                            <option value="13">修改会员取款密码</option>
+                        </select>
+                    </span>
+                </li>
+                <li class="form-content">
+                    <label>修改内容：</label>
+                    <span>
+                        <textarea class="textarea" placeholder="填写内容"></textarea>
+                    </span>
+                </li>
+                <li>
+                    <button class="detail-fm-btn btn-submit" type="button" name="button">点击查询</button>
                 </li>
             </ul>
         </div>

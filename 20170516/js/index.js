@@ -18,7 +18,7 @@ $(function() {
 			.ajax({
 				type : "POST",
 				async : false,
-				url : "/ylgkf/baseAction.do",
+				url : "/cp99kf/baseAction.php",
 				data : {
 					ctrl_action : "applyAction",
 					ctrl_method : "queryUnEditTeams"
@@ -55,8 +55,10 @@ $(function() {
 				},
 				dataType : "json"
 			});
-	
 
+	$("#activeName").on('change', function (e) {
+		$("#dialogTitle").html($(this).find("option:selected").text());
+	});
 });
 //弹出1
 function showDetail() {
@@ -81,7 +83,7 @@ function searchApplyList(currentPage) {
 			.ajax({
 				type : "POST",
 				async : false,
-				url : "/ylgkf/baseAction.do",
+				url : "/cp99kf/baseAction.php",
 				data : {
 					ctrl_action : "applyAction",
 					ctrl_method : "queryCurUserInfo",
@@ -136,28 +138,9 @@ function searchApplyList(currentPage) {
 
 
 function getModerName(showval) {
-
-	//getmoderInputName(showval);
 	showDetail();
-	$('#modal-1').hide();
-	$('#modal-2').hide();
-	$("#modalA-"+showval).show();
-	$('#msgShut').click(function(){
-	      $('#bgDiv,#msgDiv').hide();
-	      $("#modalA-"+showval).hide();
-	    });
-	$("#verifycode"+showval).click(function() {
-		var rand = parseInt(Math.random() * (100 - 0 + 1));
-		var src = $("#verifycode"+showval).attr("src");
-		$("#verifycode"+showval).attr("src", src + "?" + rand);
-	});
-	$("#view_button"+showval).click(function() {
-		   showDetail();
-		    $("#account").val("");
-		    $('#modal-1').show();
-		    $('#modal-2').hide();
-		    $("#modalA-"+showval).hide();
-		});
+	$("#activeName").val(showval);
+	$("#dialogTitle").html($("#activeName").find("option:selected").text());
 	$("#save_button"+showval).click(function() {
 		inputNameList="";
 		msg="";
@@ -178,7 +161,7 @@ function getModerName(showval) {
 			flag=false;
 		$.ajax({
 			type : "POST",
-			url : "/ywhd/baseAction.do",
+			url : "/cp99kf/baseAction.php",
 			data : {
 				ctrl_action : "applyAction",
 				ctrl_method : "applySaveMold",

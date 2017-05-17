@@ -904,7 +904,7 @@ body {
 	top: 3px
 }
 
-.detail .detail-fm .detail-fm-btn {
+.detail-fm-btn {
 	background: url(../images/btn-detail-fm.png);
 	border: 0;
 	width: 157px;
@@ -1144,14 +1144,15 @@ body {
 	-ms-box-sizing: content-box;
 	-webkit-box-sizing: content-box;
 	box-sizing: content-box;
-	width: 692px;
-	height: 552px;
+	width: 750px;
+	/*height: 552px;*/
+	min-height: 465px;
 	background: #fff;
 	border: solid 4px #c5c5c5;
 	position: fixed;
 	left: 50%;
 	top: 50%;
-	margin: -300px 0 0 -343px;
+	margin: -300px 0 0 -371px;
 	display: none;
 	font-size: 16px;
 	-moz-border-radius: 30px;
@@ -1171,7 +1172,8 @@ body {
 }
 
 #msgDiv #msgDetail {
-	height: 100%
+	height: 100%;
+	padding-bottom: 20px;
 }
 
 .modal-header {
@@ -1276,71 +1278,47 @@ body {
 }
 
 .modal-content .fm-list {
-	padding: 30px 0 0;
+	padding: 30px 0;
 	*zoom: 1
 }
 
-.modal-content .fm-list:before,.modal-content .fm-list:after {
-	content: "";
-	display: table
-}
-
-.modal-content .fm-list:after {
-	clear: both
-}
-
-.modal-content .fm-list.fm-list2 {
-	padding-top: 30px
-}
-
 .modal-content .fm-list label {
-	width: 130px;
+	width: 30%;
 	text-align: right;
 	display: inline-block;
 	color: #ec0800
 }
+.modal-content .fm-list span {
+	width: 69%;
+	display: inline-block;
+}
 
 .modal-content .fm-list .ipt {
 	height: 36px;
-	border: solid 1px #7c7c7c;
-	width: 240px;
+	border: 0 none;
+	background-color: #fff;
+	width: 80%;
 	padding: 0 10px;
 	color: #000
 }
-
-.modal-content .fm-list .yzmbox {
-	display: inline-block;
-	position: relative
+.modal-content .fm-list .form-content label {
+	vertical-align: top;
 }
-
-.modal-content .fm-list .yzmbox .yzmimg {
-	position: absolute;
-	right: 5px;
-	top: 5px
+.modal-content .fm-list .textarea {
+	border: 0 none;
+	background-color: #fff;
+	width: 80%;
+	padding: 0 10px;
+	color: #000;
+	height: 100px;
+	resize: none;
 }
 
 .modal-content .fm-list .btn-submit {
-	width: 207px;
-	height: 48px;
-	border: 0;
-	background: url(../images/btn-submit.png);
-	margin: 30px 0 0 70px
+	margin: 0 0 0 275px
 }
 
 .modal-content .fm-list .btn-submit:hover {
-	filter: alpha(opacity =   80);
-	opacity: .8
-}
-
-.modal-content .fm-list .btn-submit2 {
-	width: 178px;
-	height: 48px;
-	border: 0;
-	background: url(../images/btn-submit2.png);
-	margin: 10px 0 0 70px
-}
-
-.modal-content .fm-list .btn-submit2:hover {
 	filter: alpha(opacity =   80);
 	opacity: .8
 }
