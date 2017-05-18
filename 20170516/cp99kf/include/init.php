@@ -17,7 +17,7 @@ header("Content-type: text/html; charset=utf-8");
 session_start();
 date_default_timezone_set('Asia/Chongqing');
 define('ROOT', str_replace('include/init.php', '', str_replace('\\', '/', __FILE__)));
-define('DEVELOPMENT_ENVIRONMENT', true);//调试开关
+define('DEVELOPMENT_ENVIRONMENT', false);//调试开关
 define('DS', DIRECTORY_SEPARATOR);
 define('TPL', ROOT.DS.'templets'.DS);
 define('LIB', ROOT.DS.'include'.DS);

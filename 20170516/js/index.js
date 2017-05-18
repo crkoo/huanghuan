@@ -17,7 +17,7 @@ $(function() {
 	$.ajax({
 			type : "POST",
 			async : false,
-			url : "/20170516/cp99kf/baseAction.php",
+			url : "/cp99kf/baseAction.php",
 			data : {
 				ctrl_action : "applyAction",
 				ctrl_method : "queryUnEditTeams"
@@ -103,7 +103,7 @@ function getModerName(showval) {
 			flag=false;
 		$.ajax({
 			type : "POST",
-			url : "/20170516/cp99kf/baseAction.php",
+			url : "/cp99kf/baseAction.php",
 			data : {
 				ctrl_action : "applyAction",
 				ctrl_method : "applySaveMold",

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50520
 File Encoding         : 65001
 
-Date: 2017-05-17 22:09:33
+Date: 2017-05-18 19:57:43
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -20,21 +20,19 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `cp99_admin`;
 CREATE TABLE `cp99_admin` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `admin_name` varchar(50) CHARACTER SET utf8 COLLATE utf8_esperanto_ci NOT NULL,
-  `admin_password` varchar(64) CHARACTER SET utf8 COLLATE utf8_esperanto_ci NOT NULL DEFAULT 'e10adc3949ba59abbe56e057f20f883e',
-  `user_classify` bigint(20) unsigned DEFAULT '1',
-  `admin_number` bigint(20) NOT NULL,
+  `admin_password` varchar(64) CHARACTER SET utf8 COLLATE utf8_esperanto_ci NOT NULL DEFAULT '',
+  `admin_number` bigint(20) DEFAULT '0',
   `admin_status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '状态，1正常，0禁用',
-  `admin_remark` varchar(64) CHARACTER SET utf8 COLLATE utf8_esperanto_ci NOT NULL,
+  `admin_remark` varchar(64) CHARACTER SET utf8 COLLATE utf8_esperanto_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='管理员';
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='管理员';
 
 -- ----------------------------
 -- Records of cp99_admin
 -- ----------------------------
-INSERT INTO `cp99_admin` VALUES ('2', 'root', 'e10adc3949ba59abbe56e057f20f883e', '0', '4', '1', '');
-INSERT INTO `cp99_admin` VALUES ('4', 'admin', 'e10adc3949ba59abbe56e057f20f883e', '0', '1', '0', '');
+INSERT INTO `cp99_admin` VALUES ('1', 'root', 'e10adc3949ba59abbe56e057f20f883e', '0', '1', null);
 
 -- ----------------------------
 -- Table structure for `cp99_content`

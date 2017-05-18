@@ -1,0 +1,10 @@
+1、将目录下的cp99.sql导入到指定的数据库中；
+2、修改数据库配置文档，cp99kf/include/init.php
+       define('DB_HOST', 'localhost:3306');//数据库链接地址
+       define('DB_USER', 'root');//数据库用户名
+       define('DB_PASS', '123456');//数据库密码
+       define('DB_NAME', 'cp99');//数据库名称
+
+3、管理后台地址：http://xxxxxx.com/cp99kf/index.php?m=login
+    初始用户名：root
+    初始密码：123456

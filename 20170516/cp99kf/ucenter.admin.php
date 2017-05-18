@@ -26,7 +26,8 @@ if ($a == 'index'){
                 ShowMsg('两次输入的密码不一致', -1);
                 exit;
             }
-            $db->insert('cp99_admin', array('admin_user' => $username, 'admin_password' => md5($pwd)));
+            $db->insert('cp99_admin', array('admin_name' => $username, 'admin_password' => md5($pwd), 'admin_number' => 0, 'admin_status' => 1));
+            ShowMsg("添加成功", 'index.php?m=ucenter&a=index');
         }else{
             $find = $db->getLine("select * from cp99_admin where id=".$id);
             if (empty($find)){

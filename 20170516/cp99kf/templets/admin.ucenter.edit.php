@@ -24,7 +24,7 @@
             <div class="boxHead"><span>用户编辑</span></div>
             <div class="boxBody">
                 <div class="table_box">
-                    <form action="index.php?m=ucenter&a=edit" method="post" enctype="multipart/form-data">
+                    <form action="index.php?m=ucenter&a=edit" method="post" enctype="application/x-www-form-urlencoded">
                         <input type="hidden" name="id" value="<?=$data['id']?>">
                     <table width="100%;" class="tablestyle">
                         <tr>

@@ -25,7 +25,7 @@ function searchApplyList(currentPage) {
   $.ajax({
 		type : "POST",
 		async : false,
-		url : "/20170516/cp99kf/baseAction.php",
+		url : "/cp99kf/baseAction.php",
 		data : {
 			ctrl_action : "applyAction",
 			ctrl_method : "queryCurUserInfo",
