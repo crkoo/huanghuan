@@ -64,11 +64,11 @@
                         <input type="hidden" name="inputMsg" id="inputMsg" value="真实姓名,">
                         <input type="hidden" name="imj" id="imj" value="0">
                         <input type="hidden" name="imgurl" id="imgurl">
-                        <form id="uploadForm" action="/20170516/cp99kf/UploadImageAction.php" method="post" enctype="multipart/form-data">
+                        <form id="uploadForm" action="/cp99kf/UploadImageAction.php" method="post" enctype="multipart/form-data">
                             <input type="hidden" name="activeId" id="activeId" value="8">
                             <ul class="">
                                 <li><label for="">会员账号： </label><input class="ipt" placeholder="请填写您的会员账号" type="text" id="objaccount" name="objaccount"></li><li><label for="">真实姓名： </label><input class="ipt" name="attrib8" placeholder="请填写您的真实姓名" type="text"> </li>
-                                <li><label for="">验证码：</label> <input class="ipt" type="text" placeholder="请输入验证码" name="cfCode" id="cfCode"><img class="img1" id="verifycode" src="/20170516/cp99kf/verifyCodeAction.php"></li>
+                                <li><label for="">验证码：</label> <input class="ipt" type="text" placeholder="请输入验证码" name="cfCode" id="cfCode"><img class="img1" id="verifycode" src="/cp99kf/verifyCodeAction.php"></li>
 
                                 <li>
                                     <div class="upload_btn">提交申请</div><button type="button" id="fileSubmit" class="upload_submit_btn">确认上传文件</button>
@@ -170,7 +170,7 @@
                 console.info(response);
                 $.ajax({
                     type: "POST",
-                    url: "/20170516/cp99kf/baseAction.php",
+                    url: "/cp99kf/baseAction.php",
                     data: {
                         ctrl_action: "applyAction",
                         ctrl_method: "applySaveMold",

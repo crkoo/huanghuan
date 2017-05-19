@@ -63,7 +63,7 @@
                         <input type="hidden" name="inputMsg" id="inputMsg" value="旧的姓名,新的姓名,银行卡卡号,">
                         <input type="hidden" name="imj" id="imj" value="3">
                         <input type="hidden" name="imgurl" id="imgurl">
-                        <form id="uploadForm" action="/20170516/cp99kf/uploadImageAction.php" method="post" enctype="multipart/form-data">
+                        <form id="uploadForm" action="/cp99kf/uploadImageAction.php" method="post" enctype="multipart/form-data">
                             <input type="hidden" name="activeId" id="activeId" value="9">
                             <ul class="">
                                 <li>
@@ -103,7 +103,7 @@
                                 <li>
                                     <label>验证码：</label>
                                     <input class='ipt' type='text' placeholder='请输入验证码' name='cfCode' id='cfCode'>
-                                    <img class='img1' id='verifycode' src='/20170516/cp99kf/verifyCodeAction.php'/>
+                                    <img class='img1' id='verifycode' src='/cp99kf/verifyCodeAction.php'/>
                                 </li>
                                 <li>
                                     <div class='upload_btn'>提交申请</div>
@@ -206,7 +206,7 @@
                 console.info(response);
                 $.ajax({
                     type: "POST",
-                    url: "/20170516/cp99kf/baseAction.php",
+                    url: "/cp99kf/baseAction.php",
                     data: {
                         ctrl_action: "applyAction",
                         ctrl_method: "applySaveMold",
