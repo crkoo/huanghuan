@@ -12,18 +12,19 @@ class ValidateCode {
     private $charset = 'abcdefghkmnprstuvwxyzABCDEFGHKMNPRSTUVWXYZ23456789';//随机因子
     private $code;//验证码
     private $codelen = 4;//验证码长度
-    private $width = 130;//宽度
-    private $height = 50;//高度
+    private $width = 70;//宽度
+    private $height = 22;//高度
     private $img;//图形资源句柄
     private $font;//指定的字体
-    private $fontsize = 24;//指定字体大小
+    private $fontsize = 12;//指定字体大小
     private $fontcolor;//指定字体颜色
     //构造方法初始化
     public function __construct() {
-        $this->font = dirname(__FILE__). '/ttfs/t' . mt_rand(1, 10) . '.ttf';//注意字体路径要写对，否则显示不了图片
+//        $this->font = dirname(__FILE__). '/ttfs/t' . mt_rand(1, 10) . '.ttf';//注意字体路径要写对，否则显示不了图片
+        $this->font = dirname(__FILE__). '/ttfs/arial.ttf';//注意字体路径要写对，否则显示不了图片
     }
     //生成随机码
-    private function createCode($type = 6, $codelen = 4) {
+    private function createCode($type = null, $codelen = 4) {
         switch ($type){
             case 1:
                 $this->charset = 'abcdefghjkmnoprstuvwxyz';
@@ -44,7 +45,7 @@ class ValidateCode {
                 $this->charset = 'ABCDEFGHKMNPRSTUVWXYZ23456789';
             break;
             default:
-                $this->charset = '123456789';
+                $this->charset = '0123456789';
         }
         if (!empty($codelen)) {
             $this->codelen = $codelen;
@@ -57,7 +58,7 @@ class ValidateCode {
     //生成背景
     private function createBg() {
         $this->img = imagecreatetruecolor($this->width, $this->height);
-        $color = imagecolorallocate($this->img, mt_rand(157,255), mt_rand(157,255), mt_rand(157,255));
+        $color = imagecolorallocate($this->img, 251, 249, 236);
         imagefilledrectangle($this->img,0,$this->height,$this->width,0,$color);
     }
     //生成文字
@@ -65,21 +66,21 @@ class ValidateCode {
         $_x = $this->width / $this->codelen;
         for ($i=0;$i<$this->codelen;$i++) {
             $this->fontcolor = imagecolorallocate($this->img,mt_rand(0,156),mt_rand(0,156),mt_rand(0,156));
-            if ($i == 0){
-                $s = 10;
-            }else{
+            //if ($i == 0){
+                $s = 7;
+            /*}else{
                 $s = 0;
-            }
-            imagettftext($this->img,$this->fontsize,mt_rand(-30,30),$_x*$i+mt_rand(1,5)+$s,$this->height / 1.4,$this->fontcolor,$this->font,$this->code[$i]);
+            }*/
+            imagettftext($this->img,mt_rand(10, 14),0,$_x*$i+$s,$this->height / 1.2,$this->fontcolor,$this->font,$this->code[$i]);
         }
     }
     //生成线条、雪花
     private function createLine() {
         //线条
-        for ($i=0;$i<6;$i++) {
+        /*for ($i=0;$i<6;$i++) {
             $color = imagecolorallocate($this->img,mt_rand(0,156),mt_rand(0,156),mt_rand(0,156));
             imageline($this->img,mt_rand(0,$this->width),mt_rand(0,$this->height),mt_rand(0,$this->width),mt_rand(0,$this->height),$color);
-        }
+        }*/
         //雪花
         for ($i=0;$i<100;$i++) {
             $color = imagecolorallocate($this->img,mt_rand(200,255),mt_rand(200,255),mt_rand(200,255));
@@ -93,7 +94,7 @@ class ValidateCode {
         imagedestroy($this->img);
     }
     //对外生成
-    public function doimg($type = 6, $codelen = 4) {
+    public function doimg($type = null, $codelen = 4) {
         $this->createBg();
         $this->createCode($type, $codelen);
         $this->createLine();

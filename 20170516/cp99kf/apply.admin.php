@@ -12,7 +12,7 @@ if ($a == 'index'){
     $keywords = isset($_GET['keywords']) ? $_GET['keywords'] : "";
     $activeId = isset($_GET['activeId']) ? $_GET['activeId'] : "";
     if ($keywords){
-        $where .= " AND (`account` like '%{$keywords}%' OR `content` like '%{$keywords}%' OR `tips` like '%{$keywords}%')";
+        $where .= " AND (`account` like '%{$keywords}%' OR `attr` like '%{$keywords}%' OR `tips` like '%{$keywords}%')";
     }
     if ($activeId){
         $where .= " AND `activeId`=".$activeId;
@@ -44,7 +44,7 @@ if ($a == 'index'){
             ShowMsg("会员账号不能为空", -1);
             exit;
         }
-        if (empty($data['content'])){
+        if (empty($data['attr'])){
             ShowMsg("修改内容不能为空", -1);
             exit;
         }
@@ -75,8 +75,9 @@ if ($a == 'index'){
             'account' => null,
             'activeId' => null,
             'status' => null,
-            'content' => null,
+            'attr' => null,
             'tips' => null,
+            'pict' => null,
         );
     }
 }elseif($a == 'del'){
