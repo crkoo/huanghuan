@@ -782,10 +782,10 @@ body {
 	display: inline-block;
 	width: 180px;
 	height: 45px;
-	background-color: #ffe100;
+	background-color: #ec0800;
 	text-align: center;
 	font-size: 18px;
-	color: #664400;
+	color: #fff;
 	line-height: 45px;
 	overflow: hidden;
 	margin: 5px 0 0;
@@ -824,23 +824,23 @@ body {
 .detail .tbl {
 	margin: 15px 0;
 	width: 100%;
-	background: #cfc5bc;
+	background: #d9d9d9;
 	font-size: 14px;
-	border: solid 1px #988674;
+	border: solid 1px #797979;
 	color: #3a2a1f
 }
 
 .detail .tbl th {
 	font-weight: normal;
 	text-align: center;
-	background-color: #b9a693;
+	background-color: #d9d9d9;
 	padding: 4px;
-	border: solid 1px #988674
+	border: solid 1px #797979
 }
 
 .detail .tbl td {
 	text-align: center;
-	border: solid 1px #988674;
+	border: solid 1px #797979;
 	padding: 4px
 }
 
