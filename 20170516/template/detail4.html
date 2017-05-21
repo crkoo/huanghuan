@@ -68,14 +68,28 @@
                         <input type="hidden" name="inputMsg" id="inputMsg" value="真实姓名,银行卡卡号,">
                         <input type="hidden" name="imj" id="imj" value="1">
                         <input type="hidden" name="imgurl" id="imgurl">
-                        <form id="uploadForm" action="/ylgkf/UploadImageAction" method="post" enctype="multipart/form-data">
+                        <form id="uploadForm" action="/cp99kf/UploadImageAction.php" method="post" enctype="multipart/form-data">
                             <input type="hidden" name="activeId" id="activeId" value="4">
-
                             <ul class="">
-                                <li><label for="">会员账号： </label><input class="ipt" placeholder="请填写您的会员账号" type="text" id="objaccount" name="objaccount"></li><li><label for="">真实姓名： </label><input class="ipt" name="attrib4" placeholder="请填写您的真实姓名" type="text"> </li><li><label for="">银行卡照片： </label><input id="fileImage" type="file" size="30" name="fileselect[]" multiple=""><span class="filePicker">选择图片</span><div id="preview" class="upload_preview"></div></li><li><label for="">银行卡卡号： </label><input class="ipt" name="attrib4" placeholder="请填写您的银行卡卡号" type="text"> </li>
-
-
-                                <li><label for="">验证码：</label> <input class="ipt" type="text" placeholder="请输入验证码" name="cfCode" id="cfCode"><img class="img1" id="verifycode" src="/ylgkf/verifyCodeAction.do"></li>
+                                <li>
+                                    <label for="">会员账号： </label>
+                                    <input class="ipt" placeholder="请填写您的会员账号" type="text" id="objaccount" name="objaccount">
+                                </li>
+                                <li>
+                                    <label for="">真实姓名： </label>
+                                    <input class="ipt" name="attrib4" placeholder="请填写您的真实姓名" type="text">
+                                </li>
+                                <li>
+                                    <label for="">银行卡照片： </label>
+                                    <input id="fileImage" type="file" size="30" name="fileselect[]" data-id="0" multiple="">
+                                    <span class="filePicker">选择图片</span>
+                                    <div id="preview" class="upload_preview container0"></div>
+                                </li>
+                                <li>
+                                    <label for="">银行卡卡号： </label>
+                                    <input class="ipt" name="attrib4" placeholder="请填写您的银行卡卡号" type="text">
+                                </li>
+                                <li><label for="">验证码：</label> <input class="ipt" type="text" placeholder="请输入验证码" name="cfCode" id="cfCode"><img class="img1" id="verifycode" src="/cp99kf/verifyCodeAction.php"></li>
 
                                 <li>
                                     <div class="upload_btn">提交申请</div><button type="button" id="fileSubmit" class="upload_submit_btn">确认上传文件</button>
@@ -146,7 +160,7 @@
             height: "400px",                 // 宽度
             itemWidth: "140px",                 // 文件项的宽度
             itemHeight: "115px",                 // 文件项的高度
-            url: "/customer/uploadImageAction.do",  // 上传文件的路径
+            url: "/customer/uploadImageAction.php",  // 上传文件的路径
             fileType: ["jpg", "png", "jpeg"],// 上传文件的类型
             fileSize: 51200000,                // 上传文件的大小
             multiple: true,                    // 是否可以多个文件上传
