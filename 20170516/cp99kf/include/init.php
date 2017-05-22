@@ -65,20 +65,25 @@ $baseUrl = str_replace('\\','/',dirname($_SERVER['SCRIPT_NAME']));
 $baseUrl = empty($baseUrl) ? '/' : '/'.trim($baseUrl,'/').'/';
 define('SKINS', $baseUrl.'skins/');
 //require(LIB.'wxsdk.class.php');
-/* 对用户传入的变量进行转义操作。*/
-if (!get_magic_quotes_gpc())
+/* 对用户传入的变量进行转义操作。防止xss注入*/
+
+if (!empty($_GET))
 {
-    if (!empty($_GET))
-    {
-        $_GET  = addslashes_deep($_GET);
+    //$_GET  = addslashes_deep($_GET);
+    foreach ($_GET as $key => $val){
+        $_GET[$key] = encode($val);
     }
-    if (!empty($_POST))
-    {
-        $_POST = addslashes_deep($_POST);
-    }
-    $_COOKIE   = addslashes_deep($_COOKIE);
-    $_REQUEST  = addslashes_deep($_REQUEST);
 }
+if (!empty($_POST))
+{
+    //$_POST = addslashes_deep($_POST);
+    foreach ($_POST as $key => $val){
+        $_POST[$key] = encode($val);
+    }
+}
+$_COOKIE   = addslashes_deep($_COOKIE);
+$_REQUEST  = addslashes_deep($_REQUEST);
+
 $m = isset($_GET['m']) ? $_GET['m'] : "";
 $a = isset($_GET['a']) ? $_GET['a'] : "";
 /* 初始化数据库类 */

@@ -6,6 +6,16 @@
  * Time: 上午11:53
  */
 
+function encode($content)
+{
+    return htmlspecialchars($content, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+}
+
+function decode($content)
+{
+    return htmlspecialchars_decode($content, ENT_QUOTES);
+}
+
 function getActiveName($activeId){
     switch ($activeId){
         case 4:

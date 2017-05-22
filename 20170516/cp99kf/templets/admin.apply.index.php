@@ -74,7 +74,7 @@
                     </form>
                 </div>
                 <div class="list_box">
-                    <form action="" method="post" name="form" id="form">
+                    <form action="index.php?m=apply&a=delAll" method="post" name="form" id="form">
                         <table width="100%" class="tablestyle">
                             <tr class="tl back">
                                 <th>编号</th>
@@ -93,7 +93,7 @@
                                     <tr data-id="<?=$vo['id']?>">
                                         <td>
                                             <label>
-                                                <input type="checkbox" name="checkBox[]" value="<?=$vo['id']?>" />
+                                                <input type="checkbox" name="id[]" value="<?=$vo['id']?>" />
                                                 <?=$vo['id']?>
                                             </label>
                                         </td>
@@ -129,6 +129,18 @@
                             }
                             ?>
                         </table>
+                        <?php
+                        if ($total){
+                        ?>
+                            <div class="page clearfix">
+                                <label><input type="checkbox" id="checkall" />全选</label>
+                                <input type="submit" onclick="return check();" id="delAll" value="删除">
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <?=$pageShow?>
+                            </div>
+                        <?php
+                        }
+                        ?>
                     </form>
                 </div>
             </div>
