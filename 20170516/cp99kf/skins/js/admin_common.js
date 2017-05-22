@@ -4,7 +4,7 @@
 ;$(function(){
    var w = $(window).width();
    $(".right").css({
-       width: (w-232) + 'px'
+       width: (w-204) + 'px'
    });
 
     //全反选

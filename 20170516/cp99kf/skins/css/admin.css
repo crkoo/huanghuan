@@ -33,8 +33,15 @@ body { position: relative; width: 100%; overflow-x: hidden; font: 14px/24px "微
 .header .logo {float: left; width: 300px; text-align: center; font-size: 24px; height: 64px; overflow: hidden;}
 .header .loginInfo {float: left; font-size: 16px; color: #fff;}
 .header .logout {display: inline-block; color: #fff;}
+.content {position: relative;}
 /**left**/
-.left {margin-left: 2px; width: 182px; height: auto; overflow: hidden;}
+.left {
+    position: absolute;
+    left: 2px;
+    width: 182px;
+    overflow: hidden;
+    z-index: 9;
+}
 .left h1 {font-size: 14px; width: 182px; height: 32px;}
 .left h1 a { display: block; width: 180px; color: #000; height: 30px; text-decoration: none; moz-outline-style: none;  background: -webkit-gradient(linear, 0 0, 0 100%, from(#fcfcfd), to(#d4e0ea)); border: 1px solid #9eaeb9; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; line-height: 30px; text-align: center; font-weight: bold; cursor: pointer;}
 .menu { display: none; width: 181px; height: auto; background: url("../images/menu_topline.gif") no-repeat left 5px; padding-top: 10px;}
@@ -43,7 +50,11 @@ body { position: relative; width: 100%; overflow-x: hidden; font: 14px/24px "微
 .menu a {font-size: 14px; line-height: 26px; color: #333333; background-image: url(../images/menu_bg1.gif); background-repeat: no-repeat; height: 26px; width: 181px; display: block; text-align: center; overflow: hidden; text-decoration: none; cursor: pointer;}
 .menu a:hover,.menu a.on{font-weight: bold; color: #006600; background-image: url(../images/menu_bg2.gif);}
 /**right**/
-.right {margin: 0 10px 20px;}
+.right {
+    position: absolute;
+    padding-left: 194px;
+    margin: 0 0 20px;
+}
 .box {border: 1px solid #9eaeb9; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px;}
 .box .boxHead {width: 100%; height: 28px; background: -webkit-gradient(linear, 0 0, 0 100%, from(#fcfcfd), to(#d4e0ea)); border-bottom: 2px solid #112535;}
 .box .boxHead span {display: inline-block; margin: 3px 0 0 10px; width: auto; height: 26px; line-height: 26px; padding: 0 13px; background: #fff; border: 1px solid #bababc; border-bottom: 0 none; border-top-left-radius: 3px; border-top-right-radius: 3px; -webkit-border-top-left-radius: 3px; -webkit-border-top-right-radius: 3px; -moz-border-radius-topleft: 3px; -moz-border-radius-topright: 3px; color: #000; font-weight: bold; font-size: 14px;}
