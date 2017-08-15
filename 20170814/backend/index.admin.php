@@ -16,5 +16,13 @@ if ($a == 'out'){
     unset($_SESSION['nick']);
     session_destroy();
     header("Location: index.php?m=login");
+}else if ($a == 'create') {
+    $SCRIPT_NAME = $_SERVER['SCRIPT_NAME'];
+    $PATH = str_replace('/index.php', '', $SCRIPT_NAME);
+    $in = $site_url.$PATH.'/html.php';
+    $out = dirname(__FILE__).'/../index.html';
+    generateHtml($in, $out);
+    ShowMsg("生成成功", -1);
+    exit;
 }
 include('templets/admin.index.php');

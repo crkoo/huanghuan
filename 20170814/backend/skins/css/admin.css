@@ -32,6 +32,7 @@ body { position: relative; width: 100%; overflow-x: hidden; font: 14px/24px "微
 .header {height: 64px; width: 100%; background-color: #2196f3; color: #fff; line-height: 64px;}
 .header .logo {float: left; width: 300px; text-align: center; font-size: 24px; height: 64px; overflow: hidden;}
 .header .loginInfo {float: left; font-size: 16px; color: #fff;}
+.header .create {display: inline-block; color: #fff; margin: 0 20px;}
 .header .logout {display: inline-block; color: #fff;}
 .content {position: relative;}
 /**left**/

@@ -18,6 +18,7 @@ function logout(){
     <h1 class="logo">后台管理简易系统</h1>
     <div class="loginInfo">
         <span>用户：<b><?=$username?></b> 您好,感谢登陆使用！</span>
+        <a href="index.php?m=index&a=create" class="create">生成首页Html</a>
         <a href="javascript:;" class="logout" target="_self" onclick="logout();">退出</a>
     </div>
 </div>

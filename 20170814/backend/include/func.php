@@ -6,6 +6,13 @@
  * Time: 上午11:53
  */
 
+function generateHtml($in, $out){
+    $content = file_get_contents($in);
+    $fp = fopen($out, "w");
+    fwrite($fp, $content);
+    fclose($fp);
+}
+
 function encode($content)
 {
     return htmlspecialchars($content, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
