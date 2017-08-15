@@ -105,7 +105,7 @@ $list = $db->getLineAll("select * from dbl_activity where status=1 ORDER by ord 
         </div>
     </div>
     <div class="footerimg w1000"></div>
-    <div class="copyright w1000">Copyright © 澳门新葡京娱乐场 Reserved</div>
+    <div class="copyright w1000">Copyright © 澳门威尼斯人 Reserved</div>
 </div>
 
 <div class="modal tccon" id="querycon">
