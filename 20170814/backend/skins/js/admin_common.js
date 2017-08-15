@@ -61,11 +61,12 @@ function check(){
     }
 }
 
-function status(status,id){
+function status(status,id,action){
     if (id == ''){
         return false;
     }
-    $.post('index.php?m=ucenter&a=status&_'+Math.random(), {id: id, status: status}, function(json){
+    if (typeof action == 'undefined') action = 'ucenter';
+    $.post('index.php?m='+action+'&a=status&_'+Math.random(), {id: id, status: status}, function(json){
         if (json.errcode == 0){
             alert('更新成功');
             //$("#status_"+id).attr('src',SKINS+'images/status_'+status+'.gif');

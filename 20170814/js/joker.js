@@ -26,10 +26,10 @@ function lotterylist() {
 		success: function(obj) {
 			var sAwardEle = "";
 			$.each(obj, function(i, award) {
-				sAwardEle += '<li>澳门新葡京会员：<span>'+award.user_name+'</span>成功办理<i>'+award.active_name+'</i></li>'
+				sAwardEle += '<li><span class="user_name">恭喜：<font>'+award.user_name+'</font></span><span class="active_status">成功办理</span><span class="active_name">'+award.active_name+'</span></li>'
 			});
 			$(".infoList").html(sAwardEle);
-			jQuery(".list").slide({mainCell:".bd ul",autoPlay:true,effect:"topMarquee",vis:5,interTime:50,trigger:"click"});
+			jQuery(".list").slide({mainCell:".bd ul",autoPlay:true,effect:"topMarquee",vis: 6,interTime:50,trigger:"click"});
 		},
 		error: function(XMLHttpRequest, textStatus, errorThrown) {
 			var x = 1
@@ -41,7 +41,7 @@ var pagesize = 5;
 
 function queryPage(page) {
 	$.ajax({
-		url: 'api.php?action=querylist&p=' + page + '&size=' + pagesize,
+		url: 'api.php?action=querylist&page=' + page + '&size=' + pagesize,
 		dataType: 'json',
 		cache: false,
 		data: {

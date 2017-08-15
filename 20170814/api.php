@@ -8,13 +8,48 @@
 define('DTW', true);
 require_once dirname(__FILE__).'/backend/include/init.php';
 
-$data = $_POST;
 $method = isset($_GET['action']) ? $_GET['action'] : null;
 if (empty($method)){
     outputJson(1, '请求错误');
 }else if ($method == 'list'){
     $list = $db->getLineAll("select account as user_name,activeName as active_name from dbl_content where status=1 and is_del=0 ORDER BY id DESC limit 30 ");
+    if (!empty($list)) {
+        foreach ($list as $k => $v) {
+            $list[$k]['user_name'] = substr($v['user_name'],0,3).'****';
+        }
+    }
     echo json_encode($list);
+    exit;
+}else if ($method == 'querylist'){
+    $data = $_GET;
+    $account = isset($data['user_name']) ? htmlspecialchars($data['user_name']) : null;
+    if (empty($account)){
+        outputJson(2, '请填写会员账号');
+    }
+    $activeId = isset($data['act_id']) ? intval($data['act_id']) : null;
+    if (empty($activeId)){
+        outputJson(3, '请选择查询项目');
+    }
+    $pageSize = isset($data['size']) ? intval($data['size']) : 5;
+    $pageSize = $pageSize > 0 ? $pageSize : 5;
+    $sql = "select c.id,c.account as user_name,c.activeName,c.tips as check_desc,c.`status` as state,FROM_UNIXTIME(c.addTime,'%Y-%m-%d %H:%i:%s') as apply_time from dbl_content as c where c.is_del=0 and c.activeId=$activeId and c.account='$account'";
+    $total = $db->count($sql);
+    if ($total == 0){
+        $list = array();
+    }else {
+        $sql .= " ORDER BY c.id DESC";
+        if ($total > $pageSize) {
+            require_once(LIB . 'page.class.php');
+            $page = new Page($total, $pageSize);
+            $sql .= " limit $page->firstcount,$page->displaypg";
+        }
+        $list = $db->getLineAll($sql);
+    }
+    $json = array(
+        'count' => intval($total),
+        'data' => $list
+    );
+    echo json_encode($json);
     exit;
 }else{
     if ($method == 'queryCurUserInfo'){

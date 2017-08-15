@@ -25,7 +25,13 @@ ins {text-decoration: none;}
 del { text-decoration: line-through;}
 table {border-collapse: collapse;border-spacing: 0;}
 .clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
-.clearfix{*+height:1%;}
+.clearfix{clear:both;zoom:1}
 * html .clearfix{zoom:1;} /* IE6 */
 *+html .clearfix{zoom:1;} /* IE7 */
-html {overflow-y: scroll;} 
+html {overflow-y: scroll;}
+.fl {float:left;}
+.fr {float:right;}
+.hidden {display:none;}
+.tl {text-align:left;}
+.tr {text-align:right;}
+.tc {text-align:center;}
