@@ -1,6 +1,14 @@
 $(document).ready(function(){
 	$('.query').on('click', function(){$(".con1").show();$(".con2").hide();layer.open({type: 1, zIndex: 100, title: false,area: ['744px'],skin: 'layui-layer-nobg',shade: 0.7,closeBtn :true,shadeClose: true,content: $('#querycon')});});
 	$('.check').on('click', function(){$(".con1").show();$(".con2").hide();layer.open({type: 1, zIndex: 100, title: false,area: ['744px'],skin: 'layui-layer-nobg',shade: 0.7,closeBtn :true,shadeClose: true,content: $('#querycon')});});
+	$('.applybtn').on('click', function(e){
+		e.preventDefault();
+		var activeName = $(this).find('p').html();
+		var activeId = $(this).attr('data-id');
+		$(".activeName").html(activeName);
+		$("#activeId").val(activeId);
+		layer.open({type: 1, zIndex: 100, title: false,area: ['744px'],skin: 'layui-layer-nobg',shade: 0.7,closeBtn :true,shadeClose: true,content: $('#applybox')});});
+	$(".backbtn").on('click', function(){layer.closeAll();$("#query_user").val('');$("#query_option").find("option").eq(0).attr('selected', true)});
 	$('.look').live("click",function(){
 			if($(this).attr("title")!=""){layer.alert($(this).attr("title"),{title:"回复内容"})}else{layer.alert("审核中，请耐心等待",{title:"提示"})}
 	});

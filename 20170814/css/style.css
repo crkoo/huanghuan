@@ -50,33 +50,37 @@ body{font-size:12px; font-family: "微软雅黑"; background: #37231A url(../ima
 .footer .link ul li a:hover{background-position: bottom center}
 /*.footer .link ul li:hover{border:2px solid #faf79a;}*/
 
-.tccon{background:#212121;border-radius:8px; width:744px;min-height:540px;display: none;position:relative; overflow:hidden;}
+.tccon{background:#7a4130;border-radius:8px; width:740px;min-height:540px;display: none;position:relative; border: 2px solid #b36c50; overflow:hidden;}
 .tccon .tclogo{background: url(../images/logo.png) no-repeat;width: 360px; height: 81px; display: block; margin: 0 auto; margin-top:25px; margin-bottom:20px;}
 .tccon .fg{ width:712px; height:17px; margin:0 auto; margin-top:10px; margin-bottom:10px; display:none}
-.tccon h2{color: #fff100;font-size: 26px;text-align: center;line-height: 25px;}
+.tccon .layertitle {margin-bottom: 25px;}
 .tccon h3{ font-size:12px; color:#4e4e4e; line-height:12px; height:12px;text-align:center; display:block; margin:0 auto;}
-.tccon p{color: #fff;font-size: 14px;margin-left: 120px;line-height: 60px; height:60px}
-.tccon p span{display:inline-block;width:112px;text-align: right;color: #fff; font-size: 14px; margin-right:10px;}
-.tccon p input{ width:408px; height:40px; border:1px solid #fff; border-radius:7px; background: #fff;text-align: left;color: #7d7d7d;font-size: 14px; padding-left:15px;}
+.tccon p, .tccon .active_name {color: #fff;font-size: 14px;margin-left: 120px;line-height: 32px; margin-bottom: 20px;}
+.tccon p span, .tccon .active_name .apply_subject{display:inline-block;width:112px;text-align: right;color: #fff; font-size: 14px; margin-right:10px;}
+.tccon p input,.tccon .active_name .apply_show{ width: 275px; height: 32px; border:1px solid #fff; background: #fff;text-align: left;color: #7d7d7d; font-size: 14px; padding-left:15px; margin-left: 15px; position: relative;}
 .tccon p input::-webkit-input-placeholder{color:#7d7d7d;}
 .tccon p input::-moz-placeholder{color:#7d7d7d;opacity:1;}
 .tccon p input:-moz-placeholder{color:#7d7d7d;opacity:1;}
 .tccon p .yzmimg{position: relative;margin-left: -80px; vertical-align:middle; top: -2px;}
-.tccon p .subbtn{background:url(../images/subbtn.png) no-repeat; text-align: center; width:120px; height:40px; border:none;border-radius: 2px; color: #361905; cursor: pointer;padding: 0;font-size:14px; font-weight:bold; margin-top:15px;}
-.tccon p select{ width:423px; height:42px;color: #7d7d7d;font-size: 14px; padding-left:13px; border:none; border-radius:7px; margin:0;}
+.tccon p .subbtn{background:url(../images/subbtn.png) no-repeat; text-align: center; width: 208px; height: 54px; border:none; cursor: pointer;padding: 0;margin-top:15px; text-indent: -999999em;}
+.tccon p .applysubbtn{background: url(../images/applybtn.png) no-repeat; display:inline-block;width: 208px; height: 54px; cursor: pointer;text-align: center;border: none;margin-top: 15px; padding:0; text-indent: -999999em;}
+.tccon p select{ width: 290px; height: 32px;color: #7d7d7d;font-size: 14px; padding-left:13px; border:none; margin:0; margin-left: 15px;}
 .tccon p select option{padding-left:15px;}
-.tccon .line{ height:1px; background:#2b2b2b; width:720px; margin:0 auto; margin-top:20px;}
+.tccon .line{ height:1px; background:#7a4130; width:720px; margin:0 auto; margin-top:20px;}
 .tccon .pages{margin:0 auto; margin-top:20px; text-align:center}
-.tccon .pages a{ display:inline-block; padding:0 6px; height:20px; line-height:20px; text-align:center; background:#9a7b2f;margin:0 5px; color:#fff}
+.tccon .pages a{ display:inline-block; padding:0 6px; height:20px; line-height:20px; text-align:center; background:#feda5d;margin:0 5px; color:#932a00}
 .tccon .con1{height:310px;}
+.tccon .con3{height:310px;}
 .tccon .con2{ height:310px;display: none;}
 .tccon .con2 table{width: 600px; margin: 0 auto}
-.tccon .con2 table tr th{border: 1px solid #434343;height: 45px;line-height: 45px;color: #fff100; font-size: 14px;padding-left: 20px; text-align:left; font-weight:normal}
-.tccon .con2 table tr td{border: 1px solid #434343;height: 45px;line-height: 45px;color: #fff; font-weight:bold; font-size: 14px;padding-left: 20px;}
-.tccon .con2 table tr td a{ font-size:14px;}
+.tccon .con2 table tr th{border: 1px solid #612f21;height: 45px;line-height: 45px;color: #932a00; font-size: 14px; font-weight:normal; background-color: #feda5d; }
+.tccon .con2 table tr td{border: 1px solid #612f21;height: 45px;line-height: 45px;color: #582415; font-weight:bold; font-size: 14px;padding-left: 20px; background-color: #fff; text-align: center; }
+.tccon .con2 table tr td a{color: #582415;}
+.tccon .active_name .apply_show .activeName {color: #7e7e7e;}
+.tccon .active_name .apply_show .active_content {display: block; width: 90px; height: 34px; position: absolute; top: -1px; right: -1px; color: #502417; background-color: #fed25d; text-align: center; font-size: 14px; line-height: 34px;}
 
 
-.layui-layer-nobg .layui-layer-setwin .layui-layer-close2{background: url(../images/closebtn.png) no-repeat; width:54px; height:54px; right:-27px; top:-27px; display: block; cursor: pointer;}
+.layui-layer-nobg .layui-layer-setwin .layui-layer-close2{background: url(../images/closebtn.png) no-repeat; width:163px; height:133px; right: -18px; top:-18px; display: block; cursor: pointer;}
 .layui-layer-nobg .layui-layer-setwin .layui-layer-close2:hover{background: url(../images/closebtn.png) no-repeat;}
 
 select{appearance:none;-moz-appearance:none;-webkit-appearance:none;background:#fff url(../images/select.png) right center no-repeat;padding-right:40px;padding-left:7px;}
@@ -106,4 +110,4 @@ select::-ms-expand { display: none; }
 .box2 p input{ width:285px; height:38px; border:none; background:#fff; border-radius:5px; font-size:15px; padding-left:15px;}
 .box2 p .codeimg{ margin-left:5px; position:relative; top:6px;}
 .box2 .subbtn{background: url(../images/subbtn.png) no-repeat; display:inline-block;width: 120px; height: 40px;line-height: 35px; cursor: pointer; color: #361905; font-size: 14px;text-align: center;border: none;margin-top: 15px; padding:0; font-weight:bold;}
-.box2 .check{background: url(../images/subbtn2.png) no-repeat; display:inline-block;width: 148px; height:40px;line-height:40px; cursor: pointer; color: #fff; font-size: 14px;text-align: center;border: none;margin-left: 12px; margin-top: 15px;padding:0; font-weight:bold;}
+.box2 .check{background: url(../images/applybtn.png) no-repeat; display:inline-block;width: 148px; height:40px;line-height:40px; cursor: pointer; color: #fff; font-size: 14px;text-align: center;border: none;margin-left: 12px; margin-top: 15px;padding:0; font-weight:bold;}
