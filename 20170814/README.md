@@ -4,7 +4,9 @@
 ## Build Setup
 
 1、创建数据
+
 2、导入数据文件 0613555.sql
+
 3、修改数据库配置,backend\include\init.php
 
 ``` bash
@@ -19,5 +21,8 @@ http://xxxx.com/backend/index.php?m=login
 root 321456
 
 5、更新html页面，本次将前台页面生成静态页面了。
+
 如有更新请修改首页模板backend\html.php
+
 详情页面模板backend\activity.php
+
