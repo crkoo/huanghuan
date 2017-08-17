@@ -19,9 +19,19 @@ if ($a == 'out'){
 }else if ($a == 'create') {
     $SCRIPT_NAME = $_SERVER['SCRIPT_NAME'];
     $PATH = str_replace('/index.php', '', $SCRIPT_NAME);
+    //首页更新
     $in = $site_url.$PATH.'/html.php';
     $out = dirname(__FILE__).'/../index.html';
     generateHtml($in, $out);
+    //详情页更新
+    $list = $db->getLineAll("select id from dbl_activity where status=1");
+    if (!empty($list)){
+        foreach ($list as $k => $v){
+            $in = $site_url.$PATH.'/active.php?activeId='.$v['id'];
+            $out = dirname(__FILE__).'/../active/active'.$v['id'].'.html';
+            generateHtml($in, $out);
+        }
+    }
     ShowMsg("生成成功", -1);
     exit;
 }

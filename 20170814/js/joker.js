@@ -7,6 +7,7 @@ $(document).ready(function(){
 		var activeId = $(this).attr('data-id');
 		$(".activeName").html(activeName);
 		$("#activeId").val(activeId);
+		$("#activeContent").attr('href', 'active/active'+activeId+'.html');
 		layer.open({type: 1, zIndex: 100, title: false,area: ['744px'],skin: 'layui-layer-nobg',shade: 0.7,closeBtn :true,shadeClose: true,content: $('#applybox')});});
 	$(".backbtn").on('click', function(){layer.closeAll();$("#query_user").val('');$("#query_option").find("option").eq(0).attr('selected', true)});
 	$('.look').live("click",function(){
@@ -26,6 +27,10 @@ $(document).ready(function(){
 	lotterylist();
 })
 function lotterylist() {
+	var url = window.location.href;
+	if (url.indexOf('active/active') > 0){
+		return ;
+	}
 	$.ajax({
 		url: 'api.php?action=list',
 		dataType: 'json',

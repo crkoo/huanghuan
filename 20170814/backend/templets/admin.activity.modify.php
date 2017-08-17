@@ -13,6 +13,13 @@
 <title>活动编辑</title>
 <link href="<?=SKINS?>css/admin.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="<?=SKINS?>js/jquery-1.11.3.min.js?_v=<?=microtime()?>"></script>
+<script type="text/javascript">
+    window.UEDITOR_HOME_URL = '<?=SKINS?>ueditor/';
+    window.fixedImagePath = '<?=SKINS?>ueditor/themes/default/images/';
+</script>
+<script type="text/javascript" src="<?=SKINS?>ueditor/ueditor.config.js?_v=<?=microtime()?>"></script>
+<script type="text/javascript" src="<?=SKINS?>ueditor/ueditor.all.min.js?_v=<?=microtime()?>"></script>
+<link rel="stylesheet" href="<?=SKINS?>ueditor/themes/default/css/ueditor.css"/>
 <link rel="stylesheet" href="<?=SKINS?>uploadify/uploadify.css?_v=<?=time()?>" media="screen"/>
 <script type="text/javascript" src="<?=SKINS?>uploadify/jquery.uploadify.min.js?_v=<?php echo microtime(true); ?>"></script>
 <script>
@@ -77,12 +84,12 @@ $(function(){
                                 </div>
                             </td>
                         </tr>
-                        <!--<tr>
+                        <tr>
                             <th width="120" class="tr">内容：</th>
                             <td>
-                                <textarea style="width:70%;height:300px;" id="content" class="input-text" name="content"><?/*=stripslashes($data['content'])*/?></textarea>
+                                <textarea style="width:70%;height:300px;" id="content" class="input-text" name="content"><?=stripslashes($data['content'])?></textarea>
                             </td>
-                        </tr>-->
+                        </tr>
                         <tr>
                             <th width="120" class="tr">排序：</th>
                             <td>
@@ -99,6 +106,10 @@ $(function(){
         </div>
     </div>
 </div>
+<script>
+    window.msg_editor = new UE.ui.Editor();
+    window.msg_editor.render('content');
+</script>
 <script src="<?=SKINS?>js/admin_common.js"></script>
 </body>
 </html>

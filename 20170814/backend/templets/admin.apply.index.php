@@ -30,17 +30,18 @@
                         <input type="hidden" name="m" value="apply">
                         <input type="hidden" name="a" id="a" value="index">
                         关键词：<input type="text" name="keywords" class="text" value="<?=$keywords?>">
-                        项目：
+                        活动：
                         <select name="activeId">
                             <option value="">请选择</option>
-                            <option value="4">修改会员登入密码</option>
-                            <option value="8">会员账号解冻</option>
-                            <option value="6">忘记会员账号</option>
-                            <option value="9">修改真实姓名</option>
-                            <option value="12">修改银行账号</option>
-                            <option value="7">修改银行地址</option>
-                            <option value="5">修改银行名称</option>
-                            <option value="13">修改会员取款密码</option>
+                            <?php
+                            if (!empty($list)){
+                                foreach ($list as $v){
+                                    ?>
+                                    <option value="<?=$v['id']?>" <?=$activeId==$v['id']?'selected="selected"':''?>><?=$v['title']?></option>
+                                    <?php
+                                }
+                            }
+                            ?>
                         </select>
                         状态：
                         <select name="status">

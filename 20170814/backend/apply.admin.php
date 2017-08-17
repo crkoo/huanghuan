@@ -12,7 +12,7 @@ if ($a == 'index'){
     $keywords = isset($_GET['keywords']) ? $_GET['keywords'] : "";
     $activeId = isset($_GET['activeId']) ? $_GET['activeId'] : "";
     if ($keywords){
-        $where .= " AND (`account` like '%{$keywords}%' OR `attr` like '%{$keywords}%' OR `tips` like '%{$keywords}%')";
+        $where .= " AND (`account` like '%{$keywords}%' OR `content` like '%{$keywords}%' OR `tips` like '%{$keywords}%')";
     }
     if ($activeId){
         $where .= " AND `activeId`=".$activeId;
@@ -36,6 +36,7 @@ if ($a == 'index'){
         $list = $db->getLineAll($sql);
         $pageShow = $page->show_link();//显示分页
     }
+    $activityList = $db->getLineAll("select id, title from dbl_activity where status=1 ORDER BY ord DESC, id ASC ");
 }elseif ($a == 'modify'){
     $data = $_POST;
     if (!empty($data)){
@@ -44,10 +45,11 @@ if ($a == 'index'){
             ShowMsg("会员账号不能为空", -1);
             exit;
         }
-        if (empty($data['attr'])){
-            ShowMsg("修改内容不能为空", -1);
+        if (empty($data['orderId'])){
+            ShowMsg("注单号不能为空", -1);
             exit;
         }
+
         if (!empty($data['tips'])){
             $data['is_reply'] = 1;
             $data['updateTime'] = time();
@@ -55,7 +57,9 @@ if ($a == 'index'){
             $data['userId'] = $_SESSION['uid'];
             $data['userName'] = $_SESSION['nick'];
         }
-        $data['activeName'] = getActiveName($data['activeId']);
+        $activity = $db->getLine("select id, title from dbl_activity where id=".intval($data['activeId']));
+        $data['activeName'] = $activity['title'];
+        $data['content'] = "会员账号：".$data['account']."，注单号：".$data['orderId'];
         if (empty($data['id'])){
             unset($data['id']);
             $data['addTime'] = time();
@@ -69,15 +73,15 @@ if ($a == 'index'){
     $id = isset($_GET['id']) ? intval($_GET['id']) : null;
     if (!empty($id)){
         $data = $db->getLine("select * from dbl_content where id=".$id);
+        $list = $db->getLineAll("select id, title from dbl_activity where status=1 ORDER BY ord DESC, id ASC ");
     }else{
         $data = array(
             'id' => null,
             'account' => null,
             'activeId' => null,
+            'content' => null,
             'status' => null,
-            'attr' => null,
             'tips' => null,
-            'pict' => null,
         );
     }
 }elseif($a == 'del'){

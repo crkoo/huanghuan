@@ -36,9 +36,9 @@ $list = $db->getLineAll("select * from dbl_activity where status=1 ORDER by ord 
                 if (!empty($list)){
                     foreach ($list as $k => $v){
                         if ($k < 2) {
-                ?>
-                <li><a href='javascript:;' data-id="<?=$v['id']?>" target='_blank'><img src='<?=$v['litpic']?>' width='237' height='118'/><p><?=$v['title']?></p></a></li>
-                <?php
+                            ?>
+                            <li><a href='javascript:;' class="applybtn" data-id="<?=$v['id']?>" target='_blank'><img src='<?=$v['litpic']?>' width='237' height='118'/><p><?=$v['title']?></p></a></li>
+                            <?php
                         }
                     }
                 }
@@ -63,7 +63,7 @@ $list = $db->getLineAll("select * from dbl_activity where status=1 ORDER by ord 
                     foreach ($list as $k => $v){
                         if ($k > 1 && $k < 4) {
                             ?>
-                            <li><a href='javascript:;' data-id="<?=$v['id']?>" target='_blank'><img src='<?=$v['litpic']?>' width='237' height='118'/><p><?=$v['title']?></p></a></li>
+                            <li><a href='javascript:;' class="applybtn" data-id="<?=$v['id']?>" target='_blank'><img src='<?=$v['litpic']?>' width='237' height='118'/><p><?=$v['title']?></p></a></li>
                             <?php
                         }
                     }
@@ -79,7 +79,7 @@ $list = $db->getLineAll("select * from dbl_activity where status=1 ORDER by ord 
                 foreach ($list as $k => $v){
                     if ($k > 3) {
                         ?>
-                        <li><a href='javascript:;' data-id="<?=$v['id']?>" target='_blank'><img src='<?=$v['litpic']?>' width='237' height='118'/><p><?=$v['title']?></p></a></li>
+                        <li><a href='javascript:;' class="applybtn" data-id="<?=$v['id']?>" target='_blank'><img src='<?=$v['litpic']?>' width='237' height='118'/><p><?=$v['title']?></p></a></li>
                         <?php
                     }
                 }
@@ -112,22 +112,21 @@ $list = $db->getLineAll("select * from dbl_activity where status=1 ORDER by ord 
     <a class="layui-layer-close closebtn"></a>
     <a class="tclogo"></a>
     <div class="fg"></div>
-    <h2>申请进度查询</h2>
+    <div class="layertitle tc"><img src="images/checktitle.png" /></div>
     <h3></h3>
     <div class="con1">
         <p><span>请输入会员帐号：</span><input type="text" id="query_user" name="query_option" value="" placeholder="填写你的会员账号"  ></p>
-        <p><span>选择查询项目：</span>
-        <select id="query_option" name="query_option">
-            <?php
-            if (!empty($list)) {
-                foreach ( $list as $k =>$v) {
-            ?>
-            <option value='<?=$v['id']?>' ><?=$v['title']?></option>
-            <?php
+        <p><span>选择查询项目：</span><select id="query_option" name="query_option">
+                <?php
+                if (!empty($list)) {
+                    foreach ( $list as $k =>$v) {
+                        ?>
+                        <option value='<?=$v['id']?>' ><?=$v['title']?></option>
+                        <?php
+                    }
                 }
-            }
-            ?>
-        </select></p>
+                ?>
+            </select></p>
         <div class='line'></div>
         <p><span>&nbsp;</span><input type="submit" value="点击查询" class="subbtn checksub"></p>
     </div>
@@ -145,9 +144,70 @@ $list = $db->getLineAll("select * from dbl_activity where status=1 ORDER by ord 
         </table>
         <div class="pages">
         </div>
+        <div class="tc"><a href="javascript:;" class="backbtn"><img src="images/backbtn.png" /></a></div>
+    </div>
+</div>
+<div class="modal tccon" id="applybox">
+    <a class="layui-layer-close closebtn"></a>
+    <a class="tclogo"></a>
+    <div class="fg"></div>
+    <div class="layertitle tc"><img src="images/applytitle.png" /></div>
+    <h3></h3>
+    <div class="con3">
+        <div class="active_name clearfix">
+            <div class="apply_subject fl">申请主题：</div>
+            <div class="apply_show fl">
+                <span class="activeName">活动名称</span>
+                <a href="#" id="activeContent" class="active_content" target="_blank">了解详情</a>
+            </div>
+        </div>
+        <form action="api.php?action=apply" name="doform" id="doform" method="POST" onsubmit="return subForm();">
+            <input type="hidden" name="activeId" id="activeId" />
+            <p><span>会员帐号：</span><input type="text" placeholder="填写会员帐号" id="4_str1" name="str1"></p>
+            <p><span>注单号：</span><input type="text" placeholder="填写注单号" id="4_int_1" name="int_1"></p>
+            <p><span>&nbsp;</span><input type="submit" class="applysubbtn" value="立即提交"></p>
+        </form>
     </div>
 </div>
 <script language="javascript">
+    function subForm(){
+        var re =  /^[1-9]+[0-9]*]*$/;//判断是否为整数
+        var reg = /^0?1[3|4|5|6|7|8|9][0-9]\d{8}$/; //判断手机号码
+        var regc = /^([\u4E00-\u9FA5]+,?)+$/; //判断中文
+        var username = /^[a-zA-Z0-9_]{1,}$/;
+        var xss=/^[^<>]*$/;
+        if($("#4_str1").val()==""){
+            alert("会员账号不能为空");
+            return false;
+        }
+        if(!xss.test($("#4_str1").val())){
+            alert("会员账号不要含有特殊字符");
+            return false;
+        }
+        if(!re.test($("#4_int_1").val())){
+            alert("注单号必须是整数类型");
+            return false;
+        }
+        $.ajax({
+            url: 'api.php?action=apply',
+            data: $("#doform").serialize(),
+            dataType: 'JSON',
+            type: 'POST',
+            async: false,
+            success: function (res) {
+                if (res.errcode == 0 && res.errmsg == 'ok'){
+                    alert('提交成功');
+                    location.reload();
+                }else{
+                    alert(res.errmsg);
+                }
+            },
+            error: function (error) {
+                alert(error);
+            }
+        });
+        return false;
+    }
     $(document).ready(function () {
         $(window).scroll(function () {
             var offsetTop = $(window).scrollTop() + "px";

@@ -26,6 +26,7 @@ if ($a == 'index'){
         $ord = isset($_POST['ord']) ? intval($_POST['ord']) : "";
         $title = isset($_POST['title']) ? $_POST['title'] : "";
         $litpic = isset($_POST['litpic']) ? $_POST['litpic'] : null;
+        $content = isset($_POST['content']) ? $_POST['content'] : null;
         if (empty($title)){
             ShowMsg("请输入标题！", -1);
             exit();
@@ -44,15 +45,21 @@ if ($a == 'index'){
             'title' => $title,
             'litpic' => $litpic,
             'ord' => $ord,
+            'content' => $content,
         );
 
         if ($id){
             $result = $db->update('dbl_activity', $id, $data);
         }else{
             $data['addtime'] = time();
-            $result = $db->insert('dbl_activity', $data);
+            $result = $id = $db->insert('dbl_activity', $data);
         }
         if ($result!==false){
+            $SCRIPT_NAME = $_SERVER['SCRIPT_NAME'];
+            $PATH = str_replace('/index.php', '', $SCRIPT_NAME);
+            $in = $site_url.$PATH.'/active.php?activeId='.$id;
+            $out = dirname(__FILE__).'/../active/active'.$id.'.html';
+            generateHtml($in, $out);
             ShowMsg("编辑成功", 'index.php?m=activity&a=index');
             exit();
         }else{
