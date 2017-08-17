@@ -29,3 +29,5 @@ http://xxxx.com/backend/index.php?m=login
 详情页面模板backend\activity.php
 
 另：更新活动信息后需要去生成静态页面
+
+6、请将uploads文件目录权限修改成可以读写，因为后台修改活动图片需要存储
