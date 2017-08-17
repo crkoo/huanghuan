@@ -100,7 +100,7 @@ select::-ms-expand { display: none; }
 .box1{ padding: 0 20px 20px; width: 960px; height:auto; min-height:300px; }
 .box1 .boxtitle { height: 65px; background-color: #6b392b; line-height: 0; vertical-align: top; overflow: hidden;}
 .box1 .boxtitle .fl {width: 262px;}
-.box1 .boxtitle .fr {width: 697px; height: 63px; border: 1px solid #9e5d47; border-left: 0 none; text-align: center; font-size: 20px; font-weight: bold; color: #fff; line-height: 60px; font-family: "微软雅黑", "Microsoft YaHei", "SimSun", "宋体", arial;}
+.box1 .boxtitle .fr {width: 697px; height: 63px; border: 1px solid #9e5d47; border-left: 0 none; text-align: center; font-size: 24px; font-weight: bold; color: #fff; line-height: 60px; font-family: "微软雅黑", "Microsoft YaHei", "SimSun", "宋体", arial;}
 .box1 .boxcon { padding-left:35px; color:#fffab1; font-size:14px; line-height:28px; padding-top:20px; padding-right:30px;}
 .box1 .boxcon img {max-width: 100%;}
 .box1 .boxcon table {max-width: 100%;}
