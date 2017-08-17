@@ -22,9 +22,10 @@ http://xxxx.com/backend/index.php?m=login
 
 初始用户信息：root/321456
 
-5、更新html页面，本次将前台页面生成静态页面了。
+5、更新html页面，本次将前台页面生成静态页面了。操作按钮位于页面顶部“前台生成静态页面”
 
 如有更新请修改首页模板backend\html.php
 
 详情页面模板backend\activity.php
 
+另：更新活动信息后需要去生成静态页面
