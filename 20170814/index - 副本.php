@@ -8,7 +8,7 @@ $list = $db->getLineAll("select * from dbl_activity where status=1 ORDER by ord 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="renderer" content="webkit">
-    <title>澳门新葡京-优惠活动办理大厅</title>
+    <title>澳门威尼斯人-优惠活动办理大厅</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link type="text/css" rel="stylesheet" href="./css/reset.css"  />
     <link type="text/css" rel="stylesheet" href="./css/style.css"  />
