@@ -17,8 +17,10 @@ define('DB_PASS', '123456');//数据库密码
 define('DB_NAME', '0613555');//数据库名称
 ```
 4、登录后台修改用户密码
+
 http://xxxx.com/backend/index.php?m=login
-root 321456
+
+初始用户信息：root/321456
 
 5、更新html页面，本次将前台页面生成静态页面了。
 
