@@ -4,7 +4,7 @@ require_once dirname(__FILE__).'/include/init.php';
 $activeId = isset($_GET['activeId']) ? intval($_GET['activeId']) : null;
 $list = $db->getLineAll("select id,title from dbl_activity where status=1 ORDER by ord desc, id ASC ");
 if (!empty($activeId)) {
-    $detail = $db->getLine("select id,content from dbl_activity where status=1 and id=" . $activeId);
+    $detail = $db->getLine("select id,title,content from dbl_activity where status=1 and id=" . $activeId);
 }
 ?>
 <!DOCTYPE HTML>
@@ -35,8 +35,8 @@ if (!empty($activeId)) {
 <div class="main w1000">
     <div class="box1">
         <div class="boxtitle clearfix">
-            <a class="fl" href="../"><img src="../images/backhome.png" /></a>
-            <div class="fr"></div>
+            <a class="fl" href="../index.html"><img src="../images/backhome.png" /></a>
+            <div class="fr"><?=!empty($detail) ? $detail['title'] : null?></div>
         </div>
         <div class="boxcon">
             <?=!empty($detail) ? htmlspecialchars_decode($detail['content']) : null?>
