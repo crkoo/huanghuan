@@ -1,0 +1,95 @@
+* {
+	margin: 0px; padding: 0px;
+}
+body {
+	background: url("bg.jpg") repeat-x 0px 0px #2eb9ff; margin: 0px; padding: 0px;;
+}
+a {
+	color: #f0ff00; text-decoration: underline;
+}
+a:hover {
+	color: #f0ff00;
+}
+ul {
+	list-style: none; margin: 0px; padding: 0px; border: 0px currentColor; border-image: none;
+}
+li {
+	list-style: none; margin: 0px; padding: 0px; border: 0px currentColor; border-image: none;
+}
+img {
+	list-style: none; margin: 0px; padding: 0px; border: 0px currentColor; border-image: none;
+}
+dl {
+	list-style: none; margin: 0px; padding: 0px; border: 0px currentColor; border-image: none;
+}
+dd {
+	list-style: none; margin: 0px; padding: 0px; border: 0px currentColor; border-image: none;
+}
+dt {
+	list-style: none; margin: 0px; padding: 0px; border: 0px currentColor; border-image: none;
+}
+div {
+	list-style: none; margin: 0px; padding: 0px; border: 0px currentColor; border-image: none;
+}
+.clear {
+	height: 0px; line-height: 0px; overflow: hidden; clear: both; font-size: 0px;
+}
+.clearfix:after {content:"\0020";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix {clear: both;zoom: 1}
+.main1 {
+	background: url("main1.jpg") no-repeat top; height: 531px;
+}
+.cont {
+	margin: 0px auto; width: 974px;
+}
+.main1 p {
+	padding: 373px 0px 0px 335px; width: 540px; height: 40px; text-align: center; color: #fff; line-height: 40px; font-size: 22px; font-weight: bold;
+}
+.red {color: #ff4242;}
+.yellow {color: #f0ff00;}
+
+.boxm {
+	background: url("boxm.jpg") repeat-y 0px 0px; margin: 0px auto; width: 972px;
+}
+.boxm .m1 {
+	background: url("t1.jpg") no-repeat 0px 0px; margin: 0px auto; width: 972px; height: 167px;
+}
+.boxm .m1 p {
+	padding: 121px 0px 0px 250px; width: 700px; height: 30px; text-align: center; color: #fff; line-height: 30px; font-size: 20px; font-weight: bold;
+}
+.bot p {
+	padding: 105px 0px 0px 312px; width: 270px; height: 30px; text-align: center; color: #fff; line-height: 30px; font-size: 20px; font-weight: bold;
+}
+.list {width: 880px; margin: 10px auto 0px;}
+.list li { float: left; margin: 10px 0 ; width: 412px; margin-right: 28px;}
+.list li.last {margin-right: 0px;}
+.list li p b {color: rgb(255, 255, 255); font-size: 18px;}
+.list li p b span {color: rgb(255, 255, 0);}
+.list li p a {color: rgb(255, 255, 0); font-size: 12px;}
+.boxm .m2 {
+	background: url("xw.png") no-repeat 0px 0px; margin: 10px auto 0px; width: 880px; height: 100px;
+}
+.boxm .m3 {
+	margin: 0px auto; width: 880px; overflow: hidden; -ms-zoom: 1;
+}
+.boxm .m3 p {
+	width: 360px; padding-left: 10px; margin-right: 70px; float: left;
+}
+.boxm .m3 p b {
+	color: rgb(255, 255, 255); font-size: 18px;
+}
+.boxm .m3 p b span {
+	color: rgb(255, 255, 0);
+}
+.boxm .m3 p a {
+	color: rgb(255, 255, 0); font-size: 12px;
+}
+.boxm .m3 p a:hover {
+	color: rgb(0, 255, 255);
+}
+.bot {
+	background: url("main2.jpg") no-repeat 0px 0px; margin: 0px auto 15px; width: 972px; height: 296px;
+}
+.bot p {
+	padding: 215px 0px 0px 280px;
+}
