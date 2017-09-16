@@ -97,7 +97,7 @@ if ($a == 'index'){
     $db->update("dbl_content", $id, "`is_del`=1");
     outputJson(0, 'ok');
 }elseif ($a == 'delAll'){
-    $ids = isset($_POST['id']) ? $_POST['id'] : null;
+    $ids = isset($_REQUEST['id']) ? $_REQUEST['id'] : null;
     if (empty($ids)){
         ShowMsg('请选择您要删除的数据', -1);
         exit;

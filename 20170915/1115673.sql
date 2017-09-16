@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50520
 File Encoding         : 65001
 
-Date: 2017-08-17 11:14:41
+Date: 2017-09-16 23:10:10
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -28,7 +28,7 @@ CREATE TABLE `dbl_activity` (
   `ord` smallint(4) NOT NULL DEFAULT '0',
   `addtime` int(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COMMENT='活动列表';
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='活动列表';
 
 -- ----------------------------
 -- Records of dbl_activity
@@ -70,7 +70,7 @@ CREATE TABLE `dbl_content` (
   `account` varchar(50) NOT NULL COMMENT '账号',
   `activeId` smallint(2) DEFAULT NULL COMMENT '申请项ID',
   `activeName` varchar(100) NOT NULL COMMENT '申请项名称',
-  `orderId` varchar(50) DEFAULT NULL COMMENT '注单号',
+  `orderId` varchar(100) DEFAULT NULL,
   `content` varchar(255) DEFAULT NULL COMMENT '申请审核内容',
   `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '状态，0等待审核，1成功办理，2已拒绝',
   `tips` varchar(200) DEFAULT NULL COMMENT '回复内容',
