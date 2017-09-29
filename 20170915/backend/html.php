@@ -97,12 +97,12 @@ $list = $db->getLineAll("select * from dbl_activity where status=1 ORDER by ord 
     <div class="w1000">
         <div class="link clearfix">
             <ul>
-                <li><a href="#" target="_blank" class="l1"></a></li>
-                <li><a href="#" target="_blank" class="l2"></a></li>
-                <li><a href="#" target="_blank" class="l3"></a></li>
-                <li><a href="#" target="_blank" class="l4"></a></li>
-                <li><a href="#" target="_blank" class="l5"></a></li>
-                <li class="last"><a href="#" target="_blank" class="l6"></a></li>
+                <li><a href="http://www.1115675.com/cl/index.php?module=JoinMember###" target="_blank" class="l1"></a></li>
+                <li><a href="http://www.1115675.com/cl/?module=System&method=LiveTop&args=39" target="_blank" class="l2"></a></li>
+                <li><a href="http://www.1115675.com/cl/?module=BBinInfo" target="_blank" class="l3"></a></li>
+                <li><a href="http://www.1115675.com/cl/?module=System&method=MAdvertis&other=AT3" target="_blank" class="l4"></a></li>
+                <li><a href="http://www.1115675.com/infe/rmobile" target="_blank" class="l5"></a></li>
+                <li class="last"><a href="https://static.meiqia.com/dist/standalone.html?_=t&eid=68285" target="_blank" class="l6"></a></li>
             </ul>
         </div>
     </div>
