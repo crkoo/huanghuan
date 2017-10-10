@@ -1,6 +1,6 @@
 <?php
 define('DTW', true);
-require_once dirname(__FILE__).'//include/init.php';
+require_once dirname(__FILE__).'/include/init.php';
 $activeId = isset($_GET['activeId']) ? intval($_GET['activeId']) : null;
 $list = $db->getLineAll("select id,title from dbl_activity where status=1 ORDER by ord desc, id ASC ");
 if (!empty($activeId)) {

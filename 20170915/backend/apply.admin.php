@@ -45,10 +45,10 @@ if ($a == 'index'){
             ShowMsg("会员账号不能为空", -1);
             exit;
         }
-        if (empty($data['orderId'])){
+        /*if (empty($data['orderId'])){
             ShowMsg("注单号不能为空", -1);
             exit;
-        }
+        }*/
 
         if (!empty($data['tips'])){
             $data['is_reply'] = 1;

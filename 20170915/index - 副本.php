@@ -186,7 +186,8 @@ function subForm(){
         alert("会员账号不要含有特殊字符");
         return false;
     }
-    if(!re.test($("#4_int_1").val())){
+    var zdh = $("#4_int_1").val();
+    if(zdh !='' && !re.test(zdh)){
         alert("注单号必须是整数类型");
         return false;
     }

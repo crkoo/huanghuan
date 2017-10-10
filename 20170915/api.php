@@ -65,10 +65,10 @@ if (empty($method)){
         //活动不存在
         outputJson(4, '活动不存在');
     }
-    $orderId = isset($_POST['int_1']) ? intval($_POST['int_1']) : null;
-    if (empty($orderId)){
+    $orderId = isset($_POST['int_1']) && $_POST['int_1']!='' ? intval($_POST['int_1']) : "";
+    /*if (empty($orderId)){
         outputJson(3, '注单号不能为空');
-    }
+    }*/
     $content = "会员账号：".$account."，注单号：".$orderId;
 
     $insertData = array(
