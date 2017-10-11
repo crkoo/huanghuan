@@ -86,7 +86,7 @@ UEDITOR_HOME_URL : URL
 //,videoFieldName:"upfile"
 
 //工具栏上的所有的功能按钮和下拉框，可以在new编辑器的实例时选择自己需要的从新定义
-,toolbars:[["Bold","Italic","Underline","InsertUnorderedList","InsertOrderedList","InsertImage","InsertVideo","RemoveFormat","FontSize","ForeColor","BackColor","link","source"]]
+,toolbars:[["Bold","Italic","Underline","InsertUnorderedList","InsertOrderedList","InsertImage","InsertVideo","RemoveFormat","FontSize","ForeColor","BackColor","link","source","|",'inserttable', 'deletetable', 'insertparagraphbeforetable', 'insertrow', 'deleterow', 'insertcol', 'deletecol', 'mergecells', 'mergeright', 'mergedown', 'splittocells', 'splittorows', 'splittocols', 'charts']]
 //当鼠标放在工具栏上时显示的tooltip提示
 //,labelMap:{'bold':'','italic':'','underline':'','insertunorderedlist':'','insertorderedlist':'','insertimage':'','removeformat':'','forecolor':'','backcolor':'','Link':''}
 
