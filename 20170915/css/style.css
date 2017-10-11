@@ -59,9 +59,11 @@ body{font-size:12px; font-family: "微软雅黑"; background: #191919 url(../ima
 .tccon p, .tccon .active_name {color: #fff;font-size: 14px;margin-left: 120px;line-height: 32px; margin-bottom: 20px;}
 .tccon p span, .tccon .active_name .apply_subject{display:inline-block;width:112px;text-align: right;color: #fff; font-size: 14px; margin-right:10px;}
 .tccon p input,.tccon .active_name .apply_show{ width: 275px; height: 32px; border:1px solid #fff; background: #fff;text-align: left;color: #7d7d7d; font-size: 14px; padding-left:15px; margin-left: 15px; position: relative;}
-.tccon p input::-webkit-input-placeholder{color:#7d7d7d;}
-.tccon p input::-moz-placeholder{color:#7d7d7d;opacity:1;}
-.tccon p input:-moz-placeholder{color:#7d7d7d;opacity:1;}
+.tccon p textarea { width: 275px; height: 50px; border:1px solid #fff; background: #fff;text-align: left;color: #7d7d7d; font-size: 14px; padding-left:15px; margin-left: 15px; padding-top: 5px; position: relative;}
+.tccon p textarea,.tccon p span {vertical-align: text-top;}
+.tccon p input::-webkit-input-placeholder,.tccon p textarea::-webkit-input-placeholder{color:#7d7d7d;}
+.tccon p input::-moz-placeholder,.tccon p textarea::-moz-placeholder{color:#7d7d7d;opacity:1;}
+.tccon p input:-moz-placeholder,.tccon p textarea:-moz-placeholder{color:#7d7d7d;opacity:1;}
 .tccon p .yzmimg{position: relative;margin-left: -80px; vertical-align:middle; top: -2px;}
 .tccon p .subbtn{background:url(../images/subbtn.png) no-repeat; text-align: center; width: 208px; height: 54px; border:none; cursor: pointer;padding: 0;margin-top:15px; text-indent: -999999em;}
 .tccon p .applysubbtn{background: url(../images/applybtn.png) no-repeat; display:inline-block;width: 208px; height: 54px; cursor: pointer;text-align: center;border: none;margin-top: 15px; padding:0; text-indent: -999999em;}

@@ -166,7 +166,7 @@ $list = $db->getLineAll("select * from dbl_activity where status=1 ORDER by ord 
         <form action="api.php?action=apply" name="doform" id="doform" method="POST" onsubmit="return subForm();">
             <input type="hidden" name="activeId" id="activeId" />
             <p><span>会员帐号：</span><input type="text" placeholder="填写会员帐号" id="4_str1" name="str1"></p>
-            <p><span>申请内容：</span><input type="text" placeholder="填写申请内容" id="4_int_1" name="int_1"></p>
+            <p><span>申请内容：</span><textarea type="text" placeholder="填写申请内容" id="4_int_1" name="int_1" style="outline: none; resize: none;"></textarea></p>
             <p><span>&nbsp;</span><input type="submit" class="applysubbtn" value="立即提交"></p>
         </form>
     </div>
