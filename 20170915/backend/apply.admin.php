@@ -59,7 +59,7 @@ if ($a == 'index'){
         }
         $activity = $db->getLine("select id, title from dbl_activity where id=".intval($data['activeId']));
         $data['activeName'] = $activity['title'];
-        $data['content'] = "会员账号：".$data['account']."，注单号：".$data['orderId'];
+        $data['content'] = "会员账号：".$data['account']."，申请内容：".$data['orderId'];
         if (empty($data['id'])){
             unset($data['id']);
             $data['addTime'] = time();
