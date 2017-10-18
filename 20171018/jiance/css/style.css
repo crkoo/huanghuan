@@ -1,0 +1,477 @@
+body {
+    font-size: 12px;
+    background: #1a1a1a;
+    font-family: "微软雅黑", "宋体";
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+    blr: expression(this.onFocus=this.blur());
+    color: #424445;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    border: none;
+}
+
+li {
+    list-style: none;
+}
+
+.hx {
+    width: 100%;
+    height: 1px;
+    overflow: hidden;
+    float: left;
+}
+
+.page-center {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.top {
+    background: url(../images/top.jpg) top center no-repeat;
+    width: 100%;
+    height: 152px;
+}
+
+.logo {
+    width: 270px;
+    height: 70px;
+    float: left;
+    margin: 40px 0 0 45px;
+    display: inline;
+}
+
+.content {
+    margin: 25px auto 0;
+    width: 900px;
+    height: auto !important;
+    min-height: 620px;
+}
+
+.cont_left {
+    width: 280px;
+    padding-bottom: 20px;
+    float: left;
+    background: url(../images/left.jpg) top left no-repeat;
+}
+
+.tip {
+    width: 240px;
+    margin: 50px 0 0 20px;
+    display: inline;
+    float: left;
+    font-family: "微软雅黑", "黑体", "宋体";
+}
+
+.tip li {
+    width: 230px;
+    line-height: 24px;
+    float: left;
+    font-size: 14px;
+    color: #ffffff;
+    background: url(../images/san.png) left 4px no-repeat;
+    padding: 0 0 0 18px;
+}
+
+.tip li span {
+    color: #ffefa5;
+}
+
+.dot {
+    margin: 6px 0;
+}
+
+.cont_right {
+    width: 600px;
+    float: right;
+}
+
+.cont_left h2 {
+    background: url("../images/tipsback.png") no-repeat;
+    width: 260px;
+    height: 53px;
+    margin-bottom: 20px;
+}
+
+.clmenu li {
+    padding: 6px 10px;
+    color: rgb(201, 190, 181);
+    line-height: 1.8em;
+    letter-spacing: 1pt;
+    font-size: 14px;
+    list-style-position: inside;
+    list-style-image: url("../images/listimg.png");
+}
+
+.clmenu li img {
+    margin-top: 15px;
+}
+
+.clmenu li em {
+    color: rgb(170, 225, 66);
+}
+
+.clmenu li b {
+    color: rgb(208, 166, 85);
+}
+
+ul.testmenu li {
+    margin: 3px 0px;
+    height: 40px;
+    box-sizing: content-box;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -moz-border-radius-topleft: 8px;
+    -moz-border-radius-bottomleft: 8px;
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+}
+
+ul.testmenu li i {
+    height: 40px;
+    color: rgb(159, 143, 132);
+    line-height: 40px;
+    font-size: 14px;
+    float: left;
+    display: block;
+}
+
+ul.testmenu li h4 {
+    height: 40px;
+    color: rgb(159, 143, 132);
+    line-height: 40px;
+    font-size: 14px;
+    float: left;
+    display: block;
+}
+
+ul.testmenu li span {
+    height: 40px;
+    color: rgb(159, 143, 132);
+    line-height: 40px;
+    font-size: 14px;
+    float: left;
+    display: block;
+}
+
+ul.testmenu li a {
+    height: 40px;
+    color: rgb(159, 143, 132);
+    line-height: 40px;
+    font-size: 14px;
+    float: left;
+    display: block;
+}
+
+ul.testmenu li.odd {
+    background: url("../images/oddback.png") repeat-x;
+    border: 1px solid rgb(84, 65, 52);
+}
+
+ul.testmenu li.even {
+    background: url("../images/evenback.png") repeat-x;
+    border: 1px solid rgb(84, 65, 52);
+}
+
+ul.testmenu li.odd a {
+    background: url("../images/oddaback.png") repeat-x;
+}
+
+ul.testmenu li.even a {
+    background: url("../images/evenaback.png") repeat-x;
+}
+
+ul.testmenu li i {
+    background: url("../images/pingji.png") no-repeat 0px -160px;
+    width: 40px;
+}
+
+ul.testmenu li.you i {
+    background-position: 0px 0px;
+}
+
+ul.testmenu li.liang i {
+    background-position: 0px -40px;
+}
+
+ul.testmenu li.zhong i {
+    background-position: 0px -80px;
+}
+
+ul.testmenu li.cha i {
+    background-position: 0px -120px;
+}
+
+ul.testmenu li h4 {
+    margin: 0px 20px;
+    width: 290px;
+}
+
+ul.testmenu li span {
+    background: url("../images/clock.png") no-repeat left;
+    width: 130px;
+    padding-left: 70px;
+}
+
+ul.testmenu li a {
+    width: 78px;
+    text-align: center;
+    color: rgb(205, 172, 109);
+    margin-left: 20px;
+}
+
+ul.testmenu li a:hover {
+    background: url("../images/ahback.png") repeat-x;
+    color: rgb(255, 255, 255);
+}
+
+.retest {
+    margin: 60px 0px 20px;
+    float: right;
+}
+
+.retest a {
+    background: url("../images/reback.png");
+    width: 529px;
+    height: 40px;
+    display: block;
+    margin-right: 30px;
+}
+
+.vip h3 {
+    margin: 30px 0px 0;
+}
+
+input {
+    background: url("../images/oddback.png") repeat-x;
+    border: 0px currentColor;
+    height: 40px;
+    color: rgb(159, 143, 132);
+    line-height: 38px;
+    font-family: Microsoft Yahei;
+    font-size: 14px;
+}
+
+.button2 {
+    background: url("../images/evenaback.png") repeat-x;
+    width: 80px;
+    color: rgb(205, 172, 109);
+    margin-right: 0px;
+    text-indent: -99999px;
+}
+
+.button2:hover {
+    background: url("../images/ahback.png") repeat-x;
+    cursor: pointer;
+}
+
+.button3 {
+    background: url("../images/reback.png") 0px 0px;
+    border: 1px solid rgb(122, 140, 64);
+    width: 78px;
+    height: 40px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    line-height: 40px;
+    font-family: Microsoft Yahei;
+    font-size: 14px;
+    display: block;
+}
+
+.button3:hover {
+    background: url("../images/reback.png") 0px -52px;
+}
+
+.button4 {
+    background: url("../images/reback.png") 0px 0px;
+    width: 141px;
+    height: 35px;
+    margin-right: 230px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    line-height: 46px;
+    font-family: Microsoft Yahei;
+    font-size: 14px;
+    display: block;
+    cursor: pointer
+}
+
+.libg {
+    background: url("../images/evenback.png") repeat-x;
+}
+
+#bgimage2 {
+    background: url(../images/oddback.jpg);
+}
+
+#bgimage4 {
+    background: url(../images/oddback.jpg);
+}
+
+#bgimage6 {
+    background: url(../images/oddback.jpg);
+}
+
+#bgimage8 {
+    background: url(../images/oddback.jpg);
+}
+
+#bgimage10 {
+    background: url(../images/oddback.jpg);
+}
+
+#bgimageZ2 {
+    background: url(../images/oddback.jpg) repeat-x;
+}
+
+#bgimageZ4 {
+    background: url(../images/oddback.jpg) repeat-x;
+    border: 1px solid rgb(84, 65, 52);
+}
+
+#bgimage1 {
+    background: url(../images/oddback.jpg);
+}
+
+#bgimage3 {
+    background: url(../images/oddback.jpg);
+}
+
+#bgimage5 {
+    background: url(../images/oddback.jpg);
+}
+
+#bgimage7 {
+    background: url(../images/oddback.jpg);
+}
+
+#bgimage9 {
+    background: url(../images/oddback.jpg);
+}
+
+#bgimageZ1 {
+    background: url(../images/oddback.jpg);
+}
+
+#bgimageZ3 {
+    background: url(../images/oddback.jpg);
+}
+
+.button_oushu {
+    background: url("../images/evenaback.png") repeat-x;
+    width: 80px;
+    height: 40px;
+    color: rgb(205, 172, 109);
+    margin-right: 0px;
+    text-indent: -99999px;
+}
+
+.button_oushu:hover {
+    background: url("../images/ahback.png") repeat-x;
+    cursor: pointer;
+}
+
+.fonttype {
+    font-family: Microsoft Yahei;
+}
+
+.rightbar {
+    background: url("../images/rightbar.png") no-repeat 0px 0px;
+    top: 158px;
+    width: 103px;
+    height: 213px;
+    right: 25px;
+}
+
+ul.moremenu {
+    margin: 49px 0px 0px 7px;
+}
+
+ul.moremenu li {
+    list-style: none;
+}
+
+ul.moremenu li a {
+    width: 91px;
+    height: 35px;
+    display: block;
+}
+
+ul.moremenu li a:hover {
+    background: url("../images/rightbar.png");
+}
+
+.rightbar a.close:hover {
+    background: url("../images/rightbar.png");
+}
+
+ul.moremenu li.kefu a:hover {
+    background-position: -104px -49px;
+}
+
+ul.moremenu li.zhuce a:hover {
+    background-position: -104px -84px;
+}
+
+ul.moremenu li.xiazai a:hover {
+    background-position: -104px -119px;
+}
+
+.rightbar h5 {
+    margin: 42px 0px 0px 7px;
+    width: 91px;
+    text-align: center;
+    color: rgb(213, 199, 188);
+    line-height: 1.4em;
+    font-size: 14px;
+}
+
+.rightbar a.close {
+    margin: 7px 0px 0px 7px;
+    width: 91px;
+    height: 38px;
+    display: block;
+}
+
+.rightbar a.close:hover {
+    background-position: -104px -161px;
+}
+
+.bottom {
+    width: 100%;
+    height: 80px;
+    background: #121212;
+    margin-top: 30px;
+}
+
+.bottom p {
+    line-height: 80px;
+    color: #737373;
+    text-align: center;
+    font-size: 1.3em;
+    font-family: "微软雅黑", "宋体";
+}
+
+#followDiv1 {
+    z-index: 10;
+    position: absolute;
+    width: 100px;
+    height: 387px;
+    top: 230px;
+    right: 6px;
+}

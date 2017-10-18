@@ -1,0 +1,86 @@
+﻿
+
+.login .hd i {
+    display: inline-block;
+    width: .67rem;
+    height: .67rem;
+    background: url(../images/i-hy.png) no-repeat center center;
+    background-size: 100% auto;
+    vertical-align: top;
+}
+
+.login .hd {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: .13rem;
+    padding-bottom: .13rem;
+    border-bottom: dashed 1px #a3a3a3;
+}
+
+.login .login-reg a {
+    display: inline-block;
+    width: 1.87rem;
+    height: .6rem;
+    line-height: .6rem;
+    font-size: .37rem;
+    -moz-border-radius: .4rem;
+    -webkit-border-radius: .4rem;
+    border-radius: .4rem;
+    color: #fff;
+    background: -webkit-linear-gradient(#fb0000, #560000);
+    background: -o-linear-gradient(#fb0000, #560000);
+    background: -moz-linear-gradient(#fb0000, #560000);
+    background: linear-gradient(#fb0000, #560000);
+}
+
+login .hd i {
+    display: inline-block;
+    width: .67rem;
+    height: .67rem;
+    background: url(images/i-hy.png) no-repeat center center;
+    background-size: 100% auto;
+    vertical-align: top;
+}
+
+.login .login-reg {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+}
+
+.login .hd h2 {
+    display: inline-block;
+    font-size: .4rem;
+    line-height: .67rem;
+}
+
+.login .login-member .row2 .link1 {
+    background: -webkit-linear-gradient(#e5b100, #613b00);
+    background: -o-linear-gradient(#e5b100, #613b00);
+    background: -moz-linear-gradient(#e5b100, #613b00);
+    background: linear-gradient(#e5b100, #613b00);
+}
+
+.login .login-member {
+    text-align: center;
+    font-size: .45rem;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: .27rem;
+    padding-bottom: .27rem;
+}
+
+.login .login-member .row2 .link1, .login .login-member .row2 .link2 {
+    color: #fff;
+    display: inline-block;
+    width: 1.47rem;
+    height: .6rem;
+    line-height: .6rem;
+    font-size: .37rem;
+    -moz-border-radius: .4rem;
+    -webkit-border-radius: .4rem;
+    border-radius: .4rem;
+}

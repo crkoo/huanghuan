@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+ul,li {
+    list-style: none;
+}
+body {
+    font-family: "微软雅黑";
+    font-size: 16px;
+}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{clear:both;zoom:1}
+.content a:link {
+    color: #000;
+    text-decoration: none;
+    border: 2px #b3aeaa solid;
+    height: 45px;
+    width: 142px;
+    display: block;
+}
+
+.content a:hover {
+    border: 2px solid #d4a54c;
+    height: 45px;
+    width: 142px;
+    display: block;
+}
+
+a:visited {
+    color: #000;
+    text-decoration: none;
+    border: 2px #b3aeaa solid;
+    height: 45px;
+    width: 142px;
+    display: block;
+}
+
+.header {
+    height: 108px;
+    background-color: #262626;
+    border-bottom: 4px solid #000000;
+}
+.header_content{
+    height: 108px;
+    width: 980px;
+    margin:0 auto;
+    overflow: hidden;
+}
+.header_content .logo {
+    float: left;
+    margin-top: 12px;
+}
+.header_content .ad {
+    float: left;
+    margin-left: 115px;
+    margin-top: 27px;
+}
+.header_content .service {
+    float: right;
+    margin-top: 32px;
+}
+
+.main {
+    background: url("../images/bg.jpg") /*tpa=http://www.137.com/images/bg.jpg*/ top left repeat;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.content {
+    width: 980px;
+    background-color: #FFF;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+.content .list {
+    margin-bottom: 25px;
+}
+
+.content h4 {
+    background: url("../images/bt_bg.png") no-repeat;
+    width: 238px;
+    height: 58px;
+    color: #261200;
+    text-align: center;
+    line-height: 55px;
+    margin-bottom: 15px;
+    float: left;
+    font-size: 24px;
+}
+
+.li_name2 {
+    /*height: 67px;*/
+    background-color: #f1eded;
+    border: 1px #e5e1dd solid;
+    width: 946px;
+    margin: 0 auto;
+    clear: both;
+    padding-bottom: 9px;
+}
+
+.li_name2 li {
+    list-style: none;
+    float: left;
+    background-color: #FFF;
+    margin-top: 9px;
+    margin-left: 10px;
+    text-align: center;
+    line-height: 45px;
+}
+
+.li_name2 img {
+    line-height: 45px;
+    float: left;
+    margin-top: 12px;
+    margin-left: 20px;
+    margin-right: -15px;
+}
+
+.add img {
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: -34px;
+}
+
+.add_bt img {
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: -34px;
+}
+
+a:link {
+    color: #000;
+    text-decoration: none;
+}
+
+.footer {
+    background-color: #2e2e2e;
+    height: 48px;
+    color: #989898;
+    text-align: center;
+    line-height: 48px;
+}
