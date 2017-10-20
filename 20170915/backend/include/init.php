@@ -52,7 +52,7 @@ if(isset($_SERVER['PHP_SELF']))
 define('DB_HOST', 'localhost:3306');//数据库链接地址
 define('DB_USER', 'root');//数据库用户名
 define('DB_PASS', '123456');//数据库密码
-define('DB_NAME', '0613555');//数据库名称
+define('DB_NAME', '1115673');//数据库名称
 
 require(LIB.'func.php');
 require(LIB.'db.inc.php');

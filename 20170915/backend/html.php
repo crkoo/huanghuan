@@ -38,9 +38,9 @@ $list = $db->getLineAll("select * from dbl_activity where status=1 ORDER by ord 
                 if (!empty($list)){
                     foreach ($list as $k => $v){
                         if ($k < 2) {
-                ?>
-                <li><a href='javascript:;' class="applybtn" data-id="<?=$v['id']?>" target='_blank'><img src='<?=$v['litpic']?>' width='237' height='118'/><p><?=$v['title']?></p></a></li>
-                <?php
+                            ?>
+                            <li><a href='javascript:;' class="applybtn" data-id="<?=$v['id']?>" target='_blank'><img src='<?=$v['litpic']?>' width='237' height='118'/><p><?=$v['title']?></p></a></li>
+                            <?php
                         }
                     }
                 }
@@ -119,16 +119,16 @@ $list = $db->getLineAll("select * from dbl_activity where status=1 ORDER by ord 
     <div class="con1">
         <p><span>请输入会员帐号：</span><input type="text" id="query_user" name="query_option" value="" placeholder="填写你的会员账号"  ></p>
         <p><span>选择查询项目：</span><select id="query_option" name="query_option">
-            <?php
-            if (!empty($list)) {
-                foreach ( $list as $k =>$v) {
-            ?>
-            <option value='<?=$v['id']?>' ><?=$v['title']?></option>
-            <?php
+                <?php
+                if (!empty($list)) {
+                    foreach ( $list as $k =>$v) {
+                        ?>
+                        <option value='<?=$v['id']?>' ><?=$v['title']?></option>
+                        <?php
+                    }
                 }
-            }
-            ?>
-        </select></p>
+                ?>
+            </select></p>
         <div class='line'></div>
         <p><span>&nbsp;</span><input type="submit" value="点击查询" class="subbtn checksub"></p>
     </div>
@@ -166,57 +166,58 @@ $list = $db->getLineAll("select * from dbl_activity where status=1 ORDER by ord 
         <form action="api.php?action=apply" name="doform" id="doform" method="POST" onsubmit="return subForm();">
             <input type="hidden" name="activeId" id="activeId" />
             <p><span>会员帐号：</span><input type="text" placeholder="填写会员帐号" id="4_str1" name="str1"></p>
-            <p><span>申请内容：</span><textarea type="text" placeholder="填写申请内容" id="4_int_1" name="int_1" style="outline: none; resize: none;"></textarea></p>
+            <p><span>亏损金额：</span><input type="text" placeholder="亏损金额" id="4_str2" name="str2"></p>
+            <p class="apply_content"><span>申请内容：</span><textarea type="text" placeholder="填写申请内容" id="4_int_1" name="int_1"></textarea></p>
             <p><span>&nbsp;</span><input type="submit" class="applysubbtn" value="立即提交"></p>
         </form>
     </div>
 </div>
 <script language="javascript">
-function subForm(){
-    var re =  /^[1-9]+[0-9]*]*$/;//判断是否为整数
-    var reg = /^0?1[3|4|5|6|7|8|9][0-9]\d{8}$/; //判断手机号码
-    var regc = /^([\u4E00-\u9FA5]+,?)+$/; //判断中文
-    var username = /^[a-zA-Z0-9_]{1,}$/;
-    var xss=/^[^<>]*$/;
-    if($("#4_str1").val()==""){
-        alert("会员账号不能为空");
-        return false;
-    }
-    if(!xss.test($("#4_str1").val())){
-        alert("会员账号不要含有特殊字符");
-        return false;
-    }
-    /*var zdh = $("#4_int_1").val();
-    if(zdh !='' && !re.test(zdh)){
-        alert("申请内容必须是整数类型");
-        return false;
-    }*/
-    $.ajax({
-        url: 'api.php?action=apply',
-        data: $("#doform").serialize(),
-        dataType: 'JSON',
-        type: 'POST',
-        async: false,
-        success: function (res) {
-            if (res.errcode == 0 && res.errmsg == 'ok'){
-                alert('提交成功');
-                location.reload();
-            }else{
-                alert(res.errmsg);
-            }
-        },
-        error: function (error) {
-            alert(error);
+    function subForm(){
+        var re =  /^[1-9]+[0-9]*]*$/;//判断是否为整数
+        var reg = /^0?1[3|4|5|6|7|8|9][0-9]\d{8}$/; //判断手机号码
+        var regc = /^([\u4E00-\u9FA5]+,?)+$/; //判断中文
+        var username = /^[a-zA-Z0-9_]{1,}$/;
+        var xss=/^[^<>]*$/;
+        if($("#4_str1").val()==""){
+            alert("会员账号不能为空");
+            return false;
         }
+        if(!xss.test($("#4_str1").val())){
+            alert("会员账号不要含有特殊字符");
+            return false;
+        }
+        /*var zdh = $("#4_int_1").val();
+         if(zdh !='' && !re.test(zdh)){
+         alert("申请内容必须是整数类型");
+         return false;
+         }*/
+        $.ajax({
+            url: 'api.php?action=apply',
+            data: $("#doform").serialize(),
+            dataType: 'JSON',
+            type: 'POST',
+            async: false,
+            success: function (res) {
+                if (res.errcode == 0 && res.errmsg == 'ok'){
+                    alert('提交成功');
+                    location.reload();
+                }else{
+                    alert(res.errmsg);
+                }
+            },
+            error: function (error) {
+                alert(error);
+            }
+        });
+        return false;
+    }
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            var offsetTop = $(window).scrollTop() + "px";
+            $(".linkfloat").animate({ top: offsetTop }, { duration: 600, queue: false });
+        });
     });
-    return false;
-}
-$(document).ready(function () {
-    $(window).scroll(function () {
-        var offsetTop = $(window).scrollTop() + "px";
-        $(".linkfloat").animate({ top: offsetTop }, { duration: 600, queue: false });
-    });
-});
 </script>
 </body>
 </html>

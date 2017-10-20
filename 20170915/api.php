@@ -52,7 +52,7 @@ if (empty($method)){
     echo json_encode($json);
     exit;
 }else if ($method = 'apply'){
-    $account = isset($_POST['str1']) ? $_POST['str1'] : null;
+    $account = isset($_POST['str1']) ? htmlspecialchars($_POST['str1']) : null;
     if (empty($account)){
         outputJson(2, '用户账号不能为空');
     }
@@ -65,17 +65,22 @@ if (empty($method)){
         //活动不存在
         outputJson(4, '活动不存在');
     }
+    /*亏损金额*/
+    $loss = isset($_POST['str2']) ? htmlspecialchars($_POST['str2']) : null;
+
+    /*注单号->申请内容*/
     $orderId = isset($_POST['int_1']) && $_POST['int_1']!='' ? htmlspecialchars($_POST['int_1']) : "";
     /*if (empty($orderId)){
         outputJson(3, '注单号不能为空');
     }*/
-    $content = "会员账号：".$account."，申请内容：".$orderId;
+    $content = "会员账号：".$account."，亏损金额：".$loss."，申请内容：".$orderId;
 
     $insertData = array(
         'account' => $account,
         'activeId' => $activeId,
         'activeName' => $activity['title'],
         'orderId' => $orderId,
+        'loss' => $loss,
         'content' => $content,
         'status' => 0,
         'addTime' => time(),

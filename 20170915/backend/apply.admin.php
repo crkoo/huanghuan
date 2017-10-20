@@ -59,7 +59,7 @@ if ($a == 'index'){
         }
         $activity = $db->getLine("select id, title from dbl_activity where id=".intval($data['activeId']));
         $data['activeName'] = $activity['title'];
-        $data['content'] = "会员账号：".$data['account']."，申请内容：".$data['orderId'];
+        $data['content'] = "会员账号：".$data['account']."，亏损金额：".$data['loss']."，申请内容：".$data['orderId'];
         if (empty($data['id'])){
             unset($data['id']);
             $data['addTime'] = time();
@@ -71,14 +71,16 @@ if ($a == 'index'){
         ShowMsg('数据编辑成功', 'index.php?m=apply&a=index');
     }
     $id = isset($_GET['id']) ? intval($_GET['id']) : null;
+    $list = $db->getLineAll("select id, title from dbl_activity where status=1 ORDER BY ord DESC, id ASC ");
     if (!empty($id)){
         $data = $db->getLine("select * from dbl_content where id=".$id);
-        $list = $db->getLineAll("select id, title from dbl_activity where status=1 ORDER BY ord DESC, id ASC ");
     }else{
         $data = array(
             'id' => null,
             'account' => null,
             'activeId' => null,
+            'orderId' => null,
+            'loss' => null,
             'content' => null,
             'status' => null,
             'tips' => null,

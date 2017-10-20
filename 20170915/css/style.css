@@ -60,7 +60,8 @@ body{font-size:12px; font-family: "微软雅黑"; background: #191919 url(../ima
 .tccon p span, .tccon .active_name .apply_subject{display:inline-block;width:112px;text-align: right;color: #fff; font-size: 14px; margin-right:10px;}
 .tccon p input,.tccon .active_name .apply_show{ width: 275px; height: 32px; border:1px solid #fff; background: #fff;text-align: left;color: #7d7d7d; font-size: 14px; padding-left:15px; margin-left: 15px; position: relative;}
 .tccon p textarea { width: 275px; height: 50px; border:1px solid #fff; background: #fff;text-align: left;color: #7d7d7d; font-size: 14px; padding-left:15px; margin-left: 15px; padding-top: 5px; position: relative;}
-.tccon p textarea,.tccon p span {vertical-align: text-top;}
+.apply_content textarea,.apply_content span {vertical-align: text-top;}
+.apply_content textarea {outline: none; resize: none;}
 .tccon p input::-webkit-input-placeholder,.tccon p textarea::-webkit-input-placeholder{color:#7d7d7d;}
 .tccon p input::-moz-placeholder,.tccon p textarea::-moz-placeholder{color:#7d7d7d;opacity:1;}
 .tccon p input:-moz-placeholder,.tccon p textarea:-moz-placeholder{color:#7d7d7d;opacity:1;}
@@ -83,7 +84,7 @@ body{font-size:12px; font-family: "微软雅黑"; background: #191919 url(../ima
 .tccon .active_name .apply_show .active_content {display: block; width: 90px; height: 34px; position: absolute; top: -1px; right: -1px; color: #502417; background-color: #efcc6e; text-align: center; font-size: 14px; line-height: 34px;}
 
 
-.layui-layer-nobg .layui-layer-setwin .layui-layer-close2{background: url(../images/closebtn.png) no-repeat; width:163px; height:133px; right: -18px; top:-18px; display: block; cursor: pointer;}
+.layui-layer-nobg .layui-layer-setwin .layui-layer-close2{background: url(../images/closebtn.png) no-repeat; width:163px; height:133px; right: -19px; top:-15px; display: block; cursor: pointer;}
 .layui-layer-nobg .layui-layer-setwin .layui-layer-close2:hover{background: url(../images/closebtn.png) no-repeat;}
 
 select{appearance:none;-moz-appearance:none;-webkit-appearance:none;background:#fff url(../images/select.png) right center no-repeat;padding-right:40px;padding-left:7px;}
