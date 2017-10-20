@@ -176,7 +176,7 @@ foreach ($list as $item) {
         </form>
     </div>
 </div>
-<script>var list = <?=json_encode($listArray)?>;</script>
+<script>var listArray = <?=json_encode($listArray)?>;</script>
 <script type="text/javascript" src="./js/joker.js"></script>
 <script type="text/javascript" src="./js/layer.js"></script>
 <script language="javascript">

@@ -15,17 +15,19 @@ if (empty($method)){
     $list = $db->getLineAll("select account as user_name,activeName as active_name from dbl_content where status=1 and is_del=0 ORDER BY id DESC limit 30 ");
     if (!empty($list)) {
         foreach ($list as $k => $v) {
-            $list[$k]['user_name'] = substr($v['user_name'],0,3).'****';
+            $v['user_name'] = str_replace(array(" ","\\", "/", "\r", "\n", "\t"), '', $v['user_name']);
+            $list[$k]['user_name'] = encode(substr($v['user_name'],0,3).'****');
         }
     }
-    echo json_encode($list);
+    echo decode(json_encode($list));
     exit;
 }else if ($method == 'querylist'){
     $data = $_GET;
-    $account = isset($data['user_name']) ? htmlspecialchars($data['user_name']) : null;
+    $account = isset($data['user_name']) ? str_replace(array(" ","\\", "/", "\r", "\n", "\t"), '', $data['user_name']) : null;
     if (empty($account)){
         outputJson(2, '请填写会员账号');
     }
+    $account = htmlspecialchars($account);
     $activeId = isset($data['act_id']) ? intval($data['act_id']) : null;
     if (empty($activeId)){
         outputJson(3, '请选择查询项目');
@@ -52,10 +54,11 @@ if (empty($method)){
     echo json_encode($json);
     exit;
 }else if ($method = 'apply'){
-    $account = isset($_POST['str1']) ? htmlspecialchars($_POST['str1']) : null;
+    $account = isset($_POST['str1']) ? str_replace(array(" ","\\", "/", "\r", "\n", "\t"), '', $_POST['str1']) : null;
     if (empty($account)){
         outputJson(2, '用户账号不能为空');
     }
+    $account = htmlspecialchars($account);
     $activeId = isset($_POST['activeId']) ? intval($_POST['activeId']) : null;
     if (empty($activeId)){
         outputJson(3, '申请活动不能为空');

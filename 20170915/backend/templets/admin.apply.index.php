@@ -34,8 +34,8 @@
                         <select name="activeId">
                             <option value="">请选择</option>
                             <?php
-                            if (!empty($list)){
-                                foreach ($list as $v){
+                            if (!empty($activityList)){
+                                foreach ($activityList as $v){
                                     ?>
                                     <option value="<?=$v['id']?>" <?=$activeId==$v['id']?'selected="selected"':''?>><?=$v['title']?></option>
                                     <?php
