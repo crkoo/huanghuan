@@ -1,5 +1,6 @@
 <?php
 define('DTW', true);
+require_once dirname(__FILE__).'/include/init.php';
 $list = $db->getLineAll("select id,title,litpic,form_title,form_title2 from dbl_activity where status=1 ORDER by ord desc, id ASC ");
 $listArray = array();
 foreach ($list as $item) {
