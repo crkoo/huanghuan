@@ -8,6 +8,13 @@ $(document).ready(function(){
 		$(".activeName").html(activeName);
 		$("#activeId").val(activeId);
 		$("#activeContent").attr('href', 'active/active'+activeId+'.html');
+		$("#formTitle").html("");
+		if (typeof list[activeId]['form_title'] != 'undefined' && list[activeId]['form_title'] != null && list[activeId]['form_title'].length > 0) {
+			$("#formTitle").append('<p><span><font color="#ff0000">*</font> '+list[activeId]['form_title']+'：</span><input type="text" placeholder="'+list[activeId]['form_title']+'" id="4_str2" name="str2"></p>');
+		}
+		if (typeof list[activeId]['form_title2'] != 'undefined' && list[activeId]['form_title2'] != null && list[activeId]['form_title2'].length > 0) {
+			$("#formTitle").append('<p><span><font color="#ff0000">*</font> '+list[activeId]['form_title2']+'：</span><input type="text" placeholder="'+list[activeId]['form_title2']+'" id="4_str3" name="str3"></p>');
+		}
 		layer.open({type: 1, zIndex: 100, title: false,area: ['744px'],skin: 'layui-layer-nobg',shade: 0.7,closeBtn :true,shadeClose: true,content: $('#applybox')});});
 	$(".backbtn").on('click', function(){layer.closeAll();$("#query_user").val('');$("#query_option").find("option").eq(0).attr('selected', true)});
 	$('.look').live("click",function(){

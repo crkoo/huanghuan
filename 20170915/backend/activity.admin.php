@@ -27,6 +27,8 @@ if ($a == 'index'){
         $title = isset($_POST['title']) ? $_POST['title'] : "";
         $litpic = isset($_POST['litpic']) ? $_POST['litpic'] : null;
         $content = isset($_POST['content']) ? $_POST['content'] : null;
+        $form_title = isset($_POST['form_title']) ? $_POST['form_title'] : null;
+        $form_title2 = isset($_POST['form_title2']) ? $_POST['form_title2'] : null;
         if (empty($title)){
             ShowMsg("请输入标题！", -1);
             exit();
@@ -46,6 +48,8 @@ if ($a == 'index'){
             'litpic' => $litpic,
             'ord' => $ord,
             'content' => $content,
+            'form_title' => $form_title,
+            'form_title2' => $form_title2,
         );
 
         if ($id){

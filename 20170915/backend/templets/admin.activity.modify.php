@@ -91,6 +91,18 @@ $(function(){
                             </td>
                         </tr>
                         <tr>
+                            <th width="120" class="tr">表单标题一：</th>
+                            <td>
+                                <input type="text" name="form_title" value="<?=$data['form_title']?>" class="text w100" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="120" class="tr">表单标题二：</th>
+                            <td>
+                                <input type="text" name="form_title2" value="<?=$data['form_title2']?>" class="text w100" />
+                            </td>
+                        </tr>
+                        <tr>
                             <th width="120" class="tr">排序：</th>
                             <td>
                                 <input type="text" name="ord" value="<?=$data['ord']?intval($data['ord']):0?>" class="text w100" />
