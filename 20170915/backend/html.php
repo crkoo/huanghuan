@@ -1,7 +1,10 @@
 <?php
 define('DTW', true);
-require_once dirname(__FILE__).'/include/init.php';
-$list = $db->getLineAll("select * from dbl_activity where status=1 ORDER by ord desc, id ASC ")
+$list = $db->getLineAll("select id,title,litpic,form_title,form_title2 from dbl_activity where status=1 ORDER by ord desc, id ASC ");
+$listArray = array();
+foreach ($list as $item) {
+    $listArray[$item['id']] = $item;
+}
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -16,8 +19,6 @@ $list = $db->getLineAll("select * from dbl_activity where status=1 ORDER by ord 
     <script type="text/javascript" src="./js/jquery.SuperSlide.2.1.1.js"></script>
     <script type="text/javascript" src="./js/jeDate/jedate.min.js"></script>
     <script>var dir = "./";</script>
-    <script type="text/javascript" src="./js/joker.js"></script>
-    <script type="text/javascript" src="./js/layer.js"></script>
 </head>
 <body>
 <div class="header">
@@ -165,13 +166,18 @@ $list = $db->getLineAll("select * from dbl_activity where status=1 ORDER by ord 
         </div>
         <form action="api.php?action=apply" name="doform" id="doform" method="POST" onsubmit="return subForm();">
             <input type="hidden" name="activeId" id="activeId" />
-            <p><span>会员帐号：</span><input type="text" placeholder="填写会员帐号" id="4_str1" name="str1"></p>
-            <p><span>亏损金额：</span><input type="text" placeholder="亏损金额" id="4_str2" name="str2"></p>
-            <p class="apply_content"><span>申请内容：</span><textarea type="text" placeholder="填写申请内容" id="4_int_1" name="int_1"></textarea></p>
+            <p><span><font color="#ff0000">*</font> 会员帐号：</span><input type="text" placeholder="填写会员帐号" id="4_str1" name="str1"></p>
+            <div id="formTitle">
+                <p><span><font color="#ff0000">*</font> 亏损金额：</span><input type="text" placeholder="亏损金额" id="4_str2" name="str2"></p>
+            </div>
+            <p class="apply_content" style="display: none;"><span>申请内容：</span><textarea type="text" placeholder="填写申请内容" id="4_int_1" name="int_1"></textarea></p>
             <p><span>&nbsp;</span><input type="submit" class="applysubbtn" value="立即提交"></p>
         </form>
     </div>
 </div>
+<script>var list = <?=json_encode($listArray)?>;</script>
+<script type="text/javascript" src="./js/joker.js"></script>
+<script type="text/javascript" src="./js/layer.js"></script>
 <script language="javascript">
     function subForm(){
         var re =  /^[1-9]+[0-9]*]*$/;//判断是否为整数
@@ -186,6 +192,29 @@ $list = $db->getLineAll("select * from dbl_activity where status=1 ORDER by ord 
         if(!xss.test($("#4_str1").val())){
             alert("会员账号不要含有特殊字符");
             return false;
+        }
+        var activeId = $("#activeId").val();
+        var str2 = $("#formTitle").find("#4_str2");
+        if (typeof str2 != 'undefined') {
+            if (str2.val() == '') {
+                alert(list[activeId]['form_title'] + '不能为空');
+                return false;
+            }
+            if (!xss.test(str2.val())) {
+                alert(list[activeId]['form_title'] + "不要含有特殊字符");
+                return false;
+            }
+        }
+        var str3 = $("#formTitle").find("#4_str3");
+        if (typeof str3 != 'undefined') {
+            if (str3.val() == '') {
+                alert(list[activeId]['form_title2'] + '不能为空');
+                return false;
+            }
+            if (!xss.test(str3.val())) {
+                alert(list[activeId]['form_title2'] + "不要含有特殊字符");
+                return false;
+            }
         }
         /*var zdh = $("#4_int_1").val();
          if(zdh !='' && !re.test(zdh)){
