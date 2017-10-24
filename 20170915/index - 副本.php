@@ -1,6 +1,6 @@
 <?php
 define('DTW', true);
-require_once dirname(__FILE__).'/include/init.php';
+require_once dirname(__FILE__).'/backend/include/init.php';
 $list = $db->getLineAll("select id,title,litpic,form_title,form_title2 from dbl_activity where status=1 ORDER by ord desc, id ASC ");
 $listArray = array();
 foreach ($list as $item) {
@@ -26,7 +26,7 @@ foreach ($list as $item) {
             var urlhash = window.location.hash;
             if (!urlhash.match("fromapp")) {
                 if ((navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i))) {
-                    window.location = "wap/index.php";
+                    window.location = "wap/index.html";
                 }
             }
         } catch (err) {
