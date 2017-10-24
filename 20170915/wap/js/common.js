@@ -5,7 +5,7 @@ $(function () {
     $(".checksub").click(function(){
         var uname = $("#query_user").val();
         if(uname == ""){
-            layer.alert("会员帐号不能为空!");
+            alert("会员帐号不能为空!");
             return false;
         }
         $(".con1").hide();
