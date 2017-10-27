@@ -37,18 +37,26 @@ $list = $db->getLineAll("select id,title,litpic from dbl_activity where status=1
         </div>
     </div>
     <div class="notice2">
-        <p class="tc">请选择对应的活动类别申请，提交申请后专员将在2个小时内审核办理提交申请后可以点击审核进度查询！</p>
+        <p class="tc">请选择对应的活动类别申请，提交申请后专员将在2个小时内审核办理，提交申请后可以点击审核进度查询！</p>
     </div>
     <div class="itemList clearfix">
-        <ul>
+        <ul class="clearfix">
             <?php
             if (!empty($list)) {
+                $i = 1;
+                $count = count($list);
                 foreach ($list as $item){
             ?>
             <li>
                 <a href="activity.php?id=<?=$item['id']?>"><img src="../<?=$item['litpic']?>"><p><?=$item['title']?></p></a>
             </li>
             <?php
+                    if ($i%2==0 && $i < $count){
+            ?>
+            </ul><ul class="clearfix">
+            <?php
+                    }
+                    $i++;
                 }
             }
             ?>

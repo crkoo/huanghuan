@@ -51,7 +51,7 @@ if (empty($data) ){
             <div class="active_name clearfix">
                 <div class="apply_show">
                     <span class="activeName"><?=$data['title']?></span>
-                    <a href="content.php?id=<?=$id?>" id="activeContent" class="active_content">了解详情</a>
+                    <a href="content.php?id=<?=$id?>" id="activeContent" class="active_content">活动详情</a>
                 </div>
             </div>
             <form action="../api.php?action=apply" name="doform" id="doform" method="POST">
