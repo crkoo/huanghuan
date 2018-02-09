@@ -12,7 +12,7 @@ $(document).ready(function(){
 		if (typeof listArray[activeId]['form_title'] != 'undefined' && listArray[activeId]['form_title'] != null && listArray[activeId]['form_title'].length > 0) {
 			$("#formTitle").append('<p><span><font color="#ff0000">*</font> '+listArray[activeId]['form_title']+'：</span><input type="text" placeholder="'+listArray[activeId]['form_title']+'" id="4_str2" name="str2"></p>');
 		}
-		if (typeof listArray[activeId]['form_title2'] != 'undefined' && listArray[activeId]['form_title2'] != null && list[activeId]['form_title2'].length > 0) {
+		if (typeof listArray[activeId]['form_title2'] != 'undefined' && listArray[activeId]['form_title2'] != null && listArray[activeId]['form_title2'].length > 0) {
 			$("#formTitle").append('<p><span><font color="#ff0000">*</font> '+listArray[activeId]['form_title2']+'：</span><input type="text" placeholder="'+listArray[activeId]['form_title2']+'" id="4_str3" name="str3"></p>');
 		}
 		layer.open({type: 1, zIndex: 100, title: false,area: ['744px'],skin: 'layui-layer-nobg',shade: 0.7,closeBtn :true,shadeClose: true,content: $('#applybox')});});

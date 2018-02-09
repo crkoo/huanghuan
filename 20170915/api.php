@@ -68,6 +68,18 @@ if (empty($method)){
         //活动不存在
         outputJson(4, '活动不存在');
     }
+    $startTime = strtotime(date('Y-m-d 00:00:00'));
+    $time = time();
+    /*判断当天同一活动是否提交过*/
+    $sql = "select id,status from dbl_content where activeId={$activeId} and account='{$account}' and addTime > $startTime and addTime <= $time and status<2";
+    $row = $db->getLine($sql);
+    if (!empty($row)) {
+        if ($row['status'] == 1) {
+            outputJson(6, '请勿重复提交，如有问题及时联系客服');
+        }else {
+            outputJson(6, '已提交信息，待审核！请勿重复提交，如有问题及时联系客服');
+        }
+    }
     /*亏损金额*/
     $loss = isset($_POST['str2']) ? htmlspecialchars($_POST['str2']) : null;
     $loss2 = isset($_POST['str3']) ? htmlspecialchars($_POST['str3']) : null;
@@ -88,7 +100,7 @@ if (empty($method)){
         'loss2' => $loss2,
         'content' => $content,
         'status' => 0,
-        'addTime' => time(),
+        'addTime' => $time,
         'ipaddr' => GetIP(),
     );
 
