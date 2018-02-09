@@ -163,22 +163,22 @@
         var str2 = $("#formTitle").find("#4_str2");
         if (typeof str2 != 'undefined') {
             if (str2.val() == '') {
-                alert(list[activeId]['form_title'] + '不能为空');
+                alert(listArray[activeId]['form_title'] + '不能为空');
                 return false;
             }
             if (!xss.test(str2.val())) {
-                alert(list[activeId]['form_title'] + "不要含有特殊字符");
+                alert(listArray[activeId]['form_title'] + "不要含有特殊字符");
                 return false;
             }
         }
         var str3 = $("#formTitle").find("#4_str3");
         if (typeof str3 != 'undefined') {
             if (str3.val() == '') {
-                alert(list[activeId]['form_title2'] + '不能为空');
+                alert(listArray[activeId]['form_title2'] + '不能为空');
                 return false;
             }
             if (!xss.test(str3.val())) {
-                alert(list[activeId]['form_title2'] + "不要含有特殊字符");
+                alert(listArray[activeId]['form_title2'] + "不要含有特殊字符");
                 return false;
             }
         }
@@ -198,7 +198,20 @@
                     alert('提交成功');
                     location.reload();
                 }else{
-                    alert(res.errmsg);
+                    var msg = res.errmsg;
+                    //边缘弹出
+                    layer.open({
+                        type: 1
+                        ,offset: 'auto' //具体配置参考：offset参数项
+                        ,content: '<div style="padding: 80px; font-size: 16px; line-height: 28px; color: #FF0000;">'+msg+'</div>'
+                        ,btn: '关闭'
+                        ,btnAlign: 'c' //按钮居中
+                        ,shade: 0 //不显示遮罩
+                        ,yes: function(index){
+                            layer.close(index);
+                        }
+                    });
+                    //alert(res.errmsg);
                 }
             },
             error: function (error) {
