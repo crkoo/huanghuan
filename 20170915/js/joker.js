@@ -6,6 +6,7 @@ $(document).ready(function(){
 		var activeName = $(this).find('p').html();
 		var activeId = $(this).attr('data-id');
 		$(".activeName").html(activeName);
+		$("#doform").hide();
 		if (typeof listArray[activeId] != 'undefined' && listArray[activeId]['is_apply'] == 1) {
 			$("#doform").show();
 			$("#activeId").val(activeId);
