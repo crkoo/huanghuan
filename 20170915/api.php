@@ -77,7 +77,7 @@ if (empty($method)){
     if ($activity['apply_number'] > 0) {
         $sql = "select id from dbl_content where activeId={$activeId} and account='{$account}' and addTime > $startTime and addTime <= $time and status<2";
         $row = $db->count($sql);
-        if (!empty($row) && $row > $activity['apply_number']) {
+        if (!empty($row) && $row >= $activity['apply_number']) {
             outputJson(6, '已提交信息，待审核！请勿重复提交，如有问题及时联系客服');
         }
     }
