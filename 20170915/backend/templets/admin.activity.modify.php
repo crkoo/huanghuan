@@ -103,9 +103,23 @@ $(function(){
                             </td>
                         </tr>
                         <tr>
+                            <th width="120" class="tr">申请次数：</th>
+                            <td>
+                                <input type="number" name="apply_number" value="<?=$data['apply_number']?>" class="text w100" />
+                                <p>为0表示不限制</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="120" class="tr">表单显示：</th>
+                            <td>
+                                <label><input type="radio" name="is_apply" value="1" <?=empty($data)||$data['is_apply']==1?'checked':''?>>是</label>
+                                <label><input type="radio" name="is_apply" value="0" <?=$data['is_apply']==0?'checked':''?>>否</label>
+                            </td>
+                        </tr>
+                        <tr>
                             <th width="120" class="tr">排序：</th>
                             <td>
-                                <input type="text" name="ord" value="<?=$data['ord']?intval($data['ord']):0?>" class="text w100" />
+                                <input type="number" name="ord" value="<?=$data['ord']?intval($data['ord']):0?>" class="text w100" />
                             </td>
                         </tr>
                         <tr>

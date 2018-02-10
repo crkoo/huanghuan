@@ -29,6 +29,8 @@ if ($a == 'index'){
         $content = isset($_POST['content']) ? $_POST['content'] : null;
         $form_title = isset($_POST['form_title']) ? $_POST['form_title'] : null;
         $form_title2 = isset($_POST['form_title2']) ? $_POST['form_title2'] : null;
+        $is_apply = isset($_POST['is_apply']) ? $_POST['is_apply'] : 1;
+        $apply_number = isset($_POST['apply_number']) ? $_POST['apply_number'] : 1;
         if (empty($title)){
             ShowMsg("请输入标题！", -1);
             exit();
@@ -50,6 +52,8 @@ if ($a == 'index'){
             'content' => $content,
             'form_title' => $form_title,
             'form_title2' => $form_title2,
+            'is_apply' => $is_apply,
+            'apply_number' => $apply_number,
         );
 
         if ($id){

@@ -63,20 +63,21 @@ if (empty($method)){
     if (empty($activeId)){
         outputJson(3, '申请活动不能为空');
     }
-    $activity = $db->getLine("select id, title from dbl_activity where id=".$activeId);
+    $activity = $db->getLine("select id, title, is_apply, apply_number from dbl_activity where id=".$activeId);
     if (empty($activity)) {
         //活动不存在
         outputJson(4, '活动不存在');
     }
+    if ($activity['is_apply'] == 0) {
+        outputJson(4, '活动不需要申请');
+    }
     $startTime = strtotime(date('Y-m-d 00:00:00'));
     $time = time();
     /*判断当天同一活动是否提交过*/
-    $sql = "select id,status from dbl_content where activeId={$activeId} and account='{$account}' and addTime > $startTime and addTime <= $time and status<2";
-    $row = $db->getLine($sql);
-    if (!empty($row)) {
-        if ($row['status'] == 1) {
-            outputJson(6, '请勿重复提交，如有问题及时联系客服');
-        }else {
+    if ($activity['apply_number'] > 0) {
+        $sql = "select id from dbl_content where activeId={$activeId} and account='{$account}' and addTime > $startTime and addTime <= $time and status<2";
+        $row = $db->count($sql);
+        if (!empty($row) && $row > $activity['apply_number']) {
             outputJson(6, '已提交信息，待审核！请勿重复提交，如有问题及时联系客服');
         }
     }

@@ -6,16 +6,20 @@ $(document).ready(function(){
 		var activeName = $(this).find('p').html();
 		var activeId = $(this).attr('data-id');
 		$(".activeName").html(activeName);
-		$("#activeId").val(activeId);
-		$("#activeContent").attr('href', 'active/active'+activeId+'.html');
-		$("#formTitle").html("");
-		if (typeof listArray[activeId]['form_title'] != 'undefined' && listArray[activeId]['form_title'] != null && listArray[activeId]['form_title'].length > 0) {
-			$("#formTitle").append('<p><span><font color="#ff0000">*</font> '+listArray[activeId]['form_title']+'：</span><input type="text" placeholder="'+listArray[activeId]['form_title']+'" id="4_str2" name="str2"></p>');
+		if (typeof listArray[activeId] != 'undefined' && listArray[activeId]['is_apply'] == 1) {
+			$("#doform").show();
+			$("#activeId").val(activeId);
+			$("#activeContent").attr('href', 'active/active' + activeId + '.html');
+			$("#formTitle").html("");
+			if (typeof listArray[activeId]['form_title'] != 'undefined' && listArray[activeId]['form_title'] != null && listArray[activeId]['form_title'].length > 0) {
+				$("#formTitle").append('<p><span><font color="#ff0000">*</font> ' + listArray[activeId]['form_title'] + '：</span><input type="text" placeholder="' + listArray[activeId]['form_title'] + '" id="4_str2" name="str2"></p>');
+			}
+			if (typeof listArray[activeId]['form_title2'] != 'undefined' && listArray[activeId]['form_title2'] != null && listArray[activeId]['form_title2'].length > 0) {
+				$("#formTitle").append('<p><span><font color="#ff0000">*</font> ' + listArray[activeId]['form_title2'] + '：</span><input type="text" placeholder="' + listArray[activeId]['form_title2'] + '" id="4_str3" name="str3"></p>');
+			}
 		}
-		if (typeof listArray[activeId]['form_title2'] != 'undefined' && listArray[activeId]['form_title2'] != null && listArray[activeId]['form_title2'].length > 0) {
-			$("#formTitle").append('<p><span><font color="#ff0000">*</font> '+listArray[activeId]['form_title2']+'：</span><input type="text" placeholder="'+listArray[activeId]['form_title2']+'" id="4_str3" name="str3"></p>');
-		}
-		layer.open({type: 1, zIndex: 100, title: false,area: ['744px'],skin: 'layui-layer-nobg',shade: 0.7,closeBtn :true,shadeClose: true,content: $('#applybox')});});
+		layer.open({type: 1, zIndex: 100, title: false,area: ['744px'],skin: 'layui-layer-nobg',shade: 0.7,closeBtn :true,shadeClose: true,content: $('#applybox')});
+	});
 	$(".backbtn").on('click', function(){layer.closeAll();$("#query_user").val('');$("#query_option").find("option").eq(0).attr('selected', true)});
 	$('.look').live("click",function(){
 			if($(this).attr("title")!=""){layer.alert($(this).attr("title"),{title:"回复内容"})}else{layer.alert("审核中，请耐心等待",{title:"提示"})}

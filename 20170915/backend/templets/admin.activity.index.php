@@ -40,6 +40,8 @@
                                     <th class="tc" width="50">ID</th>
                                     <th class="tc" width="200">标题</th>
                                     <th class="tc" width="100">图片</th>
+                                    <th class="tc" width="100">申请次数</th>
+                                    <th class="tc" width="80">表单显示</th>
                                     <th class="tc" width="80">排序</th>
                                     <th class="tc" width="40">状态</th>
                                     <th class="tc" width="80">操作</th>
@@ -57,6 +59,16 @@
                                                 ?>
                                                 <img src="<?='../'.$v['litpic']?>" style="max-width: 40px; max-height: 40px;" />
                                                 <?php } ?>
+                                            </td>
+                                            <td><?=$v['apply_number']?></td>
+                                            <td>
+                                                <?php
+                                                if ($v['is_apply']) {
+                                                   echo '是';
+                                                }else{
+                                                    echo '否';
+                                                }
+                                                ?>
                                             </td>
                                             <td><input type="text" size="2" class="tc" name="orders[<?=$v['id']?>]" value="<?=$v['ord']?>" onkeyup="this.value=this.value.replace(/\D+/g,'');" maxlength="5" /> </td>
                                             <td>

@@ -1,7 +1,7 @@
 <?php
 define('DTW', true);
 require_once dirname(__FILE__).'/include/init.php';
-$list = $db->getLineAll("select id,title,litpic,form_title,form_title2 from dbl_activity where status=1 ORDER by ord desc, id ASC ");
+$list = $db->getLineAll("select id,title,litpic,form_title,form_title2,is_apply from dbl_activity where status=1 ORDER by ord desc, id ASC ");
 $listArray = array();
 foreach ($list as $item) {
     $listArray[$item['id']] = $item;
@@ -177,7 +177,7 @@ foreach ($list as $item) {
                 <a href="#" id="activeContent" class="active_content" target="_blank">了解详情</a>
             </div>
         </div>
-        <form action="api.php?action=apply" name="doform" id="doform" method="POST" onsubmit="return subForm();">
+        <form action="api.php?action=apply" name="doform" id="doform" method="POST" onsubmit="return subForm();" style="display: none;">
             <input type="hidden" name="activeId" id="activeId" />
             <p><span><font color="#ff0000">*</font> 会员帐号：</span><input type="text" placeholder="填写会员帐号" id="4_str1" name="str1"></p>
             <div id="formTitle">

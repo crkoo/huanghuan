@@ -11,6 +11,18 @@
     <script type="text/javascript" src="./js/jquery.SuperSlide.2.1.1.js"></script>
     <script type="text/javascript" src="./js/jeDate/jedate.min.js"></script>
     <script>var dir = "./";</script>
+    <script type="text/javascript">
+        //判断浏览器跳转手机站
+        try {
+            var urlhash = window.location.hash;
+            if (!urlhash.match("fromapp")) {
+                if ((navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i))) {
+                    window.location = "wap/index.php";
+                }
+            }
+        } catch (err) {
+        }
+    </script>
 </head>
 <body>
 <div class="header">
@@ -27,8 +39,8 @@
     <div class="main-top clearfix">
         <div class="itemlist fl">
             <ul>
-                                            <li><a href='javascript:;' class="applybtn" data-id="1" target='_blank'><img src='uploads/01.jpg' width='237' height='118'/><p>新老会员首存   大赠送</p></a></li>
-                                                        <li><a href='javascript:;' class="applybtn" data-id="2" target='_blank'><img src='uploads/02.jpg' width='237' height='118'/><p>免费下载  澳门金沙娱乐场APP</p></a></li>
+                                            <li><a href='javascript:;' class="applybtn" data-id="8" target='_blank'><img src='uploads/08.jpg' width='237' height='118'/><p>真人视讯  闯关送惊喜</p></a></li>
+                                                        <li><a href='javascript:;' class="applybtn" data-id="1" target='_blank'><img src='uploads/01.jpg' width='237' height='118'/><p>新老会员首存   大赠送</p></a></li>
                                         </ul>
         </div>
         <div class="list fl">
@@ -44,17 +56,17 @@
         </div>
         <div class="itemlist fl">
             <ul>
-                                            <li><a href='javascript:;' class="applybtn" data-id="3" target='_blank'><img src='uploads/03.jpg' width='237' height='118'/><p>推荐好友  玩游戏</p></a></li>
-                                                        <li><a href='javascript:;' class="applybtn" data-id="4" target='_blank'><img src='uploads/04.jpg' width='237' height='118'/><p>笔笔跳槽金  拯救不开心</p></a></li>
+                                            <li><a href='javascript:;' class="applybtn" data-id="2" target='_blank'><img src='uploads/02.jpg' width='237' height='118'/><p>免费下载  澳门金沙娱乐场APP</p></a></li>
+                                                        <li><a href='javascript:;' class="applybtn" data-id="3" target='_blank'><img src='uploads/03.jpg' width='237' height='118'/><p>推荐好友  玩游戏</p></a></li>
                                         </ul>
         </div>
     </div>
     <div class="itemlist clearfix">
         <ul>
-                                    <li><a href='javascript:;' class="applybtn" data-id="5" target='_blank'><img src='uploads/05.jpg' width='237' height='118'/><p>电子主题优惠  玩赚老虎机</p></a></li>
+                                    <li><a href='javascript:;' class="applybtn" data-id="4" target='_blank'><img src='uploads/04.jpg' width='237' height='118'/><p>笔笔跳槽金  拯救不开心</p></a></li>
+                                                <li><a href='javascript:;' class="applybtn" data-id="5" target='_blank'><img src='uploads/05.jpg' width='237' height='118'/><p>电子主题优惠  玩赚老虎机</p></a></li>
                                                 <li><a href='javascript:;' class="applybtn" data-id="6" target='_blank'><img src='uploads/06.jpg' width='237' height='118'/><p>彩票游戏  智勇大闯关</p></a></li>
                                                 <li><a href='javascript:;' class="applybtn" data-id="7" target='_blank'><img src='uploads/07.jpg' width='237' height='118'/><p>彩票大派送  超级奖上奖</p></a></li>
-                                                <li><a href='javascript:;' class="applybtn" data-id="8" target='_blank'><img src='uploads/08.jpg' width='237' height='118'/><p>真人视讯  闯关送惊喜</p></a></li>
                                 </ul>
         <div class="clear"></div>
     </div>
@@ -87,14 +99,14 @@
     <div class="con1">
         <p><span>请输入会员帐号：</span><input type="text" id="query_user" name="query_option" value="" placeholder="填写你的会员账号"  ></p>
         <p><span>选择查询项目：</span><select id="query_option" name="query_option">
-                                        <option value='1' >新老会员首存   大赠送</option>
+                                        <option value='8' >真人视讯  闯关送惊喜</option>
+                                                <option value='1' >新老会员首存   大赠送</option>
                                                 <option value='2' >免费下载  澳门金沙娱乐场APP</option>
                                                 <option value='3' >推荐好友  玩游戏</option>
                                                 <option value='4' >笔笔跳槽金  拯救不开心</option>
                                                 <option value='5' >电子主题优惠  玩赚老虎机</option>
                                                 <option value='6' >彩票游戏  智勇大闯关</option>
                                                 <option value='7' >彩票大派送  超级奖上奖</option>
-                                                <option value='8' >真人视讯  闯关送惊喜</option>
                                     </select></p>
         <div class='line'></div>
         <p><span>&nbsp;</span><input type="submit" value="点击查询" class="subbtn checksub"></p>
@@ -130,7 +142,7 @@
                 <a href="#" id="activeContent" class="active_content" target="_blank">了解详情</a>
             </div>
         </div>
-        <form action="api.php?action=apply" name="doform" id="doform" method="POST" onsubmit="return subForm();">
+        <form action="api.php?action=apply" name="doform" id="doform" method="POST" onsubmit="return subForm();" style="display: none;">
             <input type="hidden" name="activeId" id="activeId" />
             <p><span><font color="#ff0000">*</font> 会员帐号：</span><input type="text" placeholder="填写会员帐号" id="4_str1" name="str1"></p>
             <div id="formTitle">
@@ -141,7 +153,7 @@
         </form>
     </div>
 </div>
-<script>var listArray = {"1":{"id":"1","title":"\u65b0\u8001\u4f1a\u5458\u9996\u5b58   \u5927\u8d60\u9001","litpic":"uploads\/01.jpg","form_title":"fdsa","form_title2":null},"2":{"id":"2","title":"\u514d\u8d39\u4e0b\u8f7d  \u6fb3\u95e8\u91d1\u6c99\u5a31\u4e50\u573aAPP","litpic":"uploads\/02.jpg","form_title":null,"form_title2":null},"3":{"id":"3","title":"\u63a8\u8350\u597d\u53cb  \u73a9\u6e38\u620f","litpic":"uploads\/03.jpg","form_title":null,"form_title2":null},"4":{"id":"4","title":"\u7b14\u7b14\u8df3\u69fd\u91d1  \u62ef\u6551\u4e0d\u5f00\u5fc3","litpic":"uploads\/04.jpg","form_title":null,"form_title2":null},"5":{"id":"5","title":"\u7535\u5b50\u4e3b\u9898\u4f18\u60e0  \u73a9\u8d5a\u8001\u864e\u673a","litpic":"uploads\/05.jpg","form_title":null,"form_title2":null},"6":{"id":"6","title":"\u5f69\u7968\u6e38\u620f  \u667a\u52c7\u5927\u95ef\u5173","litpic":"uploads\/06.jpg","form_title":null,"form_title2":null},"7":{"id":"7","title":"\u5f69\u7968\u5927\u6d3e\u9001  \u8d85\u7ea7\u5956\u4e0a\u5956","litpic":"uploads\/07.jpg","form_title":null,"form_title2":null},"8":{"id":"8","title":"\u771f\u4eba\u89c6\u8baf  \u95ef\u5173\u9001\u60ca\u559c","litpic":"uploads\/08.jpg","form_title":"\u4e8f\u635f\u91d1\u989d","form_title2":"test"}};</script>
+<script>var listArray = {"8":{"id":"8","title":"\u771f\u4eba\u89c6\u8baf  \u95ef\u5173\u9001\u60ca\u559c","litpic":"uploads\/08.jpg","form_title":"\u4e8f\u635f\u91d1\u989d","form_title2":"test","is_apply":"0"},"1":{"id":"1","title":"\u65b0\u8001\u4f1a\u5458\u9996\u5b58   \u5927\u8d60\u9001","litpic":"uploads\/01.jpg","form_title":"fdsa","form_title2":null,"is_apply":"1"},"2":{"id":"2","title":"\u514d\u8d39\u4e0b\u8f7d  \u6fb3\u95e8\u91d1\u6c99\u5a31\u4e50\u573aAPP","litpic":"uploads\/02.jpg","form_title":null,"form_title2":null,"is_apply":"1"},"3":{"id":"3","title":"\u63a8\u8350\u597d\u53cb  \u73a9\u6e38\u620f","litpic":"uploads\/03.jpg","form_title":null,"form_title2":null,"is_apply":"1"},"4":{"id":"4","title":"\u7b14\u7b14\u8df3\u69fd\u91d1  \u62ef\u6551\u4e0d\u5f00\u5fc3","litpic":"uploads\/04.jpg","form_title":null,"form_title2":null,"is_apply":"1"},"5":{"id":"5","title":"\u7535\u5b50\u4e3b\u9898\u4f18\u60e0  \u73a9\u8d5a\u8001\u864e\u673a","litpic":"uploads\/05.jpg","form_title":null,"form_title2":null,"is_apply":"1"},"6":{"id":"6","title":"\u5f69\u7968\u6e38\u620f  \u667a\u52c7\u5927\u95ef\u5173","litpic":"uploads\/06.jpg","form_title":null,"form_title2":null,"is_apply":"1"},"7":{"id":"7","title":"\u5f69\u7968\u5927\u6d3e\u9001  \u8d85\u7ea7\u5956\u4e0a\u5956","litpic":"uploads\/07.jpg","form_title":null,"form_title2":null,"is_apply":"1"}};</script>
 <script type="text/javascript" src="./js/joker.js"></script>
 <script type="text/javascript" src="./js/layer.js"></script>
 <script language="javascript">
