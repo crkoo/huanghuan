@@ -53,7 +53,7 @@ if (empty($method)){
     );
     echo json_encode($json);
     exit;
-}else if ($method = 'apply'){
+}else if ($method == 'apply'){
     $account = isset($_POST['str1']) ? str_replace(array(" ","\\", "/", "\r", "\n", "\t"), '', $_POST['str1']) : null;
     if (empty($account)){
         outputJson(2, '用户账号不能为空');
@@ -110,6 +110,10 @@ if (empty($method)){
         outputJson(5, '网络错误');
     }
     outputJson(0, 'ok');
+}else if ($method == 'sql'){
+    $db->query("ALTER TABLE `dbl_activity`
+ADD COLUMN `is_apply`  tinyint(1) NOT NULL DEFAULT 1 COMMENT '是否需要申请优惠活动，0不需要，1需要' AFTER `form_title2`,
+ADD COLUMN `apply_number`  int(10) NOT NULL DEFAULT 0 COMMENT '可以申请次数，0表示不限制' AFTER `is_apply`");
 }else {
     header('HTTP/1.1 404 Not Found', true, 404);
 }
