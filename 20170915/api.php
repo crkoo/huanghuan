@@ -78,7 +78,7 @@ if (empty($method)){
         $sql = "select id from dbl_content where activeId={$activeId} and account='{$account}' and addTime > $startTime and addTime <= $time and status<2";
         $row = $db->count($sql);
         if (!empty($row) && $row >= $activity['apply_number']) {
-            outputJson(6, '已提交信息，待审核！请勿重复提交，如有问题及时联系客服');
+            outputJson(6, '已提交信息，待审核！请勿重复提交，以免影响派彩时间，如有疑问请咨询在线客服');
         }
     }
     /*亏损金额*/

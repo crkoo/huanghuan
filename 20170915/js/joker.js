@@ -7,10 +7,10 @@ $(document).ready(function(){
 		var activeId = $(this).attr('data-id');
 		$(".activeName").html(activeName);
 		$("#doform").hide();
+		$("#activeContent").attr('href', 'active/active' + activeId + '.html');
 		if (typeof listArray[activeId] != 'undefined' && listArray[activeId]['is_apply'] == 1) {
 			$("#doform").show();
 			$("#activeId").val(activeId);
-			$("#activeContent").attr('href', 'active/active' + activeId + '.html');
 			$("#formTitle").html("");
 			if (typeof listArray[activeId]['form_title'] != 'undefined' && listArray[activeId]['form_title'] != null && listArray[activeId]['form_title'].length > 0) {
 				$("#formTitle").append('<p><span><font color="#ff0000">*</font> ' + listArray[activeId]['form_title'] + '：</span><input type="text" placeholder="' + listArray[activeId]['form_title'] + '" id="4_str2" name="str2"></p>');
